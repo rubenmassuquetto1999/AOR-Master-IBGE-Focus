@@ -1,0 +1,6 @@
+{
+  "name": "Preparatório IBGE - Agente Operacional Regional (AOR)",
+  "description": "Plataforma preparatória completa para o concurso de Agente Operacional Regional (AOR) do IBGE. Contém cadernos de questões comentadas e simulados com foco no edital oficial abrangendo Língua Portuguesa, Noções de Administração / Situações Gerenciais, Raciocínio Lógico Quantitativo e Noções Básicas de Informática, além de suporte a estatísticas e recompensas de XP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,79 @@
+{
+  "entities": {
+    "UserProgress": {
+      "title": "UserProgress",
+      "description": "User progress data, level, XP, achievements and streaks.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "streak": { "type": "integer" },
+        "lastAnsweredDate": { "type": "string" },
+        "xp": { "type": "integer" },
+        "level": { "type": "integer" },
+        "dailyGoal": { "type": "integer" },
+        "completedAchievements": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "displayName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "address": { "type": "string" },
+        "cep": { "type": "string" },
+        "phone": { "type": "string" },
+        "bio": { "type": "string" },
+        "courseInterest": { "type": "string" },
+        "photoURL": { "type": "string" }
+      },
+      "required": ["userId", "streak", "xp", "level"]
+    },
+    "UserHistory": {
+      "title": "UserHistory",
+      "description": "The questions answered by users and whether they got them right.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "questionId": { "type": "string" },
+        "selectedOption": { "type": "integer" },
+        "isCorrect": { "type": "boolean" },
+        "answeredAt": { "type": "integer" }
+      },
+      "required": ["userId", "questionId", "selectedOption", "isCorrect", "answeredAt"]
+    },
+    "CustomQuestion": {
+      "title": "CustomQuestion",
+      "description": "User-contributed or customized study questions.",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "options": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "correctIndex": { "type": "integer" },
+        "explanations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "banca": { "type": "string" },
+        "ano": { "type": "string" },
+        "materia": { "type": "string" },
+        "assunto": { "type": "string" }
+      },
+      "required": ["text", "options", "correctIndex"]
+    }
+  },
+  "firestore": {
+    "/usersProgress/{userId}": {
+      "schema": "UserProgress",
+      "description": "Storage for user levels, stats, and achievements."
+    },
+    "/usersHistory/{historyId}": {
+      "schema": "UserHistory",
+      "description": "Study logs for users' answered questions."
+    },
+    "/customQuestions/{questionId}": {
+      "schema": "CustomQuestion",
+      "description": "Database of custom questions added by users."
+    }
+  }
+}
