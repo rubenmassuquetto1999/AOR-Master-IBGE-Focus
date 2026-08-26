@@ -35,6 +35,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 import { Question, UserHistory, UserProgress } from "./types";
 import { initialQuestions } from "./questionsData";
+import { deduplicateAndMergeQuestions, normalizeQuestionText, isQuestionEquivalent } from "./utils/questionDeduplication";
 import { db, auth } from "./firebase";
 import {
   onAuthStateChanged,
@@ -309,46 +310,6 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
-  // Sincroniza/Seeda todas as questões em código com o Firestore de forma dinâmica e sem limitações
-  useEffect(() => {
-    const seedQuestions = async () => {
-      if (currentUser && isOnline && db) {
-        try {
-          const customCol = collection(db, "customQuestions");
-          const qSnap = await getDocs(customCol);
-          
-          const existingIds = new Set<string>();
-          qSnap.forEach((docSnap) => existingIds.add(docSnap.id));
-
-          const missingQuestions = initialQuestions.filter((q) => !existingIds.has(q.id));
-
-          if (missingQuestions.length > 0) {
-            console.log(`Encontradas ${missingQuestions.length} questões ausentes no Firestore. Sincronizando...`);
-            const chunkSize = 400;
-            for (let i = 0; i < missingQuestions.length; i += chunkSize) {
-              const chunk = missingQuestions.slice(i, i + chunkSize);
-              const batch = writeBatch(db);
-              for (const q of chunk) {
-                const docRef = doc(db, "customQuestions", q.id);
-                batch.set(docRef, {
-                  ...q,
-                  userId: "system" // Identificador de questão do sistema
-                });
-              }
-              await batch.commit();
-            }
-            console.log("Sincronização dinâmica de questões no Firestore concluída com sucesso!");
-            loadUserData(currentUser.uid);
-          }
-        } catch (e) {
-          console.error("Erro ao sincronizar questões no Firestore:", e);
-        }
-      }
-    };
-    
-    seedQuestions();
-  }, [currentUser, isOnline]);
-
   // Fetch / Generate Ranking list
   useEffect(() => {
     const fetchRankings = async () => {
@@ -461,14 +422,21 @@ export default function App() {
     if (localHistory) setHistory(JSON.parse(localHistory));
     if (localProgress) setProgress(JSON.parse(localProgress));
     if (localQuestions) {
-      const guestList: Question[] = JSON.parse(localQuestions);
-      const mergedMap = new Map<string, Question>();
-      initialQuestions.forEach((q) => mergedMap.set(q.id, q));
-      guestList.forEach((q) => mergedMap.set(q.id, q));
-      const allQs = Array.from(mergedMap.values()).filter((q) => !deletedIds.includes(q.id));
-      setQuestions(allQs);
+      try {
+        const guestList: Question[] = JSON.parse(localQuestions);
+        const allQs = deduplicateAndMergeQuestions(initialQuestions, guestList, deletedIds);
+        setQuestions(allQs);
+        
+        // Clean obsolete custom questions in localStorage that already exist in initialQuestions
+        const uniqueCustoms = guestList.filter(
+          (g) => !initialQuestions.some((iq) => isQuestionEquivalent(iq, g))
+        );
+        localStorage.setItem("custom_questions", JSON.stringify(uniqueCustoms));
+      } catch (e) {
+        setQuestions(deduplicateAndMergeQuestions(initialQuestions, [], deletedIds));
+      }
     } else {
-      setQuestions(initialQuestions.filter((q) => !deletedIds.includes(q.id)));
+      setQuestions(deduplicateAndMergeQuestions(initialQuestions, [], deletedIds));
     }
   };
 
@@ -620,9 +588,27 @@ export default function App() {
       const customCol = collection(db, "customQuestions");
       const qSnap = await getDocs(customCol);
       const userQuestions: Question[] = [];
+
+      // Pre-index initialQuestions for instant O(1) checks
+      const baseIdSet = new Set(initialQuestions.map((bq) => bq.id));
+      const baseNormSet = new Set<string>();
+      const basePrefixSet = new Set<string>();
+      for (const bq of initialQuestions) {
+        const norm = normalizeQuestionText(bq.text);
+        if (norm) {
+          baseNormSet.add(norm);
+          if (norm.length >= 35) {
+            basePrefixSet.add(norm.slice(0, 35));
+          }
+        }
+      }
+
       qSnap.forEach((docQ) => {
         const qData = docQ.data();
-        userQuestions.push({
+        if (qData.userId === "system") {
+          return; // Ignore any system-seeded questions in Firestore
+        }
+        const q: Question = {
           id: docQ.id,
           text: qData.text,
           options: qData.options,
@@ -633,15 +619,23 @@ export default function App() {
           assunto: qData.assunto,
           nivelSuperior: qData.nivelSuperior,
           image: qData.image || null,
-        });
+        };
+
+        const norm = normalizeQuestionText(q.text);
+        const isBaseDuplicate =
+          baseIdSet.has(q.id) ||
+          (norm && (baseNormSet.has(norm) || (norm.length >= 35 && basePrefixSet.has(norm.slice(0, 35)))));
+
+        if (!isBaseDuplicate) {
+          userQuestions.push(q);
+        }
       });
-      // Deduplicate elements to avoid UI layout overflow
-      const mergedMap = new Map<string, Question>();
-      initialQuestions.forEach((q) => mergedMap.set(q.id, q));
-      userQuestions.forEach((q) => mergedMap.set(q.id, q));
-      const allQs = Array.from(mergedMap.values()).filter((q) => !deletedIds.includes(q.id));
+
+      // Deduplicate questions to guarantee pristine count
+      const allQs = deduplicateAndMergeQuestions(initialQuestions, userQuestions, deletedIds);
       setQuestions(allQs);
     } catch (e) {
+      console.warn("Could not load full user data from cloud (using local cache fallback):", e);
       loadGuestData();
     }
   };

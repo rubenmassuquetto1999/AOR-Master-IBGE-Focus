@@ -6,8 +6,10 @@ import { questionsRlm } from "./data/questionsRlm";
 import { questionsIbgeEtica } from "./data/questionsIbgeEtica";
 import { questionsKatiaData } from "./questionsKatiaData";
 import { questionsNewBatch } from "./data/questionsNewBatch";
+import { questionsBatchRlmAssoc } from "./data/questionsBatchRlmAssoc";
+import { mapQuestionToOfficialTopic } from "./data/disciplinesData";
 
-export const initialQuestions: Question[] = [
+const rawQuestions: Question[] = [
   ...questionsPt,
   ...questionsAdm,
   ...questionsInfo,
@@ -15,4 +17,11 @@ export const initialQuestions: Question[] = [
   ...questionsIbgeEtica,
   ...questionsKatiaData,
   ...questionsNewBatch,
+  ...questionsBatchRlmAssoc,
 ];
+
+export const initialQuestions: Question[] = rawQuestions.map((q) => ({
+  ...q,
+  assunto: mapQuestionToOfficialTopic(q.assunto, q.text),
+}));
+

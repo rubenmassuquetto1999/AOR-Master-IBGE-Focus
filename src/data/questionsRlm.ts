@@ -6171,5 +6171,269 @@ export const questionsRlm: Question[] = [
     "ano": 2026,
     "assunto": "Matemática - Geometria Plana: Perímetro de Figuras Ortogonais Compostas",
     "nivelSuperior": false
+  },
+{
+    "id": "rlm_sim_931",
+    "text": "Determinada banca examinadora solicita que o candidato encontre o valor de um parâmetro 'k' para que a equação (k − 5)x = 12 NÃO possua solução no conjunto dos números reais. Para que essa condição seja satisfeita, o valor de 'k' deve ser:",
+    "options": [
+      "A) k = 0",
+      "B) k = 12",
+      "C) k = -5",
+      "D) k = 5",
+      "E) k = 17"
+    ],
+    "correctIndex": 3,
+    "explanations": [
+      "Incorreta. Se k = 0, teríamos -5x = 12, que possui solução única (x = -12/5).",
+      "Incorreta. Se k = 12, teríamos 7x = 12, que possui solução única (x = 12/7).",
+      "Incorreta. Se k = -5, teríamos -10x = 12, que possui solução única (x = -6/5).",
+      "Correta. Se k = 5, a equação torna-se 0x = 12. Como nenhum número real multiplicado por zero resulta em 12, a equação é impossível (não possui solução).",
+      "Incorreta. Se k = 17, teríamos 12x = 12, resultando na solução única x = 1."
+    ],
+    "generalExplanation": "Para uma equação da forma ax = b ser impossível (sem solução), o coeficiente de x deve ser zero enquanto o termo independente é diferente de zero (0x = b, com b ≠ 0). Assim, k - 5 = 0 implica k = 5.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_932",
+    "text": "Considere a necessidade de isolar a incógnita 'y' na seguinte expressão algébrica: (2y − a) / 3 = b. Assinale a alternativa que descreve corretamente o valor de 'y'.",
+    "options": [
+      "A) y = (3b + a) / 2",
+      "B) y = 3b - a / 2",
+      "C) y = (3b - a) / 2",
+      "D) y = 3(b + a) / 2",
+      "E) y = 3b + a - 2"
+    ],
+    "correctIndex": 0,
+    "explanations": [
+      "Correta. Segue rigorosamente a hierarquia inversa das operações para o isolamento da variável y.",
+      "Incorreta. O erro está em não considerar que o 2 deve dividir todo o numerador (3b + a), e não apenas o termo 'a'.",
+      "Incorreta. O erro está no sinal do parâmetro 'a', que deve passar positivo (+a) ao trocar de membro.",
+      "Incorreta. O 3 multiplica apenas a constante 'b', pois o termo 'a' não estava sob o produto com 3 no início.",
+      "Incorreta. O número 2 está multiplicando y, portanto deve passar dividindo, e não subtraindo."
+    ],
+    "generalExplanation": "Passo 1: O 3 que divide todo o membro esquerdo passa multiplicando: 2y - a = 3b. Passo 2: O termo '-a' passa somando: 2y = 3b + a. Passo 3: O 2 que multiplica y passa dividindo toda a expressão: y = (3b + a) / 2.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_933",
+    "text": "Considere o sistema linear abaixo nas incógnitas x e y, onde 'k' é um número real:\n{ kx + 4y = 10\n{ 3x + 2y = 5\nPara que esse sistema seja classificado como Sistema Possível e Indeterminado (SPI), o valor de 'k' deve ser:",
+    "options": [
+      "A) k = 6",
+      "B) k = 1,5",
+      "C) k = 0",
+      "D) k = 12",
+      "E) Não existe valor de k que torne o sistema SPI."
+    ],
+    "correctIndex": 0,
+    "explanations": [
+      "Correta. Com k = 6, a primeira equação torna-se exatamente o dobro da segunda (6x + 4y = 10), gerando infinitas soluções coincidentes (SPI).",
+      "Incorreta. Valor obtido por inversão na razão de proporcionalidade (3/2 = 1,5 em vez de 3 * 2 = 6).",
+      "Incorreta. Se k = 0, teríamos 0/3 ≠ 4/2, tornando o sistema Possível e Determinado (SPD).",
+      "Incorreta. Valor obtido por multiplicação incorreta de 3 por 4 sem respeitar a razão da segunda incógnita.",
+      "Incorreta. O valor k = 6 satisfaz perfeitamente a proporcionalidade total de um SPI."
+    ],
+    "generalExplanation": "Para um sistema 2x2 ser SPI (infinitas soluções), as equações devem ser proporcionais: k/3 = 4/2 = 10/5. Como 4/2 = 2 e 10/5 = 2, temos k/3 = 2 => k = 6.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_934",
+    "text": "Um analista judiciário observou que, se adicionar 2 processos à pilha A e retirar 3 processos da pilha B, as pilhas ficam com quantidades iguais. Se ele dobrar o número de processos da pilha A e triplicar o de B, o total de processos será 190. O número total de processos nas duas pilhas originalmente é:",
+    "options": [
+      "A) 60",
+      "B) 65",
+      "C) 70",
+      "D) 75",
+      "E) 80"
+    ],
+    "correctIndex": 3,
+    "explanations": [
+      "Incorreta. Valor que não satisfaz a segunda equação do sistema (2*35 + 3*40 = 190).",
+      "Incorreta. Valor que decorreria de erro na transferência de termos na primeira equação.",
+      "Incorreta. 70 corresponde ao dobro da pilha A (2A = 70), mas a soma total das duas pilhas A + B é 75.",
+      "Correta. Com A = 35 e B = 40 processos originais, temos 35 + 2 = 40 - 3 = 37 e 2(35) + 3(40) = 70 + 120 = 190. O total é 35 + 40 = 75.",
+      "Incorreta. Valor que resultaria de interpretação invertida do sinal de adição/subtração de processos."
+    ],
+    "generalExplanation": "Montando o sistema: 1) A + 2 = B - 3 => A - B = -5 => B = A + 5. 2) 2A + 3B = 190. Substituindo B: 2A + 3(A + 5) = 190 => 2A + 3A + 15 = 190 => 5A = 175 => A = 35. Logo, B = 35 + 5 = 40. O total original de processos nas duas pilhas é A + B = 35 + 40 = 75.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_935",
+    "text": "Analise as afirmações abaixo sobre sistemas de equações lineares 2x2:\nI. Se a1/a2 = b1/b2 ≠ c1/c2, o sistema é impossível e as retas são paralelas distintas.\nII. O método da adição consiste em somar as equações para eliminar uma incógnita, sendo necessário que os coeficientes dessa incógnita sejam simétricos.\nIII. Um sistema com 0x + 0y = 0 é classificado como determinado, pois 0 é um número real.\nEstá(ão) correta(s):",
+    "options": [
+      "A) Apenas I.",
+      "B) Apenas II.",
+      "C) Apenas I e II.",
+      "D) Apenas II e III.",
+      "E) I, II e III."
+    ],
+    "correctIndex": 2,
+    "explanations": [
+      "Incorreta. A afirmativa II também está correta, tornando a alternativa incompleta.",
+      "Incorreta. A afirmativa I também está correta, tornando a alternativa incompleta.",
+      "Correta. Ambas as afirmativas I e II trazem conceitos teóricos corretos da álgebra linear para sistemas 2x2.",
+      "Incorreta. A afirmativa III está errada, pois 0=0 caracteriza um sistema indeterminado (SPI).",
+      "Incorreta. A afirmativa III é falsa."
+    ],
+    "generalExplanation": "A afirmação I é verdadeira (condição de paralelismo e sistema impossível/SI). A afirmação II é verdadeira (princípio fundamental da adição algébrica). A afirmação III é falsa, pois 0x + 0y = 0 é uma identidade que indica infinitas soluções (sistema indeterminado/SPI), não determinado.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_936",
+    "text": "Traduza a seguinte sentença complexa para a linguagem algébrica: 'A diferença entre o triplo da soma de um número com dois e a metade desse mesmo número excede dez em cinco unidades'.",
+    "options": [
+      "A) 3(x + 2) - x/2 = 10 + 5",
+      "B) 3x + 2 - x/2 = 15",
+      "C) x/2 - 3(x + 2) = 5",
+      "D) 3(x + 2) - x/2 = 10 - 5",
+      "E) 3(x + 2) + x/2 = 15"
+    ],
+    "correctIndex": 0,
+    "explanations": [
+      "Correta. Expressa com precisão o uso de parênteses no triplo da soma 3(x+2), a operação de diferença (- x/2) e a igualdade com o excesso sobre dez (10 + 5).",
+      "Incorreta. Falha ao não colocar parênteses na soma, fazendo o 3 incidir apenas sobre o x (3x + 2).",
+      "Incorreta. Inverte a ordem do minuendo e do subtraendo na diferença.",
+      "Incorreta. Subtrai 5 de 10 (10 - 5 = 5) em vez de somar 5 unidades que excedem 10 (10 + 5 = 15).",
+      "Incorreta. Usa o operador de soma (+) quando o texto explicitou 'a diferença'."
+    ],
+    "generalExplanation": "Desmembrando a linguagem natural: 1) 'triplo da soma de um número com dois' -> 3(x + 2); 2) 'diferença entre [isso] e a metade do número' -> 3(x + 2) - x/2; 3) 'excede dez em cinco unidades' -> = 10 + 5.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_937",
+    "text": "Analise a proposição: 'A quarta parte do valor que excede um número x em vinte unidades, subtraída de cinco, equivale à terça parte do próprio número x'. A equação que representa corretamente essa sentença é:",
+    "options": [
+      "A) (x + 20)/4 - 5 = x/3",
+      "B) 5 - (x + 20)/4 = x/3",
+      "C) x/4 + 20 - 5 = x/3",
+      "D) (x - 20)/4 - 5 = 3x",
+      "E) 4(x + 20) - 5 = x/3"
+    ],
+    "correctIndex": 0,
+    "explanations": [
+      "Correta. Tradução algébrica perfeita de todos os operadores e agrupamentos descritos no enunciado.",
+      "Incorreta. Inverte a ordem da subtração ao fazer '5 menos a quarta parte'.",
+      "Incorreta. Aplica a divisão por 4 apenas à variável x, esquecendo que o termo excedente é o bloco (x + 20).",
+      "Incorreta. Troca o excesso (+20) por subtração (-20) e terça parte (x/3) por triplo (3x).",
+      "Incorreta. Multiplica por 4 em vez de calcular a quarta parte (divisão por 4)."
+    ],
+    "generalExplanation": "1) 'Valor que excede x em 20': (x + 20). 2) 'A quarta parte disso': (x + 20)/4. 3) 'Subtraída de 5': (x + 20)/4 - 5. 4) 'Equivale à terça parte de x': = x/3. Equação resultante: (x + 20)/4 - 5 = x/3.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_938",
+    "text": "Há 5 anos, a idade de um pai era o triplo da idade de seu filho. Daqui a 10 anos, a idade do pai será o dobro da idade do filho. Qual é a soma das idades atuais do pai e do filho?",
+    "options": [
+      "A) 60 anos",
+      "B) 65 anos",
+      "C) 70 anos",
+      "D) 75 anos",
+      "E) 80 anos"
+    ],
+    "correctIndex": 2,
+    "explanations": [
+      "Incorreta. Valor que não atende às proporções temporais do sistema.",
+      "Incorreta. Decorrente de esquecer de aplicar a variação de anos a um dos membros.",
+      "Correta. O pai tem 50 anos e o filho 20 anos (há 5 anos tinham 45 e 15, triplo; daqui a 10 anos terão 60 e 30, dobro). Soma = 70 anos.",
+      "Incorreta. Distrator comum decorrente de erros na manipulação dos sinais nos parênteses temporais.",
+      "Incorreta. Valor excessivo que tornaria as relações temporais incompatíveis."
+    ],
+    "generalExplanation": "Sejam P e F as idades atuais. Há 5 anos: P - 5 = 3(F - 5) => P - 3F = -10. Daqui a 10 anos: P + 10 = 2(F + 10) => P - 2F = 10. Subtraindo a 1ª da 2ª: F = 20 anos. Substituindo: P = 10 + 2(20) = 50 anos. A soma das idades atuais é 50 + 20 = 70 anos.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_939",
+    "text": "Três sócios dividiram o lucro de uma empresa de R$ 18.000,00. O primeiro sócio recebeu o dobro do segundo, e o terceiro sócio recebeu R$ 2.000,00 a menos que a soma dos outros dois. Qual foi a parte destinada ao segundo sócio?",
+    "options": [
+      "A) R$ 3.000,00",
+      "B) R$ 3.500,00",
+      "C) R$ 3.333,33",
+      "D) R$ 4.000,00",
+      "E) R$ 6.000,00"
+    ],
+    "correctIndex": 2,
+    "explanations": [
+      "Incorreta. Se o segundo recebesse 3.000, o primeiro receberia 6.000 e o terceiro 7.000, totalizando 16.000 (abaixo do lucro).",
+      "Incorreta. Valor aproximado, mas incorreto para a solução algébrica de 20.000 / 6.",
+      "Correta. A modelagem 2x + x + 3x - 2000 = 18000 resulta exatamente em x = R$ 3.333,33 para o segundo sócio.",
+      "Incorreta. Se o segundo recebesse 4.000, o primeiro receberia 8.000 e o terceiro 10.000, totalizando 22.000 (acima do lucro).",
+      "Incorreta. R$ 6.000,00 seria a parte destinada ao primeiro sócio se o total fechasse em outros parâmetros."
+    ],
+    "generalExplanation": "Seja x o valor do 2º sócio. 1º sócio = 2x. 3º sócio = (x + 2x) - 2000 = 3x - 2000. Somando todos: 2x + x + (3x - 2000) = 18000 => 6x = 20000 => x = 20000 / 6 = R$ 3.333,33.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_940",
+    "text": "Uma caixa d’água pode ser enchida por duas torneiras, A e B. A torneira A, sozinha, enche a caixa em 4 horas. A torneira B, sozinha, enche a mesma caixa em 6 horas. Se as duas torneiras forem abertas simultaneamente, estando a caixa inicialmente vazia, em quanto tempo ela estará completamente cheia?",
+    "options": [
+      "A) 2 horas e 24 minutos",
+      "B) 2 horas e 40 minutos",
+      "C) 5 horas",
+      "D) 2 horas e 10 minutos",
+      "E) 3 horas e 12 minutos"
+    ],
+    "correctIndex": 0,
+    "explanations": [
+      "Correta. A vazão conjunta é de 5/12 da caixa por hora, necessitando de 12/5 = 2,4h, ou seja, 2 horas e 24 minutos.",
+      "Incorreta. 2 horas e 40 minutos corresponde a 2,66 horas, e não 2,4 horas.",
+      "Incorreta. 5 horas é a média aritmética simples entre 4 e 6 ((4+6)/2 = 5), erro clássico de quem ignora o trabalho simultâneo das vazões.",
+      "Incorreta. Erro na conversão de 0,4 horas para minutos (interpretando 0,4h como 10 minutos).",
+      "Incorreta. Valor que não condiz com a soma das frações de vazão."
+    ],
+    "generalExplanation": "Fórmula do trabalho conjunto: 1/T = 1/Ta + 1/Tb => 1/T = 1/4 + 1/6. Com MMC = 12: 1/T = (3 + 2)/12 = 5/12 => T = 12/5 = 2,4 horas. Convertendo a parte decimal: 0,4 * 60 min = 24 minutos. Portanto, 2h 24min.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
+  },
+  {
+    "id": "rlm_sim_941",
+    "text": "Um almoxarife comprou 25 itens entre canetas e borrachas. Cada caneta custou R$ 1,50 e cada borracha custou 80 centavos. O valor total da nota fiscal foi de R$ 30,50. A diferença entre a quantidade de canetas e a quantidade de borrachas compradas é de:",
+    "options": [
+      "A) 3",
+      "B) 4",
+      "C) 5",
+      "D) 6",
+      "E) 7"
+    ],
+    "correctIndex": 2,
+    "explanations": [
+      "Incorreta. Quantidades 14 e 11 resultariam em 14*1,50 + 11*0,80 = 21 + 8,80 = R$ 29,80.",
+      "Incorreta. Distrator próximo por erro na divisão 105 / 7.",
+      "Correta. Foram compradas 15 canetas e 10 borrachas (15 + 10 = 25 itens; 15*1,50 + 10*0,80 = 22,50 + 8,00 = R$ 30,50). A diferença é 15 - 10 = 5.",
+      "Incorreta. Erro aritmético no isolamento das variáveis.",
+      "Incorreta. Quantidades 16 e 9 resultariam em 16*1,50 + 9*0,80 = 24 + 7,20 = R$ 31,20."
+    ],
+    "generalExplanation": "Seja C o número de canetas e B de borrachas: 1) C + B = 25; 2) 1,50C + 0,80B = 30,50. Multiplicando a 2ª por 10: 15C + 8B = 305. Substituindo B = 25 - C: 15C + 8(25 - C) = 305 => 7C + 200 = 305 => 7C = 105 => C = 15 canetas. Logo, B = 25 - 15 = 10 borrachas. A diferença é 15 - 10 = 5.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "nivelSuperior": true
   }
 ];

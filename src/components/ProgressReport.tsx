@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ResponsiveContainer, BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import { Download, Printer, TrendingUp, BarChart2, History, Award, AlertCircle, Trash2, ExternalLink, AlertTriangle, X } from "lucide-react";
 import { Question, UserHistory } from "../types";
+import { DISCIPLINES_LIST, getDisciplineForTopic } from "../data/disciplinesData";
 
 interface ProgressReportProps {
   history: UserHistory[];
@@ -18,7 +19,27 @@ export default function ProgressReport({ history, questions, onResetData, onAler
   const totalIncorrect = totalAnswered - totalCorrect;
   const accuracyRate = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
-  // 2. Performance by Subject / Topic (Assunto)
+  // 2. Performance by Discipline (Edital IBGE)
+  const disciplineMetrics: { [key: string]: { correct: number; total: number } } = {};
+  DISCIPLINES_LIST.forEach((d) => {
+    disciplineMetrics[d] = { correct: 0, total: 0 };
+  });
+
+  history.forEach((hist) => {
+    const question = questions.find((q) => q.id === hist.questionId);
+    if (question) {
+      const disc = getDisciplineForTopic(question.assunto);
+      if (!disciplineMetrics[disc]) {
+        disciplineMetrics[disc] = { correct: 0, total: 0 };
+      }
+      disciplineMetrics[disc].total += 1;
+      if (hist.isCorrect) {
+        disciplineMetrics[disc].correct += 1;
+      }
+    }
+  });
+
+  // 3. Performance by Subject / Topic (Assunto)
   const subjectMetrics: { [key: string]: { correct: number; total: number } } = {};
   history.forEach((hist) => {
     const question = questions.find((q) => q.id === hist.questionId);
@@ -40,7 +61,7 @@ export default function ProgressReport({ history, questions, onResetData, onAler
     Total: subjectMetrics[subj].total,
   }));
 
-  // 3. Performance by Banca
+  // 4. Performance by Banca
   const bancaMetrics: { [key: string]: { correct: number; total: number } } = {};
   history.forEach((hist) => {
     const question = questions.find((q) => q.id === hist.questionId);
@@ -211,6 +232,46 @@ export default function ProgressReport({ history, questions, onResetData, onAler
         </div>
       ) : (
         <div id="printed-report-contents" className="space-y-6">
+          {/* Desempenho por Disciplina (Edital IBGE) */}
+          <div className="p-6 rounded-2xl bg-white border border-gray-100 dark:bg-gray-800 dark:border-gray-700 shadow-sm space-y-4">
+            <h3 className="text-sm font-bold text-gray-700 dark:text-gray-300 flex items-center gap-2">
+              <Award className="w-4 h-4 text-blue-500" /> Desempenho pelas 4 Disciplinas Oficiais do Edital
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {DISCIPLINES_LIST.map((discName) => {
+                const metric = disciplineMetrics[discName] || { correct: 0, total: 0 };
+                const pct = metric.total > 0 ? Math.round((metric.correct / metric.total) * 100) : 0;
+                return (
+                  <div
+                    key={discName}
+                    className="p-4 rounded-xl bg-slate-50 dark:bg-slate-750/50 border border-slate-200/80 dark:border-slate-700 space-y-2"
+                  >
+                    <div className="flex justify-between items-start">
+                      <span className="font-bold text-xs text-slate-800 dark:text-slate-200 leading-tight">
+                        {discName}
+                      </span>
+                      <span className="text-[10px] font-bold text-slate-400 font-mono">
+                        {metric.total} Qs
+                      </span>
+                    </div>
+                    <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full rounded-full transition-all ${
+                          pct >= 70 ? "bg-emerald-500" : pct >= 45 ? "bg-amber-500" : "bg-rose-500"
+                        }`}
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <div className="flex justify-between items-center text-[11px] font-semibold text-slate-600 dark:text-slate-300">
+                      <span>{metric.correct} acertos</span>
+                      <span className="font-mono font-bold">{pct}%</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
           {/* Charts Row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Subject accuracy chart */}

@@ -2174,5 +2174,1791 @@ export const questionsNewBatch: Question[] = [
     ano: 2026,
     assunto: "Noções de Administração: Tomada de Decisão - Aplicação Prática da Matriz GUT na Gestão Pública",
     nivelSuperior: false
+  },
+  // =========================================================================
+  // BLOCO: NOÇÕES DE ADMINISTRAÇÃO (Questões 256 a 270)
+  // =========================================================================
+  {
+    id: "adm_batch2_q256",
+    text: "A norma ISO 31000 estabelece um processo sistemático para a gestão de riscos. Assinale a alternativa que apresenta a sequência lógica correta de três etapas fundamentais desse processo.",
+    options: [
+      "A) Identificação de Riscos -> Análise de Riscos -> Avaliação de Riscos.",
+      "B) Tratamento de Riscos -> Identificação de Riscos -> Estabelecimento do Contexto.",
+      "C) Monitoramento -> Aceitação do Risco -> Identificação de Causas.",
+      "D) Análise de Riscos -> Estabelecimento do Contexto -> Mitigação.",
+      "E) Avaliação de Riscos -> Identificação de Riscos -> Análise de Impacto."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. Segue a ordem lógica do processo de avaliação de riscos (risk assessment): Identificação, Análise e Avaliação.",
+      "Incorreta. O estabelecimento do contexto é a etapa inicial, e o tratamento ocorre após a avaliação.",
+      "Incorreta. A aceitação é uma forma de tratamento, que ocorre após a avaliação, e não antes da identificação.",
+      "Incorreta. O contexto deve ser estabelecido antes da análise.",
+      "Incorreta. A identificação deve preceder a análise e a avaliação."
+    ],
+    generalExplanation: "A sequência lógica do framework ISO 31000 inicia com a identificação, seguida da análise (compreensão de causas/consequências) e avaliação (comparação do nível de risco com os critérios estabelecidos).",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Gestão de Riscos - Processo e Etapas da ISO 31000",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q257",
+    text: "Um gestor público decide contratar um seguro para a frota de veículos da instituição e, simultaneamente, institui um programa de treinamento de direção defensiva para os motoristas oficiais. De acordo com as estratégias de resposta aos riscos (TEAM), as ações do gestor caracterizam-se, respectivamente, como:",
+    options: [
+      "A) Mitigar e Evitar.",
+      "B) Transferir e Aceitar.",
+      "C) Transferir e Mitigar.",
+      "D) Evitar e Transferir.",
+      "E) Mitigar e Transferir."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. O seguro não é mitigação (redução direta de probabilidade ou impacto na causa), mas sim transferência do impacto financeiro para a seguradora.",
+      "Incorreta. O treinamento não é aceitação; aceitar seria tolerar o risco sem adotar ações corretivas.",
+      "Correta. Contratar seguro = Transferir o risco financeiro; Treinamento de direção defensiva = Mitigar (reduzir a probabilidade e gravidade de acidentes).",
+      "Incorreta. Evitar significaria descontinuar o uso de veículos oficiais.",
+      "Incorreta. A ordem das ações está invertida em relação ao texto do enunciado."
+    ],
+    generalExplanation: "A contratação de seguro transfere o impacto financeiro da perda para terceiros (Transferir), enquanto o treinamento de condutores reduz a probabilidade de ocorrência de sinistros (Mitigar/Reduzir).",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Gestão de Riscos - Estratégias de Resposta aos Riscos (Transferir e Mitigar)",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q258",
+    text: "No processo decisório, quando o administrador se depara com uma situação em que os próprios objetivos institucionais não estão claros ou o problema a ser resolvido é mal definido, diz-se que ele está operando sob um estado de:",
+    options: [
+      "A) Risco calculado.",
+      "B) Incerteza estatística.",
+      "C) Certeza limitada.",
+      "D) Ambiguidade.",
+      "E) Risco residual."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Na condição de risco, os objetivos e os resultados possíveis são conhecidos, com probabilidades mensuráveis.",
+      "Incorreta. Na incerteza, os objetivos e cenários são concebíveis, mas as probabilidades de ocorrência são desconhecidas.",
+      "Incorreta. A certeza pressupõe conhecimento pleno e determinístico dos objetivos e resultados.",
+      "Correta. A ambiguidade representa a condição mais complexa e confusa de decisão, caracterizada pela falta de clareza quanto aos próprios objetivos, problemas ou critérios de avaliação.",
+      "Incorreta. Risco residual é a porção de risco remanescente após a aplicação de controles, não um estado de informação do decisor."
+    ],
+    generalExplanation: "A ambiguidade é o nível máximo de indefinição no processo decisório, ocorrendo quando os objetivos organizacionais são difusos, o problema é mal compreendido e inexistem alternativas claras.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Processo Decisório - Condições de Decisão e Ambiguidade",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q259",
+    text: "A etapa de 'Diagnóstico da Situação' no processo decisório é frequentemente confundida com a 'Identificação do Problema'. No entanto, tecnicamente, o diagnóstico caracteriza-se por:",
+    options: [
+      "A) Perceber que existe uma discrepância entre o estado atual e o desejado.",
+      "B) Escolher a alternativa que apresenta o melhor custo-benefício.",
+      "C) Analisar as causas e as variáveis que envolvem o problema, coletando dados.",
+      "D) Verificar, por meio do feedback, se a decisão foi eficaz.",
+      "E) Comunicar a decisão aos subordinados para o início da implementação."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Perceber a discrepância entre o estado real e o ideal define a etapa de Identificação/Percepção do Problema.",
+      "Incorreta. A escolha com melhor custo-benefício refere-se à etapa de Tomada de Decisão / Seleção da Alternativa.",
+      "Correta. O diagnóstico é a fase analítica profunda que investiga as causas subjacentes, variáveis intervenientes e sintomas, fundamentando-se na coleta e no processamento de dados.",
+      "Incorreta. O feedback e a verificação de eficácia definem a etapa de Monitoramento e Avaliação dos Resultados.",
+      "Incorreta. Comunicar e colocar o plano em ação pertencem à etapa de Implementação da Decisão."
+    ],
+    generalExplanation: "Enquanto a identificação apenas constata que um problema existe, o diagnóstico aprofunda a análise para descobrir as causas-raiz e as variáveis que o provocam antes de gerar alternativas.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Processo Decisório - Etapas do Processo e Diagnóstico da Situação",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q260",
+    text: "Sobre a aplicação das decisões programadas e não programadas nos diferentes níveis da administração, analise a seguinte afirmação: 'Decisões programadas são exclusivas do nível operacional, enquanto decisões não programadas são exclusivas do nível estratégico'. Esta afirmação está:",
+    options: [
+      "A) Correta, pois a base da pirâmide não possui autonomia para decidir sobre o novo.",
+      "B) Correta, pois o nível estratégico não se envolve com rotinas administrativas.",
+      "C) Incorreta, pois o nível operacional também toma decisões não programadas em situações de crise local.",
+      "D) Incorreta, pois o que define a decisão é sua natureza; um gestor de alto nível pode tomar decisões programadas se houver norma clara.",
+      "E) Incorreta, pois na Administração Pública todas as decisões são programadas devido ao princípio da legalidade."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. A afirmação é falsa porque não há exclusividade rígida de tipo de decisão por nível hierárquico.",
+      "Incorreta. O nível estratégico também pode executar procedimentos programados para certas exigências legais ou regimentais padronizadas.",
+      "Incorreta. Embora crises locais ocorram, a razão teórica principal da falsidade é que a classificação programada/não programada decorre da natureza do problema e da padronização, não do cargo.",
+      "Correta. O critério definidor é a natureza da situação (rotineira/padronizada versus inédita/complexa). Gestores de topo tomam decisões programadas quando seguem ritos e normas pré-fixados.",
+      "Incorreta. O princípio da legalidade baliza a atuação, mas não elimina a necessidade de decisões não programadas diante de situações inéditas e dinâmicas."
+    ],
+    generalExplanation: "A classificação entre decisões programadas (estruturadas, repetitivas, baseadas em regras) e não programadas (não estruturadas, inéditas, complexas) refere-se à natureza do problema, e não a uma exclusividade hierárquica.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Processo Decisório - Decisões Programadas e Não Programadas",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q261",
+    text: "No contexto da tomada de decisão, a busca por uma 'solução satisfatória' em detrimento de uma 'solução otimizada' é uma consequência direta de qual fenômeno?",
+    options: [
+      "A) Da abundância de recursos e tempo no setor público.",
+      "B) Da Racionalidade Limitada do tomador de decisão.",
+      "C) Do excesso de alternativas geradas na terceira etapa do processo.",
+      "D) Da aplicação rigorosa do modelo do 'Homem Econômico'.",
+      "E) Da ausência de monitoramento e feedback no processo decisório."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. É a escassez de tempo, informação e recursos que impõe limites à otimização.",
+      "Correta. Segundo Herbert Simon, a Racionalidade Limitada decorre de restrições cognitivas e de processamento do ser humano, levando o decisor a buscar uma alternativa 'satisfatória' (que atenda aos requisitos mínimos) em vez da solução perfeita ou 'ótima'.",
+      "Incorreta. O número de alternativas é restringido pela capacidade de busca, mas o princípio da satisfação decorre da própria limitação cognitiva.",
+      "Incorreta. O modelo do 'Homem Econômico' clássico pressupõe onisciência e otimização absoluta.",
+      "Incorreta. A escolha pela satisfação ocorre durante a fase de avaliação e escolha, não pela ausência de feedback posterior."
+    ],
+    generalExplanation: "Conforme a teoria de Herbert Simon, a Racionalidade Limitada impede que o decisor processe todas as variáveis e alternativas possíveis (otimização), conduzindo-o à escolha da primeira alternativa que atinja o padrão satisfatório.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Processo Decisório - Teoria da Racionalidade Limitada e Solução Satisfatória",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q262",
+    text: "Em ambientes caracterizados como 'Anarquias Organizadas', onde os objetivos são ambíguos e a tecnologia é pouco compreendida, o processo decisório costuma seguir o Modelo da Lata de Lixo (Garbage Can). Segundo esse modelo, a decisão ocorre quando:",
+    options: [
+      "A) O decisor mais experiente impõe sua vontade sobre os demais participantes.",
+      "B) Uma análise de custo-benefício demonstra cabalmente a superioridade de uma alternativa.",
+      "C) Há um alinhamento temporário entre problemas, soluções, participantes e oportunidades de escolha.",
+      "D) O processo de negociação entre as coalizões atinge um ponto de equilíbrio estável.",
+      "E) A organização decide não decidir, aguardando que o ambiente se estabilize naturalmente."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Descreve um modelo autoritário ou autocrático.",
+      "Incorreta. A análise de custo-benefício é o instrumento típico do modelo racional clássico.",
+      "Correta. No Modelo da Lata de Lixo (Cohen, March e Olsen), a decisão é o resultado fortuito da convergência temporal de quatro fluxos independentes: problemas, soluções, participantes e oportunidades de escolha.",
+      "Incorreta. O jogo de coalizões e barganhas políticas é característico do Modelo Político.",
+      "Incorreta. O modelo explica como as decisões são efetivamente geradas em meio à ambiguidade, e não a mera omissão passiva."
+    ],
+    generalExplanation: "O Modelo da Lata de Lixo explica processos decisórios em contextos de alta ambiguidade ('anarquias organizadas'), onde problemas, soluções, participantes e ocasiões de escolha se encontram de forma dinâmica e circunstancial.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Modelos Decisórios - Modelo da Lata de Lixo (Garbage Can Model)",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q263",
+    text: "Sobre o Modelo de Racionalidade Limitada, uma banca examinadora afirma que 'o gestor, ao deparar-se com a impossibilidade de analisar todas as variáveis, age de forma irracional'. Com base na teoria de Herbert Simon, essa afirmação está:",
+    options: [
+      "A) Correta, pois a falta de informações completas impede qualquer forma de racionalidade.",
+      "B) Correta, uma vez que a intuição substitui completamente a lógica no modelo comportamental.",
+      "C) Incorreta, pois o modelo defende que o gestor é racional, mas sua racionalidade é restrita por limites cognitivos e ambientais.",
+      "D) Incorreta, pois o modelo de racionalidade limitada é, na verdade, sinônimo de modelo racional clássico.",
+      "E) Incorreta, pois a irracionalidade só é admitida no Modelo Político de tomada de decisão."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. A limitação informacional e de capacidade de cálculo não transforma a conduta em irracional.",
+      "Incorreta. A intuição e heurísticas complementam o raciocínio, mas o gestor ainda persegue objetivos lógicos e intencionais.",
+      "Correta. A Racionalidade Limitada postula que o tomador de decisão possui intenção racional, porém atua dentro dos limites da sua capacidade de processamento mental e das incertezas do ambiente.",
+      "Incorreta. O modelo clássico supõe racionalidade plena e ilimitada, diferindo substancialmente do modelo de Simon.",
+      "Incorreta. O Modelo Político também opera sob uma racionalidade própria orientada à conquista de poder e consenso entre coalizões."
+    ],
+    generalExplanation: "Herbert Simon enfatizou que o ser humano é 'intencionalmente racional', mas sua racionalidade é 'limitada' por imperfeições na informação, no tempo e na capacidade cognitiva. Portanto, não se trata de agir de modo irracional.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Teoria Comportamental - Racionalidade Limitada de Herbert Simon",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q264",
+    text: "Considere uma situação em que uma Secretaria de Estado precisa decidir sobre a alocação de recursos orçamentários. O Secretário decide manter a mesma estrutura do ano anterior, aplicando apenas um reajuste linear de 5% em todas as áreas para evitar conflitos com os diretores. Essa estratégia decisória é melhor explicada pela combinação de quais modelos?",
+    options: [
+      "A) Racional e Político.",
+      "B) Incremental e Político.",
+      "C) Lata de Lixo e Racionalidade Limitada.",
+      "D) Racional e Incremental.",
+      "E) Político e Lata de Lixo."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. O modelo racional exigiria estudo detalhado de custo-benefício e alocação por prioridades estratégicas.",
+      "Correta. A aplicação de ajustes marginais sucessivos (5% sobre a base anterior) caracteriza o Modelo Incremental (Lindblom), enquanto a motivação explícita de 'evitar conflitos com diretores' e preservar equilíbrios de poder reflete o Modelo Político.",
+      "Incorreta. A situação não envolve encontros acidentais de fluxos desconectados (Lata de Lixo).",
+      "Incorreta. O modelo racional é incompatível com o mero reajuste linear sem análise de eficiência.",
+      "Incorreta. Não se observam os pressupostos de anarquia organizada da Lata de Lixo."
+    ],
+    generalExplanation: "O incrementalismo (ajustes marginais graduais a partir de uma base consolidada) combina-se com o modelo político (busca de acomodação de interesses e prevenção de disputas entre grupos de poder na organização).",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Modelos Decisórios - Combinação dos Modelos Incremental e Político",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q265",
+    text: "Determinada autarquia federal está revisando sua gestão de estoques de materiais de consumo. O Diretor Administrativo solicitou a aplicação do Diagrama de Pareto para classificar os itens. Ao final da análise, constatou-se que 20% dos itens estocados correspondiam a 80% do valor financeiro total do inventário. Com base nessa informação e na relação entre Pareto e a Curva ABC, é correto afirmar que esses 20% de itens:",
+    options: [
+      "A) Devem ser classificados como itens de Classe C, pois são a minoria em quantidade.",
+      "B) Representam os 'muitos triviais' e devem ter um controle de estoque simplificado.",
+      "C) Compõem a Classe A, exigindo controle rigoroso, inventários frequentes e baixas margens de segurança.",
+      "D) São itens de Classe B, apresentando importância intermediária para a gestão financeira.",
+      "E) Devem ser descartados ou alienados, pois oneram excessivamente o orçamento da autarquia."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Itens de Classe C são a grande maioria em volume físico (aprox. 50%), mas de ínfimo valor monetário (aprox. 5%).",
+      "Incorreta. Os 'muitos triviais' correspondem aos itens de baixo valor agregado (Classe C). Os 20% com 80% do valor são os 'poucos vitais'.",
+      "Correta. Na Curva ABC associada a Pareto, os itens de Classe A são a minoria quantitativa (cerca de 20%) que concentra a maior parte do investimento financeiro (cerca de 80%), demandando o controle mais rigoroso e prioritário.",
+      "Incorreta. A Classe B reúne itens intermediários em quantidade (cerca de 30%) e valor (cerca de 15%).",
+      "Incorreta. Itens de alto valor financeiro exigem controle apurado e gestão criteriosa, e não descarte arbitrário."
+    ],
+    generalExplanation: "A Curva ABC aplica o Princípio de Pareto (80/20) na gestão de estoques. Os itens da Classe A são os 'poucos vitais' (~20% dos itens que concentram ~80% do valor), exigindo controle rígido e monitoramento constante.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Tomada de Decisão e Gestão de Materiais - Curva ABC e Diagrama de Pareto",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q266",
+    text: "Durante a análise SWOT de uma universidade pública, a equipe de planejamento identificou os seguintes fatores:\n1. Redução do orçamento federal para o próximo ano.\n2. Corpo docente altamente qualificado e com doutorado.\n3. Instalações físicas com necessidade de reformas urgentes.\n4. Aumento da demanda por cursos de especialização a distância no mercado.\nAssinale a alternativa que classifica corretamente esses fatores, respectivamente:",
+    options: [
+      "A) Ameaça, Força, Fraqueza e Oportunidade.",
+      "B) Fraqueza, Força, Ameaça e Oportunidade.",
+      "C) Ameaça, Oportunidade, Fraqueza e Força.",
+      "D) Fraqueza, Oportunidade, Ameaça e Força.",
+      "E) Ameaça, Força, Oportunidade e Fraqueza."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. 1. Redução de orçamento (fator externo e desfavorável = Ameaça); 2. Qualificação docente (fator interno e favorável = Força); 3. Instalações deterioradas (fator interno e desfavorável = Fraqueza); 4. Demanda de mercado em alta (fator externo e favorável = Oportunidade).",
+      "Incorreta. A redução orçamentária é decorrente de variável do ambiente externo (Ameaça), e o estado das instalações é interno (Fraqueza).",
+      "Incorreta. O corpo docente é um atributo interno da instituição (Força), e não uma Oportunidade externa.",
+      "Incorreta. Inverte os conceitos de ambiente interno e externo em múltiplos pontos.",
+      "Incorreta. A demanda de mercado é fator externo (Oportunidade), não uma Fraqueza interna."
+    ],
+    generalExplanation: "Na Matriz SWOT: Forças e Fraquezas pertencem ao ambiente interno (controlável); Oportunidades e Ameaças pertencem ao ambiente externo (não controlável). Logo: 1 = Ameaça, 2 = Força, 3 = Fraqueza, 4 = Oportunidade.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Planejamento Estratégico - Classificação de Fatores na Análise SWOT",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q267",
+    text: "O modelo COSO ERM (Enterprise Risk Management) é uma das principais referências para a governança e gestão de riscos. Segundo essa metodologia, os objetivos da organização são categorizados em quatro grupos. Assinale a alternativa que apresenta esses grupos corretamente.",
+    options: [
+      "A) Estratégicos, Operacionais, de Divulgação (Reporting) e de Conformidade (Compliance).",
+      "B) Financeiros, Administrativos, Jurídicos e Sociais.",
+      "C) Inerentes, Residuais, Mitigados e Transferidos.",
+      "D) Primários, Secundários, Terciários e Quaternários.",
+      "E) Planejamento, Organização, Direção e Controle."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. As quatro categorias oficiais de objetivos no framework COSO ERM são: Estratégicos (alinhados à missão), Operacionais (eficiência de recursos), de Divulgação/Reporting (confiabilidade dos relatórios) e de Conformidade/Compliance (cumprimento de leis e regulamentos).",
+      "Incorreta. São áreas organizacionais comuns, mas não as categorias formais de objetivos do COSO.",
+      "Incorreta. Trata-se de classificações e estados de risco, não categorias de objetivos organizacionais.",
+      "Incorreta. Classificação genérica inexistente no framework COSO.",
+      "Incorreta. Trata-se das funções clássicas do processo administrativo (PODC)."
+    ],
+    generalExplanation: "O framework COSO ERM estabelece quatro categorias fundamentais de objetivos organizacionais: Estratégicos (metas de alto nível), Operacionais (uso eficaz de recursos), de Divulgação (confiabilidade das informações) e de Conformidade (aderência a normas).",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Gestão de Riscos e Governança - Categorias de Objetivos do COSO ERM",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q268",
+    text: "Uma organização pública utiliza uma Matriz de Impacto x Probabilidade para priorizar suas respostas aos riscos. Ao analisar um risco identificado como de 'Baixa Probabilidade' e 'Alto Impacto', e considerando as boas práticas de gestão, a estratégia de tratamento mais adequada, em regra, seria:",
+    options: [
+      "A) Aceitar o risco, pois a baixa probabilidade não justifica investimentos.",
+      "B) Evitar o risco, interrompendo imediatamente a atividade relacionada.",
+      "C) Transferir o risco, por meio de seguros ou parcerias, devido ao alto impacto potencial.",
+      "D) Mitigar o risco, focando exclusivamente na redução da probabilidade.",
+      "E) Ignorar o risco, uma vez que ele se encontra na zona de baixa exposição."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. O impacto severo inviabiliza a aceitação passiva sem mecanismos compensatórios.",
+      "Incorreta. Evitar é medida drástica reservada principalmente a riscos de Alta Probabilidade e Alto Impacto.",
+      "Correta. Eventos com baixa probabilidade de ocorrência, mas com capacidade de gerar perdas catastróficas (alto impacto), são os candidatos prioritários para estratégias de Transferência (ex.: contratação de apólices de seguro ou terceirização contratual com cláusulas de garantia).",
+      "Incorreta. Como a probabilidade já é baixa, investir pesadamente apenas em prevenção tem relação custo-benefício desfavorável comparada à proteção financeira via transferência.",
+      "Incorreta. Nenhum risco de alto impacto pode ser negligenciado pela administração pública."
+    ],
+    generalExplanation: "Na Matriz de Tratamento de Riscos: Baixa Probabilidade + Alto Impacto orienta tipicamente para a Transferência/Compartilhamento (seguros, garantias), minimizando o choque financeiro caso o evento raro ocorra.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Gestão de Riscos - Matriz de Impacto x Probabilidade e Tratamento de Riscos",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q269",
+    text: "A Instrução Normativa Conjunta MP/CGU nº 01/2016 dispõe sobre controles internos, gestão de riscos e governança no âmbito do Poder Executivo Federal. Com base nessa norma e nos princípios da ISO 31000, assinale a afirmação correta sobre a finalidade da gestão de riscos.",
+    options: [
+      "A) O objetivo primordial da gestão de riscos é a eliminação total de incertezas e perigos no ambiente administrativo.",
+      "B) A gestão de riscos deve ser um processo isolado das demais atividades de planejamento para garantir a imparcialidade da análise.",
+      "C) A gestão de riscos visa manter a exposição aos riscos da organização em níveis aceitáveis, em conformidade com o seu apetite a riscos.",
+      "D) O processo de gestão de riscos é estático e deve ser revisado apenas em casos de mudanças na alta gestão da instituição.",
+      "E) A responsabilidade pela gestão de riscos é exclusiva da unidade de auditoria interna, eximindo os gestores operacionais."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. É impossível e economicamente inviável eliminar todas as incertezas de qualquer organização.",
+      "Incorreta. A gestão de riscos deve ser totalmente integrada ao planejamento estratégico e às operações cotidianas.",
+      "Correta. A finalidade da gestão de riscos é identificar, avaliar e tratar as incertezas para assegurar que o nível de risco residual permaneça dentro dos limites de tolerância (apetite a risco) fixados pela governança.",
+      "Incorreta. O processo é essencialmente dinâmico, contínuo e responsivo a alterações no ambiente interno e externo.",
+      "Incorreta. A gestão operacional é a primeira linha de defesa responsável direta pelo gerenciamento dos riscos cotidianos; a auditoria atua como terceira linha de avaliação independente."
+    ],
+    generalExplanation: "Conforme a IN Conjunta MP/CGU 01/2016 e as diretrizes da ISO 31000, a gestão de riscos tem como objetivo manter a exposição aos riscos em níveis aceitáveis, alinhados ao apetite a riscos da entidade, para dar razoável segurança no atingimento dos objetivos institucionais.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Gestão de Riscos e Controle Interno - Finalidade e Diretrizes da IN Conjunta MP/CGU 01/2016 e ISO 31000",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q270",
+    text: "No âmbito do comportamento organizacional, a distinção entre grupos e equipes de trabalho é fundamental para a gestão de pessoas. Sobre as características de um Grupo de Trabalho, assinale a alternativa correta:",
+    options: [
+      "A) A sinergia resultante do esforço coletivo é sempre positiva.",
+      "B) O desempenho é mensurado primordialmente pela soma das contribuições individuais.",
+      "C) As habilidades dos membros devem ser obrigatoriamente complementares.",
+      "D) A responsabilidade pelos resultados é compartilhada de forma mútua entre os integrantes.",
+      "E) A liderança é invariavelmente rotativa e distribuída entre todos os membros."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. Grupos de trabalho apresentam sinergia neutra (ou por vezes negativa); a sinergia positiva é apanágio das equipes.",
+      "Correta. No Grupo de Trabalho, os membros interagem principalmente para compartilhar informações e tomar decisões individuais; o desempenho final é a simples soma das entregas individuais (1 + 1 = 2).",
+      "Incorreta. Habilidades complementares caracterizam as equipes; grupos reúnem habilidades variadas e muitas vezes aleatórias.",
+      "Incorreta. No grupo a responsabilidade é estritamente individual. A responsabilidade mútua e compartilhada define as equipes.",
+      "Incorreta. Grupos contam habitualmente com liderança formal centralizada na chefia imediata."
+    ],
+    generalExplanation: "Em um Grupo de Trabalho, o objetivo é compartilhar informações, a sinergia é neutra, a responsabilidade é individual e o desempenho resulta da mera soma das contribuições individuais. Nas Equipes, há sinergia positiva, responsabilidade mútua e habilidades complementares.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Comportamento Organizacional - Diferenças entre Grupos e Equipes de Trabalho",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q271",
+    text: "Ao contrário dos grupos tradicionais, as Equipes de Trabalho buscam gerar um efeito multiplicador nos resultados da organização. Esse fenômeno, onde o resultado do esforço coletivo é superior à soma das contribuições individuais, é denominado:",
+    options: [
+      "A) Accountability individual.",
+      "B) Sinergia positiva.",
+      "C) Divisão técnica do trabalho.",
+      "D) Liderança autocrática.",
+      "E) Habilidade aleatória."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. Accountability refere-se à responsabilidade/prestação de contas, que na equipe é individual e mútua, mas não define o efeito multiplicador.",
+      "Correta. A sinergia positiva é o conceito técnico que descreve o ganho de desempenho obtido pelo trabalho em equipe (1+1 > 2).",
+      "Incorreta. A divisão técnica do trabalho é a especialização de tarefas, que por si só não garante ganho multiplicador coletivo.",
+      "Incorreta. A liderança autocrática é centralizada e típica de grupos tradicionais, não sendo indutora de sinergia.",
+      "Incorreta. Habilidades aleatórias são características de grupos; equipes requerem competências complementares."
+    ],
+    generalExplanation: "A sinergia positiva ocorre quando o esforço coordenado dos membros resulta em um nível de desempenho global maior do que a simples soma das contribuições individuais (1+1 > 2).",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Trabalho em Equipe - Conceito de Sinergia Positiva",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q272",
+    text: "No contexto da Administração Pública moderna, as relações interpessoais deixaram de ser vistas apenas como uma questão de convivência social para se tornarem ferramentas de gestão. Sobre o conceito fundamental de relações interpessoais no ambiente de trabalho, assinale a alternativa correta:",
+    options: [
+      "A) Trata-se de um processo unilateral de transmissão de ordens hierárquicas visando o cumprimento estrito de normas burocráticas.",
+      "B) Constitui o conjunto de interações e conexões entre pessoas, fundamentado na interdependência de tarefas para o alcance de objetivos comuns.",
+      "C) Refere-se exclusivamente à capacidade do servidor de evitar conflitos, mantendo uma postura passiva diante das decisões da chefia.",
+      "D) É um fenômeno isolado que depende apenas da personalidade individual, sem influência das normas do grupo ou da liderança.",
+      "E) Define-se como a habilidade de persuadir os colegas a adotarem uma visão única sobre os processos administrativos."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. Relações interpessoais são processos bidirecionais de interação e troca, não meros fluxos unilaterais de comandos.",
+      "Correta. Define com precisão o conceito: interações humanas dinâmicas alicerçadas na interdependência de tarefas e na busca de metas organizacionais compartilhadas.",
+      "Incorreta. A evitação passiva de conflitos não representa relações interpessoais eficazes, as quais demandam comunicação aberta e assertividade.",
+      "Incorreta. O comportamento interpessoal é fortemente condicionado pela cultura organizacional, liderança e normas grupais.",
+      "Incorreta. Relações interpessoais baseiam-se em cooperação e reciprocidade, e não na imposição de pensamento único."
+    ],
+    generalExplanation: "As relações interpessoais no trabalho englobam o conjunto de interações, comunicação e conexões humanas pautadas na interdependência de tarefas necessárias para o atingimento dos objetivos institucionais.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Relações Interpessoais no Trabalho - Conceito e Interdependência",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q273",
+    text: "De acordo com o modelo de Bruce Tuckman sobre o desenvolvimento de grupos, qual é a fase caracterizada por uma grande incerteza quanto ao propósito, à estrutura e à liderança do grupo, na qual os membros buscam determinar quais comportamentos são aceitáveis?",
+    options: [
+      "A) Tormenta",
+      "B) Normatização",
+      "C) Desempenho",
+      "D) Formação",
+      "E) Dissolução"
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. A Tormenta (Storming) é marcada por conflitos internos, disputas de poder e resistência aos limites impostos.",
+      "Incorreta. Na Normatização (Norming), a incerteza é superada e estabelecem-se coesão, regras e senso de identidade.",
+      "Incorreta. O Desempenho (Performing) é o ápice da maturidade e produtividade da equipe, com energia canalizada para a tarefa.",
+      "Correta. A Formação (Forming) é o estágio inicial, dominado por incertezas sobre o propósito, papéis e liderança, no qual os membros 'testam as águas'.",
+      "Incorreta. A Dissolução (Adjourning) ocorre no encerramento de grupos ou projetos temporários."
+    ],
+    generalExplanation: "No modelo de Tuckman, a fase de Formação (Forming) é o estágio inicial caracterizado por alta incerteza quanto aos propósitos, papéis e estrutura, onde os membros tateiam para descobrir comportamentos aceitáveis.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Dinâmica de Grupos - Estágio de Formação (Modelo de Tuckman)",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q274",
+    text: "No contexto da gestão de equipes e comportamento organizacional, o mnemônico 'F.T.N.D.' é frequentemente utilizado para recordar a sequência das quatro fases principais do desenvolvimento de grupos. Assinale a alternativa que apresenta a sequência correta.",
+    options: [
+      "A) Finalização, Trabalho, Normalização e Direção.",
+      "B) Formação, Tormenta, Normatização e Desempenho.",
+      "C) Fluxo, Transição, Nivelamento e Determinação.",
+      "D) Formação, Trabalho, Nivelamento e Desempenho.",
+      "E) Fomento, Tormenta, Normatização e Diluição."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. Termos não condizentes com a taxonomia clássica de Tuckman.",
+      "Correta. O ciclo de vida clássico formulado por Bruce Tuckman (1965) é: Forming (Formação), Storming (Tormenta), Norming (Normatização) e Performing (Desempenho).",
+      "Incorreta. Nomenclaturas estranhas à teoria de desenvolvimento grupal.",
+      "Incorreta. Contém termos incorretos nas fases intermediárias.",
+      "Incorreta. 'Fomento' e 'Diluição' não fazem parte da teoria de Tuckman."
+    ],
+    generalExplanation: "A sequência cronológica clássica de desenvolvimento de equipes proposta por Tuckman é: Formação (Forming) -> Tormenta/Conflito (Storming) -> Normatização (Norming) -> Desempenho (Performing).",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Dinâmica de Grupos - Ciclo de Vida e Fases de Tuckman (FTND)",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q275",
+    text: "No contexto da dinâmica de grupos e do comportamento organizacional, o conceito de 'papel' desempenha uma função fundamental para a compreensão da estrutura social das equipes. Assinale a alternativa que melhor define esse conceito.",
+    options: [
+      "A) É o conjunto de normas rígidas e imutáveis estabelecidas pelo regulamento interno da organização para cada cargo.",
+      "B) Refere-se ao conjunto de padrões comportamentais esperados de alguém que ocupa uma determinada posição em uma unidade social.",
+      "C) Trata-se da descrição técnica das tarefas contidas no manual de cargos e salários da instituição.",
+      "D) Representa a personalidade intrínseca do indivíduo, que permanece inalterada independentemente do grupo em que ele esteja inserido.",
+      "E) É a autoridade formal delegada pela alta cúpula administrativa para que um indivíduo exerça o poder de mando."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. Papéis não são normas jurídicas rígidas e imutáveis, mas sim padrões e expectativas dinâmicas de conduta.",
+      "Correta. Na teoria organizacional e sociológica, 'papel' é o conjunto de padrões comportamentais esperados de uma pessoa que ocupa determinada posição em um grupo ou contexto social.",
+      "Incorreta. A descrição formal de atribuições e tarefas define o 'cargo' (job description), que é mais restrito que o conceito psicossocial de papel.",
+      "Incorreta. O papel é relacional e situacional; um mesmo indivíduo desempenha papéis distintos em grupos diferentes.",
+      "Incorreta. Refere-se ao conceito de autoridade hierárquica formal, não ao conceito comportamental de papel."
+    ],
+    generalExplanation: "No comportamento organizacional, o 'papel' é o conjunto de padrões comportamentais e atitudes esperados de alguém que ocupa uma dada posição em uma unidade social ou equipe de trabalho.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Estrutura Grupal - Conceito de Papel no Comportamento Organizacional",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q276",
+    text: "Os papéis desempenhados pelos membros de um grupo podem ser classificados em diferentes categorias funcionais. Aqueles que estão focados diretamente na consecução dos objetivos, na resolução de problemas técnicos e na execução do trabalho são denominados:",
+    options: [
+      "A) Papéis de Manutenção.",
+      "B) Papéis Socioemocionais.",
+      "C) Papéis Individuais.",
+      "D) Papéis Voltados para a Tarefa.",
+      "E) Papéis Disfuncionais."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Papéis de manutenção dedicam-se ao suporte interpessoal, coesão e clima afetivo do grupo.",
+      "Incorreta. Socioemocional é sinônimo de papéis de manutenção/relacionamento.",
+      "Incorreta. Papéis individuais focam em interesses pessoais e egocêntricos, gerando atrito no grupo.",
+      "Correta. Os papéis voltados para a tarefa (task roles) concentram-se diretamente na realização do trabalho, definição de metas, coordenação técnica e alcance dos objetivos.",
+      "Incorreta. Papéis disfuncionais são comportamentos individuais que prejudicam a eficiência da equipe."
+    ],
+    generalExplanation: "Os papéis em grupos dividem-se principalmente em: Papéis de Tarefa (foco no cumprimento das metas, prazos e soluções técnicas) e Papéis de Manutenção/Socioemocionais (foco no clima e relações harmoniosas).",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Papéis em Equipe - Papéis Voltados para a Tarefa vs. Manutenção",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q277",
+    text: "No contexto da gestão de pessoas e do comportamento organizacional, o conceito de sinergia positiva é fundamental para diferenciar grupos de equipes. Assinale a alternativa que descreve corretamente esse fenômeno.",
+    options: [
+      "A) Ocorre quando o resultado do trabalho coletivo é exatamente igual à soma das contribuições individuais de cada membro.",
+      "B) Refere-se à situação em que os membros de um grupo trabalham de forma isolada para evitar conflitos interpessoais.",
+      "C) Representa o esforço coordenado onde o desempenho final é superior à soma das contribuições individuais dos membros.",
+      "D) É o processo de diluição da responsabilidade individual em prol de um objetivo comum e abstrato.",
+      "E) Trata-se da fase inicial de formação de um grupo, onde a incerteza sobre o propósito é predominante."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Quando o resultado é igual à soma das partes, a sinergia é neutra, situação comum em grupos de trabalho.",
+      "Incorreta. O isolamento individual inviabiliza a sinergia, que depende de interação, coordenação e complementaridade.",
+      "Correta. A sinergia positiva é a propriedade pela qual o esforço coordenado gera um resultado global significativamente superior à soma algébrica dos esforços individuais.",
+      "Incorreta. A diluição e perda de produtividade individual é a 'folga social' (social loafing), que gera sinergia negativa.",
+      "Incorreta. Refere-se à fase de Formação de Tuckman, não ao fenômeno da sinergia."
+    ],
+    generalExplanation: "A sinergia positiva constitui o marco distintivo das equipes de trabalho: a coordenação e a integração de competências complementares produzem um resultado maior do que a soma das contribuições individuais isoladas.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Trabalho em Equipe - Definição de Sinergia Positiva",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q278",
+    text: "As bancas examinadoras frequentemente distinguem 'Grupos de Trabalho' de 'Equipes de Trabalho'. Com base na literatura administrativa, uma característica exclusiva das Equipes de Trabalho é:",
+    options: [
+      "A) A responsabilidade estritamente individual pelos resultados apresentados.",
+      "B) A existência de habilidades aleatórias e variadas entre os componentes.",
+      "C) O objetivo focado primordialmente na partilha de informações entre os membros.",
+      "D) A presença de responsabilidade mútua e habilidades complementares.",
+      "E) A manutenção de uma sinergia neutra ou, por vezes, negativa."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. A responsabilidade exclusivamente individual é típica de grupos de trabalho.",
+      "Incorreta. Habilidades aleatórias ocorrem em grupos; equipes exigem competências desenhadas de modo complementar.",
+      "Incorreta. A mera partilha de informações é o escopo dos grupos de trabalho; equipes visam o desempenho coletivo conjunto.",
+      "Correta. A responsabilidade compartilhada/mútua e as competências complementares são traços essenciais e exclusivos das equipes de trabalho.",
+      "Incorreta. Equipes produzem sinergia positiva; sinergia neutra ou negativa é observada em grupos."
+    ],
+    generalExplanation: "Enquanto grupos caracterizam-se por liderança forte centralizada, responsabilidade estritamente individual e habilidades aleatórias, as equipes apoiam-se em responsabilidade mútua, habilidades complementares e sinergia positiva.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Diferença entre Grupos e Equipes - Responsabilidade Mútua e Complementaridade",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q279",
+    text: "Considere uma situação em que o IBGE designa um conjunto de servidores de diferentes áreas — estatística, tecnologia da informação e comunicação social — para planejar a divulgação dos dados do Censo. Com base nas tipologias de equipes, esse arranjo é classificado como:",
+    options: [
+      "A) Equipe de Solução de Problemas.",
+      "B) Equipe Autogerenciada.",
+      "C) Equipe Transfuncional.",
+      "D) Pseudoequipe.",
+      "E) Grupo de Trabalho Vertical."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Equipes de solução de problemas geralmente atuam dentro do mesmo setor funcional para aprimorar rotinas específicas.",
+      "Incorreta. Equipes autogerenciadas executam tarefas e realizam a própria supervisão/gestão autônoma, sem foco obrigatório em diferentes especialidades departamentais.",
+      "Correta. Equipes transfuncionais (cross-functional) reúnem colaboradores de mesmo nível hierárquico, porém de diferentes áreas funcionais e especialidades (estatística, TI, comunicação), para cumprir um projeto ou meta complexa.",
+      "Incorreta. Pseudoequipe é um nível de baixo desempenho da curva de Katzenbach e Smith, não uma tipologia estrutural.",
+      "Incorreta. Classificação inexistente na tipologia padrão de equipes organizacionais."
+    ],
+    generalExplanation: "Uma Equipe Transfuncional reúne profissionais de diferentes áreas de especialização funcional (ex.: estatísticos, analistas de TI e comunicadores) para integrar perspectivas diversas na execução de projetos transversais como o Censo.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Tipologias de Equipes - Equipes Transfuncionais",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q280",
+    text: "A doutrina de Administração diferencia grupos e equipes através de variáveis estruturais. Assinale a alternativa que apresenta uma característica exclusiva das Equipes de Trabalho:",
+    options: [
+      "A) O objetivo principal é a partilha de informações para auxiliar o desempenho individual.",
+      "B) A responsabilidade pelos resultados recai unicamente sobre o líder formal.",
+      "C) As reuniões são focadas na eficiência da delegação de tarefas individuais.",
+      "D) A sinergia é neutra, uma vez que o foco está na execução de tarefas isoladas.",
+      "E) O produto do trabalho é coletivo, fruto da interação e colaboração entre os membros."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incorreta. A partilha de informações para sustentar o desempenho de cada indivíduo é o cerne dos grupos de trabalho.",
+      "Incorreta. Nas equipes, a responsabilidade é distribuída de forma mútua e compartilhada.",
+      "Incorreta. Reuniões de equipes visam deliberação aberta, solução conjunta de problemas e criação de consenso, não apenas delegação mecânica.",
+      "Incorreta. Sinergia neutra define grupos; equipes apresentam sinergia positiva.",
+      "Correta. Em uma equipe de trabalho, as entregas geram um produto de trabalho coletivo que reflete o esforço integrado dos membros, e não uma mera colcha de retalhos individual."
+    ],
+    generalExplanation: "Em grupos, o produto do trabalho é a somatória de entregas individuais. Nas equipes, o resultado é um verdadeiro produto de trabalho coletivo resultante da sinergia e cooperação mútua.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Diferença entre Grupos e Equipes - Produto de Trabalho Coletivo",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q281",
+    text: "Durante a avaliação de desempenho de um Agente Administrativo, o supervisor, ao notar que o servidor é extremamente pontual, passa a avaliá-lo como excelente em todas as outras competências técnicas, mesmo sem evidências concretas destas. De acordo com os estudos sobre percepção interpessoal, esse fenômeno é conhecido como:",
+    options: [
+      "A) Efeito Horn.",
+      "B) Projeção de Atitude.",
+      "C) Efeito Halo.",
+      "D) Janela de Johari.",
+      "E) Dissonância Cognitiva."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. O Efeito Horn é a distorção inversa: generalizar uma característica desfavorável para macular toda a avaliação do indivíduo.",
+      "Incorreta. Projeção é a tendência de atribuir aos outros sentimentos, desejos ou defeitos próprios.",
+      "Correta. O Efeito Halo é o viés de percepção em que a impressão positiva sobre um único traço (ex.: pontualidade) contamina e eleva a avaliação global de todas as demais características.",
+      "Incorreta. A Janela de Johari é uma ferramenta conceitual sobre comunicação e autoconhecimento interpessoal.",
+      "Incorreta. Dissonância cognitiva é o estado de desconforto gerado por crenças ou comportamentos internamente conflitantes."
+    ],
+    generalExplanation: "O Efeito Halo é uma distorção sistemática de percepção na qual uma característica positiva observada (como a pontualidade) induz o avaliador a classificar positivamente todas as outras dimensões do avaliado sem base fática.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Percepção Interpessoal - Distorções Perceptivas e Efeito Halo",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q282",
+    text: "A Janela de Johari é um modelo amplamente utilizado para compreender a comunicação e as relações interpessoais. Sobre o quadrante denominado 'Eu Cego', assinale a alternativa que descreve corretamente sua característica:",
+    options: [
+      "A) Representa o que é conhecido pelo próprio indivíduo, mas mantido em segredo em relação aos outros membros do grupo.",
+      "B) Refere-se à zona de transparência, onde as informações são conhecidas tanto pelo indivíduo quanto pelos outros.",
+      "C) Compreende os potenciais latentes e impulsos do inconsciente que ninguém, nem o próprio sujeito, conhece.",
+      "D) Diz respeito ao que os outros percebem no indivíduo, mas que o próprio indivíduo não consegue notar em si mesmo.",
+      "E) É a área que deve ser aumentada por meio do feedback para garantir a eficiência das relações de trabalho."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Conhecido por si e desconhecido pelos outros é o 'Eu Oculto' (Fachada/Privado).",
+      "Incorreta. Conhecido por si e pelos outros é o 'Eu Aberto' (Arena/Público).",
+      "Incorreta. Desconhecido por si e pelos outros é o 'Eu Desconhecido'.",
+      "Correta. O 'Eu Cego' reúne comportamentos, tiques e aspectos da comunicação que os outros percebem com clareza no indivíduo, mas dos quais ele próprio não tem consciência.",
+      "Incorreta. O feedback serve para REDUZIR o 'Eu Cego', expandindo o 'Eu Aberto' (zona pública)."
+    ],
+    generalExplanation: "Na Janela de Johari (Luft e Ingham), o 'Eu Cego' corresponde às atitudes e características percebidas pelos outros, mas desconhecidas pelo próprio indivíduo. A recepção de feedback permite diminuir esse quadrante.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Relações Interpessoais - Janela de Johari e o Quadrante 'Eu Cego'",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q283",
+    text: "O feedback é uma ferramenta essencial para o aprimoramento das relações no serviço público. Para que um feedback seja considerado eficaz e construtivo, ele deve possuir certas características. Com base nisso, assinale a alternativa que apresenta uma característica CORRETA do feedback eficaz:",
+    options: [
+      "A) Deve ser genérico, para evitar que o receptor se sinta pessoalmente atacado.",
+      "B) Deve focar em julgamentos de valor sobre a personalidade do servidor.",
+      "C) Deve ser descritivo, focando em fatos e comportamentos observáveis.",
+      "D) Deve ser acumulado para ser entregue apenas na avaliação de desempenho anual.",
+      "E) Deve ser imposto de forma unilateral, independentemente da aceitação do receptor."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. O feedback eficaz deve ser específico e direcionado a situações concretas.",
+      "Incorreta. Deve centrar-se em condutas e resultados, abstendo-se de rotulações e juízos morais sobre a personalidade.",
+      "Correta. Ser descritivo (relatar fatos, evidências e comportamentos observáveis sem emitir juízos condenatórios) é a principal diretriz para reduzir barreiras defensivas e promover mudanças.",
+      "Incorreta. O feedback deve ser oportuno e tempestivo, fornecido o mais próximo possível da ocorrência dos fatos.",
+      "Incorreta. Deve buscar receptividade mútua e diálogo cooperativo, não imposição punitiva."
+    ],
+    generalExplanation: "O feedback eficaz é descritivo (em vez de avaliativo/julgador), específico (em vez de genérico), tempestivo/oportuno e direcionado a comportamentos passíveis de modificação.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Comunicação e Relações Interpessoais - Características do Feedback Eficaz",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q284",
+    text: "Daniel Goleman sistematizou os pilares da Inteligência Emocional, competência crucial para o Agente Administrativo. O pilar que se refere à capacidade de reconhecer e compreender as emoções nos outros, permitindo uma melhor conexão interpessoal, é a:",
+    options: [
+      "A) Autoconfiança.",
+      "B) Automotivação.",
+      "C) Autogestão.",
+      "D) Empatia.",
+      "E) Autorregulação."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Autoconfiança é uma manifestação do autoconhecimento individual.",
+      "Incorreta. Automotivação é a capacidade de direcionar as próprias emoções em busca de objetivos e realizações.",
+      "Incorreta. Autogestão (ou autocontrole) diz respeito ao domínio e regulação das próprias reações e impulsos emocionais.",
+      "Correta. A empatia é a competência social que permite identificar, compreender e sintonizar-se com os sentimentos, necessidades e perspectivas alheias.",
+      "Incorreta. Autorregulação foca no controle interno sobre si mesmo."
+    ],
+    generalExplanation: "Segundo Daniel Goleman, a Empatia é a habilidade de compreender as emoções, preocupações e necessidades dos outros, sendo o pilar central da inteligência emocional aplicado à convivência social e ao trabalho em equipe.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Inteligência Emocional - Pilares de Daniel Goleman e Empatia",
+    nivelSuperior: false
+  },
+  {
+    id: "adm_batch2_q285",
+    text: "Durante o desenvolvimento de uma equipe de Agentes Censitários, observa-se que os membros começaram a demonstrar relacionamentos mais próximos e uma forte coesão. As expectativas mútuas foram assimiladas e há um sentimento de identidade grupal. Segundo o modelo de Tuckman, essa equipe encontra-se na fase de:",
+    options: [
+      "A) Formação",
+      "B) Tormenta",
+      "C) Normatização",
+      "D) Desempenho",
+      "E) Adiantamento"
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Na Formação o grupo é hesitante e formal, sem coesão consolidada.",
+      "Incorreta. A Tormenta caracteriza-se por conflitos, choque de egos e divergências sobre o controle do grupo.",
+      "Correta. A Normatização (Norming) manifesta-se quando a coesão é estabelecida, os laços se estreitam, as normas são internalizadas e consolida-se o sentimento de identidade e camaradagem ('nós').",
+      "Incorreta. O Desempenho foca na plena execução funcional e na entrega produtiva autônoma.",
+      "Incorreta. A Dissolução/Desintegração (Adjourning) encerra o ciclo de vida do grupo."
+    ],
+    generalExplanation: "Na fase de Normatização (Norming) do modelo de Tuckman, superam-se as disputas de poder da tormenta e consolida-se uma sólida coesão grupal, com normas claras e forte sentimento de identidade compartilhada.",
+    banca: "IBGE / Noções de Administração",
+    ano: 2026,
+    assunto: "Noções de Administração: Dinâmica de Grupos - Fase de Normatização no Modelo de Tuckman",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q106",
+    text: "No que tange à concordância do sujeito composto posposto ao verbo, analise a frase abaixo:\n\n'__________ o empenho e a dedicação dos servidores durante a crise.'\n\nAssinale a alternativa que preenche corretamente a lacuna, considerando as possibilidades previstas na norma culta:",
+    options: [
+      "A) Bastou apenas",
+      "B) Bastaram apenas",
+      "C) Basta apenas",
+      "D) Bastaram ou bastou",
+      "E) Bastariam apenas"
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. A concordância atrativa com o núcleo mais próximo ('empenho') seria 'Bastou', mas a alternativa restringe com 'apenas', ignorando a possibilidade legítima do plural.",
+      "Incorreta. A concordância gramatical seria 'Bastaram', mas a alternativa restringe com 'apenas', ignorando a possibilidade da concordância atrativa no singular.",
+      "Incorreta. O tempo verbal 'Basta' (presente) não se alinha ao contexto passado da oração, e a restrição 'apenas' ignora a duplicidade aceita pela norma.",
+      "Correta. Reflete com exatidão as duas possibilidades canônicas aceitas pela norma culta para sujeitos compostos pospostos: plural gramatical ('Bastaram') ou singular por atração ('Bastou').",
+      "Incorreta. O futuro do pretérito não é a forma canônica contextual, e a restrição 'apenas' exclui a flexibilidade da norma."
+    ],
+    generalExplanation: "Quando o sujeito composto está posposto (depois do verbo), a concordância pode ser gramatical (no plural, concordando com a soma dos núcleos: 'Bastaram') ou atrativa (concordando com o núcleo mais próximo: 'Bastou').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Verbal - Sujeito Composto Posposto",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q107",
+    text: "Assinale a alternativa que apresenta a concordância verbal correta, observando a hierarquia das pessoas gramaticais:",
+    options: [
+      "A) Eu, tu e ele fareis o relatório final da auditoria amanhã.",
+      "B) Tu e teu irmão fizestes um excelente trabalho na recepção.",
+      "C) Eu e os demais diretores assinou o termo de posse na segunda.",
+      "D) Nem eu nem você conseguiu resolver o impasse técnico.",
+      "E) Tu e ele saíram cedo da reunião ministerial ontem."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incorreta. Havendo 1ª pessoa ('Eu'), ela prevalece sobre a 2ª e a 3ª, exigindo flexão na 1ª do plural ('faremos').",
+      "Incorreta. Embora 'fizestes' (2ª do plural) seja tradicional, na frase 'Tu e teu irmão' a 3ª do plural 'fizeram' ou 'fizestes' competem, mas a alternativa E é o padrão canônico para a combinação de 2ª e 3ª pessoas na norma culta moderna.",
+      "Incorreta. A 1ª pessoa ('Eu') prevalece sobre 'os demais diretores', exigindo o verbo na 1ª pessoa do plural: 'assinamos'.",
+      "Incorreta. Havendo 1ª pessoa ('eu'), o verbo deve flexionar-se na 1ª pessoa do plural: 'Nem eu nem você conseguimos'.",
+      "Correta. Quando o sujeito é composto por 2ª pessoa ('Tu') e 3ª pessoa ('ele'), o verbo pode ser flexionado na 2ª pessoa do plural ('vós saístes') ou, amplamente consagrado na norma culta moderna, na 3ª pessoa do plural ('vocês saíram')."
+    ],
+    generalExplanation: "Na hierarquia gramatical das pessoas do discurso, a 1ª pessoa prevalece sobre a 2ª e a 3ª (resultando em 1ª do plural - 'nós'). Não havendo 1ª pessoa, a combinação de 2ª e 3ª pessoas admite concordância na 2ª do plural ('vós') ou na 3ª do plural ('vocês/eles'). Portanto, 'Tu e ele saíram...' está gramaticalmente correta.",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Verbal - Hierarquia das Pessoas Gramaticais",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q108",
+    text: "Quanto ao uso da conjunção 'ou' na concordância verbal, assinale a alternativa que apresenta erro:",
+    options: [
+      "A) Roma ou Viena será o destino das próximas férias da família.",
+      "B) O sedentarismo ou a má alimentação prejudicam a longevidade.",
+      "C) A biologia ou a química serão a matéria escolhida por ele.",
+      "D) O atual presidente ou o candidato da oposição vencerá o pleito.",
+      "E) A injustiça ou o descaso provocam a revolta popular."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Correta quanto à norma. A conjunção 'ou' expressa exclusão mútua (apenas uma cidade será o destino), exigindo verbo no singular ('será').",
+      "Correta quanto à norma. A conjunção 'ou' tem valor aditivo/inclusivo (ambos os fatores concorrem para o dano), exigindo verbo no plural ('prejudicam').",
+      "Incorreta quanto à norma (Gabarito da questão). Como haverá apenas uma matéria escolhida (ideia de exclusão recíproca expressa por 'a matéria escolhida'), o verbo deve ficar obrigatoriamente no singular: 'será a matéria escolhida'.",
+      "Correta quanto à norma. Há exclusão mútua (apenas um candidato vencerá a eleição), exigindo verbo no singular ('vencerá').",
+      "Correta quanto à norma. Não há exclusão (ambos os fatores somam-se na causa da revolta), justificando o verbo no plural ('provocam')."
+    ],
+    generalExplanation: "Quando os núcleos do sujeito são ligados por 'ou', o verbo fica no singular se houver ideia de exclusão mútua ou retificação. Se houver ideia de inclusão/adição, o verbo vai para o plural. Em 'A biologia ou a química serão a matéria escolhida', como apenas uma será a escolhida (exclusão), o verbo deveria ser 'será'.",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Verbal - Sujeito Ligado pela Conjunção 'Ou'",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q109",
+    text: "Considere a seguinte frase:\n\n'________ existir soluções viáveis para o problema, mas ________ meses que ninguém as apresenta'.\n\nAssinale a alternativa que preenche corretamente as lacunas.",
+    options: [
+      "A) Devem – faz",
+      "B) Deve – faz",
+      "C) Devem – fazem",
+      "D) Deve – fazem",
+      "E) Pode – fazem"
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. 'Devem' concorda com o sujeito plural 'soluções viáveis' (o verbo 'existir' é pessoal e transmite sua flexão ao auxiliar). Já o verbo 'fazer' indicando tempo decorrido é impessoal, devendo ficar no singular ('faz meses').",
+      "Incorreta. 'Deve' está no singular, mas o verbo 'existir' é pessoal e tem sujeito no plural ('soluções viáveis').",
+      "Incorreta. 'Fazem' está incorreto porque 'fazer' indicando tempo transcorrido é impessoal e não flexiona no plural.",
+      "Incorreta. Ambos os verbos apresentam erro de flexão em seus respectivos contextos.",
+      "Incorreta. 'Pode' não concorda com o sujeito plural e 'fazem' desrespeita a impessoalidade temporal."
+    ],
+    generalExplanation: "O verbo 'existir' é pessoal e possui sujeito ('soluções viáveis'), flexionando a locução verbal no plural ('Devem existir'). Por outro lado, o verbo 'fazer' quando indica tempo transcorrido é impessoal, ficando obrigatoriamente na 3ª pessoa do singular ('faz meses').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Verbal - Verbo Existir e Verbo Fazer Temporal",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q110",
+    text: "A substituição do verbo 'haver' pelo verbo 'existir' exige ajustes na concordância verbal. Assinale a opção em que essa substituição foi feita corretamente, mantendo-se o sentido original.",
+    options: [
+      "A) Havia muitos candidatos na sala. / Existia muitos candidatos na sala.",
+      "B) Pode haver falhas no sistema. / Pode existir falhas no sistema.",
+      "C) Houve mudanças no cronograma. / Existiram mudanças no cronograma.",
+      "D) Sempre haverá desafios. / Sempre haverão desafios.",
+      "E) Não deve haver dúvidas. / Não devem existir dúvida."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. O verbo 'existir' é pessoal e exige concordância com o sujeito: 'Existiam muitos candidatos'.",
+      "Incorreta. A locução com 'existir' deve flexionar-se no plural: 'Podem existir falhas'.",
+      "Correta. 'Houve' (haver impessoal, sem sujeito) foi corretamente substituído por 'Existiram' (existir pessoal, concordando com o sujeito 'mudanças').",
+      "Incorreta. O verbo 'haver' no sentido de existir não admite plural ('haverão' é incorreto).",
+      "Incorreta. Houve truncamento indevido no substantivo; o correto seria 'Não devem existir dúvidas'."
+    ],
+    generalExplanation: "Enquanto o verbo 'haver' (no sentido de existir/ocorrer) é impessoal e não possui sujeito (permanecendo no singular), o verbo 'existir' é pessoal e possui sujeito gramatical com o qual deve obrigatoriamente concordar em número e pessoa ('Existiram mudanças').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Verbal - Substituição de Haver por Existir",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q111",
+    text: "Analise o emprego dos verbos que indicam fenômenos da natureza e assinale a alternativa correta.",
+    options: [
+      "A) Trovoaram muitas reclamações durante a assembleia de condomínio.",
+      "B) Nevou intensamente pétalas de rosas sobre o cortejo nupcial.",
+      "C) Anoiteceram rapidamente naquelas latitudes durante o inverno.",
+      "D) Choveu elogios ao desempenho do jovem pianista após o concerto.",
+      "E) Faziam dias muito frios naquela região serrana do país."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. Empregado em sentido figurado (metafórico), o verbo 'trovoar' deixa de ser impessoal e passa a concordar regularmente com seu sujeito ('muitas reclamações').",
+      "Incorreta. Em sentido conotativo/figurado, o verbo 'nevar' possui sujeito ('pétalas de rosas') e deveria concordar no plural: 'Nevaram intensamente pétalas...'.",
+      "Incorreta. 'Anoitecer' em sentido denotativo é impessoal e deve ficar na 3ª pessoa do singular: 'Anoiteceu rapidamente'.",
+      "Incorreta. Em sentido figurado com sujeito no plural ('elogios'), o verbo deve flexionar no plural: 'Choveram elogios...'.",
+      "Incorreta. O verbo 'fazer' indicando clima/temperatura é impessoal e fica no singular: 'Fazia dias muito frios'."
+    ],
+    generalExplanation: "Verbos que exprimem fenômenos meteorológicos são impessoais em sentido literal (denotativo). Contudo, quando empregados em sentido figurado (conotativo), tornam-se pessoais e devem concordar normalmente com o sujeito da oração ('Trovoaram muitas reclamações').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Verbal - Verbos de Fenômenos da Natureza em Sentido Figurado",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q112",
+    text: "Analise as sentenças abaixo quanto à concordância nominal:\n\nI. Elas estavam meio preocupadas com o resultado do exame.\nII. Já era meio-dia e meia quando a reunião começou.\nIII. Foram servidas meias porções de arroz para os convidados.\n\nEstá(ão) correta(s):",
+    options: [
+      "A) Apenas I.",
+      "B) Apenas II.",
+      "C) Apenas I e II.",
+      "D) Apenas II e III.",
+      "E) I, II e III."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incompleta. As proposições II e III também estão plenamente corretas.",
+      "Incompleta. As proposições I e III também estão plenamente corretas.",
+      "Incompleta. A proposição III também está correta.",
+      "Incompleta. A proposição I também está correta.",
+      "Correta. Em I, 'meio' é advérbio de intensidade (= um pouco) e é invariável. Em II, 'meia' é numeral adjetivo concordando com 'hora' implícita (meio-dia e meia hora). Em III, 'meias' é adjetivo/numeral fracionário concordando com 'porções'."
+    ],
+    generalExplanation: "A palavra 'meio' varia quando atua como numeral/adjetivo (concordando com o substantivo: 'meia hora', 'meias porções') e permanece estritamente invariável quando atua como advérbio modificando adjetivo ('meio preocupadas'). Todas as três frases estão corretas.",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Nominal - Emprego da Palavra 'Meio'",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q113",
+    text: "No que se refere ao uso da palavra 'bastante', assinale a alternativa que apresenta erro de concordância:",
+    options: [
+      "A) Os alunos leram bastantes livros durante o semestre letivo.",
+      "B) Eles ficaram bastante satisfeitos com o desempenho da equipe.",
+      "C) Havia bastantes motivos para a anulação do certame.",
+      "D) As provas eram bastantes complexas para o nível fundamental.",
+      "E) Eles já possuem bastantes informações sobre o caso."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Correta quanto à norma. 'Bastantes' funciona como pronome/adjetivo indefinido (= muitos) e concorda com o substantivo 'livros'.",
+      "Correta quanto à norma. 'Bastante' funciona como advérbio de intensidade (= muito) modificando o adjetivo 'satisfeitos', sendo invariável.",
+      "Correta quanto à norma. 'Bastantes' acompanha o substantivo 'motivos' (= muitos motivos), flexionando-se no plural.",
+      "Incorreta quanto à norma (Gabarito da questão). 'Bastante' modifica o adjetivo 'complexas', atuando como advérbio de intensidade (= muito complexas). Advérbios não se flexionam, devendo ser: 'bastante complexas'.",
+      "Correta quanto à norma. 'Bastantes' qualifica o substantivo 'informações' (= muitas informações), flexionando-se regularmente."
+    ],
+    generalExplanation: "Quando 'bastante' equivale a 'muito' e modifica um adjetivo ou verbo, exerce função adverbial e é invariável ('bastante complexas'). Quando equivale a 'muitos/muitas' e acompanha um substantivo, é pronome/adjetivo e flexiona no plural ('bastantes livros').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Nominal - Emprego de 'Bastante' (Adjetivo vs. Advérbio)",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q114",
+    text: "Assinale a alternativa que preenche, correta e respectivamente, as lacunas abaixo:\n\n1. É __________ a entrada de estranhos neste recinto.\n2. Água é __________ para a saúde de todos.\n3. É __________ a cautela em momentos de crise.",
+    options: [
+      "A) proibido – bom – necessária",
+      "B) proibida – boa – necessário",
+      "C) proibido – boa – necessária",
+      "D) proibida – bom – necessária",
+      "E) proibido – bom – necessário"
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. 1: Em sentido geral/neutro sem concordância restritiva ou conforme a regra clássica de expressões neutras ('proibido'); 2: 'Água' sem artigo determinante exige a forma neutra masculina 'bom'; 3: 'a cautela', acompanhada do artigo determinante feminino 'a', exige a concordância no feminino 'necessária'.",
+      "Incorreta. 'Água' sem determinante exige o adjetivo invariável no masculino 'bom'.",
+      "Incorreta. 'Água' exige 'bom', pois não está determinada por artigo.",
+      "Incorreta. Na frase 2, 'boa' está incorreto devido à ausência de artigo em 'Água'.",
+      "Incorreta. Na frase 3, 'a cautela' tem determinante e exige 'necessária'."
+    ],
+    generalExplanation: "As expressões 'é bom', 'é proibido' e 'é necessário' permanecem no masculino neutro quando o substantivo não vem acompanhado de artigo ou pronome determinante ('Água é bom'). Havendo determinante feminino explícito ('a cautela'), a concordância torna-se obrigatória no feminino ('É necessária a cautela').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Concordância Nominal - Expressões 'É Proibido', 'É Bom' e 'É Necessário'",
+    nivelSuperior: false
+  },
+  {
+    id: "port_batch2_q115",
+    text: "No que tange à sintaxe dos verbos impessoais em locuções verbais, assinale a alternativa que apresenta a redação em conformidade com a norma culta:",
+    options: [
+      "A) Devem haver, segundo os especialistas, mudanças drásticas no clima.",
+      "B) Poderão haver novos recursos contra a decisão do magistrado.",
+      "C) Vai fazer cinco anos que a instituição não realiza novos concursos.",
+      "D) Costumam haver muitos interessados em palestras sobre motivação.",
+      "E) Hão de haver soluções mais simples para este problema jurídico."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. O verbo 'haver' com sentido de 'existir' é impessoal e transmite sua impessoalidade ao auxiliar: 'Deve haver mudanças...'.",
+      "Incorreta. O verbo auxiliar deve permanecer no singular: 'Poderá haver novos recursos...'.",
+      "Correta. Na locução verbal 'Vai fazer', o verbo principal 'fazer' indicando tempo decorrido é impessoal, transmitindo essa impessoalidade ao auxiliar 'vai', que fica obrigatoriamente no singular.",
+      "Incorreta. O correto é: 'Costuma haver muitos interessados...'.",
+      "Incorreta. O verbo auxiliar 'haver' também permanece no singular quando associado a 'haver' impessoal: 'Há de haver soluções...'."
+    ],
+    generalExplanation: "Nas locuções verbais em que o verbo principal é impessoal (como 'haver' no sentido de existir ou 'fazer' indicando tempo transcorrido), a impessoalidade contamina o verbo auxiliar, que deve permanecer na 3ª pessoa do singular ('Vai fazer cinco anos').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Sintaxe - Concordância Verbal em Locuções com Verbos Impessoais",
+    nivelSuperior: true
+  },
+  {
+    id: "port_batch2_q116",
+    text: "A análise sintática exige atenção a regras de proibição e exceções. Com base no conteúdo sobre termos essenciais, assinale a alternativa que apresenta um erro de análise ou de construção sintática:",
+    options: [
+      "A) Em 'Chegaram os livros e as revistas', o sujeito é composto e está posposto.",
+      "B) Na frase 'É tempo de os alunos estudarem', o termo 'os alunos' é o sujeito do verbo 'estudarem'.",
+      "C) Em 'Houve-se com discrição o advogado', o verbo 'haver' é pessoal e significa 'comportar-se'.",
+      "D) Na oração 'Precisa-se de voluntários', o termo 'voluntários' é o sujeito paciente.",
+      "E) Em 'Faz invernos rigorosos no sul', o verbo é impessoal por indicar fenômeno da natureza."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Correta na análise. Sujeito composto posposto ao verbo ('os livros e as revistas').",
+      "Correta na análise. Não se contrai preposição com artigo quando este antecede o sujeito de um verbo no infinitivo ('de os alunos estudarem').",
+      "Correta na análise. O verbo 'haver' pronominal no sentido de portar-se ou comportar-se é pessoal e possui sujeito expresso ('o advogado').",
+      "Incorreta na análise (Gabarito da questão). Na oração 'Precisa-se de voluntários', o verbo é Transitivo Indireto (VTI) e a partícula 'se' atua como Índice de Indeterminação do Sujeito (IIS). Logo, o sujeito é indeterminado e 'de voluntários' é Objeto Indireto, nunca sujeito paciente.",
+      "Correta na análise. O verbo 'fazer' indicando tempo climático/meteorológico é impessoal."
+    ],
+    generalExplanation: "Em 'Precisa-se de voluntários', o verbo 'precisar' rege a preposição 'de' (VTI). A partícula 'se' atua como Índice de Indeterminação do Sujeito (IIS), tornando o termo preposicionado 'de voluntários' objeto indireto e não sujeito paciente.",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Sintaxe - Termos Essenciais e Integrantes da Oração",
+    nivelSuperior: true
+  },
+  {
+    id: "port_batch2_q117",
+    text: "Assinale a alternativa em que a classificação do sujeito ou do predicado está INCORRETA, considerando as sutilezas da norma gramatical:",
+    options: [
+      "A) Em 'Bateram duas horas no relógio da matriz', o sujeito é 'duas horas'.",
+      "B) Na frase 'Consideraram a prova extremamente complexa', o predicado é verbo-nominal.",
+      "C) Em 'Alugam-se apartamentos mobiliados', o sujeito é simples e paciente.",
+      "D) Na oração 'Nevou intensamente durante a madrugada', o predicado é verbal e a oração é sem sujeito.",
+      "E) Em 'Tratam-se de questões fundamentais', o sujeito é 'questões fundamentais'."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Correta na análise. Verbos que indicam horas (bater, soar, dar) concordam com o numeral que exerce o papel de sujeito.",
+      "Correta na análise. O verbo 'consideraram' expressa ação e 'extremamente complexa' é predicativo do objeto, caracterizando predicado verbo-nominal.",
+      "Correta na análise. Com verbo transitivo direto e partícula apassivadora 'se', 'apartamentos mobiliados' é o sujeito simples na voz passiva sintética.",
+      "Correta na análise. Verbos de fenômenos meteorológicos em sentido denotativo formam oração sem sujeito e predicado verbal.",
+      "Incorreta na análise (Gabarito da questão). O verbo 'tratar-se' com a preposição 'de' é VTI, a partícula 'se' é IIS e o verbo deve ficar no singular ('Trata-se de'). 'Questões fundamentais' é objeto indireto e o sujeito é indeterminado."
+    ],
+    generalExplanation: "A oração 'Tratam-se de questões fundamentais' apresenta erro de concordância e de sintaxe: o correto é 'Trata-se de questões fundamentais', onde a partícula 'se' é IIS, o verbo é VTI no singular e 'de questões fundamentais' é objeto indireto.",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Sintaxe - Classificação do Sujeito e Predicado",
+    nivelSuperior: true
+  },
+  {
+    id: "port_batch2_q118",
+    text: "Analise as sentenças abaixo:\n\nI. 'A confiança no guia era total.'\nII. 'A confiança do guia era total.'\n\nSobre os termos sublinhados ('no guia' e 'do guia'), é correto afirmar que:",
+    options: [
+      "A) Ambos são complementos nominais, pois completam o substantivo abstrato 'confiança'.",
+      "B) Ambos são adjuntos adnominais, pois possuem natureza possessiva em relação ao nome.",
+      "C) Em I, temos um complemento nominal (valor paciente); em II, um adjunto adnominal (valor agente).",
+      "D) Em I, temos um adjunto adnominal (valor agente); em II, um complemento nominal (valor paciente).",
+      "E) A classificação de ambos depende do contexto oracional, podendo ser objetos indiretos."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Apenas o termo com valor passivo/paciente ligado a substantivo abstrato é complemento nominal.",
+      "Incorreta. Apenas o termo com valor ativo/posse é adjunto adnominal.",
+      "Correta. Em I, 'no guia' representa o paciente/alvo da confiança (o guia recebe a confiança = valor paciente = Complemento Nominal). Em II, 'do guia' indica o agente da confiança (o guia confia = valor agente = Adjunto Adnominal).",
+      "Incorreta. As classificações foram invertidas entre I e II.",
+      "Incorreta. Termos preposicionados subordinados a substantivos nunca desempenham função de objeto (complemento verbal)."
+    ],
+    generalExplanation: "Ligado a substantivo abstrato de ação/sentimento: se o termo preposicionado tiver sentido paciente (alvo da ação), é Complemento Nominal ('confiança no guia'); se tiver sentido agente (autor da ação/sentimento), é Adjunto Adnominal ('confiança do guia').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Sintaxe - Complemento Nominal vs. Adjunto Adnominal",
+    nivelSuperior: true
+  },
+  {
+    id: "port_batch2_q119",
+    text: "Assinale a alternativa que apresenta, respectivamente, um Objeto Direto Preposicionado e um Objeto Pleonástico.",
+    options: [
+      "A) Aos amigos, não os vejo faz tempo. / Bebeu do vinho com prazer.",
+      "B) Amou a Deus sobre todas as coisas. / Aos culpados, a lei os punirá.",
+      "C) Cumpriu com o dever. / O dinheiro, ele o gastou rapidamente.",
+      "D) Necessito de ajuda. / Aos mestres, devemos-lhes respeito.",
+      "E) Venceu ao inimigo com bravura. / Entregou-me o livro ontem."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. Apresenta primeiro um objeto direto pleonástico e depois um objeto direto partitivo/preposicionado (ordem inversa).",
+      "Correta. 'Amou a Deus': o verbo amar é VTD e recebe preposição 'a' por reverência (Objeto Direto Preposicionado). Em 'Aos culpados, a lei os punirá': o objeto direto antecipado 'aos culpados' é retomado enfaticamente pelo pronome oblíquo 'os' (Objeto Pleonástico).",
+      "Incorreta. A alternativa B é a formulação técnica canônica de ambas as figuras sintáticas.",
+      "Incorreta. 'Necessito de ajuda' é objeto indireto exigido pela regência do verbo.",
+      "Incorreta. 'Entregou-me o livro' possui apenas objeto direto e indireto normais, sem pleonasmo."
+    ],
+    generalExplanation: "O Objeto Direto Preposicionado ocorre quando um verbo transitivo direto recebe preposição facultativa por razões de reverência, clareza ou estilo ('Amou a Deus'). O Objeto Pleonástico ocorre quando o complemento é antecipado e reiterado por pronome oblíquo para efeito de realce ('Aos culpados, a lei os punirá').",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Sintaxe - Objeto Direto Preposicionado e Objeto Pleonástico",
+    nivelSuperior: true
+  },
+  {
+    id: "port_batch2_q120",
+    text: "No que tange aos termos acessórios e sua mobilidade, assinale a alternativa sintaticamente correta:",
+    options: [
+      "A) O vocativo, por ser um termo independente, pode ocupar qualquer posição na frase, desde que isolado por pontuação.",
+      "B) O adjunto adnominal pode ser separado do substantivo a que se refere por uma vírgula, caso o autor queira dar ênfase.",
+      "C) O aposto especificativo deve vir sempre entre vírgulas para não ser confundido com o adjunto adnominal.",
+      "D) O adjunto adverbial, quando em sua posição natural (ordem direta), deve ser obrigatoriamente isolado por vírgulas.",
+      "E) O aposto resumidor é sempre representado por um adjetivo que sintetiza a ideia anterior."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. O vocativo é um termo sintaticamente independente (não integra o sujeito nem o predicado), podendo posicionar-se no início, no meio ou no fim da oração, devendo ser obrigatoriamente isolado por vírgula(s) ou outro sinal de pontuação.",
+      "Incorreta. O adjunto adnominal liga-se diretamente ao núcleo do substantivo e nunca pode ser dele separado por vírgula.",
+      "Incorreta. O aposto especificativo (individualizador) liga-se ao nome sem vírgulas (ex.: 'o escritor Machado de Assis', 'o rio Amazonas').",
+      "Incorreta. Na ordem direta (no final da oração), o adjunto adverbial dispensa vírgulas, sendo estas desnecessárias ou proibidas dependendo da extensão.",
+      "Incorreta. O aposto resumidor ou recapitulativo é tradicionalmente representado por pronomes indefinidos (ex.: 'tudo', 'nada', 'ninguém'), e não por adjetivos."
+    ],
+    generalExplanation: "O vocativo é um termo extravagante/independente à estrutura oracional básica (usado para invocar ou chamar o interlocutor). Ele goza de total mobilidade na oração, sendo obrigatoriamente demarcado por pontuação (geralmente vírgulas).",
+    banca: "IBGE / Língua Portuguesa",
+    ano: 2026,
+    assunto: "Língua Portuguesa: Sintaxe - Termos Acessórios da Oração e Pontuação",
+    nivelSuperior: true
+  },
+  {
+    id: "rlm_batch2_q35",
+    text: "Considere a seguinte afirmação: 'Todo homem é bípede e mamífero'.\n\nA alternativa que apresenta uma negação lógica para essa afirmação é:",
+    options: [
+      "A) Nenhum homem é bípede e mamífero.",
+      "B) Nenhum homem é bípede ou mamífero.",
+      "C) Existe homem que não é bípede ou não é mamífero.",
+      "D) Existe homem que não é bípede e não é mamífero.",
+      "E) Alguns homens são bípedes e mamíferos."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. 'Nenhum' é a universal negativa, o que extrapola e é mais forte do que a negação lógica de uma proposição universal afirmativa.",
+      "Incorreta. Constrói uma universal negativa com disjunção, não correspondendo à negação lógica da sentença original.",
+      "Correta. A negação de 'Todo A é (B e C)' é 'Existe A que não é (B e C)', o que, pelas Leis de De Morgan, equivale a 'Existe homem que não é bípede ou não é mamífero'.",
+      "Incorreta. Exige que o homem não possua nenhuma das duas características simultaneamente (conjunção), tornando a negação indevidamente restritiva.",
+      "Incorreta. 'Alguns são...' é compatível com a afirmação original 'Todos são...', não constituindo sua negação lógica."
+    ],
+    generalExplanation: "A negação de 'Todo A é (B e C)' faz-se trocando o quantificador universal por existencial e negando a conjunção interna via De Morgan: ~(B ∧ C) ≡ ~B ∨ ~C. Logo: 'Existe homem que não é bípede ou não é mamífero'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação de Quantificador Universal com Conjunção e Leis de De Morgan",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q36",
+    text: "Considere a seguinte afirmação: 'Todo funcionário público é concursado'.\n\nA alternativa que apresenta uma negação lógica para essa afirmação é:",
+    options: [
+      "A) Nenhum funcionário público é concursado.",
+      "B) Nenhum concursado é funcionário público.",
+      "C) Não existe funcionário público que não é concursado.",
+      "D) Existe funcionário público que não é concursado.",
+      "E) Todo concursado é funcionário público."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. 'Nenhum...' é uma proposição contrária (universal negativa), não a contraditória (negação lógica estrita).",
+      "Incorreta. Inverte o sujeito e o predicado com quantificador universal negativo.",
+      "Incorreta. 'Não existe quem não é' equivale logicamente a dizer 'Todo é', ou seja, à própria proposição afirmativa original.",
+      "Correta. A negação de uma proposição universal afirmativa ('Todo A é B') é a proposição existencial/particular negativa ('Algum/Existe A que não é B').",
+      "Incorreta. Inverte os termos mantendo a universal afirmativa, sem negar a proposição."
+    ],
+    generalExplanation: "A regra de negação do quantificador universal afirmativo ('Todo A é B') consiste em aplicar o quantificador particular com negação do predicado: 'Existe/Algum/Pelo menos um A que não é B'. Portanto: 'Existe funcionário público que não é concursado'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação do Quantificador Universal (Todo -> Existe / Algum ... não)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q37",
+    text: "Em certa empresa são verdadeiras as afirmações:\n\n• Qualquer gerente é mulher.\n• Nenhuma mulher sabe trocar uma lâmpada.\n\nÉ correto concluir que, nessa empresa:",
+    options: [
+      "A) algum gerente é homem.",
+      "B) há gerente que sabe trocar uma lâmpada.",
+      "C) todo homem sabe trocar uma lâmpada.",
+      "D) todas as mulheres são gerentes.",
+      "E) nenhum gerente sabe trocar uma lâmpada."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incorreta. A premissa 'Qualquer gerente é mulher' garante que o conjunto dos gerentes está contido no conjunto das mulheres.",
+      "Incorreta. Como todo gerente é mulher e nenhuma mulher sabe trocar uma lâmpada, é impossível haver gerente com essa habilidade.",
+      "Incorreta. Não há informação ou premissa sobre as habilidades dos homens na empresa.",
+      "Incorreta. 'Qualquer gerente é mulher' indica que Gerentes ⊆ Mulheres, o que não autoriza concluir que Mulheres ⊆ Gerentes.",
+      "Correta. Se o conjunto dos Gerentes está totalmente contido no conjunto das Mulheres (G ⊆ M), e a interseção entre Mulheres e 'Pessoas que sabem trocar lâmpada' é vazia (M ∩ L = ∅), conclui-se com certeza lógica que nenhum gerente sabe trocar uma lâmpada (G ∩ L = ∅)."
+    ],
+    generalExplanation: "Por meio do silogismo clássico com diagramas de Venn: Gerentes ⊆ Mulheres. Mulheres ∩ Sabem Trocar Lâmpada = ∅. Portanto, Gerentes ∩ Sabem Trocar Lâmpada = ∅ ('Nenhum gerente sabe trocar uma lâmpada').",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Diagramas Lógicos e Silogismo Categórico",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q38",
+    text: "Considere que:\n\nI. Existem empresários professores;\nII. Todos os ricos são empresários;\nIII. Todos os matemáticos são somente professores;\nIV. Existem engenheiros que são professores.\n\nCom base nas premissas acima, é CORRETO afirmar com toda certeza que:",
+    options: [
+      "A) Nenhum matemático é rico ou engenheiro.",
+      "B) Existem matemáticos que são engenheiros ou empresários.",
+      "C) Existem engenheiros matemáticos ou ricos.",
+      "D) Existem engenheiros matemáticos e empresários.",
+      "E) Nenhum engenheiro é empresário e professor."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. Pela premissa III, todos os matemáticos são SOMENTE professores (não pertencem a nenhum outro grupo profissional). Logo, nenhum matemático pode ser empresário, rico (pois ricos são empresários pela premissa II) ou engenheiro. Portanto, nenhum matemático é rico ou engenheiro.",
+      "Incorreta. Contradiz frontalmente a premissa III ('matemáticos são somente professores').",
+      "Incorreta. As premissas não garantem a existência de engenheiros que sejam matemáticos ou ricos.",
+      "Incorreta. Não há premissa que assegure a interseção entre engenheiros, matemáticos e empresários.",
+      "Incorreta. A existência de engenheiros professores (premissa IV) e de empresários professores (premissa I) não impede que haja alguém que seja engenheiro, empresário e professor."
+    ],
+    generalExplanation: "Como os matemáticos são exclusivamente professores (premissa III), eles não podem exercer nenhuma outra profissão ou condição (como engenheiro ou empresário). Como todos os ricos são empresários (premissa II), os matemáticos também não podem ser ricos. Assim, é certo que nenhum matemático é rico ou engenheiro.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Diagramas Lógicos e Dedução de Silogismos Complexos",
+    nivelSuperior: true
+  },
+  {
+    id: "rlm_batch2_q39",
+    text: "Considere FALSA a afirmação (I) e VERDADEIRA a afirmação (II):\n\nI. Todos os alunos estudam.\nII. Alguns professores estudam.\n\nSendo assim, é correto concluir que:",
+    options: [
+      "A) os alunos que estudam são professores.",
+      "B) qualquer professor que estuda é aluno.",
+      "C) existe aluno que não estuda.",
+      "D) todos os professores estudam.",
+      "E) qualquer aluno estuda."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Não há elementos para relacionar alunos que estudam com a categoria dos professores.",
+      "Incorreta. A premissa II diz apenas que alguns professores estudam, sem estabelecer que sejam alunos.",
+      "Correta. Se a proposição universal afirmativa 'Todos os alunos estudam' é falsa, sua negação lógica contraditória é obrigatoriamente verdadeira: 'Existe pelo menos um aluno que não estuda'.",
+      "Incorreta. Da afirmação de que 'Alguns professores estudam', não se pode deduzir que todos estudem.",
+      "Incorreta. Dizer que 'qualquer aluno estuda' equivale à afirmação I, que foi explicitamente dada como falsa."
+    ],
+    generalExplanation: "Se a afirmação universal 'Todos os alunos estudam' é falsa, a sua negação lógica 'Existe (ao menos um) aluno que não estuda' é necessariamente verdadeira.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Valor Lógico e Negação de Quantificador Universal",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q40",
+    text: "Considere um diagrama composto por quatro conjuntos (A, B, C e D) no qual haja elementos em todas as seções e interseções possíveis.\n\nA partir dessas informações estruturais sobre a distribuição dos conjuntos, é correto deduzir que:",
+    options: [
+      "A) todos os elementos de A, que não são elementos de B, são elementos de C ou de D.",
+      "B) não há elemento de B que seja elemento de três conjuntos ao mesmo tempo.",
+      "C) todos os elementos de C, que não são elementos apenas de C, ou são também elementos de B ou são também elementos de D.",
+      "D) há elemento de B que seja elemento de outros três conjuntos além do B.",
+      "E) qualquer elemento de D, que não é elemento de B, é também elemento de C ou elemento de A."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incorreta. A região exclusiva de A (elementos apenas de A) não pertence nem a C nem a D.",
+      "Incorreta. Existindo elementos em todas as interseções, há elementos na interseção tripla envolvendo B.",
+      "Incorreta. Há elementos pertencentes à interseção entre A e C exclusivos que não interceptam B ou D na partição geral.",
+      "Incorreta. Não há um quinto conjunto além dos quatro (A, B, C, D) para haver outros três conjuntos além de B na partição.",
+      "Correta. Pela topologia do diagrama de Venn de 4 conjuntos simétrico padrão, os elementos de D fora de B encontram-se nas interseções com C e/ou A."
+    ],
+    generalExplanation: "Análise de diagramas de Euler-Venn com múltiplos conjuntos e regiões de interseção mútua entre subconjuntos não disjuntos.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Diagramas Lógicos e Teoria dos Conjuntos",
+    nivelSuperior: true
+  },
+  {
+    id: "rlm_batch2_q41",
+    text: "Considere as afirmações verdadeiras:\n\n• Todos os administradores são analistas.\n• Alguns programadores são administradores, mas não todos.\n\nA partir dessas afirmações é correto concluir que:",
+    options: [
+      "A) os programadores que são analistas também são administradores.",
+      "B) os administradores que não são programadores também não são analistas.",
+      "C) os programadores que são administradores também são analistas.",
+      "D) os administradores que são analistas também são programadores.",
+      "E) os programadores que não são analistas também são administradores."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Um programador pode ser analista sem pertencer ao subconjunto dos administradores.",
+      "Incorreta. Todo e qualquer administrador é analista, quer seja programador ou não.",
+      "Correta. Como todo administrador é necessariamente analista (Administradores ⊆ Analistas), qualquer indivíduo que pertença à interseção entre Programadores e Administradores será obrigatoriamente um analista.",
+      "Incorreta. Apenas alguns administradores são programadores, não necessariamente todos.",
+      "Incorreta. Se não for analista, o indivíduo jamais poderá ser administrador, pois todos os administradores estão contidos nos analistas."
+    ],
+    generalExplanation: "Sendo Administradores ⊆ Analistas, a interseção Programadores ∩ Administradores está integralmente contida no conjunto dos Analistas. Logo: 'os programadores que são administradores também são analistas'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Diagramas Lógicos e Interseção de Conjuntos",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q42",
+    text: "Considere verdadeiras as seguintes afirmações:\n\n• Todos os MAGNÂNIMOS são FELIZES.\n• Alguns BENFEITORES são MAGNÂNIMOS, mas não todos.\n• Há FELIZ que é BENFEITOR.\n\nA partir dessas afirmações, é logicamente correto afirmar que:",
+    options: [
+      "A) qualquer BENFEITOR é FELIZ.",
+      "B) os MAGNÂNIMOS que não são FELIZES, são BENFEITORES.",
+      "C) os BENFEITORES que são MAGNÂNIMOS, não são FELIZES.",
+      "D) todos os BENFEITORES que são MAGNÂNIMOS são FELIZES.",
+      "E) os FELIZES que não são MAGNÂNIMOS são BENFEITORES."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Apenas os benfeitores magnânimos são garantidamente felizes; sobre os demais benfeitores não há certeza.",
+      "Incorreta. A premissa 1 afirma que 'Todos os magnânimos são felizes', logo não existem magnânimos que não sejam felizes.",
+      "Incorreta. Contradiz diretamente a premissa de inclusão dos magnânimos no conjunto dos felizes.",
+      "Correta. Como todo magnânimo é feliz (Magnânimos ⊆ Felizes), qualquer elemento da interseção entre Benfeitores e Magnânimos estará necessariamente contido no conjunto dos Felizes.",
+      "Incorreta. Não há informação suficiente para garantir que felizes não magnânimos sejam necessariamente benfeitores."
+    ],
+    generalExplanation: "Se Magnânimos ⊆ Felizes, qualquer indivíduo que pertença simultaneamente a Benfeitores e Magnânimos pertencerá ao conjunto dos Felizes. Portanto: 'todos os benfeitores que são magnânimos são felizes'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Silogismos Categóricos e Inclusão de Subconjuntos",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q43",
+    text: "Considere verdadeiras as afirmações a seguir:\n\nI. Todos os funcionários são economistas.\nII. Há economista que também é administrador.\n\nA partir dessas afirmações, assinale a alternativa correta:",
+    options: [
+      "A) Os administradores que não são economistas são funcionários.",
+      "B) Qualquer economista é funcionário.",
+      "C) É possível que haja funcionário que não seja economista.",
+      "D) Os administradores que são economistas são funcionários.",
+      "E) Os funcionários que são administradores são economistas."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incorreta. Não economistas jamais podem ser funcionários, pois Funcionários ⊆ Economistas.",
+      "Incorreta. O conjunto dos economistas é mais amplo ou igual, não se podendo concluir que todo economista seja funcionário.",
+      "Incorreta. A premissa I garante categoricamente que todo funcionário é economista.",
+      "Incorreta. Um administrador economista pode estar fora do subconjunto dos funcionários.",
+      "Correta. Se todo funcionário é economista (Funcionários ⊆ Economistas), então qualquer subgrupo de funcionários — inclusive os que são administradores — é formado por economistas."
+    ],
+    generalExplanation: "Pela primeira premissa (Funcionários ⊆ Economistas), qualquer elemento classificado como funcionário é necessariamente um economista, inclusive no caso de exercer a função de administrador.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Diagramas de Venn e Dedução Silogística",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q44",
+    text: "Considere as afirmações:\n\nI. Todos que possuem a habilidade C, possuem também a habilidade A, mas nem todos os que possuem a habilidade C possuem também a habilidade B.\nII. Não existe quem possua a habilidade B que não possua a habilidade A.\n\nA partir dessas afirmações, é correto concluir que dentre as pessoas anteriormente descritas:",
+    options: [
+      "A) se alguém possui a habilidade A, então esse alguém também possui a habilidade B.",
+      "B) se alguém possui a habilidade C, então esse alguém também possui a habilidade B.",
+      "C) se alguém possui as habilidades A e B, então esse alguém também possui a habilidade C.",
+      "D) se alguém não possui a habilidade B, então esse alguém possui a habilidade C.",
+      "E) se alguém possui as habilidades B e C, então esse alguém também possui a habilidade A."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incorreta. Possuir A não implica possuir B (B ⊆ A, mas A pode conter elementos fora de B).",
+      "Incorreta. A premissa I afirma explicitamente que nem todo C possui B.",
+      "Incorreta. Ter A e B não implica ter C.",
+      "Incorreta. Não possuir B não gera nenhuma relação necessária de inclusão em C.",
+      "Correta. A premissa I afirma que todo C possui A (C ⊆ A) e a premissa II afirma que todo B possui A (B ⊆ A). Logo, qualquer indivíduo que possua as habilidades B e C possui, por definição, a habilidade A."
+    ],
+    generalExplanation: "Como C ⊆ A e B ⊆ A, tanto quem tem C quanto quem tem B tem A. Logo, qualquer pessoa com as habilidades B e C possui necessariamente a habilidade A.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Silogismo Categórico com Múltiplas Propriedades",
+    nivelSuperior: true
+  },
+  {
+    id: "rlm_batch2_q45",
+    text: "Considere as afirmações verdadeiras:\n\n• Todo candidato bem preparado faz uma boa prova.\n• Alguns candidatos que fazem boa prova são aprovados no concurso.\n\nA partir dessas afirmações, é correto concluir que:",
+    options: [
+      "A) alguns candidatos não bem preparados fazem uma boa prova.",
+      "B) qualquer candidato bem preparado é aprovado no concurso.",
+      "C) há candidato aprovado no concurso que fez uma boa prova.",
+      "D) alguns candidatos não bem preparados são aprovados no concurso.",
+      "E) alguns candidatos bem preparados não fazem uma boa prova."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. As premissas não fornecem garantias sobre os candidatos que não estão bem preparados.",
+      "Incorreta. Fazer uma boa prova não assegura aprovação necessária para todos os bem preparados.",
+      "Correta. Se 'Alguns candidatos que fazem boa prova são aprovados' (P ∩ A ≠ ∅), então pela comutatividade lógica da interseção, 'Há candidato aprovado que fez boa prova' (A ∩ P ≠ ∅).",
+      "Incorreta. Não há informação dedutível sobre a preparação dos aprovados.",
+      "Incorreta. Contradiz diretamente a primeira premissa de que todo candidato bem preparado faz uma boa prova."
+    ],
+    generalExplanation: "A proposição particular afirmativa 'Algum P é A' é logicamente equivalente a 'Algum A é P' (comutatividade do quantificador existencial). Portanto, 'há candidato aprovado no concurso que fez uma boa prova'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Quantificadores e Equivalência Existencial",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q46",
+    text: "Um economista afirmou, no telejornal, que 'se os impostos não sobem, então a receita fiscal não cresce'. Do ponto de vista da lógica, uma frase equivalente a essa é:",
+    options: [
+      "A) se a receita fiscal cresce, então os impostos sobem.",
+      "B) se os impostos sobem, então a receita fiscal cresce.",
+      "C) se a receita fiscal não cresce, então os impostos não sobem.",
+      "D) ou o imposto não sobe, ou a receita cresce.",
+      "E) o imposto sobe sempre que a receita fiscal aumenta."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. A equivalência contrapositiva da condicional (P -> Q ≡ ~Q -> ~P) exige inverter e negar os termos. Sendo P = 'os impostos não sobem' e Q = 'a receita fiscal não cresce', a contrapositiva é '~Q -> ~P', ou seja: 'se a receita fiscal cresce, então os impostos sobem'.",
+      "Incorreta. Nega ambas as proposições sem inverter a ordem (~P -> ~Q - inversa), o que não é equivalente.",
+      "Incorreta. Apenas inverte os termos sem negá-los (Q -> P - recíproca), o que não gera equivalência lógica.",
+      "Incorreta. Constrói uma disjunção exclusiva, que não equivale à condicional.",
+      "Incorreta. A alternativa A expressa a contrapositiva na estrutura canônica 'se... então'."
+    ],
+    generalExplanation: "A regra da contrapositiva estabelece que p -> q é logicamente equivalente a ~q -> ~p. Assim, a negação do consequente ('a receita fiscal cresce') implica a negação do antecedente ('os impostos sobem'): 'se a receita fiscal cresce, então os impostos sobem'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Equivalência Lógica da Condicional (Contrapositiva)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q47",
+    text: "Considere a sentença: 'Se cometi um crime, então serei condenado'.\n\nUma sentença logicamente equivalente à sentença dada é:",
+    options: [
+      "A) Não cometi um crime ou serei condenado.",
+      "B) Se não cometi um crime, então não serei condenado.",
+      "C) Se eu for condenado, então cometi um crime.",
+      "D) Cometi um crime e serei condenado.",
+      "E) Não cometi um crime e não serei condenado."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. Aplica a clássica equivalência da condicional em disjunção (Regra do NE-OU / 'Neymar'): p -> q ≡ ~p ∨ q. Nega o antecedente ('Não cometi um crime'), troca a condicional pela disjunção 'ou', e mantém o consequente ('serei condenado').",
+      "Incorreta. Nega o antecedente e o consequente sem equivalência (inversa).",
+      "Incorreta. Inverte a ordem sem negar (recíproca).",
+      "Incorreta. Conjunção afirmativa não equivale à condicional.",
+      "Incorreta. Conjunção com duas negações não equivale à condicional."
+    ],
+    generalExplanation: "Pela regra de transformação da condicional em disjunção inclusiva: (p -> q) ≡ (~p ∨ q). Logo: 'Não cometi um crime ou serei condenado'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Equivalência da Condicional em Disjunção Inclusiva (~p v q)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q48",
+    text: "Uma sentença logicamente equivalente à afirmação 'Se eu estudei, então tirei uma boa nota no concurso' está contida na alternativa:",
+    options: [
+      "A) Não estudei e não tirei uma boa nota no concurso.",
+      "B) Se eu não tirei uma boa nota no concurso, então não estudei.",
+      "C) Se eu não estudei, então não tirei uma boa nota no concurso.",
+      "D) Se eu tirei uma boa nota no concurso, então estudei.",
+      "E) Estudei e tirei uma boa nota no concurso."
+    ],
+    correctIndex: 1,
+    explanations: [
+      "Incorreta. Trata-se de uma conjunção, não equivalente à condicional.",
+      "Correta. Pela regra da contrapositiva (p -> q ≡ ~q -> ~p): nega-se o consequente ('Se eu não tirei uma boa nota no concurso') e conclui-se a negação do antecedente ('então não estudei').",
+      "Incorreta. Nega os dois termos mantendo a ordem (inversa).",
+      "Incorreta. Inverte os termos sem negar (recíproca).",
+      "Incorreta. Conjunção simples não equivale a uma implicação condicional."
+    ],
+    generalExplanation: "A contrapositiva da proposição condicional (p -> q) é (~q -> ~p). Logo: 'Se eu não tirei uma boa nota no concurso, então não estudei'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Equivalência Lógica da Condicional (Contrapositiva)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q49",
+    text: "Dizer que 'Pedro não é pedreiro ou Paulo é paulista' é, do ponto de vista lógico, o mesmo que dizer que:",
+    options: [
+      "A) se Pedro é pedreiro, então Paulo é paulista.",
+      "B) se Paulo é paulista, então Pedro é pedreiro.",
+      "C) se Pedro não é pedreiro, então Paulo é paulista.",
+      "D) se Pedro é pedreiro, então Paulo não é paulista.",
+      "E) se Pedro não é pedreiro, então Paulo não é paulista."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. A disjunção (~p ∨ q) equivale à condicional (p -> q). Como o primeiro termo é ~p ('Pedro não é pedreiro'), sua negação é p ('Pedro é pedreiro'). Mantendo o consequente q ('Paulo é paulista'), obtém-se: 'se Pedro é pedreiro, então Paulo é paulista'.",
+      "Incorreta. Inverte a ordem lógica antecedente/consequente.",
+      "Incorreta. Mantém a negação no antecedente sem aplicar a equivalência correta.",
+      "Incorreta. Nega indevidamente o consequente.",
+      "Incorreta. Mantém a negação no antecedente e nega o consequente."
+    ],
+    generalExplanation: "A equivalência da disjunção para a condicional é dada por (~p ∨ q) ≡ (p -> q). Sendo ~p = 'Pedro não é pedreiro', temos p = 'Pedro é pedreiro'. Sendo q = 'Paulo é paulista', a condicional equivalente é: 'Se Pedro é pedreiro, então Paulo é paulista'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Equivalência da Disjunção para a Condicional (~p v q ≡ p -> q)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q50",
+    text: "Considere a seguinte afirmação:\n'Se os livros foram catalogados, então eles já foram distribuídos nas estantes.'\n\nUma negação lógica para a afirmação apresentada é:",
+    options: [
+      "A) Os livros foram catalogados e não foram distribuídos nas estantes.",
+      "B) Os livros não foram catalogados e não foram distribuídos nas estantes.",
+      "C) Os livros foram catalogados ou foram distribuídos nas estantes.",
+      "D) Se os livros não foram catalogados, então eles não foram distribuídos nas estantes.",
+      "E) Se os livros não foram distribuídos nas estantes, então eles não foram catalogados."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. Pela regra da negação da condicional (regra do MANÉ: P -> Q ≡ P ∧ ~Q), mantém-se a primeira proposição antecedente ('Os livros foram catalogados') e nega-se a segunda com conjunção ('e não foram distribuídos nas estantes').",
+      "Incorreta. Nega o antecedente e o consequente simultaneamente.",
+      "Incorreta. Constrói uma disjunção inclusiva sem a negação apropriada.",
+      "Incorreta. Mantém a estrutura condicional negando ambas as partes (~P -> ~Q).",
+      "Incorreta. Trata-se da contrapositiva (~Q -> ~P), que é equivalente e não a negação."
+    ],
+    generalExplanation: "A negação lógica de P -> Q é P ∧ ~Q ('mantém a primeira E nega a segunda'). Portanto: 'Os livros foram catalogados e não foram distribuídos nas estantes'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação da Condicional (P -> Q ≡ P ∧ ~Q)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q51",
+    text: "Considere a seguinte proposição:\n\"Se Joelma é procuradora, então Joelma é competente.\"\n\nA negação lógica dessa proposição está corretamente indicada na seguinte alternativa:",
+    options: [
+      "A) Joelma é procuradora e Joelma não é competente.",
+      "B) Joelma não é procuradora e Joelma não é competente.",
+      "C) Se Joelma não é procuradora, então Joelma é competente.",
+      "D) Se Joelma não é procuradora, então Joelma não é competente."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. A negação de P -> Q é P ∧ ~Q: mantém o antecedente ('Joelma é procuradora') e nega o consequente ('Joelma não é competente') unidos por conjunção.",
+      "Incorreta. Nega o antecedente e o consequente com conjunção.",
+      "Incorreta. Permanece como condicional negando apenas o antecedente.",
+      "Incorreta. Permanece como condicional negando ambos os termos."
+    ],
+    generalExplanation: "A negação de uma proposição condicional (P -> Q) é P ∧ ~Q. Logo: 'Joelma é procuradora e Joelma não é competente'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação da Condicional Simples",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q52",
+    text: "Admitindo-se que as proposições \"Se Lucca é ortopedista, então Victória não é pediatra\" e \"Se Natália é cardiologista, então Victória é pediatra\" são verdadeiras, julgue o item seguinte.\n\nAs proposições \"Se Lucca é ortopedista, então Victória não é pediatra\" e \"Lucca não é ortopedista ou Victória não é pediatra\" são logicamente equivalentes.",
+    options: [
+      "A) Certo",
+      "B) Errado"
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta (Item Certo). Pela regra de equivalência da condicional em disjunção inclusiva (P -> Q ≡ ~P ∨ Q): sendo P = 'Lucca é ortopedista' e Q = 'Victória não é pediatra', a negação ~P é 'Lucca não é ortopedista' e o consequente mantido Q é 'Victória não é pediatra'. Portanto, '~P ∨ Q' resulta em 'Lucca não é ortopedista ou Victória não é pediatra'.",
+      "Incorreta (Item Errado). A equivalência apresentada no item aplica com perfeição a regra de transformação de condicional em disjunção."
+    ],
+    generalExplanation: "A regra de equivalência entre condicional e disjunção estabelece que (P -> Q) ≡ (~P ∨ Q). Substituindo P = 'Lucca é ortopedista' e Q = 'Victória não é pediatra', obtém-se exatamente 'Lucca não é ortopedista ou Victória não é pediatra'. O item está Certo.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Equivalência da Condicional em Disjunção (~P ∨ Q)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q53",
+    text: "Em uma escola, o diretor anunciou aos alunos que, se não forem aprovados em todas as disciplinas, terão que fazer um curso de reforço. A partir dessa regra podemos escrever a seguinte proposição lógica:\n\"Se um aluno não foi aprovado em todas as disciplinas, então ele fará um curso de reforço.\"\n\nCom base no conceito de equivalência lógica, qual das proposições abaixo representa corretamente a mesma ideia?",
+    options: [
+      "A) Se um aluno fará o curso de reforço, então ele não foi aprovado em todas as disciplinas.",
+      "B) Se um aluno foi aprovado em todas as disciplinas, então ele fará um curso de reforço.",
+      "C) Se um aluno não fará o curso de reforço, então ele foi aprovado em todas as disciplinas.",
+      "D) Se um aluno não foi aprovado em todas as disciplinas, então ele não pode participar do curso de reforço."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Apenas inverte os termos sem negá-los (recíproca), incorrendo na falácia da afirmação do consequente.",
+      "Incorreta. Nega o antecedente sem inverter a ordem dos termos.",
+      "Correta. Pela regra da contrapositiva (P -> Q ≡ ~Q -> ~P), inverte-se e nega-se ambas as proposições: a negação de Q ('ele fará reforço') é 'Se um aluno não fará o curso de reforço' e a negação de P ('não foi aprovado em todas') é 'então ele foi aprovado em todas as disciplinas'.",
+      "Incorreta. Mantém o antecedente e nega o consequente."
+    ],
+    generalExplanation: "A contrapositiva de uma proposição condicional (P -> Q) é dada por (~Q -> ~P). Sendo P = 'aluno não foi aprovado em todas' e Q = 'fará curso de reforço', a equivalente é: 'Se um aluno não fará o curso de reforço (~Q), então ele foi aprovado em todas as disciplinas (~P)'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Equivalência Lógica da Condicional (Contrapositiva)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q54",
+    text: "Considere verdadeira a seguinte declaração:\n\"Se eu acordo tarde, não faço desjejum.\"\n\nÉ correto concluir que:",
+    options: [
+      "A) se eu não acordo tarde, faço desjejum.",
+      "B) se eu não acordo tarde, também não faço desjejum.",
+      "C) se eu faço o desjejum, então acordei tarde.",
+      "D) se eu faço o desjejum, então não acordei tarde.",
+      "E) se eu não faço o desjejum, então acordei tarde."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Incorre na falácia da negação do antecedente (~P -> ~Q).",
+      "Incorreta. Nega apenas o antecedente mantendo o consequente (~P -> Q).",
+      "Incorreta. Inverte a ordem sem a correta negação do consequente.",
+      "Correta. Aplica a contrapositiva: (P -> Q) ≡ (~Q -> ~P). Sendo P = 'acordo tarde' e Q = 'não faço desjejum', ~Q é 'faço desjejum' e ~P é 'não acordei tarde'. Logo: 'se eu faço o desjejum, então não acordei tarde'.",
+      "Incorreta. Inverte os termos sem a negação adequada (afirmação do consequente)."
+    ],
+    generalExplanation: "A proposição é da forma P -> Q (onde P = 'acordo tarde' e Q = 'não faço desjejum'). Sua contrapositiva logicamente válida é ~Q -> ~P: 'Se eu faço desjejum, então não acordei tarde'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Dedução e Contrapositiva da Condicional",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q55",
+    text: "Se uma pessoa diz \"Vou à praia, se não chover\", uma forma de negar essa proposição é:",
+    options: [
+      "A) Se chover, não vou à praia.",
+      "B) Se chover, vou à praia.",
+      "C) Choveu e fui à praia.",
+      "D) Choveu e não fui à praia.",
+      "E) Não choveu e não fui à praia."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incorreta. Sentença condicional não é negação de condicional.",
+      "Incorreta. Estrutura condicional mantida.",
+      "Incorreta. Nega o antecedente e mantém o consequente.",
+      "Incorreta. Nega o antecedente e nega o consequente.",
+      "Correta. A proposição 'Vou à praia, se não chover' equivale à condicional 'Se não chove, então vou à praia' (~C -> P). A negação é dada por antecedente E não-consequente: ~C ∧ ~P ('Não choveu e não fui à praia')."
+    ],
+    generalExplanation: "A frase 'Vou à praia, se não chover' tem a estrutura condicional 'Se não chover (antecedente), então vou à praia (consequente)'. Para negar P -> Q, mantém-se o antecedente e nega-se o consequente: 'Não choveu E não fui à praia'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação de Condicional com Antecedente Negado",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q56",
+    text: "A negação lógica da proposição bicondicional \"p ↔ q\" é:",
+    options: [
+      "A) p → ¬q",
+      "B) p → q",
+      "C) p ↔ ¬q",
+      "D) p ↔ q",
+      "E) ¬p ∨ ¬q"
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. p → ¬q é uma condicional simples, não a negação da bicondicional.",
+      "Incorreta. p → q é uma condicional simples afirmativa.",
+      "Correta. A bicondicional (p ↔ q) é verdadeira quando p e q possuem o mesmo valor lógico (ambos V ou ambos F). Sua negação ocorre quando possuem valores lógicos opostos (disjunção exclusiva p ⊕ q), o que equivale a manter uma das variáveis e negar a outra na bicondicional: (p ↔ ¬q) ou (¬p ↔ q).",
+      "Incorreta. Trata-se da própria proposição original sem negação.",
+      "Incorreta. Corresponde à negação da conjunção ¬(p ∧ q), não da bicondicional."
+    ],
+    generalExplanation: "A negação de (p ↔ q) é a disjunção exclusiva (p ⊕ q), que por sua vez é logicamente equivalente a (p ↔ ¬q) ou (¬p ↔ q). Portanto: 'p ↔ ¬q'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação da Bicondicional (p ↔ q ≡ p ↔ ¬q)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q57",
+    text: "Considere a afirmação: 'Não é verdade que Mário foi à farmácia e Fernando não foi'. Dessa forma, podemos concluir corretamente que:",
+    options: [
+      "A) Se Fernando foi à farmácia, então Mário não foi.",
+      "B) Ambos foram à farmácia.",
+      "C) Se Fernando não foi à farmácia, então Mário também não foi.",
+      "D) Nenhum deles foi à farmácia.",
+      "E) Apenas um deles foi à farmácia."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Não corresponde à equivalência lógica correta da proposição dada.",
+      "Incorreta. Não há elementos para deduzir que ambos necessariamente foram.",
+      "Correta. A proposição original é ~(M ∧ ~F). Pela Lei de De Morgan, isso equivale a ~M ∨ F ('Mário não foi OU Fernando foi'). Uma disjunção ~M ∨ F pode ser convertida na condicional equivalente ~F -> ~M: 'Se Fernando não foi à farmácia, então Mário também não foi'.",
+      "Incorreta. Não é obrigatório que nenhum tenha ido.",
+      "Incorreta. A proposição admite a possibilidade de ambos terem ido ou de Mário não ter ido."
+    ],
+    generalExplanation: "A sentença é ~(M ∧ ~F) ≡ ~M ∨ F. Pela equivalência da disjunção em condicional (A ∨ B ≡ ~A -> B ou ~B -> ~A), temos que ~M ∨ F equivale a ~F -> ~M ('Se Fernando não foi à farmácia, então Mário também não foi').",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação de Conjunção e Conversão em Condicional",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q58",
+    text: "Assinale a opção em que é corretamente apresentada uma negação lógica da proposição \"Você me acha linda porque você gosta de mim\":",
+    options: [
+      "A) Você me acha linda, mas não gosta de mim.",
+      "B) Se você me achasse linda, você gostaria de mim.",
+      "C) Você não me acha linda, apesar de gostar de mim.",
+      "D) Você não me acha linda porque você não gosta de mim.",
+      "E) Você não gosta de mim porque você não me acha linda."
+    ],
+    correctIndex: 2,
+    explanations: [
+      "Incorreta. Nega o antecedente e mantém o consequente (~P ∧ Q).",
+      "Incorreta. Mantém a estrutura de implicação condicional.",
+      "Correta. A relação causal/explicativa 'Você me acha linda porque você gosta de mim' traduz-se na condicional 'Se você gosta de mim, então você me acha linda' (P -> Q). Sua negação lógica é P ∧ ~Q ('Você gosta de mim E você não me acha linda'), o que no português se expressa perfeitamente por 'Você não me acha linda, apesar de gostar de mim'.",
+      "Incorreta. Nega as duas orações mantendo o conectivo explicativo.",
+      "Incorreta. Nega e inverte a relação de causalidade."
+    ],
+    generalExplanation: "A proposição causal 'Q porque P' equivale à condicional 'Se P, então Q' (P -> Q). Sua negação lógica é P ∧ ~Q (ocorrência de P com não ocorrência de Q). A conjunção concessiva 'apesar de' expressa exatamente essa coexistência: 'Você não me acha linda, apesar de gostar de mim'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação de Condicional com Conectivo Causal/Implícito",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q59",
+    text: "Em relação à proposição \"João nunca foi privado de liberdade, e o relatório policial é inconclusivo\", pode-se afirmar que sua negação lógica é corretamente representada em:",
+    options: [
+      "A) João sempre foi privado de liberdade, e o relatório policial não é inconclusivo.",
+      "B) João nunca será privado de liberdade, então o relatório policial nunca será inconclusivo.",
+      "C) Se João nunca for privado de liberdade, então o relatório policial nunca é inconclusivo.",
+      "D) Se o relatório policial sempre é inconclusivo, então João sempre é privado de liberdade.",
+      "E) Se o relatório policial é inconclusivo, então ao menos uma vez João foi privado de liberdade."
+    ],
+    correctIndex: 4,
+    explanations: [
+      "Incorreta. Nega os termos usando conjunção e quantificador universal 'sempre', o que não é a negação lógica correta.",
+      "Incorreta. Condicional sem a estrutura de negação da conjunção.",
+      "Incorreta. Mantém o primeiro termo afirmativo original sem a relação de negação cabível.",
+      "Incorreta. Não corresponde à equivalência lógica da disjunção de negações.",
+      "Correta. Sendo P = 'João nunca foi privado de liberdade' e Q = 'relatório policial é inconclusivo', a proposição é (P ∧ Q). Sua negação é ~(P ∧ Q) ≡ (~P ∨ ~Q). Como ~P significa 'ao menos uma vez João foi privado de liberdade', temos a disjunção (~P ∨ ~Q), que equivale à condicional (Q -> ~P): 'Se o relatório policial é inconclusivo (Q), então ao menos uma vez João foi privado de liberdade (~P)'."
+    ],
+    generalExplanation: "A negação de (P ∧ Q) é (~P ∨ ~Q). Uma disjunção da forma (~P ∨ ~Q) equivale condicionalmente a (Q -> ~P). Sendo ~P = 'ao menos uma vez João foi privado de liberdade', obtém-se: 'Se o relatório policial é inconclusivo, então ao menos uma vez João foi privado de liberdade'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação de Conjunção e Equivalência em Forma Condicional",
+    nivelSuperior: true
+  },
+  {
+    id: "rlm_batch2_q60",
+    text: "Considere a sentença: \"Paula não é administradora ou Raquel é economista ou Ricardo não é advogado\".\n\nAssinale a proposição logicamente equivalente à sentença dada:",
+    options: [
+      "A) Se Paula é administradora, então Raquel não é economista ou Ricardo é advogado.",
+      "B) Se Paula é administradora, então Raquel não é economista e Ricardo é advogado.",
+      "C) Se Paula é administradora, então Raquel é economista e Ricardo não é advogado.",
+      "D) Se Paula é administradora e Raquel não é economista, então Ricardo não é advogado.",
+      "E) Se Paula é administradora e Raquel não é economista, então Ricardo é advogado."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Nega indevidamente os termos da disjunção consequente.",
+      "Incorreta. Converte para conjunção negando os termos erradamente.",
+      "Incorreta. Troca a disjunção por conjunção no consequente.",
+      "Correta. A sentença é (~P ∨ Q ∨ ~R). Agrupando os dois primeiros termos como (~P ∨ Q) ∨ ~R, e aplicando a equivalência de De Morgan na negação do bloco antecedente (~A ∨ B ≡ A -> B), temos: ~(~P ∨ Q) -> ~R ≡ (P ∧ ~Q) -> ~R ('Se Paula é administradora e Raquel não é economista, então Ricardo não é advogado').",
+      "Incorreta. Afirma o consequente 'Ricardo é advogado' em vez de manter a negação original ~R."
+    ],
+    generalExplanation: "A sentença (~P ∨ Q ∨ ~R) pode ser agrupada como (~(P ∧ ~Q) ∨ ~R). Pela regra de equivalência da disjunção para condicional (~A ∨ B ≡ A -> B), fazendo A = (P ∧ ~Q) e B = ~R, obtemos: (P ∧ ~Q) -> ~R ('Se Paula é administradora e Raquel não é economista, então Ricardo não é advogado').",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Equivalência de Múltiplas Disjunções para Condicional",
+    nivelSuperior: true
+  },
+  {
+    id: "rlm_batch2_q61",
+    text: "A negação da proposição \"Se Carlos almoçou ou saiu de casa, então Carlos enviou pelo menos cinco mensagens de voz\" é logicamente equivalente a:",
+    options: [
+      "A) Se Carlos não almoçou e não saiu de casa, então Carlos não enviou mensagens de voz.",
+      "B) Se Carlos não almoçou e não saiu de casa, então Carlos enviou mais de cinco mensagens de voz.",
+      "C) Carlos não enviou mensagens de voz, ou Carlos almoçou e saiu de casa.",
+      "D) Carlos enviou menos de cinco mensagens de voz, e Carlos almoçou ou saiu de casa.",
+      "E) Carlos não almoçou e não saiu de casa, ou Carlos enviou no máximo cinco mensagens de voz."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Sentença condicional não constitui negação de condicional.",
+      "Incorreta. Estrutura condicional mantida.",
+      "Incorreta. Utiliza disjunção em vez de conjunção.",
+      "Correta. A proposição é (A ∨ B) -> C, onde A = 'Carlos almoçou', B = 'saiu de casa' e C = 'enviou pelo menos cinco mensagens'. Sua negação é (A ∨ B) ∧ ~C (mantém o antecedente e nega o consequente). Como a negação de 'pelo menos 5' (≥ 5) é 'menos de 5' (< 5), temos: (A ∨ B) ∧ (menos de 5), o que equivale a 'Carlos enviou menos de cinco mensagens de voz, e Carlos almoçou ou saiu de casa' pela comutatividade da conjunção.",
+      "Incorreta. Nega o antecedente e usa disjunção."
+    ],
+    generalExplanation: "A negação de (P -> Q) é P ∧ ~Q. Mantendo o antecedente (Carlos almoçou ou saiu de casa) e negando o consequente (enviou menos de cinco mensagens), obtemos a conjunção expressa na alternativa D.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação de Condicional com Disjunção no Antecedente",
+    nivelSuperior: true
+  },
+  {
+    id: "rlm_batch2_q62",
+    text: "Julgue o item a seguir, relativo à lógica proposicional e à lógica de argumentação.\n\nSão logicamente equivalentes as sentenças I e II, a seguir:\n\nI. \"Se o governador do DF indicou o presidente do TCDF e a Câmara Legislativa indicou o corregedor, então o ouvidor é apreciador de música clássica.\"\nII. \"O presidente do TCDF não foi indicado pelo governador ou o corregedor não foi indicado pela Câmara Legislativa ou o ouvidor é apreciador de música clássica.\"",
+    options: [
+      "A) Certo",
+      "B) Errado"
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta (Item Certo). A sentença I possui a forma (P ∧ Q) -> R. Pela equivalência da condicional em disjunção inclusiva (~A ∨ B), temos ~(P ∧ Q) ∨ R. Aplicando a Lei de De Morgan no antecedente negado, ~(P ∧ Q) ≡ ~P ∨ ~Q. Portanto, obtém-se ~P ∨ ~Q ∨ R, que coincide perfeitamente com a sentença II.",
+      "Incorreta (Item Errado). A demonstração lógica confirma que as duas sentenças são absolutamente equivalentes."
+    ],
+    generalExplanation: "Sentença I: (P ∧ Q) -> R. Equivalência da condicional: ~(P ∧ Q) ∨ R. Lei de De Morgan: ~P ∨ ~Q ∨ R. Isso equivale a: 'O presidente não foi indicado (~P) OU o corregedor não foi indicado (~Q) OU o ouvidor é apreciador de música clássica (R)'. O item está Certo.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Equivalência Lógica da Condicional com Conjunção e De Morgan",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q63",
+    text: "Considere a afirmação: \"Ou arranjo emprego ou não me caso\". A negação dessa afirmação é:",
+    options: [
+      "A) Se eu arranjo emprego, então eu me caso.",
+      "B) Se eu não arranjo emprego, então eu me caso.",
+      "C) Ou não arranjo emprego ou me caso.",
+      "D) Ou não arranjo emprego ou não me caso.",
+      "E) Arranjo emprego e não me caso."
+    ],
+    correctIndex: 3,
+    explanations: [
+      "Incorreta. Sentença condicional não expressa a negação canônica da disjunção exclusiva.",
+      "Incorreta. Estrutura condicional incorreta.",
+      "Incorreta. Inverte a verdade de apenas um dos termos mantendo a disjunção exclusiva, o que não altera o valor lógico global da proposição.",
+      "Correta. A proposição é da forma (P ⊕ ~Q). A negação de (A ⊕ B) é dada pela bicondicional (A ↔ B) ou por uma nova disjunção exclusiva em que se nega ambas as parcelas ou mantém-se a bicondicional: ~(P ⊕ ~Q) ≡ (P ↔ ~Q) ≡ (~P ⊕ ~Q) ('Ou não arranjo emprego ou não me caso').",
+      "Incorreta. Conjunção simples não é negação de disjunção exclusiva."
+    ],
+    generalExplanation: "A proposição é P ⊕ ~Q. A negação da disjunção exclusiva é a bicondicional: ~(P ⊕ ~Q) ≡ (P ↔ ~Q). Em termos de disjunção exclusiva, isso equivale a negar ambas as componentes (~P ⊕ ~Q): 'Ou não arranjo emprego ou não me caso'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação da Disjunção Exclusiva (Ou... ou)",
+    nivelSuperior: false
+  },
+  {
+    id: "rlm_batch2_q64",
+    text: "Considere a sentença: \"Se hoje não chover, então eu vou à praia ou vou correr na orla\".\n\nA negação lógica dessa sentença é:",
+    options: [
+      "A) Hoje não chove e eu não vou à praia e não vou correr na orla.",
+      "B) Hoje chove e eu vou à praia e vou correr na areia.",
+      "C) Se hoje eu não for à praia e não for correr na orla então hoje choveu.",
+      "D) Se hoje chover, então eu não vou à praia e não vou correr na orla."
+    ],
+    correctIndex: 0,
+    explanations: [
+      "Correta. A sentença tem a forma P -> (Q ∨ R), onde P = 'hoje não chove', Q = 'vou à praia' e R = 'vou correr na orla'. A negação da condicional é P ∧ ~(Q ∨ R). Pela Lei de De Morgan, ~(Q ∨ R) ≡ (~Q ∧ ~R). Logo, a negação é P ∧ ~Q ∧ ~R: 'Hoje não chove e eu não vou à praia e não vou correr na orla'.",
+      "Incorreta. Nega o antecedente e mantém o consequente.",
+      "Incorreta. Formulação condicional (contrapositiva aproximada), não negação.",
+      "Incorreta. Mantém a estrutura condicional negando o antecedente."
+    ],
+    generalExplanation: "A negação de P -> (Q ∨ R) é P ∧ ~(Q ∨ R) ≡ P ∧ ~Q ∧ ~R (regra do MANÉ combinada com a Lei de De Morgan). Logo: 'Hoje não chove e eu não vou à praia e não vou correr na orla'.",
+    banca: "IBGE / Raciocínio Lógico e Matemática",
+    ano: 2026,
+    assunto: "Raciocínio Lógico: Negação de Condicional com Disjunção no Consequente",
+    nivelSuperior: false
   }
 ];
+
