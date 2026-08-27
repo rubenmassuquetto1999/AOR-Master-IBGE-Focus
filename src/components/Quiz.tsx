@@ -23,7 +23,7 @@ import {
   Compass,
 } from "lucide-react";
 import { Question, UserHistory } from "../types";
-import { DISCIPLINE_TOPICS, DISCIPLINES_LIST, getDisciplineForTopic, getTopicsForDiscipline } from "../data/disciplinesData";
+import { TAXONOMY, getDisciplineForTopic, getTopicsForDiscipline, ALL_TOPICS } from "../data/taxonomy";
 
 interface QuizProps {
   questions: Question[];
@@ -41,6 +41,7 @@ interface QuizProps {
   ) => Promise<boolean>;
   initialBanca?: string;
   initialAssunto?: string;
+  initialDisciplina?: string;
 }
 
 export default function Quiz({
@@ -53,11 +54,12 @@ export default function Quiz({
   onConfirm,
   initialBanca = "Todos",
   initialAssunto = "Todos",
+  initialDisciplina = "Todas",
 }: QuizProps) {
   // Mode: "practice" (Treino livre 5, 15, 30 ou 60 Qs com filtros) | "official_ibge" (Simulado 60 Qs Edital IBGE AOR)
   const [quizMode, setQuizMode] = useState<"practice" | "official_ibge">("practice");
   const [selectedBanca, setSelectedBanca] = useState<string>(initialBanca);
-  const [selectedDisciplina, setSelectedDisciplina] = useState<string>("Todas");
+  const [selectedDisciplina, setSelectedDisciplina] = useState<string>(initialDisciplina);
   const [selectedAssunto, setSelectedAssunto] = useState<string>(initialAssunto);
   const [numQuestions, setNumQuestions] = useState<number>(5);
 
@@ -78,29 +80,43 @@ export default function Quiz({
   }, [initialBanca]);
 
   useEffect(() => {
+    if (initialDisciplina) {
+      setSelectedDisciplina(initialDisciplina);
+    }
+  }, [initialDisciplina]);
+
+  useEffect(() => {
     if (initialAssunto) {
-      if (initialAssunto === "Todos") {
-        setSelectedDisciplina("Todas");
-        setSelectedAssunto("Todos");
-      } else if (DISCIPLINES_LIST.includes(initialAssunto)) {
-        setSelectedDisciplina(initialAssunto);
-        setSelectedAssunto("Todos");
-      } else {
+      setSelectedAssunto(initialAssunto);
+      if (initialAssunto !== "Todos") {
         const disc = getDisciplineForTopic(initialAssunto);
-        setSelectedDisciplina(disc);
-        setSelectedAssunto(initialAssunto);
+        if (disc) {
+          setSelectedDisciplina(disc.name);
+        }
       }
     }
   }, [initialAssunto]);
 
+  // Handle discipline filter change
+  const handleDisciplinaChange = (newDisc: string) => {
+    setSelectedDisciplina(newDisc);
+    if (newDisc !== "Todas") {
+      const topicsForDisc = getTopicsForDiscipline(newDisc);
+      if (!topicsForDisc.includes(selectedAssunto)) {
+        setSelectedAssunto("Todos");
+      }
+    }
+  };
+
   // Set up available filters
   const availableBancas = ["Todos", ...Array.from(new Set(questions.map((q) => q.banca).filter(Boolean))).sort()];
-  const availableAssuntos = [
-    "Todos",
-    ...(selectedDisciplina === "Todas"
-      ? Array.from(new Set(questions.map((q) => q.assunto).filter(Boolean))).sort()
-      : getTopicsForDiscipline(selectedDisciplina)),
-  ];
+  
+  const availableDisciplinas = ["Todas", ...TAXONOMY.map((d) => d.name)];
+
+  const availableAssuntos =
+    selectedDisciplina === "Todas"
+      ? ["Todos", ...ALL_TOPICS]
+      : ["Todos", ...getTopicsForDiscipline(selectedDisciplina)];
 
   // Exclude successfully answered questions (No Repeated Questions priority)
   const answeredSuccessfulIds = history.filter((h) => h.isCorrect).map((h) => h.questionId);
@@ -118,10 +134,98 @@ export default function Quiz({
         basePool = basePool.filter((q) => q.banca === selectedBanca);
       }
 
-      const isAdm = (q: Question) => getDisciplineForTopic(q.assunto) === "Noções de Administração";
-      const isPort = (q: Question) => getDisciplineForTopic(q.assunto) === "Língua Portuguesa";
-      const isRlq = (q: Question) => getDisciplineForTopic(q.assunto) === "Raciocínio Lógico Quantitativo";
-      const isInfo = (q: Question) => getDisciplineForTopic(q.assunto) === "Noções Básicas de Informática";
+      const isAdm = (q: Question) => {
+        const ass = (q.assunto || "").toLowerCase();
+        return (
+          ass.includes("administra") ||
+          ass.includes("gerencia") ||
+          ass.includes("gestão") ||
+          ass.includes("gestao") ||
+          ass.includes("desempenho") ||
+          ass.includes("recursos humanos") ||
+          ass.includes("pessoas") ||
+          ass.includes("organiza") ||
+          ass.includes("planejamento") ||
+          ass.includes("ética") ||
+          ass.includes("etica") ||
+          ass.includes("ibge")
+        );
+      };
+
+      const isPort = (q: Question) => {
+        const ass = (q.assunto || "").toLowerCase();
+        return (
+          ass.includes("portug") ||
+          ass.includes("sintaxe") ||
+          ass.includes("concordância") ||
+          ass.includes("concordancia") ||
+          ass.includes("regência") ||
+          ass.includes("regencia") ||
+          ass.includes("crase") ||
+          ass.includes("pontuação") ||
+          ass.includes("pontuacao") ||
+          ass.includes("ortografia") ||
+          ass.includes("acentuação") ||
+          ass.includes("acentuacao") ||
+          ass.includes("morfologia") ||
+          ass.includes("compreensão") ||
+          ass.includes("texto") ||
+          ass.includes("hífen") ||
+          ass.includes("hifen")
+        );
+      };
+
+      const isRlq = (q: Question) => {
+        const ass = (q.assunto || "").toLowerCase();
+        return (
+          ass.includes("raciocínio") ||
+          ass.includes("raciocinio") ||
+          ass.includes("lógico") ||
+          ass.includes("logico") ||
+          ass.includes("lógica") ||
+          ass.includes("logica") ||
+          ass.includes("matemática") ||
+          ass.includes("matematica") ||
+          ass.includes("geometria") ||
+          ass.includes("pitágoras") ||
+          ass.includes("pitagoras") ||
+          ass.includes("condicional") ||
+          ass.includes("equivalência") ||
+          ass.includes("equivalencia") ||
+          ass.includes("negação") ||
+          ass.includes("negacao") ||
+          ass.includes("proposição") ||
+          ass.includes("proposicao") ||
+          ass.includes("porcentagem") ||
+          ass.includes("probabilidade") ||
+          ass.includes("combinatória") ||
+          ass.includes("combinatoria") ||
+          ass.includes("conjuntos") ||
+          ass.includes("tabela verdade") ||
+          ass.includes("sequência") ||
+          ass.includes("sequencia")
+        );
+      };
+
+      const isInfo = (q: Question) => {
+        const ass = (q.assunto || "").toLowerCase();
+        return (
+          ass.includes("informática") ||
+          ass.includes("informatica") ||
+          ass.includes("computador") ||
+          ass.includes("excel") ||
+          ass.includes("word") ||
+          ass.includes("windows") ||
+          ass.includes("hardware") ||
+          ass.includes("software") ||
+          ass.includes("internet") ||
+          ass.includes("navegador") ||
+          ass.includes("arquivos") ||
+          ass.includes("pastas") ||
+          ass.includes("segurança") ||
+          ass.includes("seguranca")
+        );
+      };
 
       const isProcessoOrg = (q: Question) => {
         const text = ((q.assunto || "") + " " + (q.text || "") + " " + (q.generalExplanation || "")).toLowerCase();
@@ -203,16 +307,13 @@ export default function Quiz({
         pool = pool.filter((q) => q.banca === selectedBanca);
       }
       if (selectedDisciplina !== "Todas") {
-        pool = pool.filter((q) => getDisciplineForTopic(q.assunto) === selectedDisciplina);
+        pool = pool.filter((q) => {
+          const disc = getDisciplineForTopic(q.assunto);
+          return disc ? disc.name === selectedDisciplina : false;
+        });
       }
       if (activeAssunto !== "Todos") {
-        pool = pool.filter((q) => {
-          if (!q.assunto) return false;
-          if (q.assunto === activeAssunto) return true;
-          const assLower = q.assunto.toLowerCase();
-          const targetLower = activeAssunto.toLowerCase();
-          return assLower.startsWith(targetLower) || assLower.includes(targetLower);
-        });
+        pool = pool.filter((q) => q.assunto === activeAssunto);
       }
 
       // Filter out successfully answered questions, unless pool is too small
@@ -962,8 +1063,8 @@ export default function Quiz({
                 </div>
               </div>
 
-              {/* Filter Row: Banca, Disciplina and Assunto */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
+              {/* Filter Row: Banca, Disciplina, and Assunto/Tópico */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
                 <div>
                   <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 font-sans">
                     Banca
@@ -987,16 +1088,12 @@ export default function Quiz({
                   </label>
                   <select
                     value={selectedDisciplina}
-                    onChange={(e) => {
-                      setSelectedDisciplina(e.target.value);
-                      setSelectedAssunto("Todos");
-                    }}
+                    onChange={(e) => handleDisciplinaChange(e.target.value)}
                     className="w-full px-3 py-2.5 border border-slate-200 rounded-xl bg-white focus:outline-blue-500 dark:bg-slate-800 dark:border-slate-755 dark:text-slate-100 text-xs font-bold"
                   >
-                    <option value="Todas">Todas as Disciplinas</option>
-                    {DISCIPLINES_LIST.map((d) => (
-                      <option key={d} value={d}>
-                        {d}
+                    {availableDisciplinas.map((disc) => (
+                      <option key={disc} value={disc}>
+                        {disc === "Todas" ? "Todas as Disciplinas" : disc}
                       </option>
                     ))}
                   </select>
@@ -1004,16 +1101,20 @@ export default function Quiz({
 
                 <div>
                   <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 font-sans">
-                    Tópico do Edital
+                    Tópico / Assunto
                   </label>
                   <select
                     value={selectedAssunto}
                     onChange={(e) => setSelectedAssunto(e.target.value)}
-                    className="w-full px-3 py-2.5 border border-slate-200 rounded-xl bg-white focus:outline-blue-500 dark:bg-slate-800 dark:border-slate-755 dark:text-slate-100 text-xs font-bold truncate"
+                    className="w-full px-3 py-2.5 border border-slate-200 rounded-xl bg-white focus:outline-blue-500 dark:bg-slate-800 dark:border-slate-755 dark:text-slate-100 text-xs font-bold"
                   >
                     {availableAssuntos.map((as) => (
                       <option key={as} value={as}>
-                        {as === "Todos" ? "Todos os Tópicos" : as}
+                        {as === "Todos"
+                          ? selectedDisciplina === "Todas"
+                            ? "Todos os Tópicos"
+                            : `Todos de ${selectedDisciplina}`
+                          : as}
                       </option>
                     ))}
                   </select>

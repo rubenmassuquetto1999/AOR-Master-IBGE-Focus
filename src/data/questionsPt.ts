@@ -21,7 +21,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": false
   },
   {
@@ -44,7 +44,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": false
   },
   {
@@ -67,7 +67,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": false
   },
   {
@@ -90,7 +90,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": false
   },
   {
@@ -113,7 +113,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": false
   },
   {
@@ -136,7 +136,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": false
   },
   {
@@ -159,7 +159,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": false
   },
   {
@@ -182,7 +182,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": true
   },
   {
@@ -203,7 +203,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": true
   },
   {
@@ -226,7 +226,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Concordância Verbal e Nominal",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": true
   },
   {
@@ -249,7 +249,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": false
   },
   {
@@ -272,7 +272,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": false
   },
   {
@@ -295,7 +295,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": false
   },
   {
@@ -318,7 +318,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": true
   },
   {
@@ -341,7 +341,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": true
   },
   {
@@ -364,7 +364,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": false
   },
   {
@@ -387,7 +387,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": true
   },
   {
@@ -410,7 +410,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": false
   },
   {
@@ -433,7 +433,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": false
   },
   {
@@ -456,7 +456,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": true
   },
   {
@@ -479,7 +479,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": true
   },
   {
@@ -502,7 +502,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Estudo dos Verbos",
+    "assunto": "Verbos",
     "nivelSuperior": false,
     "generalExplanation": "A forma verbal 'superam' corresponde à terceira pessoa do plural do presente do modo indicativo, indicando um fato real e atual no contexto da oração."
   },
@@ -526,7 +526,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -549,7 +549,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -572,7 +572,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -595,7 +595,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -618,7 +618,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -641,7 +641,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -664,7 +664,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -687,7 +687,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -710,7 +710,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -733,7 +733,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -756,7 +756,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -779,7 +779,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -802,7 +802,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -825,7 +825,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -848,7 +848,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -871,7 +871,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -894,7 +894,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -917,7 +917,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -940,7 +940,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -963,7 +963,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -986,7 +986,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -1009,7 +1009,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -1032,7 +1032,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -1055,7 +1055,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -1078,7 +1078,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": true
   },
   {
@@ -1101,7 +1101,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": true
   },
   {
@@ -1124,7 +1124,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": true
   },
   {
@@ -1147,7 +1147,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": false
   },
   {
@@ -1170,7 +1170,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": false
   },
   {
@@ -1193,7 +1193,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": false
   },
   {
@@ -1216,7 +1216,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": false
   },
   {
@@ -1239,7 +1239,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": true
   },
   {
@@ -1262,7 +1262,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": true
   },
   {
@@ -1285,7 +1285,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": true
   },
   {
@@ -1308,7 +1308,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": true
   },
   {
@@ -1331,7 +1331,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Orações e Período Composto",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": true
   },
   {
@@ -1354,7 +1354,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1377,7 +1377,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1400,7 +1400,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1423,7 +1423,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1446,7 +1446,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1469,7 +1469,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -1492,7 +1492,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1515,7 +1515,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1538,7 +1538,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1561,7 +1561,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1584,7 +1584,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": true
   },
   {
@@ -1607,7 +1607,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência Verbal e Nominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -1630,7 +1630,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1653,7 +1653,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1676,7 +1676,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1699,7 +1699,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1722,7 +1722,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1745,7 +1745,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -1768,7 +1768,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1791,7 +1791,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -1814,7 +1814,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1837,7 +1837,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1860,7 +1860,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1883,7 +1883,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -1906,7 +1906,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -1930,7 +1930,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -1954,7 +1954,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -1978,7 +1978,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2002,7 +2002,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2026,7 +2026,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2050,7 +2050,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2074,7 +2074,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2098,7 +2098,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2122,7 +2122,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2146,7 +2146,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2170,7 +2170,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2194,7 +2194,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2218,7 +2218,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2242,7 +2242,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2266,7 +2266,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2290,7 +2290,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2314,7 +2314,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2338,7 +2338,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false,
     "image": null
   },
@@ -2362,7 +2362,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "Passei Apostilas",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2386,7 +2386,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2410,7 +2410,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2434,7 +2434,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2458,7 +2458,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2482,7 +2482,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2506,7 +2506,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2530,7 +2530,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2554,7 +2554,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2578,7 +2578,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2602,7 +2602,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2626,7 +2626,7 @@ export const questionsPt: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true,
     "image": null
   },
@@ -2651,7 +2651,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "“Percebi” indica ação pontual concluída no passado (pretérito perfeito do indicativo). “Estava” indica estado contínuo ou em curso no passado (pretérito imperfeito do indicativo).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2675,7 +2675,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "“Corresponde” está no presente do indicativo, pois enuncia um fato atual. “Ajude” está no imperativo afirmativo, pois expressa um pedido ou apelo ao interlocutor.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2699,7 +2699,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção concessiva “embora” exige o uso do modo subjuntivo. A forma “exista” corresponde ao presente do subjuntivo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2723,7 +2723,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O humor decorre da polissemia da forma nominal no gerúndio (“tomando”). O verbo “tomar” funciona como VTD recebendo objetos diretos em sentidos diferentes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2747,7 +2747,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Em “faz ser”, temos uma estrutura causativa em que o verbo 'fazer' e o infinitivo integram orações com funções sintáticas distintas, não formando uma locução verbal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2771,7 +2771,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "“Deveria” está flexionado no futuro do pretérito do indicativo, indicando expectativa ou fato condicionado em relação a um marco passado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2795,7 +2795,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O “que” é pronome relativo quando retoma um antecedente (substantivo ou pronome) e introduz oração subordinada adjetiva, como em “conclusões que nos ajudem”.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2819,7 +2819,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na oração “indivíduos que se consolam”, o pronome relativo “que” retoma o substantivo imediatamente anterior, “indivíduos”.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2843,7 +2843,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Nas opções A, B, C e D, o “que” é pronome relativo retoma antecedente. Na opção E, o “que” é conjunção integrante.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2867,7 +2867,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção integrante introduz orações subordinadas substantivas (como o objeto direto de 'disseram'), enquanto o pronome relativo substitui um antecedente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2891,7 +2891,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Em “Barragem do Descoberto, que abastece...”, a palavra “que” introduz oração subordinada adjetiva e retoma o antecedente, desempenhando o papel de pronome relativo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2915,7 +2915,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Enquanto nas alternativas A, B, C e D o “que” é pronome relativo com antecedente substantivo/pronome, na alternativa E ele é conjunção integrante.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2939,7 +2939,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na alternativa A, a construção “se comparados” pode ser desdobrada em “caso sejam comparados” ou “se forem comparados”, conferindo claro valor hipotético/condicional.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2963,7 +2963,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Tanto em “procura-se” quanto em “aceitam-se”, o pronome “se” atua como partícula apassivadora junto a verbos transitivos diretos, concordando com os respectivos sujeitos pacientes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -2987,7 +2987,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O pronome “se” é reflexivo quando indica que o agente executa uma ação que recai sobre si próprio (“cuidar de si mesmo”).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -3011,7 +3011,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O pronome 'lhes' exerce a função de objeto indireto. O verbo 'restar' é transitivo indireto (restar algo a alguém), atraindo o pronome oblíquo 'lhes' por exigência de sua regência.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Regência Verbal e Colocação Pronominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3035,7 +3035,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo 'lembrar' no sentido de trazer à memória é pronominal e transitivo indireto (lembrar-se de). Como a oração inicia com o verbo, usa-se ênclise.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Regência Verbal e Colocação Pronominal",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3059,7 +3059,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Não ocorre crase antes de pronomes indefinidos, como 'alguns'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3083,7 +3083,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O adjetivo 'posterior' exige a preposição 'a', e 'soltura' é substantivo feminino determinado, havendo crase.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3107,7 +3107,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo 'levar' (no sentido de conduzir) rege a preposição 'a' e 'liberação' é substantivo feminino.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3131,7 +3131,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O adjetivo 'atento' rege a preposição 'a' e 'belas paisagens' aceita o artigo feminino plural 'as'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3155,7 +3155,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A locução 'devido a' exige a preposição, e 'importância' é substantivo feminino que aceita o artigo 'a'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3179,7 +3179,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A locução 'graças a' exige a preposição, e 'dedicação' aceita o artigo feminino 'a'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3203,7 +3203,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Quando a palavra 'distância' está especificada (dez passos), ocorre a crase.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3227,7 +3227,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "'À revelia' é locução adverbial feminina, portanto exige crase.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3251,7 +3251,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo 'entregar' é VTDI, exigindo a preposição 'a', e 'emissora' aceita o artigo 'a'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3275,7 +3275,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O adjetivo 'igual' rege a preposição 'a'. Ocorre crase com o pronome demonstrativo implícito 'a' (aquela).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Crase",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -3299,7 +3299,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção 'porquanto' pode ter valor causal ou explicativo. No contexto, justifica/explica o motivo de a relação não ter sido rompida.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Período Composto - Orações Coordenadas",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": false
   },
   {
@@ -3323,7 +3323,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O 'que' liga duas orações independentes, sendo que a segunda justifica a primeira (equivalendo a 'pois' ou 'porque').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Período Composto - Orações Coordenadas",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": false
   },
   {
@@ -3347,7 +3347,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "'Entretanto' é uma conjunção adversativa clássica, indicando contraste ou oposição de ideias.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Período Composto - Conectivos",
+    "assunto": "Período Composto / Orações Coordenadas e Subordinadas",
     "nivelSuperior": false
   },
   {
@@ -3371,7 +3371,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O gabarito oficial aponta a alternativa E. No entanto, a análise gramatical rigorosa indica que a alternativa C é a correta, pois a locução 'por ser' introduz uma oração subordinada adverbial causal. A alternativa E utiliza 'uma vez que', que também é uma conjunção causal (ou explicativa), e não de afirmação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Semântica e Sintaxe",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -3395,7 +3395,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O advérbio 'Infelizmente' é um modalizador discursivo que exprime o sentimento, a avaliação ou a opinião do autor em relação ao fato enunciado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Semântica e Modalização",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -3419,7 +3419,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Os termos destacados (inferidos pelo gabarito) são 'narrativa' (adjetivo), 'aquele' (pronome demonstrativo) e 'voz' (substantivo).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Morfologia - Classes de Palavras",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -3443,7 +3443,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Em substantivos compostos formados por numeral ordinal e substantivo (como 'terça-feira'), ambos os elementos variam no plural. Portanto, o correto é 'terças-feiras'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Morfologia - Plural dos Substantivos Compostos",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -3467,7 +3467,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O adjetivo 'sabido' é empregado com ironia. O 'mulato sabido' seria aquele que conhece a gramática, mas o poema contrapõe a gramática normativa (artificial) à língua viva e natural do povo brasileiro ('Me dá um cigarro').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Semântica e Figuras de Linguagem",
+    "assunto": "Figuras de linguagem",
     "nivelSuperior": false
   },
   {
@@ -3491,7 +3491,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O radical 'luso-' refere-se à Lusitânia (Portugal), e 'brasileira' refere-se ao Brasil.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Morfologia - Formação de Palavras",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -3515,7 +3515,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Das opções apresentadas, 'caixote' é a única forma que pode ser classificada como diminutivo (ou derivado com valor de menor tamanho em certos contextos) em contraste com as demais, que são aumentativos claros (muralha, montanha, fogaréu).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Morfologia - Flexão de Substantivos (Diminutivo)",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -3539,7 +3539,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Inferindo os termos sublinhados a partir do gabarito e da estrutura da frase: 'ao' (preposição 'a' + artigo 'o', mas a contração é frequentemente classificada pela preposição em certos contextos ou o termo era apenas o 'a'), 'sua' (pronome possessivo) e 'a' (artigo definido em 'a única'). A sequência Preposição - Pronome - Artigo justifica a alternativa E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Morfologia - Classes de Palavras",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -3563,7 +3563,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Os termos inferidos são: 'que' (pronome relativo, retoma 'regras'), 'exatamente' (advérbio de modo/intensidade) e 'o' (pronome pessoal oblíquo átono, retoma 'finlandês').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Morfologia e Sintaxe - Conjunções e Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -3587,7 +3587,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O termo destacado (inferido como 'meros' ou 'mímicos') atua como adjetivo, qualificando o substantivo 'gestos'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Morfologia - Classes de Palavras",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -3611,7 +3611,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O termo em destaque (inferido como 'científicos' ou 'vários') é um adjetivo que qualifica o substantivo 'artigos'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Morfologia - Classes de Palavras",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -3635,7 +3635,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na alternativa C, o pronome 'sua' gera ambiguidade, pois não fica claro se a maquiagem pertence à mãe ou à filha.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Semântica - Ambiguidade",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -3659,7 +3659,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa correta é a D, pois o trecho traz uma avaliação explícita do autor, marcada por 'Seria tão melhor', evidenciando opinião sobre a situação discutida no texto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Interpretação de Texto e Tipologia Textual",
+    "assunto": "Tipos e gêneros textuais",
     "nivelSuperior": false
   },
   {
@@ -3683,7 +3683,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa C apresenta identificação incorreta, pois 'aforismo' designa uma máxima ou sentença breve, e não uma suposição.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Interpretação de Texto e Semântica",
+    "assunto": "Interpretação de texto",
     "nivelSuperior": false
   },
   {
@@ -3707,7 +3707,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O cronista defende que o indivíduo deve aceitar a multiplicidade de papéis e 'eus' que convivem em si, visto que dificilmente deixarão de existir.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Interpretação de Texto",
+    "assunto": "Interpretação de texto",
     "nivelSuperior": false
   },
   {
@@ -3731,7 +3731,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A crônica caracteriza-se pela interlocução constante com o leitor e a abordagem reflexiva de fatos e situações cotidianas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Tipologia Textual e Gêneros Textuais",
+    "assunto": "Tipos e gêneros textuais",
     "nivelSuperior": false
   },
   {
@@ -3755,7 +3755,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Ambas as afirmativas são verdadeiras: 'importante' pode ser associado a 'ilustre' e 'fundamental' pode relacionar-se a 'necessário'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Semântica e Sinônimos",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -3779,7 +3779,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A palavra 'provavelmente' exprime uma hipótese ou probabilidade, equivalendo semanticamente a 'possivelmente'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Semântica e Sinonímia",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -3803,7 +3803,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A sequência correta é C-C-E. As duas primeiras afirmativas estão de acordo com o texto, enquanto a terceira é falsa pois a legislação não consegue regular plenamente a questão do sono ao volante.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Interpretação de Texto",
+    "assunto": "Interpretação de texto",
     "nivelSuperior": false
   },
   {
@@ -3827,7 +3827,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Diferentemente do ato de beber após o trabalho, a privação de sono raramente é uma escolha voluntária e consciente do indivíduo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Interpretação de Texto",
+    "assunto": "Interpretação de texto",
     "nivelSuperior": false
   },
   {
@@ -3851,7 +3851,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A expressão aproxima soluções de naturezas opostas (tecnologia avançada vs. chá artesanal), demonstrando que qualquer recurso, simples ou complexo, é incorporado à busca pela estética corporal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Interpretação de Texto e Inferência",
+    "assunto": "Interpretação de texto",
     "nivelSuperior": false
   },
   {
@@ -3875,7 +3875,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O vocábulo 'passível' empregado no sentido de 'suscetível' indica a condição de estar sujeito a ser consumido.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Semântica Textual",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -3899,7 +3899,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O texto retrata o culto ao corpo como uma imposição social contemporânea, em que atingir determinado padrão estético ganha status de obrigação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Interpretação de Texto",
+    "assunto": "Interpretação de texto",
     "nivelSuperior": false
   },
   {
@@ -3923,7 +3923,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O tema central do texto reside na crítica à busca incessante e idealizada por um padrão de corpo preestabelecido pela sociedade de consumo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Interpretação de Texto e Tema",
+    "assunto": "Interpretação de texto",
     "nivelSuperior": false
   },
   {
@@ -3947,7 +3947,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A sequência correta é V-F-V: 'A primeira' retoma elemento prévio; 'A segunda' apenas enumera a segunda parte de um par anunciado (não cria nova informação desconhecida); e 'a lógica do consumo' retoma/ancora a coesão do parágrafo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Coesão Textual",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -3971,7 +3971,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O texto apresenta estrutura prioritariamente argumentativa, marcada pela defesa de tese e exposição de marcas subjetivas e opinativas do enunciador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Tipologia Textual e Argumentação",
+    "assunto": "Tipos e gêneros textuais",
     "nivelSuperior": false
   },
   {
@@ -3995,7 +3995,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A palavra 'evasão' remete à ideia de fuga ou afastamento, sendo seu antônimo direto a 'permanência'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Semântica e Antonímia",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4013,7 +4013,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A regra geral de concordância verbal dita que o verbo concorda em número e pessoa com o núcleo do sujeito. Se 'ações' for o núcleo do sujeito, a flexão no plural está correta.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4031,7 +4031,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo 'ter' no presente do indicativo recebe acento diferencial circunflexo ('têm') quando flexionado na terceira pessoa do plural para concordar com sujeito composto ou plural.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4049,7 +4049,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Substantivos não sofrem 'concordância' com o sujeito da oração. A palavra 'produtos' é um substantivo que está no plural por si só (ou concorda com um adjetivo/numeral), não havendo relação sintática de concordância sujeito-substantivo.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4067,7 +4067,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo concorda com o núcleo do sujeito. Se 'estudos' é o núcleo e está no plural, o verbo 'alteraram' na terceira pessoa do plural está correto.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4085,7 +4085,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Quando o sujeito de uma oração é outra oração (sujeito oracional), o verbo da oração principal deve obrigatoriamente ficar na terceira pessoa do singular.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4107,7 +4107,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O núcleo do sujeito é 'presidência' (singular). O termo 'de vários setores' é apenas um adjunto adnominal. O verbo 'ver' na terceira pessoa do singular é 'vê' (com acento circunflexo).",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4131,7 +4131,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Com a expressão 'um milhão', o verbo deve ficar no singular ('Chegou um milhão'). As demais alternativas apresentam concordância correta (silepse ou concordância gramatical estrita aceita pela norma).",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4155,7 +4155,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na alternativa E, o adjetivo 'necessários' está no masculino plural, concordando corretamente com os substantivos de gêneros diferentes ('cuidados' e 'pesquisas'). Nas demais, o adjetivo deveria estar no masculino plural.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4179,7 +4179,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Com expressões partitivas seguidas de substantivo no plural ('a maioria das tarefas'), o verbo pode ficar no singular (concordância gramatical) ou no plural (concordância lógica/atrativa). A alternativa C utiliza a concordância lógica corretamente.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4203,7 +4203,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo 'ser' (Eram) concorda corretamente com o sujeito 'os fregueses' ou com o predicativo 'privilegiados'. As demais alternativas apresentam erros de concordância verbal.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4227,7 +4227,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A locução \"mas também\" soma uma informação à anterior, indicando adição.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4251,7 +4251,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A estrutura \"quanto mais... mais...\" indica que as ações variam proporcionalmente.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4275,7 +4275,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção \"que\" após o advérbio \"tanta\" introduz uma oração consecutiva (consequência).",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4299,7 +4299,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "\"Conquanto\" é conjunção concessiva, sinônima de \"embora\".",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4323,7 +4323,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Não é possível determinar o gabarito sem a visualização do texto de apoio (quadrinho).",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4347,7 +4347,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A oração introduzida por \"que\" restringe o sentido de \"vítimas de violência doméstica\", classificando-se como adjetiva restritiva.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4371,7 +4371,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A locução \"à medida que\" expressa proporção.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4395,7 +4395,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A oração reduzida de gerúndio \"Ouvindo isso\" equivale a \"Quando ouvimos isso\", indicando tempo.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4419,7 +4419,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A construção \"Ao + infinitivo\" indica o momento em que algo acontece, expressando tempo.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4443,7 +4443,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Todos os vocábulos da alternativa A são proparoxítonos e acentuados corretamente.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4467,7 +4467,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Segundo o Novo Acordo, \"voo\" perde o acento circunflexo e \"microcomputadores\" perde o hífen.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4491,7 +4491,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "\"Calúnia\" e \"plágio\" são paroxítonas terminadas em ditongo.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4515,7 +4515,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "\"Saída\" é acentuada pela regra do hiato e \"termômetro\" é proparoxítona.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4539,7 +4539,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "As palavras \"pátria\" e \"tênue\" são acentuadas por serem paroxítonas terminadas em ditongo.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4563,7 +4563,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "\"Família\" e \"cardápios\" são paroxítonas terminadas em ditongo.",
     "banca": "Simulado Língua Portuguesa",
     "ano": 2026,
-    "assunto": "Língua Portuguesa",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4587,7 +4587,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "No primeiro trecho, o 'Se' introduz oração subordinada adverbial condicional, atuando como conjunção. No segundo trecho, o 'Se' acompanha o verbo 'acostumar' como pronome (parte integrante do verbo ou índice de indeterminação do sujeito).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4611,7 +4611,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa C apresenta o verbo 'precisar' como transitivo indireto ('precisa de'), o que torna o 'se' índice de indeterminação do sujeito, e não pronome apassivador. As demais alternativas possuem verbos transitivos diretos configurando voz passiva sintética.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -4635,7 +4635,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "No enunciado, o 'se' é conjunção condicional. Na alternativa B, o 'Se' em 'Se não dominamos' também atua como conjunção condicional.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Funções do Que e do Se",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4659,7 +4659,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo 'ver' é transitivo direto, exigindo o pronome oblíquo átono 'o' (ou 'a'), e não 'lhe', que é utilizado para substituir objetos indiretos (prepostos por 'a' ou 'para'). O correto seria 'que o viu'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4683,7 +4683,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo 'dizer' é transitivo direto e indireto (dizer algo a alguém). O pronome 'lhes' funciona corretamente como objeto indireto. Nas demais alternativas, os verbos (vencer, ver, esperar, cumprimentar) são transitivos diretos e exigem os pronomes 'o(s)' ou 'a(s)'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4707,7 +4707,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo 'mostrar' é transitivo direto e indireto, e o termo 'a receita' atua como objeto direto (feminino singular). A substituição correta exige o pronome 'a', resultando na forma 'mostrá-la'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4731,7 +4731,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A ênclise em 'Oferecemos-lhes' está correta, pois não há palavra atrativa antes do verbo e este não se encontra no futuro. Nas demais, há violação das regras de colocação pronominal por presença de fatores de próclise ou regras de mesóclise/ênclise.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4755,7 +4755,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa E apresenta ênclise correta após verbo no infinitivo ('incentivá-los'), o que é plenamente aceito e recomendado pela norma-padrão.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4779,7 +4779,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A mesóclise é obrigatória quando o verbo está no futuro do presente ou futuro do pretérito e não há palavra atrativa antes dele. 'Poder-se-á' obedece a essa regra.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4803,7 +4803,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A próclise é obrigatória antes de verbos no presente do indicativo quando há pronome indefinido ('Alguns') funcionando como sujeito ou palavra atrativa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4827,7 +4827,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O verbo no imperativo afirmativo ('Explique') no início da frase exige ênclise: 'Explique-me'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4851,7 +4851,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A próclise em 'nos garantem' está correta devido à presença do pronome relativo/conjunção 'como', que atua como palavra atrativa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4875,7 +4875,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A próclise em 'se preocuparem' é obrigatória devido à conjunção subordinativa 'Quando', que atua como palavra atrativa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4899,7 +4899,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa D apresenta próclise correta devido ao pronome indefinido 'Poucos', que atrai o pronome oblíquo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -4923,7 +4923,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O pronome indefinido 'Todos' é palavra atrativa, tornando a próclise obrigatória, independentemente do tempo verbal (exceto em casos de mesóclise forçada por inexistência de atração, o que não ocorre aqui).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pronomes",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": true
   },
   {
@@ -4947,7 +4947,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A palavra 'sucuri' é oxítona terminada em 'i'. Pela regra de acentuação, oxítonas terminadas em 'i' ou 'u' não são acentuadas (salvo em hiatos específicos, o que não é o caso). 'Caju' segue a mesma regra.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Acentuação Gráfica",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4971,7 +4971,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Pelo Novo Acordo Ortográfico, quando o prefixo termina em vogal e o segundo elemento começa com a mesma vogal ou com 'h', usa-se o hífen. Como 'micro' termina em 'o' e 'organismos' começa com 'o', o correto é 'micro-organismos'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Uso do Hífen",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -4995,7 +4995,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O prefixo 'co' aglutina-se em geral com o segundo elemento, sem hífen, mesmo que este comece com 'h', 'r' ou 's' (dobrando-se estas consoantes). O correto é 'corréu'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Uso do Hífen",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -5019,7 +5019,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A banca considerou a alternativa A como a opção que contém incorreção no emprego do hífen. Contudo, vale ressaltar que 'anti-inflamatório' (vogais iguais) e 'superresfriada' (prefixo super + r) seguem as regras gerais do Novo Acordo Ortográfico.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Uso do Hífen",
+    "assunto": "Ortografia",
     "nivelSuperior": true
   },
   {
@@ -5043,7 +5043,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção adversativa 'porém' está intercalada/deslocada no interior da oração, o que exige o seu isolamento por vírgulas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5067,7 +5067,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na alternativa E, a vírgula antes do pronome relativo 'que' classifica a oração subordinada adjetiva como explicativa. A sua remoção transformaria a oração em restritiva, alterando o sentido.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -5091,7 +5091,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa A emprega corretamente as vírgulas para isolar a oração subordinada adverbial final intercalada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5115,7 +5115,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa E utiliza corretamente as vírgulas para isolar a oração reduzida intercalada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5139,7 +5139,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa A emprega corretamente a vírgula para marcar o deslocamento da oração subordinada adverbial condicional para a cabeça do período.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5163,7 +5163,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa E emprega corretamente as vírgulas para isolar a oração adjetiva explicativa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5187,7 +5187,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na alternativa D, os dois-pontos introduzem uma enumeração de itens que exemplificam 'muitos itens'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5211,7 +5211,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa C emprega corretamente a vírgula após a oração subordinada adverbial causal deslocada para o início do período.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5235,7 +5235,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa C emprega corretamente a vírgula para introduzir a oração subordinada adjetiva explicativa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5259,7 +5259,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na alternativa E, os dois-pontos introduzem uma enumeração de conselhos detalhando a expressão 'alguns conselhos'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5283,7 +5283,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A expressão 'apesar desses regulamentos e dessa ideia de modernidade' é uma locução/oração adverbial concessiva deslocada de extensão considerável, o que torna o uso das vírgulas obrigatório.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -5307,7 +5307,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Se o adjunto adverbial fosse deslocado para o final do período (ordem direta), a vírgula não seria obrigatória.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -5331,7 +5331,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa A pontua corretamente o texto, isolando o adjunto adverbial e separando as orações coordenadas adversativas/antitéticas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5355,7 +5355,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A alternativa A pontua perfeitamente o texto com vírgula de oração adverbial deslocada, travessão de aposto enumerativo e ponto final.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -5379,7 +5379,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "As vírgulas são obrigatórias para isolar a oração subordinada adverbial concessiva intercalada entre o sujeito e o verbo da oração principal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Pontuação",
+    "assunto": "Pontuação",
     "nivelSuperior": true
   },
   {
@@ -5403,7 +5403,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A coesão textual refere-se aos mecanismos linguísticos (pronomes, conectivos, sinônimos, elipses, etc.) que estabelecem ligações entre as partes do texto, garantindo a conexão entre as frases e parágrafos. É diferente da coerência, que se refere à lógica e ao sentido do texto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5427,7 +5427,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A anáfora é um mecanismo de coesão referencial em que um termo (geralmente um pronome) retoma um elemento já mencionado anteriormente no texto. No trecho, 'Ele' retoma 'O diretor', que foi mencionado na frase anterior.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5451,7 +5451,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O conectivo 'Contudo' possui valor adversativo, indicando oposição ou contraste entre ideias. Outros conectivos adversativos são: mas, porém, todavia, entretanto, no entanto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5475,7 +5475,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O conectivo 'portanto' possui valor conclusivo, indicando uma consequência ou conclusão a partir do que foi afirmado anteriormente. Outros conectivos conclusivos são: logo, por isso, assim, dessa forma, por conseguinte.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5499,7 +5499,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A substituição lexical consiste em trocar uma palavra por outra de sentido equivalente (sinônimo, hipônimo, hiperônimo, etc.). No exemplo, 'presidente' é substituído por 'mandatário', que é um sinônimo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5523,7 +5523,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A incoerência textual ocorre quando há contradição lógica entre as ideias do texto. No exemplo, dizer que alguém é vegetariano e que adora comer carne vermelha todos os dias é uma contradição lógica.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5547,7 +5547,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O pronome relativo 'onde' é empregado corretamente para retomar um substantivo que indica lugar ('cidade'), introduzindo uma oração subordinada adjetiva.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5571,7 +5571,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A elipse consiste na omissão de um termo que pode ser recuperado pelo contexto. No exemplo, 'João também' omite o verbo 'foi' e o complemento 'à festa', que podem ser recuperados a partir da primeira oração.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5595,7 +5595,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O conector 'Consequentemente' estabelece coesão interparagráfica/interoracional de valor consecutivo/conclusivo, sinalizando que a segunda proposição decorre causal e logicamente do fato exposto anteriormente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5619,7 +5619,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção 'Embora' introduz uma oração subordinada adverbial concessiva. A concessão traduz a ideia de uma oposição atenuada, em que um obstáculo real é admitido, mas não impede a concretização da proposição principal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5643,7 +5643,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A anáfora é o mecanismo coesivo pelo qual um termo gramatical ou lexical retoma um referente previamente introduzido no cotexto. O demonstrativo 'essa' tem papel anafórico padrão na língua escrita culta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5667,7 +5667,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A coesão referencial por anáfora pronominal ocorre quando pronomes de 3ª pessoa recuperam antecedentes nominais específicos já postos no texto, garantindo a continuidade tópica e a progressão textual.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5691,7 +5691,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "'Além disso' atua como operador argumentativo de adição, somando argumentos ou fatos que convergem para a mesma tese ou conclusão no desenvolvimento do texto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5715,7 +5715,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "As conjunções adversativas ('mas', 'porém', 'contudo', 'todavia', 'no entanto', 'entretanto') articulam proposições em relação de contraste, estabelecendo quebra de expectativa em relação ao enunciado antecedente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5739,7 +5739,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A locução 'Por isso' introduz uma oração conclusiva, operando como nexo que extrai a conclusão prática ou desfecho lógico a partir de premissas previamente assentadas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5763,7 +5763,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O pronome demonstrativo neutro 'isso' possui capacidade de realizar a anáfora oracional ou encapsulamento, recuperando em bloco um enunciado complexo ou evento exposto no período antecedente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5787,7 +5787,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O advérbio conectivo 'Consequentemente' sinaliza a relação de consequência/conclusão entre proposições, arrematando um encadeamento causal precedente com seu efeito lógico.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5811,7 +5811,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O conectivo adversativo 'No entanto' introduz uma proposição que quebra a expectativa pragmática gerada pela proposição anterior, expressando oposição e contraste.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5835,7 +5835,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "'Portanto' atua como conjunção coordenativa conclusiva, finalizando um silogismo ou sequência argumentativa na qual os fatos antecedentes funcionam como premissas justificadoras do resultado final.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5859,7 +5859,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Tanto conectores adversativos ('contudo') quanto concessivos ('apesar disso') fundamentam-se no campo semântico da oposição e do contraste, indicando ressalvas ou quebras de expectativas contextuais.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5883,7 +5883,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "'Por isso' é uma locução conclusiva que amarra o efeito/conclusão às causas explicadas nas frases antecedentes, garantindo coesão e coerência lógica ao parágrafo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5907,7 +5907,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A substituição de sintagmas nominais por pronomes pessoais anafóricos é um dos recursos mais comuns e eficazes da coesão referencial para evitar a repetição enfadonha de palavras no texto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5931,7 +5931,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "'Além disso' funciona como operador de soma argumentativa (adição), enquanto 'Portanto' atua como conjunção conclusiva (conclusão), estruturando harmonicamente a progressão temática do texto dissertativo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Referenciação, Substituição, Repetição e Conectores",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5955,7 +5955,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O conectivo 'pois' anteposto ao verbo introduz oração coordenada explicativa (sinônimo de 'porque'). Se estivesse posposto ao verbo e entre vírgulas, seria conclusivo. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência: Conectivos Coordenativos ('Pois' Explicativo vs. Conclusivo)",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -5979,7 +5979,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O pronome relativo 'onde' só pode ser empregado para retomar antecedentes que designem lugar físico/espacial. Para termos abstratos ou circunstanciais (situação, momento, caso), emprega-se 'em que' ou 'no(a) qual'. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão Referencial: Emprego do Pronome Relativo 'Onde' vs. 'Em Que'",
+    "assunto": "Pronomes Relativos e QUE",
     "nivelSuperior": false
   },
   {
@@ -6003,7 +6003,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção 'porém' substitui 'mas' mantendo o valor coordenativo adversativo. A alternativa D erra ao não usar o verbo no subjuntivo com 'embora'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Sintaxe e Coesão: Conjunções Adversativas vs. Concessivas e Modos Verbais",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -6027,7 +6027,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A relação concessiva de 'embora' pode ser convertida para a relação adversativa coordenada com 'mas' mantendo a oposição entre cansaço e continuidade do trabalho. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Semântica e Coesão: Equivalência entre Orações Concessivas e Adversativas",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -6051,7 +6051,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O conectivo 'pois' posposto ao verbo e intercalado entre vírgulas tem valor conclusivo (= portanto). Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Conectivos Coordenativos: 'Pois' Conclusivo (Posposto ao Verbo)",
+    "assunto": "Verbos",
     "nivelSuperior": false
   },
   {
@@ -6075,7 +6075,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "O 'pois' conclusivo deve vir posposto ao verbo da oração e isolado por vírgula(s). Na alternativa C, 'não veio, pois' equivale a 'não veio, portanto'. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Sintaxe e Pontuação: Emprego do 'Pois' Conclusivo",
+    "assunto": "Pontuação",
     "nivelSuperior": false
   },
   {
@@ -6099,7 +6099,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A progressão temática ocorre quando o texto avança informacionalmente articulando o que já foi dito (tema) com novas informações (rema). A alternativa B constrói uma narrativa coerente com acréscimo de informações. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência: Mecanismos de Progressão Temática e Continuidade Textual",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -6123,7 +6123,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção 'pois' explicativa não pode ser colocada em início absoluto de período ou encabeçando oração anteposta. Para iniciar orações com valor causal, deve-se empregar 'Como...', 'Visto que...' ou 'Já que...'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Sintaxe e Conectivos: Posição e Emprego Vicioso do 'Pois'",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -6147,7 +6147,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Coesão é a conexão formal/gramatical da superfície textual; Coerência é a harmonia de sentido e lógica do texto. É perfeitamente possível produzir um texto coeso mas completamente sem sentido (incoerente). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Linguística Textual: Distinção entre Coesão e Coerência",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -6171,7 +6171,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A retomada de um termo antecedente ('relatório anual') por meio de pronome demonstrativo + substantivo ('Esse documento') configura o mecanismo de coesão referencial anafórica (anáfora). Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão Referencial: Mecanismos de Anáfora e Catáfora",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -6195,7 +6195,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A conjunção adversativa 'mas' exige uma quebra real de expectativa lógica entre as proposições. 'Estudou muito' cria a expectativa de aprovação; o insucesso ('não foi aprovado') gera a oposição genuína. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão Semântica: Quebra de Expectativa e Conjunção Adversativa 'Mas'",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -6219,7 +6219,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na progressão linear, o rema (informação nova) de uma frase é transformado no tema (ponto de partida) da frase subsequente ($T1 \\to R1; T2(=R1) \\to R2$). Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Linguística Textual: Tipos de Progressão Temática (Linear, Constante e Derivada)",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -6243,7 +6243,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Usa-se 'aonde' exclusivamente com verbos de movimento que regem a preposição 'a' (ir a, chegar a, dirigir-se a). O verbo 'ir' exige 'a', logo: 'o lugar AONDE fui'. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Regência e Coesão: Emprego de 'Onde' vs. 'Aonde'",
+    "assunto": "Regência e Crase",
     "nivelSuperior": false
   },
   {
@@ -6267,7 +6267,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A coesão anafórica por substituição nominal utiliza um pronome demonstrativo associado a um hiperônimo ('esses profissionais' para retomar 'novos funcionários'). Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão Referencial: Substituição Nominal e Hiperonímia",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -6291,7 +6291,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "A coesão referencial adequada substitui termos já conhecidos por pronomes anafóricos ('Ele' para 'O diretor'), garantindo clareza, concisão e progressão informacional sem repetições viciosas. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão Referencial: Pronominalização e Elegância Textual",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -6315,7 +6315,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Hiperonímia: 'profissional de saúde' é hiperônimo (gênero/mais amplo) de 'médico' (espécie/hipônimo), constituindo recurso coesivo anafórico. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão e Coerência Textual: Relações Semânticas de Hiperonímia e Hiponímia",
+    "assunto": "Contexto, coesão, denotação, conotação e intertextualidade",
     "nivelSuperior": false
   },
   {
@@ -6339,7 +6339,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Uso referencial dos pronomes demonstrativos: 'esse/essa/isso' é anafórico (retoma o que já foi dito); 'este/esta/isto' é catafórico (anuncia o que vai ser dito). Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Coesão Referencial: Emprego dos Pronomes Demonstrativos (Anáfora vs. Catáfora)",
+    "assunto": "Classes Gramaticais e suas funções sintáticas",
     "nivelSuperior": false
   },
   {
@@ -6363,7 +6363,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Nas locuções verbais em que o verbo principal é impessoal (haver no sentido de existir ou fazer indicando tempo decorrido), o verbo auxiliar torna-se impessoal e fica obrigatoriamente na 3ª pessoa do singular ('Vai fazer cinco anos'). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Sintaxe de Concordância Verbal: Verbos Impessoais em Locuções Verbais",
+    "assunto": "Concordância Nominal e Concordância Verbal",
     "nivelSuperior": false
   },
   {
@@ -6387,7 +6387,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Em 'Precisa-se de voluntários', o 'se' é índice de indeterminação do sujeito e 'de voluntários' é objeto indireto. Logo, a alternativa D apresenta um erro de classificação sintática. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Sintaxe: Termos Essenciais da Oração e Índice de Indeterminação do Sujeito",
+    "assunto": "Termos da oração",
     "nivelSuperior": false
   },
   {
@@ -6411,7 +6411,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Em 'Trata-se de questões fundamentais', o sujeito é indeterminado e o verbo fica no singular. Afirmar que 'questões fundamentais' é sujeito constitui erro gramatical. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Sintaxe: Classificação do Sujeito e Predicado (Voz Passiva vs Indeterminação)",
+    "assunto": "Termos da oração",
     "nivelSuperior": false
   },
   {
@@ -6435,7 +6435,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Na distinção entre Complemento Nominal e Adjunto Adnominal ligados a substantivo abstrato: valor paciente = Complemento Nominal ('no guia'); valor agente/posse = Adjunto Adnominal ('do guia'). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Sintaxe: Diferença entre Complemento Nominal e Adjunto Adnominal",
+    "assunto": "Ortografia",
     "nivelSuperior": false
   },
   {
@@ -6459,7 +6459,7 @@ export const questionsPt: Question[] = [
     "generalExplanation": "Em 'Amou a Deus', temos Objeto Direto Preposicionado por reverência; em 'Aos culpados, a lei os punirá', temos Objeto Pleonástico pela duplicação enfática do objeto. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Língua Portuguesa - Sintaxe: Objeto Direto Preposicionado e Objeto Pleonástico",
+    "assunto": "Termos da oração",
     "nivelSuperior": false
   }
 ];

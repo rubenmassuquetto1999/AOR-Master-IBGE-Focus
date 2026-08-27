@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Flame, Trophy, Play, CheckCircle2, TrendingUp, BookOpen, Layers, Sparkles, ChevronRight, Search, ArrowRight } from "lucide-react";
 import { Question, UserHistory } from "../types";
-import { DISCIPLINE_TOPICS, getDisciplineForTopic } from "../data/disciplinesData";
+import { TAXONOMY, DisciplineInfo, getDisciplineForTopic, ALL_TOPICS } from "../data/taxonomy";
 
 interface DashboardProps {
   history: UserHistory[];
@@ -13,80 +13,23 @@ interface DashboardProps {
   dayCompletedQuestionsCount: number;
   dailyGoal: number;
   onSetTab: (tab: string) => void;
-  onSelectQuickTopic?: (banca: string, assunto: string) => void;
+  onSelectQuickTopic?: (banca: string, assunto: string, disciplina?: string) => void;
 }
 
-interface DisciplineCardData {
-  id: string;
-  name: string;
-  emoji: string;
-  colorBorder: string;
-  badgeBg: string;
-  textColor: string;
-  desc: string;
-  filterKey: string;
-  matches: (q: Question) => boolean;
-}
-
-const DISCIPLINES: DisciplineCardData[] = [
-  {
-    id: "portugues",
-    name: "Língua Portuguesa",
-    emoji: "📚",
-    colorBorder: "hover:border-blue-500 hover:shadow-blue-500/10",
-    badgeBg: "bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300",
-    textColor: "text-blue-600 dark:text-blue-400",
-    desc: "Ortografia, classes de palavras, verbos, termos da oração, concordância, crase, pontuação e interpretação.",
-    filterKey: "Língua Portuguesa",
-    matches: (q) => getDisciplineForTopic(q.assunto) === "Língua Portuguesa",
-  },
-  {
-    id: "adm",
-    name: "Noções de Administração",
-    emoji: "💼",
-    colorBorder: "hover:border-amber-500 hover:shadow-amber-500/10",
-    badgeBg: "bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300",
-    textColor: "text-amber-600 dark:text-amber-400",
-    desc: "Papéis do administrador, processo organizacional, liderança, motivação, equipes, comunicação e qualidade.",
-    filterKey: "Noções de Administração",
-    matches: (q) => getDisciplineForTopic(q.assunto) === "Noções de Administração",
-  },
-  {
-    id: "info",
-    name: "Noções Básicas de Informática",
-    emoji: "⚡",
-    colorBorder: "hover:border-emerald-500 hover:shadow-emerald-500/10",
-    badgeBg: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300",
-    textColor: "text-emerald-600 dark:text-emerald-400",
-    desc: "Hardware, software, Windows 11, gerenciamento de arquivos e pastas, Android e Microsoft Excel 365.",
-    filterKey: "Noções Básicas de Informática",
-    matches: (q) => getDisciplineForTopic(q.assunto) === "Noções Básicas de Informática",
-  },
-  {
-    id: "rlm",
-    name: "Raciocínio Lógico Quantitativo",
-    emoji: "🧠",
-    colorBorder: "hover:border-purple-500 hover:shadow-purple-500/10",
-    badgeBg: "bg-purple-50 text-purple-700 dark:bg-purple-950/40 dark:text-purple-300",
-    textColor: "text-purple-600 dark:text-purple-400",
-    desc: "Conjuntos, equações, porcentagem, geometria, progressões, proposições, tabela verdade, equivalências e argumentos.",
-    filterKey: "Raciocínio Lógico Quantitativo",
-    matches: (q) => getDisciplineForTopic(q.assunto) === "Raciocínio Lógico Quantitativo",
-  },
-];
-
-// Highlighted study topics strictly from the official lists
+// Highlighted high-yield study topics for direct practice
 const FEATURED_TOPICS = [
-  { name: "Questões de Ortografia", emoji: "📝", category: "Língua Portuguesa" },
-  { name: "Questões de Regência e Crase", emoji: "📝", category: "Língua Portuguesa" },
-  { name: "Questões de Classes de Palavras", emoji: "📝", category: "Língua Portuguesa" },
-  { name: "Administração| Gestão de Qualidade - Parte XII", emoji: "💼", category: "Noções de Administração" },
-  { name: "Administração| Liderança - Parte V", emoji: "💼", category: "Noções de Administração" },
-  { name: "Questões de Excel Microsoft 365", emoji: "⚡", category: "Noções Básicas de Informática" },
-  { name: "Questões de Sistema Operacional Windows 11", emoji: "⚡", category: "Noções Básicas de Informática" },
-  { name: "Tabela Verdade | Parte I", emoji: "🧠", category: "Raciocínio Lógico Quantitativo" },
-  { name: "Equivalência e Negação | Parte I", emoji: "🧠", category: "Raciocínio Lógico Quantitativo" },
-  { name: "Questões de Associação Lógica | Parte I", emoji: "🧠", category: "Raciocínio Lógico Quantitativo" },
+  { name: "Ortografia", emoji: "📝", category: "Língua Portuguesa" },
+  { name: "Regência e Crase", emoji: "📝", category: "Língua Portuguesa" },
+  { name: "Concordância Nominal e Concordância Verbal", emoji: "📝", category: "Língua Portuguesa" },
+  { name: "Processo Organizacional", emoji: "💼", category: "Noções de Administração" },
+  { name: "Liderança", emoji: "💼", category: "Noções de Administração" },
+  { name: "Gestão de Qualidade", emoji: "💼", category: "Noções de Administração" },
+  { name: "Microsoft Office 365 - Excel", emoji: "⚡", category: "Noções Básicas de Informática" },
+  { name: "Sistema Operacional Windows 11", emoji: "⚡", category: "Noções Básicas de Informática" },
+  { name: "Equivalência e Negação", emoji: "🧠", category: "Raciocínio Lógico Quantitativo" },
+  { name: "Tabela Verdade", emoji: "🧠", category: "Raciocínio Lógico Quantitativo" },
+  { name: "Associação Lógica", emoji: "🧠", category: "Raciocínio Lógico Quantitativo" },
+  { name: "Código de Ética do IBGE", emoji: "⚖️", category: "Ética no Serviço Público e IBGE" },
 ];
 
 export default function Dashboard({
@@ -144,17 +87,18 @@ export default function Dashboard({
     });
   };
 
-  const handleDisciplineClick = (disc: DisciplineCardData) => {
+  const handleDisciplineClick = (disc: DisciplineInfo) => {
     if (onSelectQuickTopic) {
-      onSelectQuickTopic("Todos", disc.filterKey);
+      onSelectQuickTopic("Todos", "Todos", disc.name);
     } else {
       onSetTab("quiz");
     }
   };
 
-  const handleTopicClick = (topicName: string) => {
+  const handleTopicClick = (topicName: string, discName?: string) => {
+    const discipline = discName || getDisciplineForTopic(topicName)?.name;
     if (onSelectQuickTopic) {
-      onSelectQuickTopic("Todos", topicName);
+      onSelectQuickTopic("Todos", topicName, discipline);
     } else {
       onSetTab("quiz");
     }
@@ -337,8 +281,11 @@ export default function Dashboard({
 
         {/* 5 Discipline Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {DISCIPLINES.map((disc) => {
-            const discQuestions = questions.filter(disc.matches);
+          {TAXONOMY.map((disc) => {
+            const discQuestions = questions.filter((q) => {
+              const matchedDisc = getDisciplineForTopic(q.assunto);
+              return matchedDisc ? matchedDisc.id === disc.id : disc.topics.includes(q.assunto);
+            });
             const discMastered = new Set(
               history
                 .filter((h) => h.isCorrect)

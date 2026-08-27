@@ -21,7 +21,7 @@ export const questionsIbgeEtica: Question[] = [
     ],
     "banca": "IBGE (AOR)",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Ética no Serviço Público",
     "nivelSuperior": true
   },
   {
@@ -44,7 +44,7 @@ export const questionsIbgeEtica: Question[] = [
     ],
     "banca": "IBGE (AOR)",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Ética no Serviço Público",
     "nivelSuperior": true
   },
   {
@@ -67,7 +67,7 @@ export const questionsIbgeEtica: Question[] = [
     ],
     "banca": "IBGE (AOR)",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Ética no Serviço Público",
     "nivelSuperior": true
   },
   {
@@ -90,7 +90,7 @@ export const questionsIbgeEtica: Question[] = [
     ],
     "banca": "IBGE (AOR)",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Questões de Ética no Serviço Público",
     "nivelSuperior": false
   },
   {
@@ -113,7 +113,7 @@ export const questionsIbgeEtica: Question[] = [
     ],
     "banca": "IBGE (AOR)",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Questões de Ética no Serviço Público",
     "nivelSuperior": true
   },
   {
@@ -136,7 +136,7 @@ export const questionsIbgeEtica: Question[] = [
     ],
     "banca": "IBGE (AOR)",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Questões de Ética no Serviço Público",
     "nivelSuperior": true
   }
 ];

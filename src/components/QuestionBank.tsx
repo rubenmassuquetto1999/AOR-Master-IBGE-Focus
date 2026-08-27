@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Plus, Search, Filter, PlusCircle, CheckCircle, HelpCircle, Briefcase, Award, Edit3, Save, X, Image, CheckSquare, Square, Trash2, Layers, CheckCheck, RefreshCw, Sparkles } from "lucide-react";
 import { Question } from "../types";
-import { DISCIPLINE_TOPICS, DISCIPLINES_LIST, getDisciplineForTopic, getTopicsForDiscipline } from "../data/disciplinesData";
+import { TAXONOMY, getDisciplineForTopic, getTopicsForDiscipline, ALL_TOPICS } from "../data/taxonomy";
 
 interface QuestionBankProps {
   questions: Question[];
@@ -84,12 +84,11 @@ export default function QuestionBank({
 
   // Filter and search logic
   const bancas = ["Todas", ...Array.from(new Set(questions.map((q) => q.banca).filter(Boolean))).sort()];
-  const assuntos = [
-    "Todos",
-    ...(selectedDisciplina === "Todas"
-      ? Array.from(new Set(questions.map((q) => q.assunto).filter(Boolean))).sort()
-      : getTopicsForDiscipline(selectedDisciplina)),
-  ];
+  const disciplinas = ["Todas", ...TAXONOMY.map((d) => d.name)];
+  const assuntos =
+    selectedDisciplina === "Todas"
+      ? ["Todos", ...Array.from(new Set(questions.map((q) => q.assunto).filter(Boolean))).sort()]
+      : ["Todos", ...getTopicsForDiscipline(selectedDisciplina)];
 
   const filteredQuestions = questions.filter((q) => {
     const matchesSearch =
@@ -97,7 +96,8 @@ export default function QuestionBank({
       q.assunto.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.banca.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesBanca = selectedBanca === "Todas" || q.banca === selectedBanca;
-    const matchesDisciplina = selectedDisciplina === "Todas" || getDisciplineForTopic(q.assunto) === selectedDisciplina;
+    const matchesDisciplina =
+      selectedDisciplina === "Todas" || getDisciplineForTopic(q.assunto)?.name === selectedDisciplina;
     const matchesAssunto = selectedAssunto === "Todos" || q.assunto === selectedAssunto;
     return matchesSearch && matchesBanca && matchesDisciplina && matchesAssunto;
   });
@@ -1205,9 +1205,24 @@ export default function QuestionBank({
       {/* Filter Options */}
       <div id="filter-block" className="flex flex-wrap gap-3 pb-2">
         {/* Filter by Banca */}
-        {/* Filter by Disciplina */}
         <div className="flex items-center gap-2">
           <Filter className="w-3.5 h-3.5 text-gray-400" />
+          <span className="text-xs font-semibold text-gray-500">Banca:</span>
+          <select
+            value={selectedBanca}
+            onChange={(e) => setSelectedBanca(e.target.value)}
+            className="text-xs font-semibold px-2 py-1 bg-white border border-gray-200 rounded-lg focus:outline-none dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
+          >
+            {bancas.map((b) => (
+              <option key={b} value={b}>
+                {b}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Filter by Disciplina */}
+        <div className="flex items-center gap-2">
           <span className="text-xs font-semibold text-gray-500">Disciplina:</span>
           <select
             value={selectedDisciplina}
@@ -1217,8 +1232,7 @@ export default function QuestionBank({
             }}
             className="text-xs font-semibold px-2 py-1 bg-white border border-gray-200 rounded-lg focus:outline-none dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
           >
-            <option value="Todas">Todas as Disciplinas</option>
-            {DISCIPLINES_LIST.map((d) => (
+            {disciplinas.map((d) => (
               <option key={d} value={d}>
                 {d}
               </option>
@@ -1236,23 +1250,7 @@ export default function QuestionBank({
           >
             {assuntos.map((as) => (
               <option key={as} value={as}>
-                {as === "Todos" ? "Todos os Tópicos" : as}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Filter by Banca */}
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold text-gray-500">Banca:</span>
-          <select
-            value={selectedBanca}
-            onChange={(e) => setSelectedBanca(e.target.value)}
-            className="text-xs font-semibold px-2 py-1 bg-white border border-gray-200 rounded-lg focus:outline-none dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200"
-          >
-            {bancas.map((b) => (
-              <option key={b} value={b}>
-                {b}
+                {as}
               </option>
             ))}
           </select>

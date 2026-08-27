@@ -21,7 +21,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -44,7 +44,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "FGV",
     "ano": 2017,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -67,7 +67,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "FGV",
     "ano": 2020,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -90,7 +90,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -113,7 +113,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -136,7 +136,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -159,7 +159,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -180,7 +180,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2019,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -201,7 +201,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2017,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -222,7 +222,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2019,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -245,7 +245,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -266,7 +266,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2019,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -287,7 +287,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -308,7 +308,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -329,7 +329,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -350,7 +350,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -371,7 +371,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -392,7 +392,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -413,7 +413,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -434,7 +434,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -455,7 +455,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -476,7 +476,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -499,7 +499,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -522,7 +522,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -545,7 +545,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -566,7 +566,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2017,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -589,7 +589,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -612,7 +612,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "IBGE (AOR)",
     "ano": 2021,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -635,7 +635,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -658,7 +658,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -681,7 +681,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -704,7 +704,7 @@ export const questionsAdm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -728,7 +728,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Administração Científica de Taylor foca na racionalização do trabalho no nível operacional (tarefas) e pressupõe que o indivíduo é motivado exclusivamente por recompensas materiais (Homo Economicus).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -752,7 +752,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Fayol estabeleceu originalmente as funções Prever, Organizar, Comandar, Coordenar e Controlar (POCCC).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -776,7 +776,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A retroação ou feedback é o parâmetro responsável por fornecer os dados necessários para o controle e a autorregulação do sistema.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -800,7 +800,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O cerne da Teoria Contingencial é que as práticas administrativas dependem do ambiente e da tecnologia, inexistindo um modelo universal único.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -824,7 +824,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No patrimonialismo, o Estado é visto como extensão do poder do soberano, propiciando nepotismo e uso de cargos públicos como prebendas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -848,7 +848,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O DASP (1938) foi o instrumento para implantar a administração pública burocrática no Brasil, focando na meritocracia e na impessoalidade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -872,7 +872,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A definição clássica de sistema aberto é a existência de um fluxo constante de intercâmbio de matéria, energia e informação com o meio externo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -896,7 +896,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Verbas orçamentárias e recursos humanos constituem insumos essenciais (entradas/inputs) necessários para o funcionamento organizacional.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -920,7 +920,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Burocracia proposta por Max Weber fundamenta-se na racionalidade, na impessoalidade e no caráter legal e formal das normas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -944,7 +944,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Experiência de Hawthorne demonstrou que o nível de produção é influenciado pelo comportamento social do trabalhador e sua integração ao grupo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -968,7 +968,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Taylor desenvolveu a abordagem de baixo para cima (da tarefa para a organização), enquanto Fayol seguiu de cima para baixo (da gerência e estrutura para a execução).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -992,7 +992,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Burocracia enfoca exclusivamente a organização formal e impessoal; a valorização de grupos e comunicações informais veio com a Escola de Relações Humanas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1016,7 +1016,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Entropia Negativa (ou Negentropia) é o processo pelo qual o sistema aberto absorve recursos e informação para combater a decadência e garantir a longevidade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1040,7 +1040,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Estruturas orgânicas são flexíveis e adaptáveis, apropriadas para ambientes mutáveis, destacando-se pela comunicação horizontal e descentralizada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1064,7 +1064,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Segundo Lawrence e Lorsch, quanto mais heterogêneo e complexo o ambiente, maior a necessidade de diferenciação das partes da organização e maior deve ser o esforço de integração entre elas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1088,7 +1088,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A essência do gerencialismo é a busca pela eficiência e eficácia, priorizando o que é entregue à sociedade (fins) em vez do rigor excessivo nos procedimentos (meios).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1112,7 +1112,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os Serviços Não Exclusivos são aqueles em que o Estado atua ao lado do setor privado, permitindo a criação de parcerias como as Organizações Sociais.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1136,7 +1136,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A autorreferencialidade é uma disfunção onde a máquina pública passa a existir para satisfazer seus próprios processos, perdendo o foco no atendimento à sociedade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1160,7 +1160,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A homeostase, ou equilíbrio dinâmico, é a propriedade de um sistema de manter suas variáveis internas constantes e em equilíbrio, mesmo com as variações do ambiente externo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1184,7 +1184,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A eficiência foca nos meios (uso de recursos, rapidez), enquanto a eficácia foca nos fins (atingir o objetivo, resolver o problema).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1208,7 +1208,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Ambientes turbulentos exigem estruturas orgânicas, que permitem respostas rápidas e ajustes contínuos às mudanças do meio.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1232,7 +1232,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A internalização das regras ocorre quando as normas deixam de ser meios para atingir fins e passam a ser o objetivo principal do funcionário.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1256,7 +1256,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Unidade de Comando é um pilar da Teoria Clássica de Fayol, garantindo a centralização da autoridade hierárquica.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1280,7 +1280,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Abordagem Sistêmica oferece o modelo teórico de funcionamento (interdependência, todo unitário), enquanto a Contingencial aplica esse modelo para explicar como variáveis específicas (ambiente/tecnologia) determinam a estrutura ideal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1304,7 +1304,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Joan Woodward concluiu que a tecnologia (unitária, massa ou processo contínuo) é uma variável independente que condiciona a estrutura e o comportamento organizacional.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1328,7 +1328,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A equifinalidade é o princípio sistêmico que afirma que um sistema pode alcançar o mesmo estado final (objetivo) a partir de condições iniciais diferentes e por meios distintos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1352,7 +1352,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O gerencialismo não nega a burocracia; ele a utiliza como base (especialmente a impessoalidade e o concurso) e tenta corrigir suas disfunções (rigidez).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1376,7 +1376,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O setor de serviços não exclusivos (como as OSs) possui propriedade 'pública não estatal', pois serve ao interesse público, mas não pertence ao aparelho do Estado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1400,7 +1400,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A situação descreve a realidade da administração moderna: mantém-se o pilar burocrático (concurso/meritocracia) e adiciona-se a lógica gerencial (metas/agilidade).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1424,7 +1424,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Entropia Negativa (ou Negentropia) é o esforço deliberado de importar mais energia/recursos do que se consome, visando a renovação e o combate à desorganização natural dos sistemas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1448,7 +1448,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A retroalimentação é o mecanismo que reintroduz no sistema os resultados de seu desempenho, permitindo correções e adaptações para melhorar as saídas futuras.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1472,7 +1472,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Equifinalidade significa que um sistema pode alcançar o mesmo estado final (objetivo) a partir de diferentes condições iniciais e por meio de diferentes caminhos ou métodos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1496,7 +1496,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A codificação é a etapa inicial onde o emissor converte a ideia mental em um código (linguagem, símbolos) compreensível para o envio.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1520,7 +1520,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A afixação de um edital é um exemplo clássico de comunicação unilateral (ou apenas informação), onde a mensagem é enviada sem a necessidade ou previsão de uma resposta imediata (feedback).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1544,7 +1544,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As necessidades de segurança constituem o segundo nível da pirâmide de Maslow e envolvem a busca por proteção, estabilidade e ordem.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1568,7 +1568,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os fatores higiênicos são extrínsecos ao trabalho, relacionando-se com o ambiente e as condições em que as tarefas são executadas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1592,7 +1592,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O ruído é o termo técnico que designa qualquer interferência que prejudique a fidelidade da transmissão da mensagem entre o emissor e o receptor.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1616,7 +1616,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As barreiras semânticas referem-se ao significado das palavras e ao uso de jargões técnicos que não são comuns ao receptor.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1640,7 +1640,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na liderança democrática, o líder atua como um facilitador e orientador, permitindo que o grupo participe ativamente das decisões e da definição das diretrizes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1664,7 +1664,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A centralização de decisões e a determinação unilateral de tarefas são marcas registradas da liderança autocrática.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1688,7 +1688,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O fluxo descendente (ou vertical de cima para baixo) é aquele que emana da cúpula administrativa em direção aos subordinados para transmitir ordens e orientações.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1712,7 +1712,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O fluxo ascendente é o canal que permite aos subordinados enviar feedbacks, relatórios e sugestões para os níveis superiores da hierarquia.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1736,7 +1736,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O ruído semântico ocorre quando o emissor e o receptor não compartilham o mesmo repertório (significado das palavras), impedindo a decodificação correta da mensagem.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1760,7 +1760,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O canal é o suporte físico ou virtual (e-mail) que transporta a informação, enquanto a mensagem é o conteúdo propriamente dito (as instruções).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1784,7 +1784,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O feedback (ou retroalimentação) é o componente que fecha o ciclo comunicativo, permitindo o ajuste e a confirmação da compreensão mútua.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1808,7 +1808,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A administração é avaliada pelos resultados que promove (III) e proporciona rumo e direção para o alcance de metas organizacionais (II). A afirmativa I é incorreta porque os processos produtivos não são abstratos e os objetivos organizacionais não são apenas simbólicos.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1832,7 +1832,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Segundo a teoria de Robert Katz, as habilidades humanas são preponderantes no nível tático/gerencial, enquanto o nível estratégico exige habilidades conceituais e o nível operacional exige habilidades técnicas.",
     "banca": "FGV",
     "ano": 2017,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1856,7 +1856,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os papéis decisórios de Mintzberg envolvem tomadas de decisão e escolhas, abrangendo: empreendedor, solucionador de conflitos (distúrbios), alocador/administrador de recursos e negociador.",
     "banca": "FGV",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1880,7 +1880,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Alocação de recursos = Organizar (2); Comparação de resultados com planos = Controlar (4); Liderança e gestão da execução = Dirigir (3); Definição de metas e objetivos = Planejar (1). Sequência: 2, 4, 3, 1.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1904,7 +1904,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A medição e avaliação dos resultados obtidos em relação aos padrões estabelecidos é a função de Controle. O Planejamento refere-se ao estabelecimento de objetivos e à definição das ações para atingi-los.",
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1928,7 +1928,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os componentes clássicos do planejamento estratégico incluem: definição da missão/visão, análise do ambiente externo, análise do ambiente interno e formulação das estratégias (plano estratégico). O detalhamento de contingências não é um componente da estrutura clássica do planejamento estratégico.",
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1952,7 +1952,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A sequência do PODC apresentada no trecho de Chiavenato corresponde a: Organização (estruturação das tarefas), Direção (liderança e coordenação de pessoas), Planejamento (definição de objetivos) e Controle (monitoramento de desempenho).",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -1976,7 +1976,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As duas primeiras afirmações inverteram os conceitos: definir o que fazer e metas é Planejamento (F); alocar recursos, atribuir tarefas e definir responsáveis é Organização (F). A terceira afirmação sobre Controle é Verdadeira.",
     "banca": "IBFC",
     "ano": 2019,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2000,7 +2000,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A função Controle é responsável por acompanhar os resultados, comparar com os padrões planejados e adotar medidas corretivas quando necessário para assegurar o cumprimento das metas.",
     "banca": "IBFC",
     "ano": 2017,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2024,7 +2024,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A primeira afirmativa é Verdadeira (planejamento operacional é detalhado e de curto prazo). A segunda é Falsa (liderança, tomada de decisão com subordinados e comunicação são elementos da função Direção, não da Organização). A terceira é Verdadeira (níveis estratégico, tático e operacional). Sequência: V, F, V.",
     "banca": "IBFC",
     "ano": 2019,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2048,7 +2048,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A alternativa D apresenta o termo 'colidente' (que significa em conflito, divergente, em oposição). O gestor deve atuar de forma coerente e alinhada (e não colidente) com uma liderança eficaz para garantir o bom desempenho da equipe.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2072,7 +2072,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A definição clássica e consagrada de liderança na administração (Chiavenato) a conceitua como o processo de influência interpessoal exercido em uma dada situação e dirigido, por meio da comunicação, ao alcance de objetivos específicos.",
     "banca": "IBFC",
     "ano": 2019,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2096,7 +2096,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A afirmativa I descreve perfeitamente a liderança Autocrática. A afirmativa II descreveu na verdade a Liderança Liberal (laissez-faire). E a afirmativa III descreveu a Liderança Democrática. Portanto, apenas a afirmativa I está correta.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2120,7 +2120,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No estilo democrático, as diretrizes são debatidas e decididas pelo grupo com o estímulo e orientação do líder, que busca atuar como um membro normal do grupo e mantém objetividade nas críticas e elogios.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2144,7 +2144,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Teoria da Liderança Situacional (de Hersey & Blanchard) fundamenta-se precipuamente na adequação do estilo do líder ao nível de maturidade (desenvolvimento/prontidão) dos liderados no cumprimento de uma determinada tarefa.",
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2168,7 +2168,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Todas as afirmativas estão corretas e alinhadas com os conceitos das teorias motivacionais apresentados no texto base.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2190,7 +2190,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A escala de progressão salarial é um fator extrínseco (higiênico), dependente do ambiente e da organização, não um motivo interno do indivíduo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2212,7 +2212,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O comportamento microorganizacional refere-se ao nível individual, e não ao grupo. O nível grupal é intermediário (meso).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2234,7 +2234,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A fase de 'Realização' (ou desempenho) é o estágio em que a equipe já superou conflitos e está focada e otimizada na execução das tarefas e alcance dos resultados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2258,7 +2258,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A administração é avaliada por seus resultados práticos e por fornecer direção. A afirmativa I é incoerente ao falar em 'objetivos simbólicos'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2282,7 +2282,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O nível tático (intermediário) atua como elo entre a cúpula e a base, exigindo forte habilidade humana para lidar com grupos e pessoas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2306,7 +2306,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A categoria descrita refere-se aos Papéis Decisórios. Segundo o texto, incluem: Empreendedor, Alocador de Recursos, Gerenciador de Turbulências (Solucionador de Problemas/Conflitos) e Negociador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2328,7 +2328,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A liderança é classicamente definida como um processo de influência interpessoal e comunicação visando objetivos, diferenciando-se da imposição hierárquica.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2352,7 +2352,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A afirmativa I descreve corretamente a liderança autocrática. A II descreve a liberal e a III descreve a democrática, havendo troca indevida nos enunciados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2376,7 +2376,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na liderança democrática, o líder atua como um facilitador e membro do grupo, focando nos fatos e estimulando o debate.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2400,7 +2400,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A liderança situacional (Hersey e Blanchard) baseia-se na maturidade (desenvolvimento) da equipe e na adaptação à situação. A liderança é um processo que envolve também os liderados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2424,7 +2424,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Todas as assertivas refletem princípios modernos de gestão de pessoas, liderança coach, visão sistêmica e foco no capital humano como diferencial competitivo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2448,7 +2448,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Todas as afirmativas apresentam definições corretas e complementares sobre o papel do líder na coordenação, motivação e provisão de condições de trabalho.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2472,7 +2472,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O cerne da teoria de Hersey e Blanchard é que não existe um único estilo melhor; a eficácia depende de adaptar o estilo à maturidade (prontidão) dos liderados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2496,7 +2496,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Alocar recursos é Organizar (2); comparar resultados é Controlar (4); gerir a execução é Dirigir (3); estabelecer metas é Planejar (1).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2520,7 +2520,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Todas as afirmativas refletem conceitos modernos e amplamente aceitos sobre gestão de pessoas, liderança sistêmica e a aplicação de técnicas de coaching (como o feedback construtivo) no ambiente corporativo e hospitalar.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -2544,7 +2544,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As três afirmativas definem com precisão o papel do líder: coordenar esforços (I), motivar e alinhar interesses (II) e prover as condições e recursos necessários para a execução do trabalho (III).",
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2568,7 +2568,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A premissa fundamental da Teoria da Liderança Situacional de Hersey e Blanchard é que não existe um único estilo de liderança ideal. A eficácia depende da adequação do estilo do líder ao nível de maturidade (competência e comprometimento) dos liderados para a tarefa específica.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -2592,7 +2592,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A afirmativa I está correta (teorias de conteúdo focam nas necessidades, como Maslow; teorias de processo focam no como a motivação ocorre, como Vroom). A II descreve a Teoria da Expectativa de Vroom. A III descreve a Teoria da Equidade de Adams.",
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -2614,7 +2614,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A escala de progressão salarial é um fator de motivação extrínseca (externo), pois depende de políticas da organização e do ambiente, e não de características psicológicas ou intrínsecas do indivíduo.",
     "banca": "IBFC",
     "ano": 2017,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2636,7 +2636,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O nível microorganizacional refere-se ao estudo do indivíduo (comportamento individual). O comportamento do grupo situa-se no nível intermediário (meso), e o nível macro refere-se à organização como um todo.",
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -2658,7 +2658,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No modelo de Tuckman, o estágio de Desempenho (Performing), aqui traduzido como Realização, é a fase em que a equipe está madura, coesa, resolve conflitos e atinge níveis ótimos de produtividade e execução do trabalho.",
     "banca": "IBFC",
     "ano": 2017,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2682,7 +2682,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Segundo a doutrina (como Chiavenato e Robbins), a cultura organizacional é transmitida e mantida principalmente por meio de histórias, rituais, cerimônias, símbolos materiais e linguagem/comunicação.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2706,7 +2706,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Todos os itens listados (Fonte/Emissor, Transmissor/Codificador, Canal, Receptor/Decodificador e Destino) compõem o modelo clássico do processo de comunicação descrito por Chiavenato.",
     "banca": "IBFC",
     "ano": 2016,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2728,7 +2728,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A comunicação interna (ou endomarketing) tem como objetivo alinhar, integrar e motivar os colaboradores, facilitando o fluxo de informações entre os diversos setores da organização.",
     "banca": "IBFC",
     "ano": 2019,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2752,7 +2752,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A ética profissional exige que, mesmo em ambientes onde a informalidade e as conversas paralelas ocorram, o colaborador mantenha o respeito à privacidade alheia, abstendo-se de alimentar fofocas ou emitir opiniões sobre a vida pessoal de terceiros.",
     "banca": "IBFC",
     "ano": 2017,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2776,7 +2776,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Uma comunicação estratégica e eficaz busca a empatia e a conexão, utilizando os pontos em comum e interesses compartilhados para engajar colaboradores diversos, respeitando suas individualidades.",
     "banca": "IBFC",
     "ano": 2017,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -2800,7 +2800,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na Gestão da Qualidade, o elemento 'Especificação' refere-se à descrição do produto ou serviço, estabelecendo a 'qualidade planejada' e definindo exatamente como ele deve ser em termos de atributos e desempenho.",
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -2824,7 +2824,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Ciclo de Shewhart, popularizado por Deming como PDCA (Plan, Do, Check, Act) ou PDSA (Plan, Do, Study, Act), é composto pelas etapas de Planejar, Fazer/Executar, Estudar/Checar e Agir.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -2848,7 +2848,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Kaoru Ishikawa é o pai do Diagrama de Causa e Efeito (Espinha de Peixe). Walter Shewhart é o precursor do Controle Estatístico de Processo e do ciclo que originou o PDCA. Armand Feigenbaum, o pai da Qualidade Total (TQC), expandiu os fatores que afetam a qualidade para os 9 M's.",
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Noções de Administração",
+    "assunto": "Questões de Administração",
     "nivelSuperior": true
   },
   {
@@ -2872,7 +2872,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Para Herzberg, salário e condições físicas são fatores higiênicos. Eles têm caráter preventivo: evitam a insatisfação, mas não produzem satisfação/motivação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -2896,7 +2896,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As necessidades de nível baixo de Maslow (primárias) coincidem com os fatores higiênicos de Herzberg, pois ambos tratam de aspectos básicos e externos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -2920,7 +2920,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Como os fatores higiênicos já estão atendidos (salário, ambiente, relações), a motivação só virá através de fatores motivacionais, como responsabilidade e participação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -2944,7 +2944,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A filtragem ocorre quando o emissor manipula a informação para que ela seja vista de forma mais favorável pelo receptor.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -2968,7 +2968,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A sobrecarga de informações é uma barreira organizacional que ocorre quando o fluxo de dados é maior do que a capacidade de processamento do servidor.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -2992,7 +2992,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A comunicação lateral ou horizontal ocorre entre membros do mesmo nível hierárquico para coordenação de tarefas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3016,7 +3016,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O estilo liberal (laissez-faire) é marcado pela passividade do líder, que só intervém se solicitado, o que geralmente resulta em desorientação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3040,7 +3040,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na liderança democrática, o envolvimento do grupo gera um senso de responsabilidade que mantém o ritmo de trabalho independentemente da vigilância direta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3064,7 +3064,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A liderança democrática é a que melhor promove qualidade e comprometimento, com o líder atuando de forma objetiva e facilitadora.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3088,7 +3088,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O fluxo horizontal (ou lateral) ocorre entre membros do mesmo nível hierárquico, visando a coordenação e integração de esforços entre diferentes departamentos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3112,7 +3112,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No fluxo ascendente, a filtragem ocorre quando o emissor (subordinado) manipula a informação para que ela seja vista de forma positiva pelo receptor (superior).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3136,7 +3136,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O fluxo transversal (ou diagonal) é aquele que atravessa diferentes níveis e áreas, sendo fundamental para a agilidade em estruturas complexas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3160,7 +3160,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O fluxo transversal faz exatamente o oposto do descrito na alternativa D: ele rompe a cadeia de comando vertical para permitir a comunicação entre diferentes áreas e níveis.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3184,7 +3184,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O ruído é definido como qualquer interferência que prejudique a clareza da mensagem, incluindo fatores psicológicos como preconceitos, desatenção ou estados emocionais.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3208,7 +3208,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A eficácia da decodificação depende de o emissor utilizar um código e símbolos que façam parte do repertório do receptor, garantindo que o significado seja preservado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": true
   },
   {
@@ -3232,7 +3232,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A questão pede a alternativa incorreta. Medir resultados é atividade típica da função controle, e não do planejamento. O planejamento está relacionado à definição antecipada de objetivos, meios, estados futuros desejados e atualização contínua.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Planejamento",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3256,7 +3256,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os componentes clássicos do planejamento estratégico envolvem missão, análises dos ambientes externo e interno e definição do plano estratégico. O detalhamento de contingências pode existir em planos contingenciais, mas não é componente central do processo sistemático descrito.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Planejamento Estratégico",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": true
   },
   {
@@ -3280,7 +3280,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A sequência correta é Organização, Direção, Planejamento e Controle. Organização trata da divisão do trabalho e coordenação estrutural; Direção coordena pessoas; Planejamento define objetivos e ações; Controle monitora desempenho.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas (PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3304,7 +3304,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A sequência correta é F, F, V. A primeira afirmativa atribui indevidamente à Organização a definição do que deve ser feito para atingir resultados (Planejamento). A segunda atribui ao Planejamento atividades típicas de Organização (alocação de recursos e definição de tarefas/responsáveis). A terceira está correta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas (PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": true
   },
   {
@@ -3328,7 +3328,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Controle é a função administrativa que monitora o desempenho, compara resultados com padrões, verifica se os objetivos estão sendo alcançados e identifica necessidades de correção ou modificação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Controle",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3352,7 +3352,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A sequência correta é V, F, V. O planejamento operacional é detalhado, de curto prazo e com cronogramas. A segunda afirmativa é falsa, pois liderança, tomada de decisões e comunicação com subordinados são aspectos da Direção, não da Organização. A terceira é verdadeira, pois o planejamento pode ocorrer nos níveis estratégico, tático e operacional.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Processo Organizacional (PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": true
   },
   {
@@ -3376,7 +3376,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A questão pede a alternativa incorreta. A alternativa D é incorreta porque ações e crenças 'colidentes' com liderança consistente contradizem o papel do administrador de facilitar, desenvolver e consolidar desempenho por meio de liderança alinhada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Papéis e Habilidades do Administrador",
+    "assunto": "Papeis e Habilidades do Administrador",
     "nivelSuperior": false
   },
   {
@@ -3398,7 +3398,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A função de Organização é responsável por estruturar os recursos, distribuir tarefas e definir a autoridade para a execução do que foi planejado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Processo Organizacional (PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3420,7 +3420,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Direção lida diretamente com o comportamento humano, abrangendo liderança, motivação, comunicação e orientação dos subordinados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Processo Organizacional (PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3442,7 +3442,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Planejamento Estratégico caracteriza-se por abranger a organização como um todo, focar no longo prazo e estabelecer metas globais.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Planejamento Estratégico",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3464,7 +3464,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Controle baseia-se na medição do desempenho e na retroalimentação (feedback) para corrigir eventuais desvios em relação ao planejado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Controle",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3486,7 +3486,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Planejamento é a função precursora que estabelece os objetivos e as estratégias necessárias para guiar todas as outras funções administrativas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Planejamento",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3508,7 +3508,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A organização informal surge espontaneamente dos relacionamentos pessoais e sociais entre os membros da empresa, diferindo da estrutura formal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Processo Organizacional (PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3530,7 +3530,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Planejamento Tático atua no nível intermediário (gerencial), desdobrando a estratégia global em objetivos específicos para cada departamento ou setor.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Planejamento",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3552,7 +3552,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Processo Administrativo é o ciclo contínuo e integrado formado pelas funções de Planejamento, Organização, Direção e Controle.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Processo Organizacional (PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3574,7 +3574,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A função de Controle é responsável por acompanhar a execução das tarefas, comparar os resultados com as metas traçadas e efetuar correções.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Controle",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3596,7 +3596,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Organização estabelece a estrutura formal da empresa, atribuindo tarefas, definindo cargos e mapeando as relações de hierarquia e autoridade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Processo Organizacional (PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -3620,7 +3620,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A instabilidade técnica no sistema/arquivo é um ruído físico (interferência no canal/suporte). O uso de siglas desconhecidas que impede a compreensão do significado é um ruído semântico.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3644,7 +3644,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O enriquecimento vertical busca elevar a profundidade do cargo, adicionando responsabilidades de níveis hierárquicos superiores (planejamento e controle).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3668,7 +3668,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Diferente das necessidades deficitárias (fisiológicas, segurança, etc.), a autorrealização é uma necessidade de crescimento; quanto mais o indivíduo se desenvolve, mais motivado ele fica para continuar crescendo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3692,7 +3692,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Herzberg utiliza o termo 'higiênico' ou 'profilático' por analogia à medicina: eles evitam a doença (insatisfação), mas não garantem a saúde (satisfação/motivação).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3716,7 +3716,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O medo de represálias leva à omissão de informações (silêncio) e à manipulação de dados para agradar chefias (filtragem).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3740,7 +3740,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Apenas a assertiva I está correta, pois o feedback é o mecanismo de controle da compreensão da mensagem.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3764,7 +3764,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A falta de coerência entre a fala e o corpo é uma barreira pessoal/psicológica, pois reflete o estado emocional e a atitude do indivíduo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3788,7 +3788,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Uma característica marcante do líder autocrático é ser pessoal em suas avaliações, o que reforça sua posição de domínio sobre os indivíduos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3812,7 +3812,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Todas as afirmações são tecnicamente precisas de acordo com o conteúdo: a descrição é de liderança liberal (I), a autocrática eleva a quantidade sob pressão (II) e a democrática resolve problemas de coesão e qualidade (III).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3836,7 +3836,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Ponte de Fayol permite que funcionários de mesmo nível em departamentos diferentes se comuniquem diretamente (fluxo horizontal) para evitar a demora de subir e descer toda a hierarquia.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3860,7 +3860,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A situação envolve múltiplos níveis (Diretor, Coordenadores e Agentes) e múltiplas áreas (TI, Logística e Finanças), o que caracteriza o fluxo transversal ou diagonal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Comportamento Organizacional: Motivação, Comunicação e Liderança",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -3884,7 +3884,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A centralização ocorre quando o ente político (União, Estados, DF ou Municípios) exerce a atividade administrativa de forma direta, utilizando seus próprios órgãos e agentes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -3908,7 +3908,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A desconcentração é um processo interno (dentro da mesma pessoa) que cria órgãos (letra 'O' de desconcentração/órgão), enquanto a descentralização envolve outra pessoa jurídica, ou seja, uma entidade (letra 'E' de descentralização/entidade).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -3932,7 +3932,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A autoridade é definida como o direito legítimo, conferido pelo cargo e pela estrutura formal, de comandar e tomar decisões.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -3956,7 +3956,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A autoridade é alocada nos níveis superiores e flui para baixo. A responsabilidade gera a obrigação do subordinado de prestar contas ao superior (fluxo ascendente).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -3980,7 +3980,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Poder Hierárquico é a prerrogativa da Administração Pública de distribuir e escalonar funções e competências entre seus órgãos e agentes, estabelecendo vínculos de coordenação, subordinação e comando interno.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4004,7 +4004,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Poder de Revisão deriva diretamente da hierarquia e do princípio da autotutela, autorizando os órgãos superiores a reexaminar a legalidade e o mérito dos atos emanados por seus subordinados hierárquicos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4028,7 +4028,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Estrutura Linear (Clássica/Militar) apoia-se no princípio da unidade de comando de Henri Fayol: linhas únicas e diretas de autoridade ligam o topo à base da pirâmide organizacional, de modo que cada subordinado tem apenas um chefe imediato.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4052,7 +4052,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Estrutura Funcional divide a autoridade por competência técnica e especialidade funcional. Nela, não há unidade de comando rígida: os subordinados reportam-se a diferentes especialistas conforme a natureza da tarefa a ser executada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4076,7 +4076,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Cadeia de Comando (também chamada de Cadeia Escalar por Fayol) é a linha vertical ininterrupta de autoridade que vai do nível estratégico superior até os níveis operacionais da base da organização, definindo claramente o fluxo hierárquico.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4100,7 +4100,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Amplitude de Controle (ou Administrativa) corresponde ao número de colaboradores subordinados diretamente a um único gestor. Amplitudes estreitas geram organizações agudas (muitos níveis), enquanto amplitudes amplas produzem estruturas achatadas (poucos níveis hierárquicos).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4124,7 +4124,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na descentralização por outorga (ou por serviços/técnica/funcional), o Estado cria, mediante lei, uma nova pessoa jurídica de direito público ou privado integrante da Administração Indireta, transferindo a titularidade e a execução do serviço público.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4148,7 +4148,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A contratação de concessionárias ou permissionárias particulares caracteriza a Descentralização por Delegação (ou Colaboração). Nela, transfere-se por prazo determinado unicamente a execução da atividade, permanecendo a titularidade do serviço com o Poder Concedente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4172,7 +4172,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A relação entre a Administração Direta e as entidades da Administração Indireta é de vinculação (e não de subordinação hierárquica). Trata-se do princípio da tutela administrativa ou supervisão ministerial, restrito ao controle finalístico previsto em lei.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4196,7 +4196,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A delegação transfere autoridade formal e atribuição de execução, mas não exonera o superior de sua responsabilidade final. Quem delega compartilha a responsabilidade pelos resultados e mantém o dever de supervisão e acompanhamento.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4220,7 +4220,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Princípio da Paridade (ou Equivalência de Fayol) postula que a autoridade e a responsabilidade devem ser proporcionais. Conceder autoridade sem responsabilidade estimula abusos; cobrar responsabilidade sem a devida autoridade torna a entrega da meta inviável.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4244,7 +4244,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Chester Barnard definiu 4 condições simultâneas para aceitação da autoridade formal: 1) Compreensão da ordem; 2) Consistência com o propósito organizacional; 3) Compatibilidade com interesses pessoais do empregado; 4) Capacidade física/mental de execução. O carisma pessoal é um conceito de liderança carismática (Max Weber), não um requisito da Teoria da Aceitação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4268,7 +4268,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Autoridade Formal é institucional, legítima e despersonalizada: reside no cargo e flui verticalmente pela estrutura formal. Já o Poder é a capacidade de influenciar comportamentos, podendo ser informal e fluir em qualquer direção.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4292,7 +4292,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O dever de obediência hierárquica é relativo. Perante ordem manifestamente ilegal, o agente público tem a obrigação jurídica de se recusar a cumpri-la e de representar formalmente contra a ilegalidade (art. 116, IV e XII da Lei nº 8.112/1990).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4316,7 +4316,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A descentralização administrativa cria entidades autônomas com personalidade jurídica própria. Entre o ente instituidor (Administração Direta) e a entidade criada (Administração Indireta) não há subordinação hierárquica, mas tão somente controle finalístico (tutela ou supervisão ministerial).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4340,7 +4340,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No âmbito dos servidores públicos, o Poder Disciplinar é considerado pela doutrina administrativista como um poder acessório ou correlato do Poder Hierárquico, pois é a hierarquia que estabelece os deveres de subordinação e o controle funcional que fundamentam a aplicação de penalidades.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4364,7 +4364,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os órgãos de Staff exercem funções de suporte, consultoria, pareceres e planejamento técnico. Eles aconselham e prestam serviços de apoio aos órgãos de linha, sem possuir autoridade formal de comando sobre a execução direta das atividades-fim.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4388,7 +4388,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A estrutura Linha-Staff é o modelo híbrido que preserva as linhas diretas e a unidade de comando da Estrutura Linear (autoridade de linha), ao mesmo tempo em que incorpora a especialização técnica da Estrutura Funcional por meio de órgãos consultivos (staff).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4412,7 +4412,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na estrutura funcional (proposta por Taylor), a autoridade é fragmentada por especialidade. A ausência de um comando único pode acarretar duplicidade de comandos, conflitos entre orientações de especialistas distintos e dificuldade de coordenação global.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4436,7 +4436,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A redução de níveis hierárquicos (delayering) produz uma estrutura achatada (plana/horizontal). Como há menos cargos de chefia para coordenar o mesmo número de pessoas, a amplitude administrativa (número de subordinados por chefe) torna-se necessariamente mais larga.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4460,7 +4460,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Amplitudes de controle largas são recomendadas quando as atividades são padronizadas, previsíveis e bem documentadas, e quando a equipe possui maturidade, qualificação e autonomia para operar com baixa dependência de supervisão diária.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4484,7 +4484,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Existe uma relação inversamente proporcional entre amplitude administrativa e níveis hierárquicos: para uma mesma quantidade de colaboradores, quanto maior o número de subordinados diretos por chefe (amplitude ampla), menor será o número de camadas hierárquicas (organização achatada).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4508,7 +4508,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Pelo art. 37, XIX da Constituição Federal de 1988: as Autarquias (pessoas jurídicas de direito público) são CRIADAS diretamente por lei específica (nascem com a vigência da lei). Já as Empresas Públicas, Sociedades de Economia Mista e Fundações (pessoas jurídicas de direito privado) têm sua criação AUTORIZADA por lei específica e adquirem personalidade jurídica com o registro de seus atos constitutivos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4532,7 +4532,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Princípio da Especialidade vincula a atuação da entidade da Administração Indireta aos fins e objetivos expressamente consignados na lei instituidora. A entidade não possui capacidade genérica, devendo restringir suas atividades ao cumprimento de seu propósito legal de criação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4556,7 +4556,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Autoridade Formal decorre da legitimidade do cargo na estrutura organizacional (caso de Maria, investida na função diretiva). Já o Poder é a capacidade de influenciar comportamentos e decisões, podendo derivar do conhecimento técnico especializado (caso de João, que detém o poder de especialista/perito).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4580,7 +4580,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A autoridade formal e a prestação de contas formam um ciclo contínuo: a autoridade é delegada de cima para baixo (descendente) para conceder legitimidade e meios de execução, enquanto a responsabilidade e o dever de prestar contas (accountability) fluem de baixo para cima (ascendente) perante as instâncias de controle e a sociedade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4604,7 +4604,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Atos administrativos válidos e legais que se tornam supervenientemente inoportunos ou inconvenientes para o interesse público são extintos por meio da Revogação, que produz efeitos prospectivos ('ex nunc') e constitui prerrogativa legítima da autoridade hierárquica.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4628,7 +4628,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No pacto federativo brasileiro, os entes federados (União, Estados, Distrito Federal e Municípios) são entes políticos autônomos. Não existe qualquer relação de hierarquia ou subordinação entre a União e os Estados-Membros, vigendo o princípio da autonomia federativa e a distribuição constitucional de competências.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4652,7 +4652,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Estrutura Matricial (ou Matriz) é caracterizada pela sobreposição de uma departamentalização funcional com uma estrutura por projetos ou produtos, resultando na coexistência de duas linhas de comando (dupla subordinação: gerente funcional + gerente de projeto).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4676,7 +4676,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os principais conflitos na estrutura Linha-Staff decorrem da tênue fronteira entre aconselhar e mandar. Especialistas de staff podem tentar impor suas orientações como ordens diretas aos operacionais, gerando conflitos de autoridade com os chefes de linha.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional: Responsabilidade, Coordenação, Autoridade, Poder e Delegação",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4700,7 +4700,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O downsizing (reestruturação e enxugamento organizacional) promove o achatamento da pirâmide hierárquica: reduz o número de níveis escalonados (encurta a cadeia de comando) e amplia o número de subordinados diretos sob a responsabilidade de cada gestor (aumenta a amplitude de controle).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional e Amplitude Administrativa",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4724,7 +4724,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Quanto mais complexa, instável e arriscada for a tarefa desempenhada pelos subordinados, mais estreita (menor) deve ser a amplitude de controle do gestor para permitir supervisão atenta e suporte técnico constante.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional e Amplitude Administrativa",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4748,7 +4748,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As estruturas verticais (com cadeias de comando muito longas) padecem de lentidão decisória, ruído na comunicação ascendente e descendente, custos gerenciais elevados e isolamento do nível estratégico em relação à operação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Estrutura Organizacional e Hierarquia",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4772,7 +4772,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Coordenação é o processo de harmonizar todas as atividades de uma organização, facilitando seu funcionamento e seu sucesso ao sincronizar ações de departamentos distintos em prol da missão global.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas (Coordenação)",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4796,7 +4796,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Para Fayol (POCCC - Prever, Organizar, Comandar, Coordenar e Controlar), 'coordenar é ligar, unir e harmonizar todos os atos e esforços', consistindo em uma das 5 funções autônomas clássicas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Teorias da Administração (Fayol e POCCC)",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -4820,7 +4820,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Controle fecha o ciclo administrativo: monitora o desempenho frente aos padrões planejados e fornece feedback para alimentar novas rodadas de planejamento e organização.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas (Controle)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -4844,7 +4844,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Tipologia do Controle pelos níveis organizacionais: 1) Estratégico (Institucional/Longo Prazo/Macro); 2) Tático (Departamental/Médio Prazo/Setorial); 3) Operacional (Tarefas e Operações/Curto Prazo/Micro).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Níveis de Controle Administrativo",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -4868,7 +4868,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O processo administrativo PODC é formado por Planejamento (estabelece objetivos), Organização (aloca recursos e estrutura cargos), Direção (conduz as pessoas) e Controle (avalia resultados e fecha o ciclo com retroalimentação).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Processo Administrativo (Ciclo PODC)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -4892,7 +4892,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Planejamento possui primazia sobre as outras funções administrativas: é ele quem determina antecipadamente o que deve ser feito, quando, como e por quem, servindo de base indispensável para a Organização, a Direção e o Controle.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas (Planejamento)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -4916,7 +4916,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Pirâmide do Planejamento: 1) Estratégico (Alta Administração, longo prazo, visão holística e macro); 2) Tático (Média Gerência, médio prazo, departamental/setorial); 3) Operacional (Supervisão e Base, curto prazo, tarefas e rotinas analíticas).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Níveis de Planejamento (Estratégico, Tático e Operacional)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -4940,7 +4940,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Nível Operacional abriga os planos de ação detalhados, Procedimentos Operacionais Padrão (POPs), rotinas e métodos específicos executados pelos servidores na base da estrutura administrativa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Níveis de Planejamento e Execução Operacional",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -4964,7 +4964,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Classificação temporal do Controle: 1) Prévio / Preventivo / Ex-ante / Feedforward (atua sobre insumos antes da ação); 2) Concomitante / Simultâneo / Em tempo real (atua durante o processamento); 3) Posterior / Corretivo / Ex-post / Feedback (atua sobre os resultados/outputs após a ação).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Tipos e Momentos do Controle Administrativo",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -4988,7 +4988,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O controle corretivo/posterior (feedback) avalia os resultados obtidos após o término do trabalho, servindo como base de aprendizado organizacional e correção para os próximos planejamentos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Tipos e Momentos do Controle Administrativo",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5012,7 +5012,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na evolução do pensamento administrativo de Fayol (POCCC) para o modelo contemporâneo (PODC), a Coordenação deixou de figurar como uma 'caixa isolada' para ser reconhecida como o fio condutor transversal que sincroniza o Planejamento, a Organização, a Direção e o Controle.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Teorias Administrativas e Evolução das Funções",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -5036,7 +5036,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A coordenação administrativa é o antídoto para a fragmentação gerada pela divisão do trabalho: ela integra pessoas, cronogramas e setores, garantindo que o conjunto funcione de forma coesa e sem desperdícios operacionais.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Princípios da Organização e Coordenação Administrativa",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5060,7 +5060,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A Organização cuida da arquitetura estrutural e da distribuição de competências (diferenciação), enquanto a Coordenação assegura a convergência, a sintonia e a fluidez entre essas partes diferenciadas (integração).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas (Organização vs. Coordenação)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5084,7 +5084,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na administração gerencial e moderna, o controle é teleológico (orientado a fins): serve como ferramenta analítica de suporte à gestão e à melhoria da entrega de serviços públicos, superando o formalismo punitivo e a cultura do papel.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas (Controle Moderno e Gerencial)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5108,7 +5108,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Tríade do Desempenho Administrativo: 1) Eficiência: foco nos meios/custos (produtividade dos insumos); 2) Eficácia: foco nas metas/produtos (entrega dos resultados planejados); 3) Efetividade: foco no impacto/sociedade (mudança real da realidade).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Critérios de Avaliação (Eficiência, Eficácia e Efetividade)",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -5132,7 +5132,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A função Organização responde pela engenharia interna da instituição: divide o trabalho, agrupa órgãos/setores, define autoridades e distribui os recursos físicos e financeiros necessários para que os planos saiam do papel.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas (Organização)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5156,7 +5156,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Planejamento Tático é o elo de ligação ('meio-campo') entre o nível institucional (Estratégico) e a execução técnica (Operacional), operando em médio prazo e com escopo departamental/setorial.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Níveis de Planejamento (Planejamento Tático)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5180,7 +5180,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O controle concomitante (simultâneo) ocorre pari passu com a transformação/execução, permitindo intervenções tempestivas e imediatas para ajustar o processo ao padrão planejado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Tipos e Momentos de Controle Administrativo",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5204,7 +5204,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Eficácia é a ênfase nos resultados e nos objetivos adequados (Nível Estratégico); Eficiência é a ênfase nos meios, nos métodos e no uso racional de recursos (Nível Operacional).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Níveis de Gestão e Binômio Eficiência/Eficácia",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -5228,7 +5228,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O processo de desdobramento do planejamento segue o fluxo descendente da pirâmide organizacional: Estratégico (Presidência/Macro/5 anos) → Tático (Coordenação de TI/Médio Prazo/Setorial) → Operacional (Agentes/Curto Prazo/Rotinas Diárias).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Níveis de Planejamento (Estratégico, Tático e Operacional)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5252,7 +5252,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O planejamento tático tem escopo departamental, horizonte de médio prazo e atua como articulador entre a visão global da cúpula e a execução técnica da base.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Níveis de Planejamento (Planejamento Tático)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5276,7 +5276,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Abordagem Sistêmica do Controle: Entradas (Inputs) → Controle Preventivo; Processamento → Controle Concomitante; Saídas (Outputs/Resultados) → Controle Corretivo/Posterior (que alimenta o Feedback).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Teoria Sistêmica e Foco das Modalidades de Controle",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5300,7 +5300,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A supervisão direta 'em tempo real' durante o fluxo de trabalho é o modelo clássico de controle concomitante/simultâneo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Tipos e Momentos de Controle Administrativo",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5324,7 +5324,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Travas de fluxo e validações condicionais 'passo a passo' em sistemas eletrônicos constituem ferramentas clássicas de controle concomitante (simultâneo): garantem a conformidade durante a realização da atividade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Tipos e Momentos de Controle Administrativo",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5348,7 +5348,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O controle posterior é o motor do feedback: gera inteligência e aprendizado para reajustar metas, aperfeiçoar normas e blindar a organização em seus próximos ciclos de planejamento.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Controle Posterior e Aprendizado Organizacional",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5372,7 +5372,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Princípio contingencial de Lawrence e Lorsch: Diferenciação e Integração são forças interdependentes. Quanto mais uma organização se diferencia em departamentos especializados com objetivos específicos, maior deve ser a capacidade de integração (coordenação) para manter a coesão institucional.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Teoria Contingencial (Diferenciação e Integração)",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -5396,7 +5396,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Coordenação foca na harmonia, no sincronismo e na convergência de esforços coletivos; Controle foca no monitoramento, na conformidade e na aderência aos padrões planejados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Relação Funcional entre Coordenação e Controle",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5420,7 +5420,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A partitura define o roteiro prévio das ações (Planejamento), enquanto a gravação e análise de falhas permite comparar o executado com o padrão (Controle). Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Funções Administrativas: Planejamento e Controle",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5444,7 +5444,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Sequência canônica das 4 etapas do Controle: 1. Padrões → 2. Monitoramento/Medição → 3. Comparação → 4. Ação Corretiva. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Processo de Controle: Etapas e Ciclo de Realimentação",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5468,7 +5468,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O controle baseia-se na Cibernética e na Teoria dos Sistemas, utilizando a retroalimentação (feedback) a partir da comparação do resultado (output) com o padrão planejado. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Fundamentos do Controle: Cibernética e Retroalimentação",
+    "assunto": "Questões de Ética no Serviço Público",
     "nivelSuperior": false
   },
   {
@@ -5492,7 +5492,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O processo administrativo é dinâmico, cíclico e interativo: as funções (PODC) ocorrem simultaneamente e retroalimentam-se mutuamente no dia a dia organizacional. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Dinâmica do Ciclo Administrativo (Interatividade e Simultaneidade)",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -5516,7 +5516,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Enquanto a Organização lida com a estrutura e alocação de recursos materiais/estruturais, a Direção lida com a condução de pessoas (liderança, motivação, comunicação e influência). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Distinção entre Organização e Direção",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5540,7 +5540,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Identificar desvios em relação a metas e implementar medidas para corrigi-los (como treinamento e revisão de processos) é a essência do Controle gerando Ações Corretivas e retroalimentação. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ação Corretiva e Retroalimentação no Controle",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5564,7 +5564,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Níveis de planejamento: Estratégico (longo prazo, macroambiente, alta incerteza), Tático (médio prazo, departamental, incerteza moderada) e Operacional (curto prazo, tarefas, alta certeza). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Níveis de Planejamento: Estratégico, Tático e Operacional",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5588,7 +5588,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O cascateamento traduz os objetivos estratégicos de longo prazo em planos táticos departamentais e estes em planos operacionais de rotina, assegurando alinhamento institucional. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Desdobramento e Cascateamento do Planejamento",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5612,7 +5612,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A elaboração do Planejamento Estratégico compete exclusivamente à Alta Cúpula (Diretoria/Ministros). O Agente Administrativo atua no nível operacional. A alternativa D é incorreta como assertiva e, portanto, é o gabarito. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Responsabilidades e Competências nos Níveis de Planejamento",
+    "assunto": "Papeis e Habilidades do Administrador",
     "nivelSuperior": false
   },
   {
@@ -5636,7 +5636,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "I é verdadeira (controle preventivo reduz custos mas pode burocratizar); II é falsa (controle corretivo/ex-post é indispensável no ciclo); III é verdadeira (Feedforward = controle preventivo). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Classificação Temporal do Controle: Preventivo (Feedforward), Concorrente e Corretivo",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5660,7 +5660,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Auditoria de contas do ano anterior = controle 'A posteriori' (posterior / ex-post); análise jurídica prévia de contratação = controle 'A priori' (prévio / ex-ante). Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Momentos do Controle Administrativo (A Priori vs. A Posteriori)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5684,7 +5684,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Eficiência = foco nos meios, processos e custos (fazer mais com menos recursos); Eficácia = foco nos fins e metas; Efetividade = foco nos impactos sociais. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Critérios de Desempenho: Eficiência, Eficácia e Efetividade",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -5708,7 +5708,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As 4 Eras da Qualidade (David Garvin): 1. Inspeção (foco no produto final/refugo) → 2. Controle Estatístico (amostragem no processo) → 3. Garantia da Qualidade (prevenção) → 4. Gestão da Qualidade Total (estratégia e foco no cliente). Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: As 4 Eras da Qualidade (Era da Inspeção)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5732,7 +5732,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "PDCA significa Plan (Planejar), Do (Fazer/Executar), Check (Checar/Verificar) e Act (Agir/Padronizar). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Ferramentas da Qualidade (Ciclo PDCA)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5756,7 +5756,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os 5 Sensos do Programa 5S: 1. Seiri (Utilização/Descarte) → 2. Seiton (Ordenação) → 3. Seiso (Limpeza) → 4. Seiketsu (Padronização/Saúde) → 5. Shitsuke (Autodisciplina). Separar o necessário do desnecessário é Seiri. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Metodologia e Programa 5S (Seiri)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5780,7 +5780,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As 4 Regras de Ouro do Brainstorming: 1. Não julgar/não criticar durante a geração; 2. Buscar quantidade; 3. Estimular ideias audaciosas; 4. Combinar e melhorar ideias. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Ferramentas da Qualidade (Brainstorming)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5804,7 +5804,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Foco no Cidadão-Usuário significa estruturar a Administração Pública a partir das necessidades, acessibilidade e direitos dos usuários dos serviços públicos. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Qualidade no Atendimento: Foco no Cidadão-Usuário no Setor Público",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5828,7 +5828,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Mnemônico C.O.R.E. do Atendimento de Excelência: Cortesia, Objetividade, Responsabilidade e Empatia. A letra R representa a Responsabilidade na condução e solução da demanda. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Qualidade no Atendimento: Pilares do Atendimento de Excelência (C.O.R.E.)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5852,7 +5852,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Diferença fundamental: no setor público o cidadão é titular de direitos coletivos e a excelência mira a efetividade social e a geração de valor público. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão Pública: Distinção entre Cliente e Cidadão-Usuário",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -5876,7 +5876,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No Gespública/MEGP, o critério Liderança diz respeito à atuação, comprometimento e visão da alta administração no exame do desempenho e disseminação de valores. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Modelo de Excelência em Gestão Pública (Gespública - Critério Liderança)",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -5900,7 +5900,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Melhoria Contínua (Kaizen) é a filosofia de que nenhum processo é perfeito e tudo pode ser melhorado continuamente de forma sustentável. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Princípios da GQT (Melhoria Contínua / Kaizen)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5924,7 +5924,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Fase 'Plan' do PDCA: Identificar o problema, analisar o fenômeno/causas, estabelecer metas e elaborar o plano de ação. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ciclo PDCA: Atividades da Etapa de Planejamento (Plan)",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -5948,7 +5948,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na metodologia PDCA, a etapa 'Do' (Execução) engloba expressamente o treinamento e capacitação da equipe antes e durante a realização das atividades. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ciclo PDCA: Capacitação e Treinamento na Etapa Do (Executar)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5972,7 +5972,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No PDCA: se deu certo $\\to$ Padronizar (Act); se deu errado $\\to$ Agir Corretivamente nas causas e girar novo ciclo voltando ao Plan. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ciclo PDCA: Ação Corretiva vs. Padronização na Etapa Act",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -5996,7 +5996,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A fase 'Check' (Checar/Verificar) tem como finalidade primordial confrontar e comparar o desempenho real executado com as metas planejadas. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ciclo PDCA: Objetivos da Etapa Check (Verificação de Desempenho)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6020,7 +6020,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No Diagrama de Ishikawa (6Ms), variáveis físicas do espaço de trabalho (calor, barulho, iluminação) pertencem à categoria Meio Ambiente. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Diagrama de Ishikawa (Método dos 6Ms)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6044,7 +6044,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Os 3 primeiros sensos do 5S (Seiri, Seiton e Seiso) são operacionais/físicos; os 2 últimos (Seiketsu e Shitsuke) são comportamentais/de gestão. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Classificação dos Sensos no Programa 5S",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6068,7 +6068,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Sequência lógica de aplicação: 5S (organização do ambiente) $\\to$ Brainstorming (geração de ideias de problemas/causas) $\\to$ Ishikawa (categorização e identificação da causa-raiz). Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Integração das Ferramentas da Qualidade",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6092,7 +6092,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Equilíbrio profissional: Empatia na comunicação e no acolhimento humano do cidadão; Impessoalidade na aplicação rigorosa e isonômica da legislação. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Qualidade no Atendimento: Empatia e Impessoalidade no Serviço Público",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6116,7 +6116,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Lei 13.460/2017 (Art. 7º): A Carta de Serviços ao Usuário é obrigatória e deve detalhar os serviços, requisitos, prazos, formas de acesso e padrões de qualidade do atendimento. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Direitos dos Usuários: Lei 13.460/2017 (Carta de Serviços ao Usuário)",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -6140,7 +6140,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A função Organização é responsável pela estruturação dos órgãos, divisão do trabalho, atribuição de responsabilidades, definição da hierarquia e alocação racional dos recursos. Gabarito B.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Funções Administrativas: Organização e Estruturação de Recursos",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -6164,7 +6164,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Nos 10 Papéis Gerenciais de Mintzberg, o papel interpessoal de 'Contato' (ou Elemento de Ligação / Liaison) consiste em criar e manter uma rede de contatos internos e externos para obtenção de informações e apoio. Gabarito C.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Papéis Gerenciais de Mintzberg: Papel de Contato / Ligação",
+    "assunto": "Papeis e Habilidades do Administrador",
     "nivelSuperior": false
   },
   {
@@ -6188,7 +6188,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Habilidades de Katz: Conceituais (Topo/Estratégico), Humanas (Meio/Tático e transversal a todos os níveis) e Técnicas (Base/Operacional). Gabarito C.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Habilidades do Administrador (Robert Katz): Níveis Hierárquicos",
+    "assunto": "Papeis e Habilidades do Administrador",
     "nivelSuperior": false
   },
   {
@@ -6212,7 +6212,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Estilos de Liderança (White e Lippitt): Na liderança democrática, as diretrizes são debatidas e decididas pelo grupo sob estímulo do líder, gerando maior coesão, satisfação e qualidade sustentável de trabalho. Gabarito C.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Estilos de Liderança (White e Lippitt): Liderança Democrática",
+    "assunto": "Liderança",
     "nivelSuperior": false
   },
   {
@@ -6236,7 +6236,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Teoria Bifatorial de Herzberg: Fatores Higiênicos (salário, instalações físicas, ambiente) quando excelentes apenas EVITAM a insatisfação (geram o estado de 'não insatisfação'). A motivação/satisfação genuína decorre exclusivamente dos Fatores Motivacionais (conteúdo do cargo, autonomia, reconhecimento). Gabarito B.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Motivação Organizacional: Teoria Bifatorial de Herzberg (Fatores Higiênicos)",
+    "assunto": "Motivação",
     "nivelSuperior": false
   },
   {
@@ -6260,7 +6260,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Hierarquia de Maslow: A busca por estabilidade no emprego, proteção financeira e previsibilidade futura vincula-se às Necessidades de Segurança (2º nível da pirâmide). Gabarito D.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Motivação Organizacional: Hierarquia das Necessidades de Maslow (Necessidades de Segurança)",
+    "assunto": "Motivação",
     "nivelSuperior": false
   },
   {
@@ -6284,7 +6284,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Níveis de Planejamento: Estratégico (Longo prazo, macroorientado, eficácia, alta incerteza); Tático (Médio prazo, departamental); Operacional (Curto prazo, microorientado/tarefas, eficiência, alta certeza/rotina). Gabarito C.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Níveis de Planejamento: Planejamento Operacional",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -6308,7 +6308,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "As 4 fases canônicas do Controle: 1. Fixação de padrões de desempenho; 2. Monitoramento/Medição do desempenho real; 3. Comparação entre real e padrão; 4. Ação corretiva. Gabarito B.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Funções Administrativas: Etapas do Processo de Controle",
+    "assunto": "Processo Organizacional",
     "nivelSuperior": false
   },
   {
@@ -6332,7 +6332,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Modelo do CHA das Competências: Conhecimento = Saber (Teoria); Habilidade = Saber Fazer (Prática/Técnica/Aplicação); Atitude = Querer Fazer (Comportamento/Postura). Gabarito B.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Gestão por Competências: Tripé CHA (Habilidade / Saber Fazer)",
+    "assunto": "Papeis e Habilidades do Administrador",
     "nivelSuperior": false
   },
   {
@@ -6356,7 +6356,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Herbert Simon (Racionalidade Limitada): Diante de limites cognitivos, tempo escasso e informações incompletas, o tomador de decisão busca soluções 'satisfatórias' (satisficing), e não ótimas/perfeitas. Gabarito D.",
     "banca": "IBFC / Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração / Situações Gerenciais - Processo Decisório: Racionalidade Limitada de Herbert Simon",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -6380,7 +6380,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A resolutividade mede a capacidade de solucionar a necessidade do cidadão-usuário sem idas e vindas burocráticas desnecessárias. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade no Serviço Público: Indicadores de Desempenho e Resolutividade",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6404,7 +6404,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A conformidade legal é o requisito de base (piso) de qualquer atuação pública; a excelência em gestão exige gerar efetividade e valor social agregado para a cidadania. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão da Qualidade: Conformidade Legal vs. Excelência e Efetividade Social",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6428,7 +6428,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Tríade dos 3Es: Eficiência (uso dos meios/custos), Eficácia (alcance dos fins/metas) e Efetividade (impacto social/transformação real). Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Gestão de Resultados: Tríade dos 3Es (Eficiência, Eficácia e Efetividade)",
+    "assunto": "Questões de Administração",
     "nivelSuperior": false
   },
   {
@@ -6452,7 +6452,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "Na Era da Garantia da Qualidade, o foco deixa de ser remediar/inspecionar e passa a ser a PREVENÇÃO desde o planejamento do sistema e a padronização normativa (normas ISO). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Evolução da Gestão da Qualidade: Era da Garantia da Qualidade",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6476,7 +6476,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "PDCA = Melhoria Contínua (muda o patamar); SDCA = Manutenção da Rotina (padroniza e estabiliza o patamar alcançado). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ferramentas da Qualidade: Relação entre PDCA (Melhoria) e SDCA (Padronização)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6500,7 +6500,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O MASP é a aplicação estruturada do ciclo PDCA dividida em 8 passos analíticos para resolução de problemas crônicos. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Metodologias da Qualidade: MASP e sua Vinculação com o Ciclo PDCA",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6524,7 +6524,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "A coleta de dados na fase 'Do' provê a base empírica e quantitativa necessária para a verificação e comparação de metas na fase 'Check'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ciclo PDCA: Integração entre a Coleta no 'Do' e a Verificação no 'Check'",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6548,7 +6548,7 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "O Diagrama de Ishikawa (Espinha de Peixe) é uma ferramenta gráfica de análise causal que mapeia e categoriza as causas-raízes de um problema. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ferramentas da Qualidade: Diagrama de Ishikawa (Causa e Efeito)",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
@@ -6572,12 +6572,31 @@ export const questionsAdm: Question[] = [
     "generalExplanation": "No Brainstorming, a fase de geração exige suspensão total de críticas e julgamentos; todas as ideias são registradas para estimular a livre associação e a criatividade. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Administração - Ferramentas da Qualidade: Princípios e Regras do Brainstorming",
+    "assunto": "Gestão de Qualidade",
     "nivelSuperior": false
   },
   {
     "id": "adm_sim_247",
-    "text": "No contexto da metodologia do Programa 5S de qualidade no ambiente de trabalho, a etapa de Shitsuke (Senso de Autodisciplina) é amplamente reconhecx��T�nI��+J>a)8+{�D����iš<Sv
-z�'�=V�!�ʁ#�w~�W=l)b}�quϫW�^��LUh15��jI�R�Cd��1�#7<���Գ\d�%zκa��ľ��l@1J�F|
-��UDv�8ל�Or<9< �&��|��?%��ɔ�r�H!���q�o��Phz�$��:*�$8f���Ҏ�l��Ϧ�6���.iF��jHQ��i9KE;<#���Ԇ���W���.C5Zq�Nk�e/���N�!V�>�v�K�g�}j�B�Cr��-��d�VǊ�9�=��SzÐ���2���)q��ߠ������D;�Dj��a��NC�]d��t�)��h��g���h�O��:�KK�܀�o��]2)��G��(���8ȁ�lRR�:����g��K���6,��cs�ל���f����|IϡJ�SQ�}FӮ���������^��B����FW`o#�5��6pvp��i劏��#��`����G�t�������_POG�q6�@N�jM��~�ZO�&L�4�1شa;����R����'��.w�G�,�����1wƵ)��Q�%n����v��7Q��ҡ-�Jjݎ����d�J(�7�/�	,�5Qf�
-���P����!6�|�5Xm��.�F���HY��mNhqH�Pٴ�`C3L�vd�`�����C�o���þg������͞,�W\*ѦsF�����x�>�����)��'��<0E���!=�c�"c}ŏ�k\X����+����3�����Zl���/	�>|xz�  �� P[\V
+    "text": "No contexto da metodologia do Programa 5S de qualidade no ambiente de trabalho, a etapa de Shitsuke (Senso de Autodisciplina) é frequentemente apontada como fundamental para a sustentabilidade do programa porque:",
+    "options": [
+      "A) Determina a compra de novos equipamentos e ferramentas tecnológicas para a organização.",
+      "B) Foca exclusivamente no descarte inicial de materiais e documentos obsoletos no setor de trabalho.",
+      "C) Consiste no compromisso contínuo com o cumprimento dos padrões estabelecidos e a internalização de hábitos de ordem e limpeza.",
+      "D) Substitui a necessidade de supervisão hierárquica e de liderança nas equipes administrativas.",
+      "E) Restringe a responsabilidade pela qualidade aos membros do comitê executivo da instituição."
+    ],
+    "correctIndex": 2,
+    "explanations": [
+      "Incorreta. A aquisição de ferramentas não é o objetivo do senso de autodisciplina.",
+      "Incorreta. O descarte de materiais desnecessários corresponde ao Seiri (Senso de Utilização).",
+      "Correta. Shitsuke (Autodisciplina) é o 5º senso do programa 5S, consistindo em manter e aprimorar continuamente as práticas dos sensos anteriores (Seiri, Seiton, Seiso, Seiketsu), transformando padrões de qualidade e higiene em hábitos naturais e constantes.",
+      "Incorreta. A autodisciplina fortalece o trabalho em equipe, mas a liderança continua tendo papel orientador e inspirador.",
+      "Incorreta. O 5S deve ser praticado por todos os colaboradores em todos os níveis da organização."
+    ],
+    "generalExplanation": "O senso de Shitsuke (Autodisciplina) refere-se à manutenção contínua dos padrões, respeito às regras e internalização de atitudes que garantem a sustentabilidade do Programa 5S. Gabarito C.",
+    "banca": "Simulado IBGE",
+    "ano": 2026,
+    "assunto": "Gestão de Qualidade",
+    "nivelSuperior": false
+  }
+];

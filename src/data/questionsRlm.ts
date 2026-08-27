@@ -21,7 +21,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "FGV",
     "ano": 2018,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -44,7 +44,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "FGV",
     "ano": 2015,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -67,7 +67,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "VUNESP",
     "ano": 2021,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -90,7 +90,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2020,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -113,7 +113,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "VUNESP",
     "ano": 2020,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -136,7 +136,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "FGV",
     "ano": 2017,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -153,7 +153,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "CESPE / Cebraspe",
     "ano": 2018,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -170,7 +170,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "CESPE / Cebraspe",
     "ano": 2018,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -187,7 +187,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "CESPE / Cebraspe",
     "ano": 2018,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -210,7 +210,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "FUNDATEC",
     "ano": 2022,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -233,7 +233,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "CESPE / Cebraspe",
     "ano": 2020,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -256,7 +256,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "VUNESP",
     "ano": 2021,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -279,7 +279,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "IBFC",
     "ano": 2021,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -302,7 +302,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "VUNESP",
     "ano": 2021,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -325,7 +325,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "VUNESP",
     "ano": 2022,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -348,7 +348,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "CESPE / Cebraspe",
     "ano": 2018,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -371,7 +371,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "FCC",
     "ano": 2018,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -394,7 +394,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "VUNESP",
     "ano": 2019,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -417,7 +417,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "FGV",
     "ano": 2018,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -434,7 +434,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "CESPE / Cebraspe",
     "ano": 2019,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -457,7 +457,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "FCC",
     "ano": 2018,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -480,7 +480,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "FCC",
     "ano": 2019,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -501,7 +501,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -522,7 +522,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -543,7 +543,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -564,7 +564,7 @@ export const questionsRlm: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -588,7 +588,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Passo a passo: 1.(P ∧ Q) é (V ∧ V)= V. 2. ¬(V)= F (Antecedente). 3. (R ∧ ¬R) é (F ∧ V)= F. 4. F → F resulta em Verdadeiro. Na condicional, antecedente falso torna a condicional sempre verdadeira.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -612,7 +612,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pelo Modus Tollens, negamos o consequente (~Q) para negar o antecedente ~(P e R). Pela Lei de De Morgan, a negação de (P e R) é (~P ou ~R): 'O projeto não é viável OU o orçamento não foi aprovado'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -636,7 +636,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A fala de Daniel é uma conjunção (P ∧ Q). A negação lógica de (P ∧ Q), pelas Leis de De Morgan, é (~P ∨ ~Q): 'Daniel é culpado OU o perito é inocente'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -660,7 +660,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Associações: Alberto é Analista. O Auditor vive em BH. Como Caio não vive no Rio e não pode ser Analista, se Breno é Auditor de BH, Caio é Técnico de SP e Alberto é Analista do RJ.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -684,7 +684,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Em problemas de ordenação, pistas de vizinhança ou posição relativa ('imediatamente acima/abaixo') devem ser tratadas como blocos fixos para testar as possibilidades.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -708,7 +708,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Culpado diz a verdade, inocentes mentem. Testando A como culpado: A diz a verdade (B é inocente). B é inocente (mente dizendo C é culpado). C é inocente (mente dizendo ser culpado). Tudo é consistente. Logo, A é o culpado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -732,7 +732,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (D_inocente E E_culpado) pelas Leis de De Morgan resulta em (D_culpado OU E_inocente).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -756,7 +756,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "O quantificador universal é expresso por termos como 'todo', 'toda', 'qualquer', 'todos'. A alternativa B usa 'Todo juiz', indicando que a propriedade se aplica à totalidade do conjunto dos juízes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Quantificadores",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -780,7 +780,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo A é B' é 'Algum A não é B'. Portanto, a negação de 'Toda Agência do Banco do Brasil tem déficit de funcionários' é 'Alguma Agência do Banco do Brasil não tem déficit de funcionários'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -804,7 +804,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo A é B' é 'Algum/Existe A que não é B'. Assim, a negação de 'Todo docente é licenciado' é 'Existe docente que não é licenciado'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -828,7 +828,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "'Qualquer pessoa' equivale a 'toda pessoa'. A negação de 'Toda pessoa sabe andar de bicicleta' é 'Pelo menos uma pessoa não sabe andar de bicicleta'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -846,7 +846,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se 'Todo A é B' é falso, então existe ao menos um elemento de A que não é B. Logo, 'Pelo menos um russo não gosta de sopa de beterraba' é verdadeiro.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Quantificador Universal e Existencial",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -870,7 +870,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo A é B' é 'Algum A não é B'. Portanto, a negação correta é 'Algum policial militar não é um exímio atirador'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -888,7 +888,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todas as reuniões devem ser gravadas' é 'Alguma reunião não deve ser gravada', e não 'Nenhuma reunião deve ser gravada'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -906,7 +906,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'todo condutor era brasileiro ou estrangeiro' é 'algum condutor não era brasileiro nem estrangeiro'. A sentença proposta usa 'nenhum', o que constitui universal negativa, não a negação correta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal com Disjunção",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -924,7 +924,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Toda bicicleta tem duas rodas' é 'Alguma bicicleta não tem duas rodas'. 'Nenhuma bicicleta tem duas rodas' é universal negativa e não equivale à negação correta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -948,7 +948,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Nenhum A é B' é 'Algum A é B'. Assim, a negação de 'Nenhum soldado escuta mal' é 'Há pelo menos um soldado que escuta mal'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -970,7 +970,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Nenhum A é B' é 'Algum A é B'. Logo, a negação de 'nenhum cachorro é baixo' é 'algum cachorro é baixo'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -994,7 +994,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se 'Nenhum aluno está preparado' é falsa, sua negação é verdadeira: 'Algum aluno está preparado'. Portanto, existe aluno preparado para a prova.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -1018,7 +1018,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Nenhum A é B' é 'Algum A é B'. Assim, a negação é 'Há, pelo menos, um médico cego'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Universal Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -1042,7 +1042,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A afirmação 'Existem insetos que não são pretos' corresponde a 'Algum inseto não é preto'. Se é falsa, sua negação é verdadeira: 'Todo inseto é preto'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Existencial Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -1066,7 +1066,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A afirmação original é 'Alguma empresa não tem certificação digital'. Sua negação é 'Todas as empresas que participaram do pregão público têm certificação digital'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Negação de Quantificador Existencial Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -1084,7 +1084,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição (P∨Q) → (Q∧P) não é uma tautologia. Se P for Verdadeiro e Q for Falso, (P∨Q) resulta em Verdadeiro e (Q∧P) resulta em Falso. A condicional Verdadeiro → Falso resulta em Falso. Portanto, trata-se de uma contingência.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1102,7 +1102,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição [P∨Q] → Q não é uma tautologia. Se P for Verdadeiro e Q for Falso, a disjunção [P∨Q] será Verdadeira. A condicional Verdadeiro → Falso resulta em Falso. Logo, é uma contingência.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1120,7 +1120,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição P∧Q∧R→P∨Q é uma tautologia. O antecedente (P∧Q∧R) só é verdadeiro quando P, Q e R são simultaneamente verdadeiros. Nesse caso, o consequente (P∨Q) também será verdadeiro, resultando em V→V (Verdadeiro). Em todas as outras combinações, o antecedente é falso, e uma condicional com antecedente falso é sempre verdadeira.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1144,7 +1144,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A alternativa A apresenta a estrutura p → (p ∨ q). Se p for verdadeiro, a disjunção (p ∨ q) também será verdadeira (V → V = V). Se p for falso, a condicional já é verdadeira por ter antecedente falso (F → Qualquer = V). Portanto, é uma tautologia.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1168,7 +1168,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição I tem a forma (p ∧ ~p) → q. O antecedente é uma contradição (sempre Falso). Uma condicional com antecedente falso é sempre verdadeira, logo é uma tautologia. A proposição II tem a forma ~q → (p ∧ q). Se q for Verdadeiro, ~q é Falso e a condicional é Verdadeira. Se q for Falso, ~q é Verdadeiro e (p ∧ q) é Falso, resultando em V → F (Falso). Como pode ser V ou F, é uma contingência.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1192,7 +1192,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A questão pede a alternativa INCORRETA. A expressão (P^~P) é uma contradição (sempre Falsa). Logo, a sua negação ~(P^~P) será sempre Verdadeira, configurando uma tautologia. A alternativa C afirma que ~(P^~P) NÃO é um caso de tautologia, o que é uma afirmação falsa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1216,7 +1216,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Substituindo P por Falso (F) na sentença: (F → ~Q) ↔ (R ^ F). A condicional (F → ~Q) é sempre Verdadeira (V). A conjunção (R ^ F) é sempre Falsa (F). A sentença reduz-se a V ↔ F, cujo resultado é sempre Falso. Portanto, a sentença é falsa sempre que P é falsa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1234,7 +1234,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição p ∧ ~p é o exemplo clássico de uma contradição (Princípio da Não Contradição), pois uma proposição e sua negação não podem ser verdadeiras simultaneamente. Seu valor lógico é sempre Falso.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1258,7 +1258,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Aplicando as Leis de De Morgan no antecedente, ¬(p∨q) torna-se (¬p ∧ ¬q). A proposição assume a forma (¬p ∧ ¬q) ⇒ (¬p ∨ ¬q). Se a conjunção (¬p ∧ ¬q) for verdadeira, ambos os termos são verdadeiros, o que torna a disjunção (¬p ∨ ¬q) também verdadeira (V ⇒ V = V). Se a conjunção for falsa, a condicional é automaticamente verdadeira (F ⇒ Qualquer = V). Logo, é sempre verdadeira (Tautologia).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1276,7 +1276,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "O argumento é representado por ((~E ∧ ~P) ∧ (E ∨ P)) → (E ↔ P). A conjunção das premissas P1 e P2 é uma contradição lógica, pois exige que E e P sejam ambos falsos e, simultaneamente, que pelo menos um seja verdadeiro. Como o antecedente da condicional é sempre Falso, a condicional completa é sempre Verdadeira, caracterizando uma tautologia (o que também prova que o argumento é válido).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1300,7 +1300,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição tem a estrutura lógica p ∨ ~p. Pelo Princípio do Terceiro Excluído, uma proposição ou é verdadeira ou é falsa, não havendo terceira opção. A disjunção de uma proposição com sua negação é sempre verdadeira, o que define uma tautologia.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1324,7 +1324,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A alternativa C apresenta a estrutura (p∧q)→(p∨q). Se a conjunção (p∧q) for verdadeira, ambos p e q são verdadeiros, o que torna a disjunção (p∨q) também verdadeira (V→V = V). Se a conjunção for falsa, a condicional é automaticamente verdadeira (F→Qualquer = V). Logo, é sempre verdadeira.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1348,7 +1348,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Contingência é a proposição que pode ser verdadeira ou falsa. A condicional P ⇒ Q (P → Q) é falsa quando P é verdadeiro e Q é falso, e verdadeira nos demais casos, dependendo portanto dos valores lógicos de P e Q.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1372,7 +1372,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Para classificar a fórmula P → (~P ∨ Q), testamos os valores lógicos. Se P for Verdadeiro e Q for Falso, temos: V → (~V ∨ F) => V → (F ∨ F) => V → F, que resulta em Falso. Se P for Falso e Q for Falso, temos: F → (~F ∨ F) => F → (V ∨ F) => F → V, que resulta em Verdadeiro. Como a fórmula assume tanto valores Verdadeiros quanto Falsos, ela é uma contingência.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1396,7 +1396,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A condicional R → S é logicamente equivalente a ~R ∨ S. Substituindo na fórmula original, temos: (~R ∨ S) ↔ (S ∨ ~R). Como a disjunção possui a propriedade comutativa, os dois lados da bicondicional são exatamente a mesma expressão. Uma bicondicional entre expressões idênticas (A ↔ A) é sempre Verdadeira, caracterizando uma tautologia.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico Quantitativo - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1420,7 +1420,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A alternativa B tem a forma lógica q ∨ ¬q, que é sempre verdadeira independentemente do valor lógico da proposição q (Princípio do Terceiro Excluído).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1444,7 +1444,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A alternativa A afirma simultaneamente que dois é par e ímpar, o que corresponde à forma p ∧ ¬p, sendo sempre falsa (contradição).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1468,7 +1468,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A fórmula (P ∨ ¬Q) ↔ (P → Q) assume valores verdadeiros e falsos conforme a tabela-verdade dos componentes, caracterizando uma contingência.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1492,7 +1492,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Contradição é qualquer proposição composta cuja tabela-verdade é inteiramente falsa. O exemplo clássico é (P ∧ ¬P).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -1516,7 +1516,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição ((P ∨ Q) ∧ (P → Q)) → Q resulta sempre em Verdadeiro para todas as combinações de valoração de P e Q, sendo portanto uma tautologia.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tautologia, Contradição e Contingência",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": true
   },
   {
@@ -1534,7 +1534,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Proposição é toda oração declarativa que exprime um pensamento de sentido completo e à qual se atribui um único valor lógico (Verdadeiro ou Falso), constituindo uma sentença fechada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1558,7 +1558,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Na lógica proposicional, proposições são orações declarativas com verbo/predicado que possuem um único valor lógico (Princípio do Terceiro Excluído e da Não-Contradição).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -1582,7 +1582,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Apenas sentenças declarativas são proposições. Sentenças exclamativas (!), interrogativas (?) e imperativas (ordens) não são proposições lógicas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1600,7 +1600,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Sentenças imperativas (que expressam ordens ou comandos) não podem ser valoradas como verdadeiras ou falsas, logo não são proposições.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1624,7 +1624,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Frases interrogativas não possuem valor lógico (não são nem verdadeiras nem falsas), portanto não são proposições.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1642,7 +1642,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Sentenças interrogativas (B) e sentenças abertas sem quantificador (C) não são proposições. Apenas A (declarativa matemática) e D (declarativa) são proposições.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1666,7 +1666,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Sentenças no futuro indeterminado/incerto não podem ter seu valor lógico determinado no momento da afirmação, não sendo consideradas proposições na abordagem do examinador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1684,7 +1684,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "O Princípio da Não-Contradição e o Princípio do Terceiro Excluído asseguram que toda proposição é ou Verdadeira ou Falsa, recebendo um único valor lógico.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1708,7 +1708,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Os princípios fundamentais da lógica clássica são: 1. Identidade (toda proposição é igual a si mesma); 2. Não-Contradição (uma proposição não pode ser V e F ao mesmo tempo); 3. Terceiro Excluído (uma proposição é V ou F, não havendo terceira opção).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1732,7 +1732,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "O Princípio da Não-Contradição estabelece que nenhuma proposição pode ser simultaneamente verdadeira e falsa sob o mesmo aspecto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -1750,7 +1750,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição original é 'algum promotor tem 30 anos ou mais' (existencial afirmativa). Sua negação lógica é 'nenhum promotor tem 30 anos ou mais' (universal negativa). Afirmar que 'nem todo promotor...' equivale a dizer que 'algum promotor não tem...', o que não constitui a negação correta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -1768,7 +1768,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo ator sabe cantar e dançar' substitui o 'Todo' por 'Existe' e aplica a negação de (Cantar E Dançar) via Lei de De Morgan, resultando em (Não cantar OU Não dançar). O item está Certo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -1792,7 +1792,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição é uma conjunção P ∧ Q. A negação é ~P ∨ ~Q. Negando 'Todos os cachorros latem' temos 'Nem todos os cachorros latem'. Negando 'Nem todos os gatos miam' (que é 'Existe gato que não mia') temos 'Todos os gatos miam'. Logo: 'Nem todos os cachorros latem ou todos os gatos miam'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Proposições e Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -1816,7 +1816,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A expressão 'Não é verdade que Todo x faz A e B' é a negação de ∀x (A ∧ B), o que equivale a ∃x (¬A ∨ ¬B): 'Algum parlamentar comparece às sessões (não falta) ou não retorna ao seu estado de origem'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -1840,7 +1840,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Descobrir que uma declaração universal conjuntiva é falsa significa que a sua negação lógica é verdadeira: 'Existe pelo menos um funcionário que não possui plano de saúde OU ganha até R$ 3.000,00 por mês'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -1858,7 +1858,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Trata-se da equivalência pela contrapositiva: (P → Q) é equivalente a (¬Q → ¬P). A negação de 'Todos os esquizofrênicos são fumantes' é 'Existe esquizofrênico que não é fumante'. O item está Certo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência e Contraposição",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -1882,7 +1882,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negar ∀x (P → Q) resulta em ∃x (P ∧ ¬Q). Como Q é (Estudou ∨ Sorte), ¬Q é (não estudou E não teve sorte). Logo: 'Algum candidato foi aprovado e não estudou muito nem teve sorte'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificadores e Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": true
   },
   {
@@ -1904,7 +1904,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se todo belo-horizontino é mineiro, o conjunto dos belo-horizontinos está contido dentro do conjunto dos mineiros. Portanto, o conjunto dos mineiros contém os belo-horizontinos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -1928,7 +1928,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Da verdade da proposição universal afirmativa ('Todo livro é instrutivo'), infere-se necessariamente a verdade da particular afirmativa correspondente ('Algum livro é instrutivo').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -1952,7 +1952,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "'Qualquer deputado estadual é advogado' é uma proposição universal afirmativa. Por subalternação, a proposição particular afirmativa 'Algum deputado estadual é advogado' é necessariamente verdadeira.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -1976,7 +1976,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Construindo os conjuntos: Empregados do BC ⊂ Ricos. Ricos ∩ Alegres = ∅. Cariocas ⊂ Alegres. Marcos ∈ BC. Conclusões: Ricos ∩ Cariocas = ∅. Marcos é rico e não-carioca. Item 01 é V, 02 é V, 03 é F, 04 é F. Sequência: 1-V, 2-V, 3-F, 4-F.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": true
   },
   {
@@ -2000,7 +2000,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Existe uma porção de elementos de A que também são R. Como nenhum elemento de G pode ser R, essa porção de A não pode pertencer a G. Logo, 'algum A não é G'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2024,7 +2024,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Os adultos que são felizes pertencem ao conjunto dos felizes, o qual é completamente disjunto do conjunto dos alunos de matemática. Logo, esses adultos felizes não são alunos de matemática, concluindo-se que 'algum adulto não é aluno de matemática'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2048,7 +2048,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como Matemática está contida em Inglês e Português está contido em Informática, e sabendo que Informática e Inglês não possuem elementos em comum (são disjuntos), conclui-se que Matemática e Português também são totalmente disjuntos. Ou seja, nenhum aluno de português é aluno de matemática.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": true
   },
   {
@@ -2072,7 +2072,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Os empregados de Alfa que são estudantes formam um grupo que obrigatoriamente também pertence ao conjunto dos competentes (pois todo empregado de Alfa é competente). Logo, existe pelo menos um estudante que é competente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2094,7 +2094,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "O princípio da identidade estabelece que toda proposição é idêntica a si mesma (uma proposição verdadeira é verdadeira; uma proposição falsa é falsa). O princípio da não contradição postula que uma proposição não pode ser verdadeira e falsa simultaneamente. O princípio do terceiro excluído dita que uma proposição só pode ser verdadeira ou falsa, inexistindo um terceiro valor lógico (portanto o item III é falso).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -2112,7 +2112,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição expressa um pensamento declarativo único e completo (sujeito e predicado), sem conectivos lógicos unindo proposições distintas, caracterizando com precisão uma proposição simples.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -2130,7 +2130,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Frases imperativas (ordens), exclamativas, interrogativas e sentenças abertas não são proposições lógicas, pois não é possível atribuir a elas um valor lógico de Verdadeiro ou Falso.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Lógicas",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -2154,7 +2154,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Substituindo p = V e q = F:\n(1) p ∧ q ⇒ V ∧ F = F\n(2) (~p) → q ⇒ (~V) → F ⇒ F → F = V\n(3) ~[p ∨ (~q)] ⇒ ~[V ∨ (~F)] ⇒ ~[V ∨ V] = ~V = F\n(4) ~(p ↔ q) ⇒ ~(V ↔ F) ⇒ ~(F) = V\nPortanto, exatamente 2 proposições são verdadeiras: (2) e (4).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2172,7 +2172,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Para que uma proposição seja sempre verdadeira (tautologia), seu valor deve ser V em todas as linhas da tabela-verdade. Atribuindo P = V, Q = F e R = V, obtemos V → (F ∨ ~V) ⇒ V → F = F. Logo, a proposição é uma contingência.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2190,7 +2190,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição pode ser estruturada como a condicional P → Q, onde P é 'Um de nós mudar de ideia' e Q é 'A decisão será modificada'. Com 2 proposições simples distintas, o número de linhas da tabela-verdade é 2^2 = 4 linhas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2208,7 +2208,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição é formada por 4 proposições simples distintas: p ('estiver sob pressão dos corruptores'), q ('estiver diante de uma oportunidade...'), r ('será leniente com a fraude') e s ('dela participará'). A quantidade de linhas da tabela-verdade é dada por 2^n = 2^4 = 16 linhas. Como 16 > 10, o item está correto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2226,7 +2226,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "O número de linhas de uma tabela-verdade é calculado pela fórmula 2^n, onde n representa o número de variáveis proposicionais distintas. Como a proposição contém n = 3 variáveis (p, q, r), temos 2^3 = 8 linhas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2244,7 +2244,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "O número de linhas de uma tabela-verdade depende exclusivamente da quantidade de variáveis proposicionais distintas (2^n). Como tanto S quanto T contêm as variáveis p, q e r (n = 3), ambas possuem 2^3 = 8 linhas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2268,7 +2268,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição é uma disjunção (p ∨ q) formada por 2 proposições simples: (1) 'A qualidade da educação dos jovens sobe' e (2) 'a sensação de segurança da sociedade diminui'. O total de linhas da tabela-verdade é 2^2 = 4 linhas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2290,7 +2290,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "As variáveis proposicionais são as orações declarativas simples básicas que formam as proposições compostas:\np: 'A salada está sem tempero'\nq: 'O refrigerante está sem gás'\nr: 'A carne está sem tempero'\nTotalizando exatamente 3 variáveis proposicionais distintas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2308,7 +2308,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Avaliando a fórmula [P ∧ (¬Q)] ∨ [Q → P], a construção a partir das colunas iniciais de P e Q resulta exatamente na sequência de valores lógicos da expressão apresentada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2326,7 +2326,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Avaliando S = (P → Q) ∧ R nas 8 linhas padrão:\n1. (V,V,V) → V ∧ V = V\n2. (V,V,F) → V ∧ F = F\n3. (V,F,V) → F ∧ V = F\n4. (V,F,F) → F ∧ F = F\n5. (F,V,V) → V ∧ V = V\n6. (F,V,F) → V ∧ F = F\n7. (F,F,V) → V ∧ V = V\n8. (F,F,F) → V ∧ F = F\nSequência real: V, F, F, F, V, F, V, F. Portanto, a assertiva está ERRADA.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2344,7 +2344,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Avaliando P ↔ (Q ∧ R) nas 8 linhas padrão:\n1. (V,V,V) → V ↔ V = V\n2. (V,V,F) → V ↔ F = F\n3. (V,F,V) → V ↔ F = F\n4. (V,F,F) → V ↔ F = F\n5. (F,V,V) → F ↔ V = F (o item afirma V)\n6. (F,V,F) → F ↔ F = V\n7. (F,F,V) → F ↔ F = V\n8. (F,F,F) → F ↔ F = V\nSequência correta: V, F, F, F, F, V, V, V. O item contém erro na 5ª linha, estando ERRADO.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2368,7 +2368,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A fórmula P ∧ (¬Q) → ¬P possui duas variáveis proposicionais (P e Q), gerando 2^2 = 4 linhas:\n1. P=V, Q=V: (V ∧ F) → F ⇒ F → F = V\n2. P=V, Q=F: (V ∧ V) → F ⇒ V → F = F\n3. P=F, Q=V: (F ∧ F) → V ⇒ F → V = V\n4. P=F, Q=F: (F ∧ V) → V ⇒ F → V = V\nOs resultados são V, F, V, V, caracterizando uma Contingência (nem sempre verdadeira, nem sempre falsa).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2392,7 +2392,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Por meio do diagrama de conjuntos: o conjunto dos Carpinteiros está contido no conjunto dos Corajosos (Carpinteiros ⊂ Corajosos). João pertence a Carpinteiros, logo pertence a Corajosos. O conjunto dos Funcionários da Firma X é disjunto de Corajosos. Portanto, é garantido que a interseção entre Corajosos e Carpinteiros não é vazia (alguns corajosos são carpinteiros).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2416,7 +2416,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como todo advogado é formado em direito e todo advogado é sagaz, os advogados pertencem à interseção entre os formados em direito e os sagazes. Logo, conclui-se validamente que há pessoas formadas em direito que são sagazes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2440,7 +2440,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Análise lógica por casos:\n1. Premissas dadas: X1 ⊂ Y, X3 ⊂ Y e X4 ⊂ Y.\n2. Para qualquer elemento x pertencente a X2:\n   - Se x ∈ X3 ⇒ como X3 ⊂ Y, x ∈ Y.\n   - Se x ∉ X3 ⇒ pelo enunciado, x ∈ X1 ou x ∈ X4. Como X1 ⊂ Y e X4 ⊂ Y, em ambos os casos x ∈ Y.\nConclusão inevitável: todo elemento de X2 pertence a Y (todo X2 é Y).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2464,7 +2464,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição 'Quem rouba é preso' tem estrutura universal: 'Todo homem que rouba é preso' (Se rouba, então é preso). A negação do quantificador universal afirmativo 'Todo A é B' é 'Algum A não é B', isto é: 'Alguém rouba e não é preso' (regra do MANÉ na condicional: Mantém a primeira E Nega a segunda).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Quantificadores e Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2488,7 +2488,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Para negar 'Todo x é (P e Q)':\n1. Troca-se o quantificador universal ('Todo') pelo existencial ('Existe / Algum / Pelo menos um').\n2. Nega-se a proposição composta interna pela Lei de De Morgan: ¬(P ∧ Q) ≡ ¬P ∨ ¬Q.\nResultado: Existe pessoa que não pode se reunir pacificamente OU não tem direito a receber informações.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal com Conjunção",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2512,7 +2512,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição é da forma ∀x(P(x) ∧ Q(x)). Sua negação é ∃x(¬P(x) ∨ ¬Q(x)), expressa em linguagem natural como: 'Algum pernambucano não gosta de peixe OU não torce pelo Náutico'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal com Conjunção",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2536,7 +2536,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição original é uma conjunção (P ∧ Q):\n• P = 'Todos os gatos são pardos' ⇒ Negação ¬P = 'Existe gato que não é pardo'\n• Q = 'Algumas corujas são brancas' ⇒ Negação ¬Q = 'Nenhuma coruja é branca' / 'Não há corujas brancas'\nPela Lei de De Morgan: ¬(P ∧ Q) ≡ ¬P ∨ ¬Q ⇒ 'Existe gato que não é pardo OU não há corujas brancas'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Conjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2560,7 +2560,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição dada afirma universalmente que para toda conta x: número de erros ≥ 2. A negação contraditória exige que exista pelo menos uma conta x cujo número de erros seja < 2 (isto é, no máximo 1 erro contábil). Logo: 'Pelo menos uma das contas apresentadas por Fernando contém, no máximo, um erro contábil'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2584,7 +2584,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se a proposição disjuntiva P ∨ Q é FALSA, pela tabela-verdade do conectivo 'ou', ambos os disjuntos são obrigatoriamente falsos (P = F e Q = F), o que significa que ¬P é verdadeira e ¬Q é verdadeira:\n1. ¬('todas as bolas são vermelhas') = 'existe bola que não é vermelha'.\n2. ¬('algumas barras não são azuis') = 'todas as barras são azuis'.\nUnindo as duas verdades por conjunção: 'existe bola que não é vermelha E todas as barras são azuis'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Disjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2608,7 +2608,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Aplicando a Lei de De Morgan para negar a disjunção ¬(P ∨ Q) ≡ ¬P ∧ ¬Q:\n• P = 'Todos os potes de sobremesa viraram' ⇒ ¬P = 'Pelo menos um pote de sobremesa não virou'\n• Q = 'Choveu em cima da sacola' ⇒ ¬Q = 'Não choveu em cima da sacola'\nResultado: 'Pelo menos um pote de sobremesa não virou E não choveu em cima da sacola'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Disjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2632,7 +2632,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela Lei de De Morgan, ¬(P ∧ Q) ≡ ¬P ∨ ¬Q:\n1. ¬('Todos os cantores são músicos') = 'Pelo menos um cantor não é músico'.\n2. ¬('Existe advogado que é cantor') = 'Não existe advogado que seja cantor' (Nenhum advogado é cantor).\n3. Conectivo de união: 'OU'.\nLogo: 'Pelo menos um cantor não é músico OU não existe advogado que seja cantor'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Conjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2656,7 +2656,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "No quadrado das oposições lógicas, a negação contraditória da proposição universal afirmativa ('Todo A é B') é a particular negativa ('Algum A não é B' / 'Existe A que não é B'). Portanto, a negação de 'Todo homem é trabalhador' é 'Existe homem que não é trabalhador'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2680,7 +2680,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Aplicando De Morgan ¬(P ∨ Q) ≡ ¬P ∧ ¬Q:\n1. Negação de 'Todos os analistas são inteligentes' (Todo A é B) ⇒ 'Existe analista que não é inteligente' (Existe A não B).\n2. Negação de 'Nenhum técnico é capacitado' (Nenhum A é B) ⇒ 'Existe técnico que é capacitado' (Existe A que é B).\n3. O conectivo 'ou' torna-se 'e'.\nFrase final: 'Existe analista que não é inteligente E existe técnico que é capacitado'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Disjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2704,7 +2704,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Para que a afirmação 'Todos os servidores públicos usam gravata' seja falsa, basta que exista pelo menos um único servidor público que não use gravata (quantificador existencial + negação do predicado).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2728,7 +2728,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A regra de negação de uma condicional (P → Q) é ¬(P → Q) ≡ P ∧ ¬Q:\n• P (antecedente mantido): 'Todos os plact são plect'.\n• Conectivo: conjunção 'e' (ou 'mas').\n• ¬Q (consequente negado): A negação de 'Todos os plict são ploct' é 'Existe plict que não é ploct'.\nResultado: 'Todos os plact são plect, mas existe plict que não é ploct'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Condicional com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2746,7 +2746,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A condicional P → (Q ∨ ~R) só seria sempre verdadeira se fosse uma tautologia. Contudo, quando P é verdadeiro, Q é falso e R é verdadeiro, temos antecedente V e consequente F (F ∨ ~V = F), resultando em V → F = F. Portanto, a afirmação está Errada.",
     "banca": "Simulado IBGE / CEBRASPE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2764,7 +2764,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição P ∧ (Q ∨ R) exige que P seja verdadeiro e pelo menos uma entre Q ou R seja verdadeira. Nas quatro primeiras linhas (onde P=V), apenas na linha 4 temos Q e R simultaneamente falsos. Nas últimas quatro linhas (P=F), a conjunção é sempre falsa. Logo, a coluna resulta em V, V, V, F, F, F, F, F.",
     "banca": "Simulado IBGE / CEBRASPE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2782,7 +2782,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Uma proposição condicional p → q só assume valor falso quando o antecedente é verdadeiro e o consequente é falso. O antecedente (P ∧ Q) só é verdadeiro nas linhas 1 e 2. Como na linha 1 o consequente R=V, a condicional é V; na linha 2 com R=F, a condicional é F. Em todas as outras linhas (3 a 8), o antecedente é F, tornando a condicional V. Sequência: V, F, V, V, V, V, V, V.",
     "banca": "Simulado IBGE / CEBRASPE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Tabela-Verdade",
+    "assunto": "Tabela Verdade",
     "nivelSuperior": false
   },
   {
@@ -2806,7 +2806,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição 'Todos os carpinteiros são corajosos' implica a conversão por limitação/acidente: 'Alguns corajosos são carpinteiros' (já garantida a existência real pelo elemento João). Além disso, os conjuntos Carpinteiros e Funcionários da Firma X são disjuntos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2830,7 +2830,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se todo A é B (Todo advogado é sagaz) e todo A é C (Todo advogado é formado em direito), qualquer elemento do conjunto A pertence necessariamente à interseção B ∩ C. Logo, há pessoas formadas em direito que são sagazes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2854,7 +2854,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Por análise de casos exaustiva: para todo elemento x ∈ X2: Caso 1: x ∈ X3 ⇒ x ∈ Y. Caso 2: x ∉ X3 ⇒ x ∈ (X1 ∪ X4). Como X1 ⊆ Y e X4 ⊆ Y, x ∈ Y em ambos os ramos. Consequentemente, todo X2 é Y (X2 ⊆ Y).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2878,7 +2878,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de uma proposição condicional universal ('Todo A é B' ou 'Se é A, então é B') é a proposição particular/existencial 'Existe A que não é B' (ou 'Algum A não é B').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Quantificadores e Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -2902,7 +2902,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Para negar 'Todo x é (P e Q)', troca-se o quantificador universal pelo existencial e nega-se a conjunção aplicando a Lei de De Morgan: ¬(P ∧ Q) ≡ ¬P ∨ ¬Q. Logo: 'Existe ao menos um x que não é P ou não é Q'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal com Conjunção",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2926,7 +2926,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de uma sentença do tipo 'Todo A é B e C' é 'Existe/Algum A que não é B ou não é C', utilizando a equivalência das Leis de De Morgan aliada à mudança do quantificador de universal para existencial.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal com Conjunção",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2950,7 +2950,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Para negar a conjunção (P ∧ Q), aplica-se De Morgan: ¬(P ∧ Q) ≡ ¬P ∨ ¬Q. Sendo P: 'Todos os gatos são pardos' (¬P: 'Existe gato que não é pardo') e Q: 'Algumas corujas são brancas' (¬Q: 'Nenhuma coruja é branca / Não há corujas brancas').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Conjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2974,7 +2974,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação do quantificador universal 'Para toda conta (erros ≥ 2)' é 'Existe pelo menos uma conta (erros ≤ 1)'. A negação de 'no mínimo 2' em números inteiros não negativos é 'no máximo 1'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -2998,7 +2998,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se uma disjunção (A ∨ B) é Falsa, obrigatoriamente A é Falso e B é Falso. Logo: (1) É falso que 'todas são vermelhas' ⇒ 'existe bola não vermelha'; (2) É falso que 'alguma barra não é azul' ⇒ 'todas as barras são azuis'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Disjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3022,7 +3022,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ∨ Q) é (¬P ∧ ¬Q). Negando 'Todos viraram' obtemos 'Pelo menos um não virou'; negando 'Choveu' obtemos 'Não choveu'. A conjunção dessas duas negações define a resposta correta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Disjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3046,7 +3046,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela Lei de De Morgan: ¬(P ∧ Q) ≡ ¬P ∨ ¬Q. A negação de quantificador universal afirmativo ('Todo') é o existencial negativo ('Pelo menos um não'); a negação de existencial afirmativo ('Existe') é o universal negativo ('Não existe / Nenhum').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Conjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3070,7 +3070,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "No quadrado das oposições aristotélicas, a contraditória (negação lógica estrita) da universal afirmativa (Todo A é B) é a particular negativa (Algum/Existe A que não é B).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3094,7 +3094,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo A é B ou Nenhum C é D' é 'Existe A que não é B E Existe C que é D'. Aplica-se a Lei de De Morgan para disjunções conjuntamente com a negação de cada quantificador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Disjunção com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3118,7 +3118,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo S é P' é 'Existe S que não é P' (ou 'Pelo menos um S não é P').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3142,7 +3142,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P → Q) é (P ∧ ¬Q). Sendo P = 'todos os plact são plect' e Q = 'todos os plict são ploct', temos: ¬(P → Q) ≡ 'Todos os plact são plect E/MAS Existe plict que não é ploct'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Condicional com Quantificadores",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3166,7 +3166,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de ∀x (P(x) ∧ Q(x)) é ∃x (¬P(x) ∨ ¬Q(x)). Troca-se o quantificador universal pelo existencial e aplica-se a Lei de De Morgan à conjunção de predicados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal com Conjunção",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3190,7 +3190,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "No quadrado lógico de oposição aristotélica, a contraditória da proposição do tipo A ('Todo S é P') é a proposição do tipo O ('Algum/Existe S que não é P').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3214,7 +3214,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Por silogismo categórico em diagramas lógicos: se o conjunto G está contido em M, e M é disjunto de L, então necessariamente G também é disjunto de L ('Nenhum G é L').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Silogismo",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -3238,7 +3238,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A cláusula restritiva 'são SOMENTE professores' confina o conjunto dos Matemáticos estritamente ao atributo Professor, tornando-o disjunto de qualquer outra categoria profissional (como Engenheiro) ou de categorias que impliquem outras atividades (como Rico, que implica Empresário).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -3262,7 +3262,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Dizer que a sentença universal afirmativa ∀x (Aluno(x) → Estuda(x)) é Falsa implica que a sua negação lógica ∃x (Aluno(x) ∧ ¬Estuda(x)) é Verdadeira ('Existe aluno que não estuda').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3286,7 +3286,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A análise de diagramas de Venn de múltiplos conjuntos exige a identificação precisa das regiões complementares e das uniões de interseções parciais (D ∩ Bᶜ ⊆ A ∪ C).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Teoria dos Conjuntos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -3310,7 +3310,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Sendo Adm ⊆ Analistas, temos (Prog ∩ Adm) ⊆ Adm ⊆ Analistas. Portanto, todo elemento que é simultaneamente Programador e Administrador é obrigatoriamente Analista.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Silogismo",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -3334,7 +3334,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A regra de inclusão universal determina que qualquer subconjunto de Magnânimos (neste caso, a interseção Benfeitores ∩ Magnânimos) é automaticamente subconjunto de Felizes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Silogismo",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -3358,7 +3358,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Dado que Funcionários ⊆ Economistas, a interseção (Funcionários ∩ Administradores) está estritamente contida em Funcionários e, portanto, em Economistas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Silogismo",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -3382,7 +3382,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como tanto o conjunto B quanto o conjunto C estão contidos no conjunto A (B ⊆ A e C ⊆ A), a interseção (B ∩ C) está duplamente contida em A. Logo, quem tem B e C possui obrigatoriamente a habilidade A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Silogismo",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -3406,7 +3406,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição existencial 'Alguns A são B' (∃x: A(x) ∧ B(x)) é logicamente equivalente a 'Alguns B são A' (∃x: B(x) ∧ A(x)) devido à comutatividade da conjunção e da interseção de conjuntos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Silogismo",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -3430,7 +3430,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A contrapositiva de uma condicional (P → Q) é (~Q → ~P). Invertem-se as posições do antecedente e do consequente e negam-se ambos os termos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência e Contraposição",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3454,7 +3454,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A condicional (P → Q) é logicamente equivalente à disjunção inclusiva (¬P ∨ Q) ('Nega a primeira OU Mantém a segunda'). Ambas possuem idêntica tabela-verdade (V, F, V, V).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3478,7 +3478,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A contrapositiva (¬Q → ¬P) é a forma padrão mais cobrada em concursos para a equivalência lógica de proposições condicionais simples.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência e Contraposição",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3502,7 +3502,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A relação (¬P ∨ Q) ≡ (P → Q) decorre diretamente da comutatividade e da tabela-verdade da implicação lógica. Para converter uma disjunção (A ∨ B) em condicional, nega-se a primeira parte e mantém-se a segunda (~A → B).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3526,7 +3526,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Na estrutura de um argumento lógico, as premissas fornecem as razões ou evidências (muitas vezes introduzidas por conectivos causais como 'visto que', 'já que', 'porque'), enquanto a conclusão é a proposição sustentada por essas premissas (que aceita o conectivo 'portanto').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Estrutura Lógica e Argumentação",
+    "assunto": "Implicação e Argumentação",
     "nivelSuperior": false
   },
   {
@@ -3550,7 +3550,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "No cálculo proposicional, conjunções adversativas da língua portuguesa (como 'mas', 'embora', 'porém') são formalizadas pelo conectivo lógico de conjunção (∧), exigindo a verdade cumulativa de ambas as proposições para que a sentença composta seja verdadeira.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Compostas e Conectivos",
+    "assunto": "Conectivos Lógicos",
     "nivelSuperior": false
   },
   {
@@ -3574,7 +3574,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela Lei de De Morgan: ¬(P ∧ Q) ≡ (¬P ∨ ¬Q). Para negar uma conjunção ('e'), nega-se a primeira proposição, troca-se o conectivo 'e' pelo 'ou', e nega-se a segunda proposição.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação de Proposições Compostas (Leis de De Morgan)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3598,7 +3598,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Em problemas de associação lógica com matrizes/tabelas de correspondência biunívoca, o cruzamento das informações elimina hipóteses contraditórias, confirmando Breno como Auditor em Belo Horizonte.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Associação Lógica",
+    "assunto": "Associação Lógica",
     "nivelSuperior": false
   },
   {
@@ -3622,7 +3622,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Em enunciados lógicos, 'A convidou B e C' estabelece imediatamente que A ≠ B e A ≠ C (três indivíduos distintos). Os marcadores de tratamento ('Sr.') identificam o gênero e viabilizam o descarte imediato dos nomes masculinos para a posição do anfitrião.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Associação Lógica",
+    "assunto": "Associação Lógica",
     "nivelSuperior": false
   },
   {
@@ -3646,7 +3646,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Montando a tabela de associação: Alberto = Azul (SP), Bruno = Cinza (BH), Carlos = Branco (RJ). Todas as pistas são plenamente satisfeitas sem contradições.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Associação Lógica",
+    "assunto": "Associação Lógica",
     "nivelSuperior": false
   },
   {
@@ -3670,7 +3670,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A técnica dos 'blocos fixos' é fundamental para ordenação linear/espacial: agrupa-se os elementos com posições relativas travadas (ex: A imediatamente acima de B -> bloco [A/B]) e desloca-se esse bloco pelas posições válidas do diagrama.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Ordenação Linear e Espacial",
+    "assunto": "Progressão Aritmética",
     "nivelSuperior": false
   },
   {
@@ -3694,7 +3694,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "No problema clássico de 'Verdades e Mentiras' com regra invertida (culpado diz a verdade e inocente mente), testa-se a suposição de culpa para cada indivíduo: apenas a hipótese de A ser culpado satisfaz todos os valores lógicos sem contradições.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Problemas de Verdades e Mentiras",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -3718,7 +3718,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação da conjunção (P ∧ Q) = Falso resulta na disjunção (¬P ∨ ¬Q) = Verdadeiro pelas Leis de De Morgan: basta que ao menos uma das parcelas seja falsa para invalidar o depoimento conjunto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Lógica Proposicional e Negação",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3742,7 +3742,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Analisando a paridade dos andares e as distâncias relativas: Advogado = 2º, Engenheiro = 3º, Médico = 5º. Isso deixa o 4º ou 6º andar livre para o Professor, e os andares 1º e 6º/4º para o bloco Arquiteto/Dentista.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Associação Lógica e Ordenação",
+    "assunto": "Associação Lógica",
     "nivelSuperior": false
   },
   {
@@ -3766,7 +3766,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Na disposição circular de 6 lugares: P1(1), P2(2), P6(3), P4(4), P3(5), P5(6). O indivíduo situado imediatamente à esquerda de P4 (olhando para o centro da mesa) é P6.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Ordenação Circular e Orientação Espacial",
+    "assunto": "Progressão Aritmética",
     "nivelSuperior": false
   },
   {
@@ -3790,7 +3790,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se B chega imediatamente após C, B só pode ocupar posições do 2º ao 5º lugar. A 1ª colocação é terminantemente vedada a B pela existência compulsória de C imediatamente à sua frente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Ordenação Linear e Classificação",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -3814,7 +3814,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Em problemas com idades, quando transcorrem N anos no tempo, a soma das idades de um grupo de K pessoas aumenta em exatamente (K × N) anos. Para 2 irmãos e 6 anos: Soma Futura = 34 + (2 × 6) = 46 anos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Problemas Aritméticos e com Idades",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -3838,7 +3838,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Modelagem por equação do 1º grau: Menor = x, Maior = x + 800. Equação: 2x + 800 = 5000 → 2x = 4200 → x = R$ 2.100,00.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Problemas Aritméticos e Equações do 1º Grau",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -3862,7 +3862,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Resolução por Sistema de Equações Lineares: P + G = 15 e 5P + 10G = 110. Multiplicando a 1ª por -5: -5P - 5G = -75. Somando à 2ª: 5G = 35 → G = 7 grampeadores.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Sistemas de Equações Lineares do 1º Grau",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": false
   },
   {
@@ -3886,7 +3886,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Equivalência lógica da Disjunção para a Condicional: P ∨ Q ≡ ~P → Q ≡ ~Q → P. Negando a primeira parte e mantendo a segunda em formato condicional, obtemos: 'Se a menina não tem olhos azuis, então o menino é loiro'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Equivalência da Disjunção para Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3904,7 +3904,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição P → Q é equivalente apenas à sua contrapositiva (~Q → ~P) ou à disjunção (~P ∨ Q). A sentença ~P → ~Q é a inversa e constitui uma falácia lógica (não é equivalente).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Equivalência Lógica da Condicional (Contrapositiva vs. Inversa)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3928,7 +3928,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Dada a disjunção (P ∨ ~Q), aplicando a equivalência para condicional (nega a primeira e mantém a segunda: ~Q ∨ P ≡ ~(~Q) → P ≡ Q → P), chegamos a: 'Se Walter é procurador-geral, então Augusto é analista'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Equivalência da Disjunção para Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3952,7 +3952,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição ~P ∨ Q equivale a P → Q. Pela contrapositiva, P → Q ≡ ~Q → ~P ('Se Laura não é sonhadora, então Gael não é curioso').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Equivalência da Disjunção para Condicional e Contrapositiva",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -3976,7 +3976,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação da Conjunção (Leis de De Morgan): ~(P ∧ ~Q) ≡ ~P ∨ Q. Nega-se a primeira parte, troca-se 'e' por 'ou' e nega-se a segunda parte ('não usou' vira 'usou').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação de Proposições Compostas (Leis de De Morgan - Conjunção)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4000,7 +4000,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de (~P ∧ Q): nega-se ~P (obtendo P), troca-se a conjunção 'e' pela disjunção 'ou', e nega-se Q (obtendo ~Q). Resultado: 'Gosto de ficar em casa ou não vou ao cinema todos os dias'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação de Conjunção com Termo Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4018,7 +4018,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de (~P ∧ Q) ≡ P ∨ ~Q. Nega-se a primeira ('sou espião'), troca-se 'e' por 'ou' e nega-se a segunda ('não amo meu país'). O item está CERTO.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação da Conjunção em Argumentos Lógicos",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4036,7 +4036,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de Disjunção (De Morgan): ~(P ∨ ~Q) ≡ ~P ∧ Q. Troca-se 'ou' por 'e' e invertem-se os valores de cada proposição simples ('diminuir' vira 'não diminuir'; 'não aprovar' vira 'aprovar'). Item CERTO.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação da Disjunção Inclusiva (Leis de De Morgan)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4054,7 +4054,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A expressão 'Não P nem Q' é logicamente (~P ∧ ~Q). Sua negação é (P ∨ Q) com 'OU', e não com 'E'. Portanto, o item está ERRADO.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação de Estruturas com 'Nem' (Conjunção Negativa)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4078,7 +4078,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de uma condicional 'Se P, então Q' é SEMPRE uma conjunção: ~(P → Q) ≡ P ∧ ~Q ('Mantém o antecedente E nega o consequente').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação da Condicional (Regra do MANÉ)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4102,7 +4102,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Se A, então B' é 'A e não B'. Como A já contém uma negativa ('Pedro não é brasileiro'), mantém-se A ('Pedro não é brasileiro') e nega-se B ('João não é corintiano'), unindo-os por 'E'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação da Condicional com Antecedente Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4126,7 +4126,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de P → ~Q: ~(P → ~Q) ≡ P ∧ Q. Mantém a primeira ('Hoje irá chover') e nega a segunda ('não irei' vira 'irei'), com o conectivo 'E'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação da Condicional com Consequente Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4150,7 +4150,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se P ∧ Q é Falsa, então ~P ∨ ~Q é Verdadeira. Como ~P ∨ ~Q ≡ P → ~Q, a proposição condicional 'Se André bebe suco, então Jacqueline não bebe cerveja' é infalivelmente verdadeira.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação de Conjunção e Equivalência Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4174,7 +4174,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de (P ∧ Q) ≡ ~P ∨ ~Q. Como ~P ∨ ~Q ≡ P → ~Q, a formulação condicional 'Se P, então não Q' expressa a negação exata da conjunção original.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação da Conjunção sob Forma Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4198,7 +4198,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de uma bicondicional (se e somente se) é a disjunção exclusiva (ou... ou...): ~(P ↔ Q) ≡ (P ⊻ Q). Alternativa E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação da Bicondicional (Disjunção Exclusiva)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4222,7 +4222,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Quantificadores universais (∀) abrangem 100% dos elementos do conjunto ('Todo', 'Toda', 'Qualquer', 'Nenhum'). A alternativa B ('Todo juiz...') é a única universal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Quantificadores Lógicos (Universal vs. Existencial)",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4246,7 +4246,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Regra clássica de negação de quantificadores: ~(Todo A é B) ≡ Algum A NÃO é B (ou Pelo menos um / Existe). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal Afirmativo (Todo)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4270,7 +4270,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo A é B' é 'Existe A que NÃO é B' (ou 'Pelo menos um A não é B').",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal Afirmativo (Todo)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4294,7 +4294,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como 'Qualquer pessoa' = 'Toda pessoa', a sua negação lógica é 'Pelo menos uma pessoa não sabe andar de bicicleta' (∃x ~P(x)).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação de Quantificador Universal ('Qualquer' / 'Todo')",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4312,7 +4312,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se a universal afirmativa (Todo A é B) é falsa, a particular negativa (Existe / Pelo menos um A não é B) é necessariamente verdadeira. Item CERTO.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Relação de Contradição e Valores Lógicos de Quantificadores",
+    "assunto": "Tautologia, contradição e contingência",
     "nivelSuperior": false
   },
   {
@@ -4336,7 +4336,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de Todo: ~(Todo A é B) = Algum A não é B. Alternativa E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal Afirmativo (Todo)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4354,7 +4354,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de 'Todo' NÃO é 'Nenhum'! A negação correta é existencial com negação: 'Existe pelo menos uma reunião que não deve ser gravada'. Item ERRADO.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Distinção entre Proposição Contraditória e Contrária (Todo vs. Nenhum)",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4372,7 +4372,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de 'Todo A é (B ou C)' ≡ 'Algum A não é B e não é C' (Existe pelo menos um contraexemplo). Substituir por 'Nenhum' está incorreto. Item ERRADO.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação de Quantificador Universal com Disjunção",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4390,7 +4390,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo A é B' é 'Algum A não é B'. O uso de 'Nenhum' está errado. Item ERRADO.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal Afirmativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4414,7 +4414,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação do 'Nenhum': ~(Nenhum A é B) ≡ Algum A é B (Existe / Há pelo menos um A que é B). Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal Negativo (Nenhum)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4438,7 +4438,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de 'Nenhum A é B' é 'Algum A é B'. Logo, a negação de 'Nenhum cachorro é baixo' é 'Algum cachorro é baixo'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal Negativo (Nenhum)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4462,7 +4462,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se a proposição 'Nenhum aluno está preparado' é falsa, sua negação contraditória 'Existe ao menos um aluno preparado' é obrigatoriamente verdadeira. Alternativa B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Falsidade do 'Nenhum' e Verdade da Proposição Existencial",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4486,7 +4486,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Nenhum A é B' é 'Há pelo menos um A que é B'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal Negativo (Nenhum)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4510,7 +4510,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação da particular negativa ('Algum A não é B') é a universal afirmativa ('Todo A é B'). Se 'Existem insetos que não são pretos' é falsa, então 'Todo inseto é preto' é verdadeira.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Existencial Negativo (Algum... Não)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4534,7 +4534,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação lógica de 'Pelo menos um A não é B' é 'Todo A é B'. Logo: 'Todas as empresas que participaram do pregão público têm certificação digital'. Alternativa D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação de 'Pelo menos um... não' para 'Todo'",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4558,7 +4558,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo A é (B e C)' é 'Existe A que não é B OU não é C' (aplicação combinada de negação de quantificador universal com a Lei de De Morgan). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação de Quantificador Universal com Conjunção (De Morgan)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4582,7 +4582,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação clássica de 'Todo A é B': ~(Todo A é B) ≡ Existe A que NÃO é B. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal Afirmativo (Todo)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4606,7 +4606,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Silogismo com diagramas de conjuntos: Gerentes ⊆ Mulheres e Mulheres disjunto de Sabem Trocar Lâmpada. Conclusão inevitável: 'Nenhum gerente sabe trocar uma lâmpada'. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Diagramas Lógicos e Silogismo Categórico",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4630,7 +4630,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como os matemáticos são SOMENTE professores, seu conjunto é disjunto de engenheiros e de empresários (e consequentemente de ricos, pois ricos ⊆ empresários). Logo: 'Nenhum matemático é rico ou engenheiro'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Diagramas Lógicos e Dedução de Conjuntos Disjuntos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4654,7 +4654,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se a afirmação 'Todos os alunos estudam' é falsa, sua negação lógica contraditória 'Existe aluno que não estuda' é verdadeira. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Negação do Quantificador Universal e Valores Lógicos",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4678,7 +4678,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Análise de regiões de pertinência em diagramas de conjuntos: a alternativa E expressa a relação correta de continência das regiões de D externas a B. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Teoria dos Conjuntos e Análise de Diagramas de Venn",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4702,7 +4702,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se Administradores ⊆ Analistas, então a interseção (Programadores ∩ Administradores) ⊆ Analistas. Logo, 'os programadores que são administradores também são analistas'. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Silogismo e Diagramas de Conjuntos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4726,7 +4726,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como Magnânimos ⊆ Felizes, a interseção Benfeitores ∩ Magnânimos está contida em Felizes: 'todos os BENFEITORES que são MAGNÂNIMOS são FELIZES'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Silogismo Categórico e Subconjuntos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4750,7 +4750,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como Funcionários ⊆ Economistas, qualquer funcionário é economista. Portanto, 'os funcionários que são administradores são economistas'. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Diagramas de Venn e Dedução Categórica",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4774,7 +4774,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como C ⊆ A e B ⊆ A, quem possui B e C pertence a C (e a B) e, portanto, possui necessariamente a habilidade A. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Inclusão de Conjuntos e Implicação Lógica",
+    "assunto": "Implicação e Argumentação",
     "nivelSuperior": false
   },
   {
@@ -4798,7 +4798,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição 'Alguns que fazem boa prova são aprovados' é comutativa e equivale a 'Há aprovado que fez boa prova'. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Conversão de Proposições Particulares e Silogismos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4822,7 +4822,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Regra da Contrapositiva: (P → Q) ≡ (~Q → ~P). Nega-se e inverte-se: 'Se a receita fiscal cresce, então os impostos sobem'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Equivalência Lógica da Condicional (Contrapositiva)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4846,7 +4846,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Equivalência condicional para disjunção: (P → Q) ≡ (~P ∨ Q). 'Não cometi um crime ou serei condenado'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Equivalência Lógica da Condicional para Disjunção (Regra do NE-MA)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4870,7 +4870,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Contrapositiva da condicional: (P → Q) ≡ (~Q → ~P). Logo, 'Se eu não tirei uma boa nota no concurso, então não estudei'. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Equivalência Lógica da Condicional (Contrapositiva)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4894,7 +4894,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Equivalência disjunção para condicional: (~P ∨ Q) ≡ (P → Q). Logo: 'Se Pedro é pedreiro, então Paulo é paulista'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico - Equivalência da Disjunção para a Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4918,7 +4918,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de 'Todo A é B e C' é 'Existe A que não é B OU não é C' (troca-se o quantificador universal pelo existencial e aplica-se a Lei de De Morgan à conjunção). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Categóricas: Negação de Quantificador Universal com Conjunção (De Morgan)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4942,7 +4942,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação lógica de 'Todo A é B' (proposição tipo A) é 'Algum/Existe A que não é B' (proposição tipo O). Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Categóricas: Negação do Quantificador Universal",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -4966,7 +4966,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Silogismo categórico: Se todo G é M e nenhum M é L, então necessariamente nenhum G é L (nenhum gerente sabe trocar lâmpada). Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Lógica de Argumentação: Silogismo Categórico e Diagramas Lógicos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -4990,7 +4990,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como todo matemático é SOMENTE professor, o conjunto dos matemáticos é disjunto de engenheiros e empresários. E como todo rico é empresário, matemáticos também não podem ser ricos. Logo, nenhum matemático é rico ou engenheiro. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos: Inferência e Exclusividade de Conjuntos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -5014,7 +5014,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se a afirmação 'Todos os alunos estudam' é FALSA, sua negação contraditória é necessariamente VERDADEIRA: 'Existe aluno que não estuda'. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Categóricas: Valor Lógico e Negação Contraditória",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5038,7 +5038,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Análise de diagramas lógicos de Venn para múltiplos conjuntos. A alternativa E reflete a leitura correta das regiões de pertinência do conjunto D fora de B. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Teoria dos Conjuntos: Leitura de Interseções e Diferenças",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -5062,7 +5062,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como todo administrador é analista, a interseção dos programadores com os administradores ($P \\cap Adm$) está necessariamente contida no conjunto dos analistas. Logo, os programadores que são administradores também são analistas. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos e Silogismo: Interseção e Inclusão de Subconjuntos",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -5086,7 +5086,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Se todo Magnânimo é Feliz, então qualquer indivíduo classificado como Magnânimo é Feliz. Consequentemente, todos os Benfeitores que são Magnânimos são Felizes. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos: Inclusão e Interseção Categórica",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -5110,7 +5110,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela premissa I, 'Todo Funcionário é Economista'. Qualquer subgrupo formado por funcionários (incluindo os funcionários que são administradores) estará contido no conjunto dos economistas. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Lógica de Argumentação: Inclusão de Subconjuntos",
+    "assunto": "Implicação e Argumentação",
     "nivelSuperior": false
   },
   {
@@ -5134,7 +5134,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Como $C \\subset A$ e $B \\subset A$, qualquer elemento que possua B e C está contido em A. Logo, quem possui B e C possui necessariamente a habilidade A. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Diagramas Lógicos: Dedução a partir de Múltiplas Inclusões",
+    "assunto": "Diagrama Lógico e Quantificadores",
     "nivelSuperior": false
   },
   {
@@ -5158,7 +5158,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição particular afirmativa 'Algum A é B' é logicamente equivalente a 'Algum B é A' (comutatividade da interseção). Logo, se alguns que fazem boa prova são aprovados, há aprovado que fez boa prova. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Proposições Categóricas: Conversão de Proposições Particulares (Tipo I)",
+    "assunto": "Progressão Aritmética",
     "nivelSuperior": false
   },
   {
@@ -5182,7 +5182,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Equivalência pela Contrapositiva: $P \\to Q \\equiv \\neg Q \\to \\neg P$. Sendo $P =$ 'impostos não sobem' e $Q =$ 'receita não cresce', a contrapositiva é: 'Se a receita fiscal cresce, então os impostos sobem'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências Lógicas: Contrapositiva da Condicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5206,7 +5206,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Regra da equivalência disjuntiva da condicional: $P \\to Q \\equiv \\neg P \\lor Q$ (nega o primeiro, OU, mantém o segundo). Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências Lógicas: Condicional para Disjunção Inclusiva (~P v Q)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5230,7 +5230,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Contrapositiva da condicional: $P \\to Q \\equiv \\neg Q \\to \\neg P$. A equivalente é: 'Se eu não tirei uma boa nota no concurso, então não estudei'. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências Lógicas: Contrapositiva da Condicional (Inverte e Nega)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5254,7 +5254,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Equivalência de Disjunção para Condicional: $\\neg P \\lor Q \\equiv P \\to Q$. Sendo $\\neg P =$ 'Pedro não é pedreiro' e $Q =$ 'Paulo é paulista', a condicional equivalente é: 'Se Pedro é pedreiro, então Paulo é paulista'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências Lógicas: Disjunção para Condicional (~P v Q ≡ P -> Q)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5278,7 +5278,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ↔ Q) equivale a (P ∧ ~Q) ∨ (~P ∧ Q). Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Bicondicional",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5302,7 +5302,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela Lei de De Morgan, a negação de (P ∧ Q) é (~P ∨ ~Q). Assim, a negação de 'tomei remédio e a dor não passou' é 'não tomei remédio ou a dor passou'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências e Negações: Negação da Conjunção (Lei de De Morgan)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5326,7 +5326,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ∧ Q) é (~P ∨ ~Q) (assertiva II) e também pode ser expressa por ~(P ∧ Q) (assertiva III). Logo, apenas II e III estão corretas. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Lógica Proposicional: Formas Equivalentes de Negação da Conjunção",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5350,7 +5350,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ∨ Q) é (~P ∧ ~Q), expressa por 'Maria não sabe cozinhar nem falar inglês'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências e Negações: Negação da Disjunção Inclusiva",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5374,7 +5374,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ∧ Q) é (~P ∨ ~Q): 'Marta não joga futebol ou Ana não dança ballet'. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências e Negações: Negação da Conjunção (Lei de De Morgan)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5396,7 +5396,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ∨ Q) é (~P ∧ ~Q): 'Pedro não passa no concurso e não vai ao show em Brasília'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências e Negações: Negação da Disjunção Inclusiva",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5420,7 +5420,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação da bicondicional ~(P ↔ Q) equivale à disjunção exclusiva (P ⊕ Q), expressa pela estrutura 'Ou... ou...'. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Bicondicional por Disjunção Exclusiva",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5444,7 +5444,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ↔ Q) é (P ⊕ Q): 'Ou a casa de Cícero é de palha, ou a casa de Heitor é de madeira'. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Bicondicional por Disjunção Exclusiva",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5466,7 +5466,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de (P ∨ ~Q) é (~P ∧ Q): 'Amanhã eu não vou dormir até o meio-dia e me chamo Mariano'. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Disjunção associada à Dupla Negação",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5490,7 +5490,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Negação de conjunção tripla ~(P ∧ Q ∧ R) é (~P ∨ ~Q ∨ ~R). Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Lei de De Morgan Generalizada: Negação de Múltiplas Conjunções",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5514,7 +5514,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ∨ Q) é (~P ∧ ~Q): 'Meu copo não é de vidro e meu prato não é de louça'. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências e Negações: Negação da Disjunção (Lei de De Morgan)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5538,7 +5538,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (~P ∧ Q) resulta em (P ∨ ~Q): 'Renato passou pelo bar ou não foi para a academia'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Conjunção com Proposição Simples Negativa",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5560,7 +5560,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P ↔ Q) é (P ⊕ Q): 'Ou Javier comeu tacos, ou Joana preparou nachos'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Bicondicional por Disjunção Exclusiva",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5578,7 +5578,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A proposição 'P, mas só se Q' é uma bicondicional (P ↔ Q). Sua negação é a disjunção exclusiva (P ⊕ Q): 'Ou P ou Q'. O item está Certo. Gabarito Certo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Julgamento Certo/Errado: Negação da Bicondicional ('Mas só se')",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5602,7 +5602,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P → Q) é (P ∧ ~Q): 'O servidor é aprovado e não assume o cargo'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Condicional (Regra MANÉ)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5626,7 +5626,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P → Q) é (P ∧ ~Q): 'Jeniffer escolhe a viagem e Leonardo não paga as passagens'. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Condicional (Regra MANÉ)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5650,7 +5650,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de P → Q é P ∧ ~Q (regra MANÉ: Mantém a primeira E Nega a segunda). Logo: 'Um relatório apresenta inconsistências e não é revisado'. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Condicional (Regra MANÉ)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5674,7 +5674,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P → ~Q) é P ∧ ~(~Q) = P ∧ Q: 'Luto e perco'. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Condicional com Consequente Negativo",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5698,7 +5698,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de (P → Q) é (P ∧ ~Q): 'Fulano fez o concurso e ele não foi aprovado'. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Condicional (Regra MANÉ)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5722,7 +5722,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A negação de P → Q é P ∧ ~Q: 'João é servidor público e não tem direito a férias'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Negação da Condicional (Regra MANÉ)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5746,7 +5746,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A equivalência da condicional pela contrapositiva é P → Q ≡ ~Q → ~P: 'Se o candidato não é aprovado, então ele não estuda'. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional: Contrapositiva (~Q → ~P)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5770,7 +5770,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Dada a condicional P → ~Q, a única consequência lógica e equivalente válida é a contrapositiva Q → ~P ('Se dormi, então não tomei café' - Item I). Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalências e Falácias da Condicional (Contrapositiva)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5794,7 +5794,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "P → Q equivale pela contrapositiva a ~Q → ~P: 'Se Amanda não é meticulosa, então George não é pontual'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional: Contrapositiva (~Q → ~P)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5818,7 +5818,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A contrapositiva de P → ~Q é Q → ~P: 'Se hoje eu trabalho, então hoje não é terça-feira'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional: Contrapositiva com Negação",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5842,7 +5842,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela contrapositiva, P → Q ≡ ~Q → ~P: 'Se não tenho o Ensino Superior completo, então não estou participando deste concurso'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional: Contrapositiva (~Q → ~P)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5860,7 +5860,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A segunda oração 'se voltar, não será o mesmo' (V → ~M) equivale pela contrapositiva a 'se você for o mesmo, não voltará' (M → ~V). O item está Certo. Gabarito Certo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Julgamento Certo/Errado: Equivalência da Condicional pela Contrapositiva",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5882,7 +5882,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A equivalência da condicional em disjunção inclusiva (regra NEyMA) estabelece que P → Q ≡ ~P ∨ Q: 'Não me equivoquei ou devo ser punido'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional para Disjunção (Regra NEyMA)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5905,7 +5905,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A disjunção (~P ∨ Q) equivale à condicional (P → Q): 'Se Ayra é novata, então Bernardo é veterano'. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Disjunção para Condicional (NEyMA Inversa)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5929,7 +5929,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela regra NEyMA (P → Q ≡ ~P ∨ Q): nega a primeira ('O tempo não voa') OU mantém a segunda ('o dinheiro não cresce em árvore'). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional para Disjunção (Regra NEyMA)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5953,7 +5953,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A disjunção (~P ∨ Q) equivale à condicional (P → Q): 'Se Oswaldo acredita em horóscopo, então Pedro é do signo de Peixes'. Gabarito A.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Disjunção para Condicional (NEyMA Inversa)",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -5977,7 +5977,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela contrapositiva combinada com a Lei de De Morgan: ~(R) → ~(P ∧ ~Q) ≡ ~R → (~P ∨ Q): 'Se minha saúde não agradece, então não como verduras ou como gorduras saturadas'. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Equivalência da Condicional pela Contrapositiva combinada com De Morgan",
+    "assunto": "Equivalência e Negação",
     "nivelSuperior": false
   },
   {
@@ -6001,7 +6001,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "As diagonais de um trapézio retângulo não são necessariamente perpendiculares entre si. Essa propriedade só ocorre em casos muito específicos e não é regra geral. Gabarito E.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Matemática - Geometria Plana: Propriedades dos Quadriláteros Notáveis",
+    "assunto": "Geometria Plana",
     "nivelSuperior": false
   },
   {
@@ -6025,7 +6025,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Os ângulos internos medem 70°, 82,5° e 27,5°. Como todos são menores que 90°, o triângulo é acutângulo. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Matemática - Geometria Plana: Teorema do Ângulo Externo e Classificação de Triângulos",
+    "assunto": "Geometria Plana",
     "nivelSuperior": false
   },
   {
@@ -6049,7 +6049,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pelo Teorema de Pitágoras no triângulo lateral, a altura h = 8 cm. Área = (22 + 10) × 8 / 2 = 128 cm². Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Matemática - Geometria Plana: Área do Trapézio Isósceles e Teorema de Pitágoras",
+    "assunto": "Geometria Plana",
     "nivelSuperior": false
   },
   {
@@ -6073,7 +6073,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "d = √[(10 - 2)² + (18 - 3)²] = √(64 + 225) = √289 = 17 (número inteiro exato). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Matemática - Geometria Analítica: Distância Euclidiana entre Dois Pontos",
+    "assunto": "Geometria Plana",
     "nivelSuperior": false
   },
   {
@@ -6097,7 +6097,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Afirmação I está correta (terno pitagórico 7, 24, 25); Afirmação II está correta (relação quadrática da área com a diagonal); Afirmação III está incorreta (Pitágoras exige ângulo reto). Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Matemática - Geometria Plana: Teorema de Pitágoras e Relações de Área",
+    "assunto": "Geometria Plana",
     "nivelSuperior": false
   },
   {
@@ -6121,7 +6121,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Arco = (60/360) × 2 × 3 × 12 = 12 m. Perímetro total do setor = Arco + 2 × Raio = 12 + 24 = 36 m. Gabarito C.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Matemática - Geometria Plana: Perímetro de Setor Circular",
+    "assunto": "Geometria Plana",
     "nivelSuperior": false
   },
   {
@@ -6145,7 +6145,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Perímetro total = 2 × 32 = 64 cm. Medida de cada lado = 64 / 8 = 8 cm. Gabarito B.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Matemática - Geometria Plana: Polígonos Regulares e Semiperímetro",
+    "assunto": "Geometria Plana",
     "nivelSuperior": false
   },
   {
@@ -6169,10 +6169,10 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Pela projeção ortogonal dos degraus, o perímetro equivale ao do retângulo circunscrito: P = 2 × (15 cm + 10 cm) = 50 cm. Gabarito D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Matemática - Geometria Plana: Perímetro de Figuras Ortogonais Compostas",
+    "assunto": "Geometria Plana",
     "nivelSuperior": false
   },
-{
+  {
     "id": "rlm_sim_931",
     "text": "Determinada banca examinadora solicita que o candidato encontre o valor de um parâmetro 'k' para que a equação (k − 5)x = 12 NÃO possua solução no conjunto dos números reais. Para que essa condição seja satisfeita, o valor de 'k' deve ser:",
     "options": [
@@ -6193,7 +6193,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Para uma equação da forma ax = b ser impossível (sem solução), o coeficiente de x deve ser zero enquanto o termo independente é diferente de zero (0x = b, com b ≠ 0). Assim, k - 5 = 0 implica k = 5.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6217,7 +6217,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Passo 1: O 3 que divide todo o membro esquerdo passa multiplicando: 2y - a = 3b. Passo 2: O termo '-a' passa somando: 2y = 3b + a. Passo 3: O 2 que multiplica y passa dividindo toda a expressão: y = (3b + a) / 2.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6241,7 +6241,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Para um sistema 2x2 ser SPI (infinitas soluções), as equações devem ser proporcionais: k/3 = 4/2 = 10/5. Como 4/2 = 2 e 10/5 = 2, temos k/3 = 2 => k = 6.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6265,7 +6265,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Montando o sistema: 1) A + 2 = B - 3 => A - B = -5 => B = A + 5. 2) 2A + 3B = 190. Substituindo B: 2A + 3(A + 5) = 190 => 2A + 3A + 15 = 190 => 5A = 175 => A = 35. Logo, B = 35 + 5 = 40. O total original de processos nas duas pilhas é A + B = 35 + 40 = 75.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6289,7 +6289,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "A afirmação I é verdadeira (condição de paralelismo e sistema impossível/SI). A afirmação II é verdadeira (princípio fundamental da adição algébrica). A afirmação III é falsa, pois 0x + 0y = 0 é uma identidade que indica infinitas soluções (sistema indeterminado/SPI), não determinado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6313,7 +6313,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Desmembrando a linguagem natural: 1) 'triplo da soma de um número com dois' -> 3(x + 2); 2) 'diferença entre [isso] e a metade do número' -> 3(x + 2) - x/2; 3) 'excede dez em cinco unidades' -> = 10 + 5.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6337,7 +6337,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "1) 'Valor que excede x em 20': (x + 20). 2) 'A quarta parte disso': (x + 20)/4. 3) 'Subtraída de 5': (x + 20)/4 - 5. 4) 'Equivale à terça parte de x': = x/3. Equação resultante: (x + 20)/4 - 5 = x/3.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6361,7 +6361,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Sejam P e F as idades atuais. Há 5 anos: P - 5 = 3(F - 5) => P - 3F = -10. Daqui a 10 anos: P + 10 = 2(F + 10) => P - 2F = 10. Subtraindo a 1ª da 2ª: F = 20 anos. Substituindo: P = 10 + 2(20) = 50 anos. A soma das idades atuais é 50 + 20 = 70 anos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6385,7 +6385,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Seja x o valor do 2º sócio. 1º sócio = 2x. 3º sócio = (x + 2x) - 2000 = 3x - 2000. Somando todos: 2x + x + (3x - 2000) = 18000 => 6x = 20000 => x = 20000 / 6 = R$ 3.333,33.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6409,7 +6409,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Fórmula do trabalho conjunto: 1/T = 1/Ta + 1/Tb => 1/T = 1/4 + 1/6. Com MMC = 12: 1/T = (3 + 2)/12 = 5/12 => T = 12/5 = 2,4 horas. Convertendo a parte decimal: 0,4 * 60 min = 24 minutos. Portanto, 2h 24min.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   },
   {
@@ -6433,7 +6433,7 @@ export const questionsRlm: Question[] = [
     "generalExplanation": "Seja C o número de canetas e B de borrachas: 1) C + B = 25; 2) 1,50C + 0,80B = 30,50. Multiplicando a 2ª por 10: 15C + 8B = 305. Substituindo B = 25 - C: 15C + 8(25 - C) = 305 => 7C + 200 = 305 => 7C = 105 => C = 15 canetas. Logo, B = 25 - 15 = 10 borrachas. A diferença é 15 - 10 = 5.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Raciocínio Lógico e Matemática - Álgebra Básica",
+    "assunto": "Proposição Lógica",
     "nivelSuperior": true
   }
 ];

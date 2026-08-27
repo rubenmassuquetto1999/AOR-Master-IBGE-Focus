@@ -7,9 +7,8 @@ import { questionsIbgeEtica } from "./data/questionsIbgeEtica";
 import { questionsKatiaData } from "./questionsKatiaData";
 import { questionsNewBatch } from "./data/questionsNewBatch";
 import { questionsBatchRlmAssoc } from "./data/questionsBatchRlmAssoc";
-import { mapQuestionToOfficialTopic } from "./data/disciplinesData";
 
-const rawQuestions: Question[] = [
+export const initialQuestions: Question[] = [
   ...questionsPt,
   ...questionsAdm,
   ...questionsInfo,
@@ -19,9 +18,3 @@ const rawQuestions: Question[] = [
   ...questionsNewBatch,
   ...questionsBatchRlmAssoc,
 ];
-
-export const initialQuestions: Question[] = rawQuestions.map((q) => ({
-  ...q,
-  assunto: mapQuestionToOfficialTopic(q.assunto, q.text),
-}));
-

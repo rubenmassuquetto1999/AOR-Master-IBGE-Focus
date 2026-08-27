@@ -106,11 +106,13 @@ export default function App() {
   // UI state
   const [activeTab, setActiveTab] = useState<string>("home");
   const [preselectedBanca, setPreselectedBanca] = useState<string>("Todos");
+  const [preselectedDisciplina, setPreselectedDisciplina] = useState<string>("Todas");
   const [preselectedAssunto, setPreselectedAssunto] = useState<string>("Todos");
 
-  const handleSelectQuickTopic = (banca: string, assunto: string) => {
+  const handleSelectQuickTopic = (banca: string, assunto: string, disciplina?: string) => {
     setPreselectedBanca(banca);
     setPreselectedAssunto(assunto);
+    setPreselectedDisciplina(disciplina || "Todas");
     setActiveTab("quiz");
   };
 
@@ -1734,6 +1736,7 @@ export default function App() {
                 onAlert={customAlert}
                 onConfirm={customConfirm}
                 initialBanca={preselectedBanca}
+                initialDisciplina={preselectedDisciplina}
                 initialAssunto={preselectedAssunto}
               />
             )}

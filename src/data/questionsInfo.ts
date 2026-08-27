@@ -21,7 +21,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -44,7 +44,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -67,7 +67,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -90,7 +90,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true
   },
   {
@@ -113,7 +113,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true
   },
   {
@@ -136,7 +136,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -159,7 +159,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -182,7 +182,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -205,7 +205,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -228,7 +228,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -251,7 +251,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -275,7 +275,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -299,7 +299,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -323,7 +323,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -347,7 +347,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -371,7 +371,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -395,7 +395,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -419,7 +419,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -443,7 +443,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -467,7 +467,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -491,7 +491,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -515,7 +515,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -539,7 +539,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -563,7 +563,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -587,7 +587,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -611,7 +611,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -635,7 +635,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -659,7 +659,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -683,7 +683,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -707,7 +707,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -731,7 +731,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -755,7 +755,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -779,7 +779,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -803,7 +803,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -827,7 +827,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -851,7 +851,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -875,7 +875,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -899,7 +899,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -923,7 +923,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -947,7 +947,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -971,7 +971,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -995,7 +995,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -1019,7 +1019,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -1043,7 +1043,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -1067,7 +1067,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -1091,7 +1091,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "IBGE Focus",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": true,
     "image": null
   },
@@ -1115,7 +1115,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='320' viewBox='0 0 280 320'><rect x='1' y='1' width='278' height='318' fill='%23f2f2f2' stroke='%23a0a0a0' stroke-width='1' rx='3' ry='3'/><text x='15' y='22' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' font-weight='bold' fill='%23000000'>Expandir</text><line x1='5' y1='32' x2='275' y2='32' stroke='%23e0e0e0' stroke-width='1'/><text x='15' y='46' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Abrir Reprodução Automática...</text><text x='15' y='66' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Verificar com o System Center Endpoint Protection...</text><line x1='5' y1='78' x2='275' y2='78' stroke='%23e0e0e0' stroke-width='1'/><text x='15' y='92' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Abrir em nova janela</text><text x='15' y='112' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Compartilhar com</text><path d='M 260,108 L 265,111 L 260,114 Z' fill='%23666666'/><text x='15' y='132' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Restaurar versões anteriores</text><text x='15' y='152' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Incluir na biblioteca</text><path d='M 260,148 L 265,151 L 260,154 Z' fill='%23666666'/><text x='15' y='172' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Formatar...</text><line x1='5' y1='182' x2='275' y2='182' stroke='%23e0e0e0' stroke-width='1'/><text x='15' y='196' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Copiar</text><line x1='5' y1='206' x2='275' y2='206' stroke='%23e0e0e0' stroke-width='1'/><text x='15' y='220' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Renomear</text><line x1='5' y1='230' x2='275' y2='230' stroke='%23e0e0e0' stroke-width='1'/><text x='15' y='244' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Novo</text><path d='M 260,240 L 265,243 L 260,246 Z' fill='%23666666'/><line x1='5' y1='254' x2='275' y2='254' stroke='%23e0e0e0' stroke-width='1'/><text x='15' y='268' font-family='Segoe UI, Tahoma, sans-serif' font-size='11' fill='%23000000'>Propriedades</text></svg>"
   },
@@ -1133,7 +1133,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1151,7 +1151,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1169,7 +1169,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1187,7 +1187,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1211,7 +1211,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1235,7 +1235,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='380' height='200' viewBox='0 0 380 200'><rect x='1' y='1' width='378' height='198' fill='%23fafafa' stroke='%23cccccc' stroke-width='1' rx='4' ry='4'/><text x='10' y='20' font-family='Segoe UI, Tahoma, sans-serif' font-size='12' font-weight='bold' fill='%23333333'>Biblioteca Documentos</text><text x='10' y='36' font-family='Segoe UI, Tahoma, sans-serif' font-size='10' fill='%23666666'>Inclui: 2 locais</text><text x='270' y='24' font-family='Segoe UI, Tahoma, sans-serif' font-size='10' fill='%23333333'>Organizar por: Pasta â–¾</text><line x1='10' y1='45' x2='370' y2='45' stroke='%23dddddd' stroke-width='1'/><g transform='translate(15, 60)'><path d='M 5,10 L 20,10 L 25,15 L 50,15 L 50,45 L 5,45 Z' fill='%23e0c068' stroke='%23b09030' stroke-width='1'/><text x='27' y='55' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Outlook</text></g><g transform='translate(85, 60)'><path d='M 5,10 L 20,10 L 25,15 L 50,15 L 50,45 L 5,45 Z' fill='%23e0c068' stroke='%23b09030' stroke-width='1'/><text x='27' y='55' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Fotos</text></g><g transform='translate(155, 60)'><path d='M 5,10 L 20,10 L 25,15 L 50,15 L 50,45 L 5,45 Z' fill='%23e0c068' stroke='%23b09030' stroke-width='1'/><text x='27' y='55' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Geral</text></g><g transform='translate(225, 60)'><path d='M 5,10 L 20,10 L 25,15 L 50,15 L 50,45 L 5,45 Z' fill='%23e0c068' stroke='%23b09030' stroke-width='1'/><text x='27' y='55' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Outros</text></g><g transform='translate(295, 60)'><rect x='10' y='10' width='35' height='40' fill='%23fcfcfc' stroke='%23999999' stroke-width='1' rx='2' ry='2'/><rect x='15' y='15' width='25' height='20' fill='%231f7246' rx='1' ry='2'/><text x='27' y='28' font-family='Segoe UI' font-weight='bold' font-size='12' fill='%23ffffff' text-anchor='middle'>X</text><rect x='10' y='38' width='12' height='12' fill='%23ffffff' stroke='%23000000' stroke-width='1' rx='1' ry='1'/><path d='M 12,47 L 18,41 M 15,41 L 18,41 L 18,44' stroke='%230066cc' stroke-width='1.5' fill='none'/><text x='27' y='62' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Arquivo 5</text></g><g transform='translate(15, 125)'><rect x='10' y='10' width='35' height='40' fill='%23fcfcfc' stroke='%23999999' stroke-width='1' rx='2' ry='2'/><rect x='15' y='15' width='25' height='20' fill='%232b579a' rx='1' ry='2'/><text x='27' y='28' font-family='Segoe UI' font-weight='bold' font-size='12' fill='%23ffffff' text-anchor='middle'>W</text><rect x='10' y='38' width='12' height='12' fill='%23ffffff' stroke='%23000000' stroke-width='1' rx='1' ry='1'/><path d='M 12,47 L 18,41 M 15,41 L 18,41 L 18,44' stroke='%230066cc' stroke-width='1.5' fill='none'/><text x='27' y='62' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Arquivo 1</text></g><g transform='translate(85, 125)'><rect x='10' y='10' width='35' height='40' fill='%23fcfcfc' stroke='%23999999' stroke-width='1' rx='2' ry='2'/><rect x='15' y='15' width='25' height='20' fill='%231f7246' rx='1' ry='2'/><text x='27' y='28' font-family='Segoe UI' font-weight='bold' font-size='12' fill='%23ffffff' text-anchor='middle'>X</text><text x='27' y='62' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Arquivo 2</text></g><g transform='translate(155, 125)'><rect x='10' y='10' width='35' height='40' fill='%23fcfcfc' stroke='%23999999' stroke-width='1' rx='2' ry='2'/><rect x='15' y='15' width='25' height='20' fill='%232b579a' rx='1' ry='2'/><text x='27' y='28' font-family='Segoe UI' font-weight='bold' font-size='12' fill='%23ffffff' text-anchor='middle'>W</text><text x='27' y='62' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Arquivo 3</text></g><g transform='translate(225, 125)'><rect x='10' y='10' width='35' height='40' fill='%23fcfcfc' stroke='%23999999' stroke-width='1' rx='2' ry='2'/><rect x='15' y='15' width='25' height='20' fill='%23d24726' rx='1' ry='2'/><text x='27' y='28' font-family='Segoe UI' font-weight='bold' font-size='12' fill='%23ffffff' text-anchor='middle'>P</text><text x='27' y='62' text-anchor='middle' font-family='Segoe UI' font-size='8' fill='%23000000'>Arquivo 4</text></g></svg>"
   },
@@ -1259,7 +1259,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1283,7 +1283,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect x='1' y='1' width='98' height='98' fill='%23fafafa' stroke='%23cccccc' stroke-width='1' rx='4' ry='4'/><g transform='translate(15, 15)'><rect x='20' y='10' width='45' height='55' fill='white' stroke='%23555555' stroke-width='2' rx='3' ry='3'/><line x1='28' y1='22' x2='57' y2='22' stroke='%23888888' stroke-width='2'/><line x1='28' y1='32' x2='57' y2='32' stroke='%23888888' stroke-width='2'/><line x1='28' y1='42' x2='47' y2='42' stroke='%23888888' stroke-width='2'/><rect x='10' y='22' width='45' height='55' fill='white' stroke='%23333333' stroke-width='2' rx='3' ry='3'/><line x1='18' y1='34' x2='47' y2='34' stroke='%23666666' stroke-width='2'/><line x1='18' y1='44' x2='47' y2='44' stroke='%23666666' stroke-width='2'/><line x1='18' y1='54' x2='37' y2='54' stroke='%23666666' stroke-width='2'/></g></svg>"
   },
@@ -1305,7 +1305,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1327,7 +1327,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1345,7 +1345,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1369,7 +1369,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1393,7 +1393,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1411,7 +1411,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1433,7 +1433,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1451,7 +1451,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1473,7 +1473,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1497,7 +1497,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1521,7 +1521,7 @@ export const questionsInfo: Question[] = [
     ],
     "banca": "Focus Concursos",
     "ano": 2024,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false,
     "image": null
   },
@@ -1546,7 +1546,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows 10 permite o uso de parênteses, sublinhados (underscore) e pontos em nomes de arquivos. O nome 'lista_de_compras(2023).xlsx' não contém nenhum dos caracteres proibidos pelo mnemônico 'BASIADO' (Barra, Asterisco, Sinal de maior, Interrogação, Aspas, Dois pontos, sinal de menor).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1570,7 +1570,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Diferente de sistemas Unix/Linux, o Windows (em seus sistemas de arquivos padrão como NTFS e FAT32) é 'case-insensitive', o que significa que ele não distingue maiúsculas de minúsculas para fins de nomeação no mesmo diretório.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1594,7 +1594,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O caractere underline (ou sublinhado) não faz parte da lista de caracteres proibidos pelo Windows, sendo amplamente utilizado para separar palavras em nomes de arquivos. Os caracteres proibidos são: \\ / : * ? \" < > |",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1618,7 +1618,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla F2 é o atalho padrão universal no Windows para a função de renomear o item selecionado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1642,7 +1642,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla de função F2 é o atalho padrão universal no Windows para renomear o item (arquivo ou pasta) que está selecionado no momento.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1666,7 +1666,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla CTRL é utilizada para seleções alternadas ou pontuais, permitindo que o usuário escolha itens específicos sem selecionar os que estão entre eles.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1690,7 +1690,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Área de Transferência é, por definição, um recurso de software que utiliza a memória RAM (volátil e temporária) para manter dados que o usuário deseja mover ou duplicar entre diferentes locais ou aplicativos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1714,7 +1714,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O comando Ctrl+Z é o atalho universal no Windows e em diversos aplicativos para a função 'Desfazer' (Undo), permitindo reverter a última alteração realizada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1738,7 +1738,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A combinação Shift+Delete é o atalho padrão no Windows para a exclusão permanente de itens, ignorando o armazenamento temporário na Lixeira.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1762,7 +1762,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função 'Restaurar' tem como comportamento padrão devolver o item ao seu caminho de diretório original. O Windows rastreia o metadado do local original para permitir a restauração precisa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1786,7 +1786,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O caminho absoluto fornece a rota completa desde o topo da hierarquia (a raiz, representada pela letra da unidade) até o arquivo ou pasta final. Ele é independente do diretório de trabalho atual do usuário.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1810,7 +1810,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Bibliotecas são contêineres lógicos (virtuais). Elas não armazenam os arquivos em si, mas sim referências a pastas físicas localizadas em diferentes partes do sistema ou rede. É a definição técnica precisa de Biblioteca no Windows.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1834,7 +1834,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A regra de ouro do Windows define que, entre unidades de disco diferentes (C: para D:), a ação padrão do arrastar e soltar é a CÓPIA. A movimentação é o padrão apenas para arraste dentro da mesma unidade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1858,7 +1858,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Arquivos excluídos de unidades removíveis (como pen drives e cartões de memória) não são enviados para a Lixeira; a exclusão é direta e permanente. A Lixeira é um recurso para unidades de disco locais fixas (HD/SSD internos).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1882,7 +1882,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Este é o comportamento de 'renomeação em lote' do Windows. Ao renomear múltiplos arquivos de uma vez, o sistema aplica o nome base e adiciona um sufixo numérico entre parênteses para evitar conflitos. É um recurso nativo da interface gráfica (Explorador de Arquivos).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1906,7 +1906,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Windows, a regra de 'arrastar e soltar' (drag and drop) define que, entre unidades de disco diferentes (C: para D:), a ação padrão é a CÓPIA.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1930,7 +1930,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O atalho padrão para a criação de uma nova pasta (New folder) no Windows 10 é Ctrl + Shift + N.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1954,7 +1954,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Alterar a extensão de um arquivo manualmente não altera seu conteúdo técnico, apenas como o sistema o identifica. Por segurança, o Windows emite um alerta de que o arquivo pode parar de funcionar corretamente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -1978,7 +1978,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As afirmativas I e II estão corretas. O Ctrl + Z é capaz de desfazer renomeações, movimentações e até exclusões (enviando da lixeira de volta para a pasta). A afirmativa III está incorreta porque o Ctrl + Z também desfaz operações de cópia (removendo a cópia criada).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2002,7 +2002,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Por questões de privacidade e recursos de sistema, o Histórico da Área de Transferência não vem ativado de fábrica; o usuário deve habilitá-lo, o que geralmente ocorre no primeiro acionamento do atalho Win + V.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2026,7 +2026,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Diferente de textos, onde o conteúdo some na hora, no Explorador de Arquivos o 'Recortar' apenas marca o arquivo (ícone esmaecido). A transferência física só ocorre no momento da colagem (Ctrl+V).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2050,7 +2050,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O comando Ctrl + Y é o padrão no Windows para a função 'Refazer' (Redo), que reverte a ação do comando 'Desfazer' (Ctrl + Z).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2074,7 +2074,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Windows em português, o atalho Ctrl + A (de 'All' ou 'A' de 'Tudo' em algumas interpretações de interface) é o comando padrão para selecionar a totalidade dos elementos ativos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2098,7 +2098,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Por padrão, o Windows trata Pen Drives e cartões de memória como unidades de armazenamento que não possuem suporte à Lixeira, resultando em exclusão direta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2122,7 +2122,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows utiliza a lógica FIFO para garantir que o espaço da lixeira seja renovado, descartando os itens mais antigos primeiro.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2146,7 +2146,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows 10 possui a inteligência de reconstruir a estrutura de diretórios necessária para restaurar um arquivo ao seu caminho original, mesmo que as pastas intermediárias tenham sido removidas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2170,7 +2170,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows reserva nomes herdados do MS-DOS para dispositivos de sistema, como CON (console), PRN (impressora), NUL (dispositivo nulo), AUX, COM1-COM9 e LPT1-LPT9.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2194,7 +2194,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As proposições I e II estão corretas conforme a documentação técnica do Windows. A proposição III está incorreta porque o Windows utiliza a barra invertida (\\) como separador, enquanto a barra normal (/) é padrão em sistemas Unix/Linux.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2218,7 +2218,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla CTRL é a tecla modificadora que força a operação de CÓPIA, independentemente de os arquivos estarem na mesma unidade ou em unidades diferentes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2242,7 +2242,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows mantém os metadados do caminho original. Se o contêiner (pasta) foi excluído, o sistema o recria automaticamente para garantir que o arquivo volte exatamente para onde estava.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2266,7 +2266,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No NTFS, quando um arquivo é movido dentro da mesma partição, ele mantém seus metadados e permissões originais. Se for movido para uma partição diferente ou copiado, ele herda as permissões da pasta de destino.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2290,7 +2290,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla ALT é a tecla modificadora específica para forçar a criação de um atalho durante a operação de arrastar e soltar, independentemente de as unidades de origem e destino serem iguais ou diferentes.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2314,7 +2314,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função de 'fixar' (pin) no histórico serve justamente para evitar que itens importantes sejam perdidos quando o histórico é limpo ou quando o sistema é desligado, já que a RAM é volátil.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2338,7 +2338,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Na Área de Transferência clássica, um novo item sobrescreve o anterior. Como o 'Recortar' de arquivos só se concretiza na colagem, se o usuário copiar outra coisa antes de colar, a operação de recorte é cancelada e o arquivo original não sofre alteração.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2362,7 +2362,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As afirmativas I e III estão corretas. A II está incorreta pois o CMD realiza exclusão direta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2386,7 +2386,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Arquivos excluídos de unidades de rede (pastas compartilhadas) são removidos permanentemente e não passam pela lixeira do computador local nem do servidor.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2410,7 +2410,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecnologia ADSL é, por definição, assimétrica, priorizando a largura de banda para o download, que é a atividade mais comum do usuário doméstico.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2434,7 +2434,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O WPA3 é a evolução mais recente dos protocolos de segurança Wi-Fi, trazendo proteções robustas contra ataques de dicionário e força bruta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2458,7 +2458,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O padrão Wi-Fi utiliza o CSMA/CA para evitar colisões, já que a detecção de colisões (CD) é tecnicamente inviável em transmissões de rádio simultâneas no mesmo canal.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2482,7 +2482,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A sequência correta estabelecida pela Wi-Fi Alliance é: 802.11n (Wi-Fi 4), 802.11ac (Wi-Fi 5) e 802.11ax (Wi-Fi 6).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2506,7 +2506,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A funcionalidade offline do Google Maps é projetada primariamente para fornecer rotas de condução (carro), baixando a malha viária necessária para esse fim.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2530,7 +2530,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O aplicativo permite a gestão do armazenamento, possibilitando que o usuário escolha entre a memória interna do smartphone ou o armazenamento externo (cartão SD).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2554,7 +2554,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O LTE é o padrão tecnológico que define o 4G, focado em redes de pacotes com arquitetura baseada em IP.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2578,7 +2578,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O 3G (UMTS/HSPA) foi o marco inicial da internet móvel funcional para o grande público e o surgimento da era dos smartphones.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2602,7 +2602,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Existe uma relação inversa entre frequência e alcance: frequências maiores (5 GHz) transportam mais dados (velocidade), mas sofrem mais atenuação com obstáculos (alcance).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2626,7 +2626,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O URLLC é o pilar do 5G voltado para missões críticas que exigem resposta quase instantânea da rede (baixa latência).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2650,7 +2650,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Latência é o tempo de resposta da rede. Em jogos online ou chamadas de vídeo, uma latência baixa é fundamental para evitar 'lags'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2674,7 +2674,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Frequências mais altas (5 GHz) permitem maiores taxas de dados, mas sofrem maior atenuação ao encontrar obstáculos, resultando em menor alcance.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2698,7 +2698,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Diferente do Wi-Fi 4 e do Wi-Fi 6, o padrão 802.11ac foi projetado para operar exclusivamente na banda de 5 GHz para maximizar a performance.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2722,7 +2722,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O MU-MIMO permite que o ponto de acesso se comunique com vários clientes ao mesmo tempo, em vez de atender um por vez em uma fila rápida.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2746,7 +2746,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Em cenários com obstáculos e necessidade de alcance, a banda de 2.4 GHz é superior à de 5 GHz, apesar de ser mais lenta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2770,7 +2770,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O GPS (Global Positioning System) é um hardware independente da rede de dados celular. Ele se comunica diretamente com satélites para obter coordenadas geográficas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2794,7 +2794,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Dados de trânsito são dinâmicos e exigem comunicação constante com os servidores do Google para serem atualizados, o que é impossível sem internet.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2818,7 +2818,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Google Maps tenta manter os mapas offline atualizados automaticamente em segundo plano quando detecta uma conexão Wi-Fi estável.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2842,7 +2842,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A baixíssima latência (tempo de resposta) é o requisito fundamental para missões críticas onde o atraso na comunicação deve ser imperceptível.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2866,7 +2866,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Network Slicing permite que uma única infraestrutura física suporte diversas redes lógicas com características de desempenho distintas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2890,7 +2890,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A redução da latência de ~50ms (4G) para <1ms (5G) é uma das mudanças mais significativas entre as gerações.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2914,7 +2914,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O 5G foi projetado para suportar a conectividade massiva, com capacidade para até 1 milhão de dispositivos por kmÂ².",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2938,7 +2938,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As afirmações I e III estão tecnicamente precisas. A afirmação II está incorreta pois o 802.11ac opera apenas em 5 GHz.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2962,7 +2962,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Para resolver, deve-se converter Bytes para bits ou vice-versa. 500 MB = 4000 Mbits (500 * 8). Dividindo 4000 Mbits pela velocidade de 400 Mbps, obtemos 10 segundos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -2986,7 +2986,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A ISO/IEC 27002 destaca que as atividades de quem possui maior poder no sistema (administradores e operadores) devem ser monitoradas de perto e protegidas com rigor adicional para evitar abusos de poder ou ocultação de falhas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Conectividade: Wi-Fi, 4G e Operação online/offline",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -3010,7 +3010,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O OFDMA divide o canal em subcanais (Resource Units), permitindo que o roteador envie pequenos pacotes para vários dispositivos em uma única transmissão, otimizando o uso do espectro.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Conectividade: Wi-Fi, 4G e Operação online/offline",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -3034,7 +3034,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Todas as afirmações são verdadeiras de acordo com as especificações técnicas dos padrões Wi-Fi 4, 5 e 6.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Conectividade: Wi-Fi, 4G e Operação online/offline",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -3058,7 +3058,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O download offline foca em dados vetoriais (linhas, pontos e textos) que são leves. Imagens (satélite e 360º do Street View) são pesadas demais para o armazenamento móvel padrão em larga escala.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Conectividade: Wi-Fi, 4G e Operação online/offline",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -3082,7 +3082,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A busca offline é estritamente local. Se o dado não existia no pacote no momento do download (ou da última atualização), ele é invisível para o sistema offline.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Conectividade: Wi-Fi, 4G e Operação online/offline",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -3106,7 +3106,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Massive MIMO (Multiple Input Multiple Output) é uma tecnologia chave do 5G para aumentar a capacidade e a eficiência espectral.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Conectividade: Wi-Fi, 4G e Operação online/offline",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -3130,7 +3130,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O 5G não é apenas incremental; ele exige novos padrões de rádio (NR) e tecnologias avançadas de antena para gerenciar o sinal de forma eficiente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções de Conectividade: Wi-Fi, 4G e Operação online/offline",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -3154,7 +3154,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O operador de dois pontos (:) é o operador de intervalo, que significa 'até'. Portanto, B2:B5 abrange B2, B3, B4 e B5.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3178,7 +3178,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função CONT.SE exige dois argumentos: o intervalo e o critério. Quando o critério é um texto, ele deve obrigatoriamente estar entre aspas duplas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3202,7 +3202,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O gráfico de linhas é o mais indicado para representar dados contínuos ao longo do tempo, permitindo identificar facilmente tendências de alta, queda ou estabilidade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3226,7 +3226,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Excel, a tecla F11 é o atalho padrão para gerar um gráfico instantâneo em uma aba (folha de gráfico) separada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3250,7 +3250,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O cifrão ($) funciona como uma 'âncora', criando referências absolutas ou mistas que não se alteram quando a fórmula é movida ou copiada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3274,7 +3274,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla F4 é o atalho padrão no Excel para alternar entre os quatro estados de referência: relativa (A1), absoluta ($A$1), mista com linha travada (A$1) e mista com coluna travada ($A1).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3298,7 +3298,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "De acordo com a 'Regra de Ouro' do Excel, toda e qualquer fórmula ou função deve começar obrigatoriamente com o sinal de igual (=).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3322,7 +3322,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função CONT.VALORES conta todas as células que não estão vazias, independentemente do tipo de dado (texto, número, erro, etc.).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3346,7 +3346,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função MÉDIA ignora células vazias, mas inclui o valor zero no cálculo do denominador. Assim, a soma é 10+0+20=30. O divisor será 3 (A1, A2 e A4). 30/3 = 10.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3370,7 +3370,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As afirmativas I e III estão corretas conforme o comportamento padrão das funções de agregação. A II está incorreta porque, se não houver números, o resultado costuma ser 0, não necessariamente um erro #VALOR! em referências de intervalo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3394,7 +3394,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O gráfico de barras (horizontal) é preferível quando os rótulos das categorias são longos, pois oferece mais espaço linear para o texto no eixo vertical.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3418,7 +3418,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A principal diferença técnica entre os dois é que a Rosca permite múltiplas séries (anéis), enquanto a Pizza é restrita a uma única série.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3442,7 +3442,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Quando um gráfico é selecionado, o Excel exibe as guias contextuais 'Design do Gráfico' e 'Formatar' para ajustes de layout, dados e estética.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3466,7 +3466,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A fórmula original utiliza referências relativas. Ao mover de C1 para D2, houve um deslocamento de +1 coluna (C para D) e +1 linha (1 para 2). Aplicando esse deslocamento: A vira B, 1 vira 2; B vira C, 1 vira 2. Resultado: =B2+C2.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3490,7 +3490,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Origem C1 -> Destino D2 (+1 coluna, +1 linha). Na referência $A1, a coluna está travada ($A), então permanece A; a linha está solta, então 1 vira 2 (=$A2). Na referência B$1, a coluna está solta, então B vira C; a linha está travada ($1), então permanece 1 (=C$1). Resultado: =$A2+C$1.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3514,7 +3514,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Na referência A$10, a coluna A é relativa e a linha 10 é absoluta (travada). De B1 para C11, há um deslocamento de +1 coluna e +10 linhas. A coluna A (solta) vira B. A linha 10 (travada) permanece 10. Resultado: B$10.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3538,7 +3538,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função MÉDIA ignora células vazias, mas inclui o valor zero no cálculo. Portanto, a soma é 10+0+20=30, e o divisor será 3 (A1, A3 e A4). 30/3 = 10.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3562,7 +3562,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Quando um intervalo é passado como argumento para a função SOMA, qualquer célula contendo texto é simplesmente ignorada, e o cálculo prossegue com os valores numéricos restantes (50 + 150 = 200).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3586,7 +3586,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O operador ':' (dois pontos) indica um intervalo (de... até), somando A1, A2 e A3 (10+20+30=60). O operador ';' (ponto e vírgula) é um separador de argumentos (e), somando apenas A1 e A3 (10+30=40).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3610,7 +3610,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Assim como na matemática clássica (PEMDAS), os parênteses são o nível mais alto de precedência e servem para forçar o Excel a calcular primeiro o que está dentro deles.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3634,7 +3634,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Em intervalos (A1:A2), o Excel ignora textos, resultando em 10. Em argumentos diretos (separados por ponto e vírgula), se o texto puder ser convertido em número, o Excel o faz. Assim, 10 + 20 = 30.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3658,7 +3658,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A soma será: A1 (5) + Intervalo A3:A5 (2+3+4=9) + Constante (10) + Valor Lógico direto (VERDADEIRO=1). Total: 5 + 9 + 10 + 1 = 25.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3682,7 +3682,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O gráfico de dispersão (XY) é o único projetado especificamente para mostrar a relação entre dois conjuntos de valores numéricos, sendo fundamental para análises de correlação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3706,7 +3706,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Quando há grande disparidade de escala entre duas séries de dados (ex: faturamento em centenas de milhares e índice de 0 a 1), o uso de um Gráfico Combinado associado a um Eixo Secundário permite plotar cada série em sua própria escala vertical.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3730,7 +3730,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Área de Plotagem é a região interna do gráfico onde os dados são desenhados (barras, linhas, colunas), limitada pelos eixos. A Área do Gráfico engloba tudo, inclusive título e legenda.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3754,7 +3754,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Deslocamento de B2 para D5 (+2 colunas, +3 linhas): =$A1 tem coluna fixa ($A) e linha livre (1+3=4) -> =$A4. B$2 tem coluna livre (B+2=D) e linha fixa ($2) -> D$2. Resultado final: =$A4+D$2.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3778,7 +3778,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Para construir um intervalo expansível (soma acumulada), fixa-se a linha do ponto de partida com cifrão (A$2) e mantém-se o ponto final relativo (A2). Assim, =SOMA(A$2:A2) expande-se linha a linha.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3802,7 +3802,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Diferente de Copiar/Colar (que recalcula referências relativas com base no deslocamento), o comando Recortar/Colar (Ctrl+X / Ctrl+V) apenas move a célula de local, preservando as referências e a fórmula idênticas: =MÉDIA(A1:C5).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3826,7 +3826,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "MÁXIMO(A1:A3) retorna o maior valor (10) e MÁNIMO(A1:A3) retorna o menor valor (2). Pela ordem de precedência da esquerda para a direita na multiplicação e divisão: 10 * 2 = 20; 20 / 2 = 10.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3850,7 +3850,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função CONT.VALORES conta qualquer célula preenchida, independentemente de conter número, texto, valor lógico ou código de erro (#N/D). Como apenas A3 está vazia no intervalo de 5 células, o resultado é 4.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Fórmulas Básicas (Soma, Média, Cont.se) e Gráficos Simples",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3874,7 +3874,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Pasta de Trabalho (Workbook) é o arquivo propriamente dito salvo no computador (ex.: .xlsx), o qual funciona como contêiner para uma ou mais Planilhas (Worksheets/abas).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Organização de Dados, Filtros e Classificação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3898,7 +3898,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Excel, cada célula é a interseção de uma coluna vertical (identificada por letras de A a XFD) com uma linha horizontal (identificada por números de 1 a 1.048.576), com endereço na forma ColunaLinha (ex.: B10).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Organização de Dados, Filtros e Classificação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3922,7 +3922,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Classificar reorganiza a ordem física das linhas com base em critérios definidos (alfabéticos, numéricos, cronológicos), mantendo tudo visível. Filtrar oculta temporariamente as linhas que não atendem aos critérios.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Organização de Dados, Filtros e Classificação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3946,7 +3946,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Excel, datas são armazenadas internamente como números seriais sequenciais. Portanto, a ordem crescente organiza as datas em ordem cronológica ascendente: da mais antiga para a mais recente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Organização de Dados, Filtros e Classificação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3970,7 +3970,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Filtro Automático oculta visualmente e temporariamente as linhas que não correspondem aos critérios. Como indicador visual clássico do Excel, os números das linhas filtradas/visíveis ficam destacados na cor azul.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Organização de Dados, Filtros e Classificação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -3994,7 +3994,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O atalho oficial no Microsoft Excel para ativar e desativar os botões de Filtro Automático na linha de cabeçalho é Ctrl + Shift + L.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Organização de Dados, Filtros e Classificação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -4018,7 +4018,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Por padrão no Excel: Textos alinham-se à esquerda; Números, Moedas, Datas e Horas alinham-se à direita; Valores lógicos e Códigos de Erro são centralizados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Organização de Dados, Filtros e Classificação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -4042,7 +4042,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla F2 coloca o Excel em modo de edição da célula selecionada, posicionando o ponto de inserção no final do texto para que o usuário possa fazer ajustes sem apagar o conteúdo prévio.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Planilhas Eletrônicas: Organização de Dados, Filtros e Classificação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -4066,7 +4066,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A1:A4 define o intervalo contínuo e ;C10 une a célula isolada. A sintaxe mais compacta e correta é =SOMA(A1:A4;C10).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4090,7 +4090,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Caixa de Nome exibe o endereço da célula ativa ou nome do intervalo selecionado ao lado da Barra de Fórmulas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4114,7 +4114,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla CTRL permite selecionar células não adjacentes no Excel.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4138,7 +4138,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Na guia Dados, a ferramenta 'Classificar' permite adicionar múltiplos níveis de classificação para organizar dados por mais de um critério.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4162,7 +4162,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A opção 'Expandir a seleção' reordena a tabela inteira com base na coluna escolhida, preservando a relação dos registros das linhas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4186,7 +4186,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Listas Personalizadas permitem ordenar dados por sequências específicas do calendário que não seguem a ordem alfabética.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4210,7 +4210,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Filtros aplicados em colunas diferentes no Filtro Automático do Excel funcionam em conjunto (lógica E).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4234,7 +4234,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Copiar os resultados filtrados diretamente para outro local da planilha é uma exclusividade do Filtro Avançado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4258,7 +4258,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No formato Contábil, o símbolo da moeda fica alinhado à esquerda e o número à direita, enquanto no Moeda o símbolo fica junto ao número.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4282,7 +4282,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Excel, datas são armazenadas como números de série (1 = 01/01/1900). Somar 10 a uma data equivale a somar 10 dias ao seu número serial.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4306,7 +4306,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Sustenidos (#####) surgem por falta de largura na coluna ou por datas/horas negativas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4330,7 +4330,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Nomes de planilhas com espaços devem ser envolvidos por aspas simples ('Resumo Mensal'!). A exclamação (!) faz a ligação com a célula/intervalo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4354,7 +4354,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O operador de espaço simples indica a interseção entre dois intervalos de células.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4378,7 +4378,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Em classificações do Excel (crescente ou decrescente), células vazias são sempre posicionadas ao final da lista.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4402,7 +4402,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No botão Opções da Janela de Classificação, é possível habilitar a distinção entre maiúsculas e minúsculas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4426,7 +4426,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Contas de Usuário Padrão permitem utilizar o sistema para tarefas cotidianas e alterar configurações pessoais sem comprometer a segurança global do computador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4450,7 +4450,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O UAC ajuda a evitar que alterações não autorizadas no computador sejam feitas solicitando permissão antes que ações de nível administrativo sejam executadas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4474,7 +4474,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Confidencialidade garante o sigilo das informações, permitindo o acesso somente a pessoas ou processos autorizados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4498,7 +4498,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Ataques de Negação de Serviço (DoS/DDoS) afetam a Disponibilidade, tornando o sistema ou serviço inacessível aos usuários legítimos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4522,7 +4522,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Informações públicas não exigem confidencialidade, mas seu tratamento deve garantir a Integridade (não sofrer alterações indevidas) e a Disponibilidade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4546,7 +4546,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Nível de Acesso é a definição do conjunto de autorizações de um perfil para consultar, alterar ou excluir dados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4570,7 +4570,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Política de Uso Aceitável (PUA) especifica o uso adequado e permitido dos recursos de TI e comunicação pelos colaboradores.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4594,7 +4594,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Senhas fortes devem mesclar diferentes tipos de caracteres (maiúsculas, minúsculas, números, símbolos) e possuir tamanho adequado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4618,7 +4618,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Conta Microsoft possibilita a sincronização de configurações e integração nativa com o OneDrive entre múltiplos dispositivos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4642,7 +4642,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O PIN fica vinculado exclusivamente ao dispositivo físico em que foi criado, não sendo transmitido pela rede.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4666,7 +4666,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Desativar o Desktop Seguro remove o isolamento da janela do UAC, permitindo que programas maliciosos em tese interfiram na confirmação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4690,7 +4690,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Funções de Hash (resumo criptográfico) geram um código único que permite verificar se o arquivo sofreu alterações (Integridade).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4714,7 +4714,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Assinatura Digital assegura Integridade, Autenticidade e Não Repúdio.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4738,7 +4738,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Sniffing intercepta pacotes de dados para leitura, ferindo o pilar da Confidencialidade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4762,7 +4762,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O princípio 'Need-to-Know' exige que o acesso seja concedido apenas a quem efetivamente necessita da informação para realizar suas atribuições.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4786,7 +4786,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O nível interno é destinado ao uso rotineiro dos colaboradores da organização (como manuais e ramais) sem exibição externa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4810,7 +4810,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O foco do nível confidencial é resguardar o conteúdo da informação contra visualização ou vazamento.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4834,7 +4834,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Quanto mais sensível a classificação de uma informação, menor o número de pessoas com autorização de acesso.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4858,7 +4858,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Conceder acesso apenas a quem precisa é 'Necessidade de Conhecer' e dar apenas os direitos estritamente necessários é 'Menor Privilégio'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4882,7 +4882,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Senha é 'algo que você sabe' e impressão digital é 'algo que você é'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4906,7 +4906,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Credenciais individuais garantem a Irretratabilidade (Não-Repúdio), impedindo que o usuário negue a autoria de ações praticadas no sistema.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4930,7 +4930,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O snap-in 'lusrmgr.msc' (Usuários e Grupos Locais) é um recurso indisponível nas edições Home do Windows.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4954,7 +4954,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Para Usuários Padrão, o UAC solicita credenciais administrativas (usuário e senha) para autorizar ações que alterem o sistema.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -4978,7 +4978,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O princípio do menor privilégio estabelece que o usuário deve operar com o menor nível de acesso possível para realizar suas funções cotidianas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5002,7 +5002,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Disponibilidade exige que o sistema esteja pronto e funcional para o fim a que se destina.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5026,7 +5026,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Apenas a assertiva II está correta; I trata de Integridade e III trata de Autenticidade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5050,7 +5050,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A comparação entre os hashes (calculado e decifrado) verifica a integridade do documento.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5074,7 +5074,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Princípio do Menor Privilégio exige que os usuários tenham somente as permissões necessárias para desempenhar suas funções.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5098,7 +5098,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O transporte de documentos confidenciais utiliza envelope duplo, sendo o externo isento de marcações de sigilo para evitar atração indevida.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5122,7 +5122,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A sequência do controle de acesso é Identificação, Autenticação, Autorização e Auditoria.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5146,7 +5146,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A VPN evita a interceptação de tráfego em redes abertas (sniffing) e a restrição de USB bloqueia a entrada de malwares.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5170,7 +5170,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Área de Trabalho (Desktop) é uma pasta dentro do diretório do perfil do usuário no Windows.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5194,7 +5194,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O botão 'Mostrar Área de Trabalho' minimiza todas as janelas abertas de uma só vez.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5218,7 +5218,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Ctrl+Esc abre o Menu Iniciar e substitui a tecla Windows.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5242,7 +5242,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A suspensão mantém o estado do sistema na memória RAM em modo de baixo consumo de energia.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5266,7 +5266,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A unidade C: é a partição padrão onde o sistema operacional Windows e os programas ficam instalados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5290,7 +5290,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla F2 ativa a edição do nome do arquivo ou pasta selecionado no Explorador de Arquivos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5314,7 +5314,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Os caracteres proibidos no Windows para nomear arquivos e pastas são: \\ / : * ? \" < > |",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5338,7 +5338,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O atalho Ctrl+Shift+Esc abre diretamente o Gerenciador de Tarefas, sem redirecionar para a tela de segurança intermediária do sistema.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5362,7 +5362,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Painel de Navegação é a estrutura lateral do Explorador de Arquivos que permite navegar em unidades, pastas, dispositivos e atalhos fixados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5386,7 +5386,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Na janela de Propriedades de um arquivo, o usuário pode alterar diretamente atributos como 'Somente Leitura' e 'Oculto'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5410,7 +5410,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As Áreas de Trabalho Virtuais permitem criar múltiplos ambientes de trabalho independentes para organizar janelas e aplicativos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5434,7 +5434,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows possui suporte nativo ao formato .zip, permitindo compactar e extrair arquivos sem necessidade de programas de terceiros.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5458,7 +5458,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A ferramenta de pesquisa do Windows permite filtrar e encontrar arquivos por nome, conteúdo, tipo, data de modificação e outros atributos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5482,7 +5482,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Snap permite reorganizar janelas rapidamente arrastando-as para as extremidades da tela (como esquerda ou direita para ocupar metade da tela).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5506,7 +5506,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A associação entre a extensão do arquivo e o programa padrão é configurável pelo usuário no Windows.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5530,7 +5530,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Histórico de Arquivos é a ferramenta nativa do Windows para backup pessoal automático de pastas e bibliotecas em unidades externas ou de rede.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5554,7 +5554,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows Defender (ou Segurança do Windows) é a solução antivírus gratuita e nativa do sistema operacional com proteção em tempo real.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5578,7 +5578,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows Update é o serviço responsável pela entrega de atualizações de segurança, correções do sistema, drivers e novas funcionalidades.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5602,7 +5602,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Registro do Windows é o banco de dados hierárquico central que armazena definições de sistema, perfis de usuários, hardware e aplicativos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5626,7 +5626,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Gerenciamento de Disco é a ferramenta gráfica administrativa do Windows utilizada para particionar, formatar e gerenciar unidades de armazenamento.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5650,7 +5650,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Prompt de Comando (cmd) do Windows, o comando 'dir' é utilizado para listar os arquivos e subdiretórios presentes na pasta atual.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5674,7 +5674,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O BitLocker é o recurso de criptografia total de disco do Windows que protege a unidade de armazenamento inteira contra acessos não autorizados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Noções Básicas de Informática",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -5698,7 +5698,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A ação 'Reduzir Volume' (Shrink Volume) no Gerenciamento de Disco permite criar espaço não alocado a partir de uma partição existente sem apagar os dados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistema Operacional Windows: Desktop, Menu Iniciar, Pastas e Arquivos",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -5722,7 +5722,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Windows 10/11, uma janela pode ser fixada em todas as Áreas de Trabalho Virtuais, tornando-a visível em todas elas simultaneamente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistema Operacional Windows: Desktop, Menu Iniciar, Pastas e Arquivos",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -5746,7 +5746,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O recurso de Backup e Restauração do Windows permite criar cópias de segurança em unidades locais ou de rede, e pode ser agendado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistema Operacional Windows: Desktop, Menu Iniciar, Pastas e Arquivos",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -5770,7 +5770,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Restauração do Sistema não afeta os arquivos pessoais do usuário, apenas configurações do sistema e programas instalados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistema Operacional Windows: Desktop, Menu Iniciar, Pastas e Arquivos",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -5794,7 +5794,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Gerenciador de Dispositivos permite atualizar drivers, desativar e desinstalar dispositivos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistema Operacional Windows: Desktop, Menu Iniciar, Pastas e Arquivos",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -5818,7 +5818,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O msconfig permite gerenciar serviços, inicialização e inicialização segura.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistema Operacional Windows: Desktop, Menu Iniciar, Pastas e Arquivos",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -5842,7 +5842,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Gaveta de Aplicativos (App Drawer) é o elemento que permite ao usuário acessar rapidamente os aplicativos instalados no dispositivo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -5866,7 +5866,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As atualizações de sistema podem ser realizadas manualmente ou automaticamente, e podem ser agendadas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -5890,7 +5890,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O armazenamento pode ser gerenciado pelas Configurações do dispositivo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -5914,7 +5914,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As notificações podem ser recebidas de qualquer aplicativo instalado no dispositivo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -5938,7 +5938,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O dispositivo pode ser conectado a redes Wi-Fi e redes móveis simultaneamente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -5962,7 +5962,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O dispositivo pode ser protegido com senha, PIN ou biometria.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -5986,7 +5986,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O backup pode ser realizado em unidades locais ou de nuvem.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -6010,7 +6010,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Os aplicativos podem ser instalados pela loja oficial ou de outras fontes (sideloading).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -6034,7 +6034,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As permissões de aplicativos podem ser concedidas na instalação e alteradas nas Configurações.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": false
   },
   {
@@ -6058,7 +6058,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O ART (Android Runtime) utiliza a compilação Ahead-of-Time (AOT), que converte o código do aplicativo em código de máquina durante a instalação, resultando em execução mais rápida e menor consumo de bateria durante o uso.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6082,7 +6082,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A barra de navegação é composta pelos botões Voltar, Início (Home) e Visão Geral (Recentes), permitindo que o usuário navegue entre aplicativos e retorne à tela inicial.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6106,7 +6106,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A gaveta de aplicativos (App Drawer) é o local onde todos os aplicativos instalados no dispositivo ficam disponíveis, geralmente acessada por gesto de deslizar para cima na tela inicial.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6130,7 +6130,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As notificações push permitem que aplicativos enviem informações ao usuário mesmo sem estarem abertos em primeiro plano, aparecendo na barra de notificações.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6154,7 +6154,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O modo avião desativa todas as conexões sem fio (Wi-Fi, Bluetooth, dados móveis e telefone), mas permite que o usuário reative individualmente Wi-Fi e Bluetooth, mantendo o modo avião ativo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6178,7 +6178,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A sincronização de contas mantém dados como contatos, e-mails, eventos de calendário e configurações atualizados entre o dispositivo e os serviços de nuvem.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6202,7 +6202,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O backup no Android permite salvar dados como aplicativos, configurações, histórico de chamadas e outros dados na nuvem ou em armazenamento local, garantindo a recuperação em caso de perda ou troca de dispositivo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6226,7 +6226,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As atualizações do Android são distribuídas via OTA (Over The Air) e geralmente requerem confirmação do usuário para serem instaladas, podendo ser baixadas por Wi-Fi ou redes móveis.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6250,7 +6250,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Android, o usuário pode conceder ou negar permissões individualmente, tanto durante a instalação quanto posteriormente nas configurações do aplicativo, garantindo maior controle sobre a privacidade.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6274,7 +6274,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O modo de economia de bateria reduz o consumo de energia limitando atividades em segundo plano, sincronização automática, brilho da tela e desempenho do processador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6298,7 +6298,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A desinstalação remove o aplicativo e seus dados locais, mas dados sincronizados com a nuvem (como contatos e fotos) podem ser preservados se a sincronização estiver ativa.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6322,7 +6322,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "As atualizações OTA são pacotes que podem ser incrementais (apenas alterações) ou completos (imagem completa), modificando partições específicas do sistema e geralmente exigindo reinicialização.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6346,7 +6346,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Android integra múltiplos mecanismos de segurança, incluindo sandboxing (isolamento de aplicativos), permissões granulares, criptografia de armazenamento e autenticação biométrica (digital, facial).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6370,7 +6370,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A fragmentação do Android refere-se à coexistência de múltiplas versões do sistema em diferentes dispositivos, impactando a velocidade de distribuição de atualizações e a compatibilidade de aplicativos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6394,7 +6394,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A desinstalação remove o aplicativo e seus dados locais, mas dados sincronizados com a nuvem (como contatos, fotos e configurações) podem ser preservados, permitindo recuperação futura.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Sistemas Móveis (Android): Operações Básicas, Configuração e Atualização",
+    "assunto": "Sistemas operacionais: Android",
     "nivelSuperior": true
   },
   {
@@ -6418,7 +6418,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O menu de contexto específico descrito na questão original corresponde ao clique com o botão direito sobre o ícone de uma unidade removível (como um pen drive) não expandida na árvore de diretórios do Windows Explorer.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows 7)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": true
   },
   {
@@ -6436,7 +6436,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows bloqueia a renomeação, exclusão ou movimentação de arquivos que estão atualmente em uso (abertos) por algum programa, para evitar corrupção de dados e falhas no sistema.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6454,7 +6454,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows proíbe o uso de certos caracteres especiais nos nomes de arquivos e pastas, são eles: \\ / : * ? \" < > |. O asterisco (*) está na lista de caracteres proibidos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6472,7 +6472,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A janela de Propriedades de um arquivo no Windows exibe metadados detalhados, incluindo o tamanho exato do arquivo em bytes, KB, MB, etc., na guia 'Geral'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows 8)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6490,7 +6490,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O sistema de arquivos do Windows (NTFS, FAT32, exFAT) armazena metadados (atributos) para cada arquivo, incluindo data de criação, modificação, acesso, tamanho, permissões e atributos de sistema/oculto.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6514,7 +6514,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Para excluir arquivos permanentemente (sem enviar para a Lixeira), deve-se usar a combinação Shift + Delete. O Ctrl + A é o atalho para selecionar todos os itens da pasta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows 10)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": true
   },
   {
@@ -6538,7 +6538,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Windows, os atalhos são identificados visualmente por uma pequena seta curvada no canto inferior esquerdo do ícone do arquivo ou pasta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows 7)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6562,7 +6562,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows não permite o uso dos seguintes caracteres em nomes de arquivos e pastas: \\ / : * ? \" < > |. A única alternativa que não contém nenhum desses caracteres proibidos é a A, que usa apenas hifens.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows 10)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6586,7 +6586,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O ícone padrão da barra de ferramentas do Windows Explorer que representa duas folhas sobrepostas refere-se à ação de Copiar para a Área de Transferência.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows 10)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6608,7 +6608,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A tecla de atalho F2 no Windows Explorer é utilizada para renomear o arquivo ou pasta selecionado. Além disso, não podem existir dois arquivos com o mesmo nome na mesma pasta, o que invalida a tentativa de nomear como 'venda.doc'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6630,7 +6630,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows Explorer (atualmente chamado de Explorador de Arquivos) é o gerenciador de arquivos e pastas nativo do sistema operacional Windows, permitindo copiar, mover, excluir e organizar dados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6648,7 +6648,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows permite a renomeação de pastas independentemente do seu conteúdo (arquivos ou subpastas), desde que nenhum arquivo dentro dela esteja bloqueado por estar em uso no momento da operação.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6672,7 +6672,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O formato padrão para endereçamento de caminhos de rede no Windows (UNC - Universal Naming Convention) utiliza duas barras invertidas no início, seguidas do nome do servidor, barra invertida, nome do compartilhamento/pasta e o arquivo: \\\\servidor\\pasta\\arquivo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Redes Windows)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": true
   },
   {
@@ -6696,7 +6696,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A estrutura mostra que 'Casa Nova' é uma subpasta (ou arquivo) dentro de 'Projetos'. No Windows, ao excluir um diretório pai, todo o seu conteúdo (subpastas e arquivos) é excluído em cascata.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": true
   },
   {
@@ -6714,7 +6714,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A opção 'Criar atalho' no menu de contexto gera o atalho na mesma pasta onde o arquivo original está localizado. Para criar um atalho diretamente na Área de Trabalho, deve-se usar a opção 'Enviar para' > 'Área de trabalho (criar atalho)'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas (Windows 8.1)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -6738,7 +6738,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A referência absoluta fixa tanto a coluna quanto a linha, impedindo que a referência seja alterada quando a fórmula é copiada ou arrastada para outras células. No Excel, isso é feito utilizando o símbolo de cifrão ($) antes da letra da coluna e do número da linha (ex: $A$1).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Referências de Célula",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -6762,7 +6762,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função =SOMA() é a ferramenta padrão e específica no Excel para realizar a adição de um intervalo de células, números ou combinações de ambos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Funções Matemáticas",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -6786,7 +6786,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função =MAIOR(matriz; k) retorna o k-ésimo maior valor de um conjunto de dados. O argumento '2' indica que a função retornará o segundo maior valor presente no intervalo B4:D4.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Funções Estatísticas",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -6810,7 +6810,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função SE testa uma condição. Se A1 for menor ou igual a 3000, multiplica-se o valor por 1,08 (o que equivale a adicionar 8%). Caso contrário, mantém o valor original de A1.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função SE",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -6834,7 +6834,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função ESCOLHER (CHOOSE em inglês) usa um índice para retornar um valor de uma lista de valores (até 254 argumentos).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função ESCOLHER",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -6858,7 +6858,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função avalia se B2 é maior ou igual a 10000. Se verdadeiro, retorna o texto 'Atingiu a meta'. Se falso, retorna 'Não atingiu a meta'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função SE",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -6882,7 +6882,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Para definir um intervalo contínuo de células no Excel, utiliza-se o sinal de dois pontos (:). O ponto e vírgula (;) é usado para separar argumentos ou células não contíguas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Funções MÁNIMO e MÁXIMO",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -6906,7 +6906,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Avaliação dos resultados retornados pelas funções configuradas nas células A6, B6 e C6 no Excel 2019.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Funções Diversas",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -6930,7 +6930,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Excel em Português do Brasil, o separador de argumentos padrão é o ponto e vírgula (;), pois a vírgula (,) é o separador decimal. Portanto, a fórmula II geraria erro de sintaxe. As fórmulas I e III estão corretas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função MÉDIA",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -6954,7 +6954,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O botão Mesclar e Centralizar na guia Página Inicial é utilizado para combinar e centralizar o conteúdo de várias células selecionadas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Interface e Formatação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -6978,7 +6978,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O PROCV (Procura Vertical) pesquisa um valor na primeira coluna à esquerda de um intervalo e retorna um valor na mesma linha de uma coluna especificada pelo usuário.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função PROCV",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -7002,7 +7002,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A fórmula testa se o valor em B6 (nota) é maior ou igual a 7. Em caso afirmativo, retorna 'Aprovado'; caso contrário, 'Reprovado'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função SE",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -7026,7 +7026,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A ferramenta 'Congelar Painéis', localizada na guia 'Exibir', é usada para travar linhas de cabeçalho ou colunas específicas durante a rolagem.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Exibição e Navegação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -7050,7 +7050,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função CONT.VALORES conta o número de células que não estão vazias em um intervalo especificado.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função CONT.VALORES",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -7074,7 +7074,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Excel, a inserção de elementos visuais e objetos externos, incluindo gráficos, é centralizada na guia 'Inserir'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Criação de Gráficos",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -7098,7 +7098,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Para aplicar formatação condicional baseada em um valor de texto específico no Excel, deve-se utilizar o menu 'Página Inicial' > 'Formatação Condicional' > 'Realçar Regras das Células' > 'É Igual a'.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Formatação Condicional",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -7122,7 +7122,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função =SOMASE(intervalo; critério) soma os valores do intervalo que atendem ao critério especificado (neste caso, valores maiores ou iguais a 4).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função SOMASE",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -7146,7 +7146,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O recurso Mesclar e Centralizar da guia Página Inicial combina e centraliza o conteúdo das células selecionadas em uma célula maior.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Interface e Formatação",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": false
   },
   {
@@ -7170,7 +7170,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Para obter a menor cotação entre os valores em B2, C2 e D2, utiliza-se a função MENOR(matriz; k), onde k=1 indica o menor valor do intervalo contínuo B2:D2.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função MENOR",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -7194,7 +7194,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A função PROCV(Valor_Procurado; Matriz_Tabela; Núm_Ándice_Coluna; [Correspondência_Exata]) pesquisa um valor na primeira coluna de uma tabela organizada verticalmente e retorna o valor correspondente na coluna indicada.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função PROCV",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -7216,7 +7216,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Resolução do cálculo da fórmula configurada na célula A10 da planilha informada na questão.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Fórmulas",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -7240,7 +7240,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Ao copiar/arrastar uma fórmula com referências relativas duas colunas para a direita, a fórmula em D6 torna-se =MÉDIASE(D2:D4;\">=5\"), calculando a média dos valores >=5 da coluna D.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Microsoft Excel - Função MÉDIASE e Referências Relativas",
+    "assunto": "Microsoft Office 365 - Excel",
     "nivelSuperior": true
   },
   {
@@ -7264,7 +7264,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O SSD é um dispositivo de armazenamento não volátil (mantém dados sem energia) baseado em semicondutores / memória flash.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Armazenamento SSD",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -7286,7 +7286,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A classificação básica dos periféricos divide-se em entrada (enviam dados à CPU), saída (recebem dados da CPU) e armazenamento (mantêm dados gravados).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Periféricos",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -7308,7 +7308,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A memória RAM (Random Access Memory) armazena temporariamente dados e instruções dos programas que estão sendo executados no momento pelo processador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Memória RAM",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -7332,7 +7332,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A principal função da memória RAM é fornecer armazenamento volátil de alta velocidade para dados e instruções que o processador precisa acessar imediatamente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Memória RAM",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -7356,7 +7356,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Periféricos de saída exibem ou reproduzem dados resultantes do processamento do computador para o usuário (ex: impressoras, monitores, caixas de som).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Periféricos de Saída",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -7378,7 +7378,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A porta USB (Universal Serial Bus) é utilizada para conectar periféricos variados e transferir dados gerais, enquanto a porta HDMI (High-Definition Multimedia Interface) é dedicada à transmissão de sinais digitais de áudio e vídeo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Portas de Conexão",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -7400,7 +7400,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Gargalos de 100% de uso de disco são comuns em HDDs mecânicos devido às suas baixas velocidades de leitura/escrita. A substituição por um SSD resolve o problema com taxas de acesso significativamente mais altas.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Armazenamento e Desempenho",
+    "assunto": "Hardware",
     "nivelSuperior": true
   },
   {
@@ -7424,7 +7424,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A questão solicita a alternativa INCORRETA. A alternativa A nega a função essencial da placa-mãe, que é viabilizar as interconexões elétricas e lógicas entre todos os componentes do computador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Placa-mãe",
+    "assunto": "Hardware",
     "nivelSuperior": true
   },
   {
@@ -7446,7 +7446,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Diretórios (ou pastas) são a estrutura hierárquica utilizada pelos sistemas operacionais para organizar e armazenar arquivos e informações.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas",
+    "assunto": "Gerenciamento, arquivos e pastas",
     "nivelSuperior": false
   },
   {
@@ -7464,7 +7464,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Os nomes dos arquivos são diferentes: 'ecoturismo.docx' e 'ecoturismo.pdf'. A extensão faz parte do nome do arquivo no sistema operacional, portanto são arquivos distintos e podem coexistir na mesma pasta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas",
+    "assunto": "Gerenciamento, arquivos e pastas",
     "nivelSuperior": true
   },
   {
@@ -7486,7 +7486,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Windows, nomes de arquivos e pastas podem conter letras (maiúsculas ou minúsculas), números, espaços e alguns caracteres especiais, exceto os caracteres proibidos: \\ / : * ? \" < > |.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas",
+    "assunto": "Gerenciamento, arquivos e pastas",
     "nivelSuperior": false
   },
   {
@@ -7510,7 +7510,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A Área de Transferência (Clipboard) é o local de armazenamento temporário onde o Windows mantém dados copiados ou recortados até que sejam colados em outro destino.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas",
+    "assunto": "Gerenciamento, arquivos e pastas",
     "nivelSuperior": false
   },
   {
@@ -7534,7 +7534,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "No Windows, ao arrastar um arquivo entre unidades diferentes (C: para D:), a operação padrão é COPIAR. Para mover entre unidades diferentes, é necessário pressionar SHIFT durante o arraste.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Gerenciamento de Arquivos e Pastas",
+    "assunto": "Gerenciamento, arquivos e pastas",
     "nivelSuperior": true
   },
   {
@@ -7556,7 +7556,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Windows é um sistema operacional desenvolvido pela Microsoft, responsável por gerenciar hardware e software do computador.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Conceitos Básicos",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7578,7 +7578,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Um sistema operacional possui como funções principais: gerenciamento de processos (processador), memória, dispositivos de entrada/saída e arquivos.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Conceitos Básicos",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7602,7 +7602,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O modo Suspender mantém o computador ligado com baixo consumo de energia, salvando o estado atual na memória RAM e desligando o monitor e outros componentes não essenciais.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Interface e Funcionalidades",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7626,7 +7626,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O atalho Ctrl + Esc abre o Menu Iniciar no Windows. A tecla Windows também abre diretamente, mas entre as alternativas fornecidas, Ctrl + Esc é a correta.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Interface e Funcionalidades",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7644,7 +7644,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Paint e o Bloco de Notas continuam presentes no Windows 11 como aplicativos instalados automaticamente. Eles não foram descontinuados.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Aplicativos e Ferramentas",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7666,7 +7666,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O atalho Ctrl + Shift + Esc abre diretamente o Gerenciador de Tarefas do Windows, sem passar pela tela de segurança do Ctrl + Alt + Del.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Aplicativos e Ferramentas",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7690,7 +7690,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Bloco de Notas é um editor de texto simples que salva arquivos com extensão .txt por padrão. Não possui formatação avançada como tabelas, gráficos ou exportação direta para .docx/.pdf.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Aplicativos e Ferramentas",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7708,7 +7708,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O BitLocker é a ferramenta de criptografia de unidades de disco do Windows, projetada para proteger dados contra acesso não autorizado em caso de roubo ou perda do dispositivo.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Segurança (BitLocker)",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7730,7 +7730,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "Na central de Segurança do Windows 11, a seção 'Desempenho e integridade do dispositivo' exibe relatórios e status de funcionamento do hardware, armazenamento e atualizações do sistema.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Segurança e Configurações",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": true
   },
   {
@@ -7748,7 +7748,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "O Painel de Controle não foi removido no Windows 11. Embora a Microsoft venha migrando diversas configurações para o aplicativo Configurações, o Painel de Controle continua disponível no sistema.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Windows 11 - Segurança e Configurações",
+    "assunto": "Sistema Operacional Windows 11",
     "nivelSuperior": false
   },
   {
@@ -7770,7 +7770,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A memória Cache é uma memória ultrarrápida (normalmente SRAM) integrada ao processador ou próxima a ele, projetada para reduzir o tempo de acesso da CPU à memória principal (RAM).",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Memória Cache",
+    "assunto": "Hardware",
     "nivelSuperior": false
   },
   {
@@ -7794,7 +7794,7 @@ export const questionsInfo: Question[] = [
     "generalExplanation": "A memória RAM é a memória principal do computador, caracterizada por ser volátil e de acesso rápido. É onde os programas abertos e arquivos em uso ficam carregados para que o processador possa manipulá-los rapidamente.",
     "banca": "Simulado IBGE",
     "ano": 2026,
-    "assunto": "Informática - Hardware - Memória RAM",
+    "assunto": "Hardware",
     "nivelSuperior": false
   }
 ];
