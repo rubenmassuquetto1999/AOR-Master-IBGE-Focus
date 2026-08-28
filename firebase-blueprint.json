@@ -60,6 +60,34 @@
         "assunto": { "type": "string" }
       },
       "required": ["text", "options", "correctIndex"]
+    },
+    "AuthorizedInvite": {
+      "title": "AuthorizedInvite",
+      "description": "Whitelist of invited and authorized email addresses allowed to access the platform.",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "invitedBy": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "status": { "type": "string" },
+        "role": { "type": "string" }
+      },
+      "required": ["email", "invitedBy", "status"]
+    },
+    "AccessRequest": {
+      "title": "AccessRequest",
+      "description": "Requests made by users asking for platform access and invitation.",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "userId": { "type": "string" },
+        "requestedAt": { "type": "string" },
+        "status": { "type": "string" },
+        "message": { "type": "string" }
+      },
+      "required": ["email", "requestedAt", "status"]
     }
   },
   "firestore": {
@@ -74,6 +102,14 @@
     "/customQuestions/{questionId}": {
       "schema": "CustomQuestion",
       "description": "Database of custom questions added by users."
+    },
+    "/authorizedInvites/{inviteId}": {
+      "schema": "AuthorizedInvite",
+      "description": "Authorized whitelist of invited users."
+    },
+    "/accessRequests/{requestId}": {
+      "schema": "AccessRequest",
+      "description": "Access requests submitted by uninvited users."
     }
   }
 }

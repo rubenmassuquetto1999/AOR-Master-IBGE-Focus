@@ -29,6 +29,8 @@ import {
   CheckCircle,
   Shuffle,
   ChevronRight,
+  Shield,
+  Users,
 } from "lucide-react";
 
 import { motion, AnimatePresence } from "motion/react";
@@ -57,6 +59,9 @@ import QuestionBank from "./components/QuestionBank";
 import ProgressReport from "./components/ProgressReport";
 import Achievements, { ALL_ACHIEVEMENTS } from "./components/Achievements";
 import UserProfile from "./components/UserProfile";
+import AccessGate from "./components/AccessGate";
+import AdminInvitesModal from "./components/AdminInvitesModal";
+import { checkUserInviteStatus, isUserAdmin } from "./lib/firestoreUtils";
 
 export const STUDY_TIPS = [
   {
@@ -149,6 +154,9 @@ export default function App() {
   const [isOnline, setIsOnLine] = useState<boolean>(window.navigator.onLine);
   const [currentUser, setCurrentUser] = useState<FirebaseUser | null>(null);
   const [isLoadingAuth, setIsLoadingAuth] = useState<boolean>(true);
+  const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
+  const [isAdmin, setIsAdmin] = useState<boolean>(false);
+  const [showAdminInvites, setShowAdminInvites] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
   
@@ -290,6 +298,27 @@ export default function App() {
     localStorage.setItem("themeMode", mode);
   };
 
+  // Verify user authorization against invite whitelist
+  const handleVerifyUserAuth = async (user: FirebaseUser) => {
+    if (!user.email) {
+      setIsAuthorized(false);
+      setIsAdmin(false);
+      return;
+    }
+    try {
+      const authStatus = await checkUserInviteStatus(user.email);
+      setIsAuthorized(authStatus.isAuthorized);
+      setIsAdmin(authStatus.isAdmin);
+      if (authStatus.isAuthorized) {
+        await loadUserData(user.uid);
+      }
+    } catch (err) {
+      console.warn("Authorization verification error:", err);
+      setIsAuthorized(false);
+      setIsAdmin(false);
+    }
+  };
+
   // Listen to Firebase Auth state change
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -297,9 +326,11 @@ export default function App() {
       try {
         if (user) {
           setCurrentUser(user);
-          await loadUserData(user.uid);
+          await handleVerifyUserAuth(user);
         } else {
           setCurrentUser(null);
+          setIsAuthorized(false);
+          setIsAdmin(false);
           loadGuestData();
         }
       } catch (err) {
@@ -1319,204 +1350,62 @@ export default function App() {
 
   if (isLoadingAuth) {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col items-center justify-center font-sans">
+      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center font-sans text-slate-100">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-          <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 animate-pulse">Carregando plataforma...</p>
+          <div className="w-12 h-12 border-4 border-indigo-500/20 border-t-indigo-500 rounded-full animate-spin"></div>
+          <p className="text-sm font-semibold text-slate-400">Verificando autorização de acesso...</p>
         </div>
       </div>
     );
   }
 
-  if (!currentUser) {
+  // 🔒 Master Security Gate: Only users with authorized invites can access the platform
+  if (!currentUser || !isAuthorized) {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex items-center justify-center p-4 transition-colors duration-300 font-sans">
-        {/* Toggle de tema no topo direito */}
-        <div className="absolute top-6 right-6 flex items-center gap-0.5 bg-slate-100 border border-slate-200 p-0.5 rounded-xl dark:bg-slate-850 dark:border-slate-800 shrink-0 shadow-sm">
-          <button
-            onClick={() => toggleThemeMode("light")}
-            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
-              themeMode === "light"
-                ? "bg-white text-amber-500 shadow-sm dark:bg-slate-800 dark:text-amber-400 font-bold"
-                : "text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
-            }`}
-            title="Modo Claro"
-          >
-            <Sun className="w-3.5 h-3.5" />
-          </button>
-          <button
-            onClick={() => toggleThemeMode("dark")}
-            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
-              themeMode === "dark"
-                ? "bg-white text-indigo-500 shadow-sm dark:bg-slate-800 dark:text-indigo-400 font-bold"
-                : "text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
-            }`}
-            title="Modo Escuro"
-          >
-            <Moon className="w-3.5 h-3.5" />
-          </button>
-          <button
-            onClick={() => toggleThemeMode("system")}
-            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
-              themeMode === "system"
-                ? "bg-white text-blue-500 shadow-sm dark:bg-slate-800 dark:text-blue-400 font-bold"
-                : "text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
-            }`}
-            title="Sincronizar com o Dispositivo (Computador, Celular, etc.)"
-          >
-            <Laptop className="w-3.5 h-3.5" />
-          </button>
-        </div>
-
-        <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl max-w-md w-full space-y-6 relative transition-colors duration-300">
-          {/* Cabeçalho */}
-          <div className="text-center space-y-2">
-            <div className="inline-flex w-12 h-12 bg-blue-600 rounded-2xl items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-500/20 mb-2 select-none">
-              A
-            </div>
-            <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-100 tracking-tight">
-              {isSignUp ? "Criar sua conta" : "Entrar na sua conta"}
-            </h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              {isSignUp 
-                ? "Cadastre-se gratuitamente para salvar seu progresso perpétuo."
-                : "Estude com inteligência, simule e conquiste a sua vaga!"}
-            </p>
-          </div>
-
-          {/* Erro de autenticação */}
-          {authError && (
-            <p className="p-3 text-xs bg-rose-50 border border-rose-150 text-rose-600 dark:bg-rose-950/20 dark:border-rose-900/40 rounded-xl font-bold">
-              ⚠️ {authError}
-            </p>
-          )}
-
-          {/* Form de E-mail & Senha */}
-          <form onSubmit={handleAuth} className="space-y-4">
-            <div>
-              <label className="block text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 mb-1.5 tracking-wider">Endereço de E-mail</label>
-              <div className="relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500">
-                  <Mail className="w-4 h-4" />
-                </span>
-                <input
-                  type="email"
-                  required
-                  placeholder="seu_email@exemplo.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 text-sm border border-slate-200 dark:border-slate-750 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-800 dark:text-slate-100 dark:focus:ring-blue-400 transition-all duration-200"
-                />
-              </div>
-            </div>
-
-            <div>
-              <div className="flex justify-between items-center mb-1.5">
-                <label className="block text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 tracking-wider">Senha Privada</label>
-                {!isSignUp && (
-                  <button
-                    type="button"
-                    onClick={handleForgotPassword}
-                    className="text-[11px] font-bold text-blue-600 hover:underline dark:text-blue-400"
-                  >
-                    Esqueceu sua senha?
-                  </button>
-                )}
-              </div>
-              <div className="relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500">
-                  <Lock className="w-4 h-4" />
-                </span>
-                <input
-                  type={showPassword ? "text" : "password"}
-                  required
-                  placeholder={isSignUp ? "Mínimo de 6 caracteres" : "Digite sua senha"}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-10 py-2.5 text-sm border border-slate-200 dark:border-slate-750 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-800 dark:text-slate-100 dark:focus:ring-blue-400 transition-all duration-200"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
-                >
-                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                </button>
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/10 active:scale-[0.98] text-white rounded-xl text-sm font-bold shadow-md transition-all duration-200 flex items-center justify-center gap-1.5"
-            >
-              {isSignUp ? "Criar Minha Conta" : "Entrar"}
-            </button>
-          </form>
-
-          {/* Divisória elegante */}
-          <div className="relative flex py-1 items-center">
-            <div className="flex-grow border-t border-slate-150 dark:border-slate-800"></div>
-            <span className="flex-shrink mx-4 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">ou continue com</span>
-            <div className="flex-grow border-t border-slate-150 dark:border-slate-800"></div>
-          </div>
-
-          {/* Botões de Login Social */}
-          <div className="grid grid-cols-3 gap-2.5">
-            {/* Google */}
-            <button
-              type="button"
-              onClick={handleGoogleLogin}
-              className="flex items-center justify-center py-2.5 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group"
-              title="Entrar com o Google"
-            >
-              <svg className="w-5 h-5 group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="none">
-                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
-                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05" />
-                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335" />
-              </svg>
-            </button>
-            
-            {/* Facebook */}
-            <button
-              type="button"
-              onClick={handleFacebookLogin}
-              className="flex items-center justify-center py-2.5 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group"
-              title="Entrar com o Facebook"
-            >
-              <svg className="w-5 h-5 group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="#1877F2">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </button>
-            
-            {/* Apple */}
-            <button
-              type="button"
-              onClick={handleAppleLogin}
-              className="flex items-center justify-center py-2.5 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group"
-              title="Entrar com a Apple"
-            >
-              <svg className="w-5 h-5 fill-current text-slate-800 dark:text-slate-100 group-hover:scale-105 transition-transform" viewBox="0 0 24 24">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.22.67-2.94 1.51-.64.73-1.2 1.88-1.05 2.99 1.12.09 2.27-.58 3-1.44z" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Rodapé */}
-          <div className="text-center pt-2">
-            <button
-              type="button"
-              onClick={() => {
-                setIsSignUp(!isSignUp);
-                setAuthError("");
-              }}
-              className="text-xs font-semibold text-blue-600 hover:underline dark:text-blue-400"
-            >
-              {isSignUp ? "Já possui uma conta? Faça Login" : "Não tem uma conta? Cadastre-se"}
-            </button>
-          </div>
-        </div>
-      </div>
+      <AccessGate
+        currentUser={currentUser}
+        isLoadingAuth={isLoadingAuth}
+        onGoogleLogin={handleGoogleLogin}
+        onEmailLogin={async (loginEmail, loginPass, isRegister) => {
+          setAuthError("");
+          if (isRegister) {
+            await createUserWithEmailAndPassword(auth, loginEmail, loginPass);
+          } else {
+            await signInWithEmailAndPassword(auth, loginEmail, loginPass);
+          }
+        }}
+        onForgotPassword={async (userEmail) => {
+          if (!userEmail) {
+            customAlert("Por favor, digite seu e-mail para enviarmos o link de recuperação.", "E-mail Necessário");
+            return;
+          }
+          try {
+            await sendPasswordResetEmail(auth, userEmail);
+            customAlert(`Link de recuperação enviado com sucesso para ${userEmail}.`, "E-mail Enviado! ✉️");
+          } catch (err: any) {
+            setAuthError(err.message || "Erro ao enviar e-mail de recuperação.");
+          }
+        }}
+        onLogout={async () => {
+          await signOut(auth);
+          setCurrentUser(null);
+          setIsAuthorized(false);
+          setIsAdmin(false);
+          loadGuestData();
+        }}
+        onRecheckAuth={async () => {
+          if (currentUser) {
+            setIsLoadingAuth(true);
+            try {
+              await handleVerifyUserAuth(currentUser);
+            } finally {
+              setIsLoadingAuth(false);
+            }
+          }
+        }}
+        authError={authError}
+        setAuthError={setAuthError}
+      />
     );
   }
 
@@ -1524,28 +1413,31 @@ export default function App() {
     <div id="full-page-application-wrapper" className="min-h-screen bg-slate-50 flex flex-col transition-colors duration-300 dark:bg-slate-950 pb-16 md:pb-0 font-sans text-slate-900 dark:text-slate-100">
       
       {/* 🚀 Sticky Upper Header Navigation */}
-      <header id="app-main-header" className="sticky top-0 z-40 bg-white border-b border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-sm print:hidden">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+      <header id="app-main-header" className="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-xs print:hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
           
           {/* Logo Brand info */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => setActiveTab("home")}>
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-sm tracking-wide shadow-sm">
+          <div 
+            className="flex items-center gap-2.5 cursor-pointer shrink-0" 
+            onClick={() => setActiveTab("home")}
+          >
+            <div className="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-sm tracking-wide shadow-sm shadow-blue-500/20">
               A
             </div>
-            <div>
-              <h1 className="text-base font-bold text-slate-800 dark:text-slate-100 tracking-tight leading-none flex items-center gap-1">
-                AOR <span className="text-blue-600 dark:text-blue-400 font-extrabold">Master</span>
+            <div className="flex flex-col">
+              <h1 className="text-sm sm:text-base font-extrabold text-slate-800 dark:text-slate-100 tracking-tight leading-none flex items-center gap-1">
+                AOR <span className="text-blue-600 dark:text-blue-400">Master</span>
               </h1>
               <p className="text-[9px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider font-mono">IBGE Focus</p>
             </div>
           </div>
 
           {/* Desktop Tab Selector */}
-          <nav className="hidden lg:flex items-center gap-1 self-center">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
             {[
               { id: "home", label: "Dashboard" },
-              { id: "quiz", label: "Caderno Estudantil" },
-              { id: "bank", label: "Banco de Questões" },
+              { id: "quiz", label: "Caderno" },
+              { id: "bank", label: "Questões" },
               { id: "progress", label: "Desempenho" },
               { id: "badges", label: "Medalhas" },
               { id: "profile", label: "Área do Aluno" },
@@ -1556,10 +1448,10 @@ export default function App() {
                   setActiveTab(tab.id);
                   setShowMobileMenu(false);
                 }}
-                className={`text-xs font-bold px-3.5 py-2 rounded-xl transition ${
+                className={`text-xs font-semibold px-2.5 xl:px-3 py-1.5 rounded-xl whitespace-nowrap transition-all ${
                   activeTab === tab.id
-                    ? "bg-blue-600 text-white shadow-sm"
-                    : "text-slate-600 hover:text-slate-850 dark:text-slate-400 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                    ? "bg-blue-600 text-white font-bold shadow-xs shadow-blue-600/20"
+                    : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800"
                 }`}
               >
                 {tab.label}
@@ -1568,15 +1460,15 @@ export default function App() {
           </nav>
 
           {/* Controls actions header */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
 
             {/* Segmented Theme Switcher Control */}
-            <div className="flex items-center gap-0.5 bg-slate-100 border border-slate-200 p-0.5 rounded-xl dark:bg-slate-850 dark:border-slate-800 shrink-0">
+            <div className="flex items-center gap-0.5 bg-slate-100 border border-slate-200/80 p-0.5 rounded-xl dark:bg-slate-850 dark:border-slate-800 shrink-0">
               <button
                 onClick={() => toggleThemeMode("light")}
                 className={`p-1.5 rounded-lg transition-all cursor-pointer ${
                   themeMode === "light"
-                    ? "bg-white text-amber-500 shadow-sm dark:bg-slate-800 dark:text-amber-400 font-bold"
+                    ? "bg-white text-amber-500 shadow-xs dark:bg-slate-800 dark:text-amber-400 font-bold"
                     : "text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
                 }`}
                 title="Modo Claro"
@@ -1587,7 +1479,7 @@ export default function App() {
                 onClick={() => toggleThemeMode("dark")}
                 className={`p-1.5 rounded-lg transition-all cursor-pointer ${
                   themeMode === "dark"
-                    ? "bg-white text-indigo-500 shadow-sm dark:bg-slate-800 dark:text-indigo-400 font-bold"
+                    ? "bg-white text-indigo-500 shadow-xs dark:bg-slate-800 dark:text-indigo-400 font-bold"
                     : "text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
                 }`}
                 title="Modo Escuro"
@@ -1598,7 +1490,7 @@ export default function App() {
                 onClick={() => toggleThemeMode("system")}
                 className={`p-1.5 rounded-lg transition-all cursor-pointer ${
                   themeMode === "system"
-                    ? "bg-white text-blue-500 shadow-sm dark:bg-slate-800 dark:text-blue-400 font-bold"
+                    ? "bg-white text-blue-500 shadow-xs dark:bg-slate-800 dark:text-blue-400 font-bold"
                     : "text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
                 }`}
                 title="Sincronizar com o Dispositivo (Computador, Celular, etc.)"
@@ -1609,7 +1501,7 @@ export default function App() {
 
             {/* Offline sync badge */}
             <div
-              className={`flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-mono font-bold tracking-tight border ${
+              className={`hidden md:flex items-center gap-1 px-2 py-1 rounded-xl text-[11px] font-mono font-bold tracking-tight border shrink-0 ${
                 isOnline
                   ? "bg-emerald-50 text-emerald-600 border-emerald-200 dark:bg-emerald-950/25 dark:text-emerald-400 dark:border-emerald-900/30"
                   : "bg-amber-50 text-amber-600 border-amber-200 dark:bg-amber-950/25 dark:text-amber-400 dark:border-amber-900/30"
@@ -1617,66 +1509,78 @@ export default function App() {
               title={isOnline ? "Conexão de rede ativa na nuvem" : "Suporte offline ativo. Dados salvos localmente e sincronizados ao retornar online!"}
             >
               {isOnline ? <Wifi className="w-3.5 h-3.5" /> : <WifiOff className="w-3.5 h-3.5" />}
-              <span className="hidden md:inline">{isOnline ? "Online" : "Offline"}</span>
+              <span>{isOnline ? "Online" : "Offline"}</span>
             </div>
 
-            {/* Profile Avatar instead of text Name */}
-            <div className="flex items-center gap-2">
+            {/* Admin Invites Panel Button */}
+            {isAdmin && (
               <button
-                onClick={() => setActiveTab("profile")}
-                className="w-8 h-8 rounded-full overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-400 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-center bg-slate-100 dark:bg-slate-800 cursor-pointer shadow-sm"
-                title="Ir para Área do Aluno"
+                onClick={() => setShowAdminInvites(true)}
+                className="flex items-center gap-1.5 px-2.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 dark:bg-indigo-950/60 dark:hover:bg-indigo-900/80 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/80 rounded-xl text-xs font-bold transition shadow-2xs cursor-pointer shrink-0"
+                title="Gerenciar Convites de Alunos"
               >
-                {progress.photoURL ? (
-                  progress.photoURL.startsWith("http") || progress.photoURL.startsWith("data:image") ? (
-                    <img 
-                      src={progress.photoURL} 
-                      alt="Foto de Perfil" 
-                      className="w-full h-full object-cover" 
-                      referrerPolicy="no-referrer" 
-                    />
-                  ) : (
-                    <span className="text-sm leading-none select-none">{progress.photoURL}</span>
-                  )
-                ) : (
-                  <User className="w-4 h-4 text-slate-500 dark:text-slate-400" />
-                )}
+                <Shield className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+                <span className="hidden sm:inline">Convites</span>
               </button>
+            )}
 
-              {currentUser ? (
-                <button
-                  onClick={handleLogout}
-                  className="p-2 bg-rose-50 border border-rose-100 text-rose-500 rounded-xl hover:bg-rose-100 transition dark:bg-rose-950/20 dark:border-rose-900/30 dark:text-rose-400 cursor-pointer"
-                  title="Sair da Conta (Logout)"
-                >
-                  <LogOut className="w-4 h-4" />
-                </button>
+            {/* Profile Avatar button */}
+            <button
+              onClick={() => setActiveTab("profile")}
+              className="w-8 h-8 rounded-full overflow-hidden border border-slate-200 dark:border-slate-750 hover:border-blue-500 dark:hover:border-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-500/40 flex items-center justify-center bg-slate-100 dark:bg-slate-800 cursor-pointer shadow-2xs shrink-0"
+              title="Ir para Área do Aluno"
+            >
+              {progress.photoURL ? (
+                progress.photoURL.startsWith("http") || progress.photoURL.startsWith("data:image") ? (
+                  <img 
+                    src={progress.photoURL} 
+                    alt="Foto de Perfil" 
+                    className="w-full h-full object-cover" 
+                    referrerPolicy="no-referrer" 
+                  />
+                ) : (
+                  <span className="text-sm leading-none select-none">{progress.photoURL}</span>
+                )
               ) : (
-                <button
-                  onClick={() => {
-                    setIsSignUp(false);
-                    setShowAuthModal(true);
-                  }}
-                  className="flex items-center gap-1.5 px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs transition shadow-sm cursor-pointer"
-                >
-                  <LogIn className="w-3.5 h-3.5" /> <span className="hidden md:inline">Sincronizar</span>
-                </button>
+                <User className="w-4 h-4 text-slate-500 dark:text-slate-400" />
               )}
-            </div>
+            </button>
 
-            {/* Mobile menu triggers */}
+            {/* Logout / Login */}
+            {currentUser ? (
+              <button
+                onClick={handleLogout}
+                className="p-1.5 sm:p-2 bg-rose-50 border border-rose-100 text-rose-500 rounded-xl hover:bg-rose-100 transition dark:bg-rose-950/30 dark:border-rose-900/30 dark:text-rose-400 cursor-pointer shrink-0"
+                title="Sair da Conta (Logout)"
+              >
+                <LogOut className="w-4 h-4" />
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  setIsSignUp(false);
+                  setShowAuthModal(true);
+                }}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs transition shadow-xs cursor-pointer shrink-0"
+              >
+                <LogIn className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Entrar</span>
+              </button>
+            )}
+
+            {/* Mobile menu trigger */}
             <button
               onClick={() => setShowMobileMenu(!showMobileMenu)}
-              className="p-2 lg:hidden bg-slate-50 border border-slate-200 text-slate-600 rounded-xl dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300"
+              className="p-1.5 sm:p-2 lg:hidden bg-slate-100 border border-slate-200 text-slate-600 rounded-xl dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300 shrink-0 cursor-pointer"
+              aria-label="Abrir menu"
             >
               {showMobileMenu ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
             </button>
           </div>
         </div>
 
-        {/* Mobile menu dropdown dropdown panel */}
+        {/* Mobile menu dropdown panel */}
         {showMobileMenu && (
-          <div className="lg:hidden block bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 py-3 space-y-1 shadow-md">
+          <div className="lg:hidden block bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 py-3 space-y-1.5 shadow-md">
             {[
               { id: "home", label: "Dashboard" },
               { id: "quiz", label: "Caderno Estudantil" },
@@ -1691,15 +1595,28 @@ export default function App() {
                   setActiveTab(tab.id);
                   setShowMobileMenu(false);
                 }}
-                className={`w-full text-left font-bold py-2.5 px-3.5 rounded-xl text-sm transition ${
+                className={`w-full text-left font-bold py-2 px-3 rounded-xl text-xs transition ${
                   activeTab === tab.id
-                    ? "bg-blue-600 text-white shadow-sm"
-                    : "text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
+                    ? "bg-blue-600 text-white shadow-xs"
+                    : "text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
                 }`}
               >
                 {tab.label}
               </button>
             ))}
+
+            {isAdmin && (
+              <button
+                onClick={() => {
+                  setShowAdminInvites(true);
+                  setShowMobileMenu(false);
+                }}
+                className="w-full text-left font-bold py-2 px-3 rounded-xl text-xs transition bg-indigo-50 text-indigo-700 dark:bg-indigo-950/50 dark:text-indigo-300 flex items-center gap-2 border border-indigo-200 dark:border-indigo-800/60"
+              >
+                <Shield className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+                Painel de Convites (Admin)
+              </button>
+            )}
           </div>
         )}
       </header>
@@ -1766,6 +1683,8 @@ export default function App() {
                 onUpdateProgress={handleUpdateProfile}
                 currentUserEmail={currentUser ? currentUser.email : null}
                 onAlert={customAlert}
+                isAdmin={isAdmin}
+                onOpenAdminInvites={() => setShowAdminInvites(true)}
               />
             )}
           </div>
@@ -2213,6 +2132,13 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* 🔒 Administrator Invitation & Whitelist Management Modal */}
+      <AdminInvitesModal
+        isOpen={showAdminInvites}
+        onClose={() => setShowAdminInvites(false)}
+        onAlert={customAlert}
+      />
     </div>
   );
 }

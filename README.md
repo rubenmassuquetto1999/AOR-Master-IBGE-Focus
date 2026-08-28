@@ -37,10 +37,17 @@ O **AOR Master** foi desenvolvido para proporcionar aos candidatos uma experiên
 - Sistema de Pontos de Experiência (XP) e níveis de progressão.
 - Contador de ofensiva diária (*Streak*) para manter o hábito constante de estudos.
 - Metas diárias configuráveis com barra de progresso em tempo real.
+- Galeria de conquistas e medalhas comemorativas desbloqueáveis.
 
-### 6. 🌓 Interface Moderna e Acessível
-- Suporte a tema Claro (*Light*) e Escuro (*Dark*).
-- Design responsivo adaptado para computadores, tablets e smartphones.
+### 6. 🔒 Controle de Acesso Restrito & Gestão de Convites
+- **Portal de Acesso Exclusivo (`AccessGate`)**: Plataforma restrita a usuários autorizados via whitelist/convite.
+- **Painel Administrativo de Convites**: Interface para o administrador cadastrar convites por e-mail, atribuir permissões (Aluno ou Administrador) e gerenciar solicitações de acesso pendentes.
+- **Segurança no Firestore**: Regras de segurança rigorosas (`firestore.rules`) protegendo dados de progresso e a lista de usuários autorizados.
+
+### 7. 🌓 Interface Moderna e Acessível
+- Suporte a tema Claro (*Light*), Escuro (*Dark*) e Sincronização com o Sistema.
+- Indicador de status de conexão com suporte a sincronização offline / nuvem em tempo real.
+- Design responsivo adaptado para computadores, tablets e smartphones com navegação fluida.
 
 ---
 

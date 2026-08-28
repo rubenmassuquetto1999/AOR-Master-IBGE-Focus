@@ -53,3 +53,23 @@ export interface QuizSession {
   startTime: number;
   sessionHistoryId?: string;
 }
+
+export interface AuthorizedInvite {
+  id?: string;
+  email: string;
+  name?: string;
+  invitedBy: string;
+  createdAt: string;
+  status: "active" | "revoked";
+  role: "admin" | "student";
+}
+
+export interface AccessRequest {
+  id?: string;
+  email: string;
+  name?: string;
+  userId: string;
+  requestedAt: string;
+  status: "pending" | "approved" | "rejected";
+  message?: string;
+}

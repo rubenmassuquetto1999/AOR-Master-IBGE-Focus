@@ -2,27 +2,68 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() &&
+             request.auth.token.email != null &&
+             request.auth.token.email.lower() == 'rubenmassuquetto1999@gmail.com';
+    }
+
     // Global Safety Net
     match /{document=**} {
       allow read, write: if false;
     }
 
+    // Rules for authorized invites (whitelist)
+    match /authorizedInvites/{inviteId} {
+      allow get: if isSignedIn() && (
+        isAdmin() || 
+        (request.auth.token.email != null && (inviteId == request.auth.token.email.lower() || resource.data.email == request.auth.token.email.lower()))
+      );
+      allow list: if isSignedIn() && (
+        isAdmin() || 
+        (request.auth.token.email != null && resource.data.email == request.auth.token.email.lower())
+      );
+      allow write: if isAdmin();
+    }
+
+    // Rules for access requests
+    match /accessRequests/{requestId} {
+      allow create: if isSignedIn() && 
+                    request.auth.token.email != null && 
+                    request.resource.data.email == request.auth.token.email.lower();
+      allow get: if isSignedIn() && (
+        isAdmin() || 
+        (request.auth.token.email != null && resource.data.email == request.auth.token.email.lower())
+      );
+      allow list: if isSignedIn() && (
+        isAdmin() || 
+        (request.auth.token.email != null && resource.data.email == request.auth.token.email.lower())
+      );
+      allow update, delete: if isAdmin();
+    }
+
     // Rules for usersProgress
     match /usersProgress/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, write: if isSignedIn() && (request.auth.uid == userId || isAdmin());
     }
     
     // Rules for usersHistory
     match /usersHistory/{historyId} {
-      allow get: if request.auth != null && (historyId.startsWith(request.auth.uid) || resource.data.userId == request.auth.uid);
-      allow list: if request.auth != null && resource.data.userId == request.auth.uid;
-      allow delete: if request.auth != null && (historyId.startsWith(request.auth.uid) || resource.data.userId == request.auth.uid);
-      allow create, update: if request.auth != null && (historyId.startsWith(request.auth.uid) || request.resource.data.userId == request.auth.uid);
+      allow get: if isSignedIn() && (historyId.startsWith(request.auth.uid) || resource.data.userId == request.auth.uid || isAdmin());
+      allow list: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow delete: if isSignedIn() && (historyId.startsWith(request.auth.uid) || resource.data.userId == request.auth.uid || isAdmin());
+      allow create, update: if isSignedIn() && (historyId.startsWith(request.auth.uid) || request.resource.data.userId == request.auth.uid || isAdmin());
     }
     
     // Rules for customQuestions
     match /customQuestions/{questionId} {
-      allow read, write: if request.auth != null;
+      allow read: if isSignedIn();
+      allow write: if isSignedIn();
     }
   }
 }
