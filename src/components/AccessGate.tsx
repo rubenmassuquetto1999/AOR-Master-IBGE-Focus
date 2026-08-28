@@ -61,6 +61,7 @@ export default function AccessGate({
   const [isSendingRequest, setIsSendingRequest] = useState(false);
   const [requestSentSuccess, setRequestSentSuccess] = useState(false);
   const [isCheckingRequest, setIsCheckingRequest] = useState(false);
+  const [isEditingRequest, setIsEditingRequest] = useState(false);
 
   useEffect(() => {
     if (currentUser?.email) {
@@ -74,6 +75,8 @@ export default function AccessGate({
     try {
       const req = await checkExistingAccessRequest(userEmail);
       setExistingRequest(req);
+      if (req?.name) setRequestName(req.name);
+      if (req?.message) setRequestMessage(req.message);
     } catch {
       // Ignore
     } finally {
@@ -102,6 +105,7 @@ export default function AccessGate({
     try {
       await submitAccessRequest(requestName, requestMessage);
       setRequestSentSuccess(true);
+      setIsEditingRequest(false);
       await checkRequestStatus(currentUser.email);
     } catch (err: any) {
       alert(err.message || "Erro ao enviar solicitação.");
@@ -173,49 +177,105 @@ export default function AccessGate({
           </div>
 
           {/* Request Status or Request Form */}
-          {existingRequest ? (
+          {existingRequest && !isEditingRequest ? (
             <div className="p-5 rounded-2xl bg-slate-850/60 border border-slate-800 space-y-3">
-              <div className="flex items-center gap-2 text-amber-400 text-xs font-bold">
-                <Clock className="w-4 h-4" />
-                Solicitação de Acesso em Análise
+              <div className="flex items-center gap-2 text-xs font-bold">
+                {existingRequest.status === "rejected" ? (
+                  <span className="text-rose-400 flex items-center gap-1.5">
+                    <ShieldAlert className="w-4 h-4" />
+                    Solicitação Não Aprovada
+                  </span>
+                ) : existingRequest.status === "approved" ? (
+                  <span className="text-amber-400 flex items-center gap-1.5">
+                    <Clock className="w-4 h-4" />
+                    Autorização Necessita de Atualização
+                  </span>
+                ) : (
+                  <span className="text-amber-400 flex items-center gap-1.5">
+                    <Clock className="w-4 h-4" />
+                    Solicitação de Acesso em Análise
+                  </span>
+                )}
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Você enviou uma solicitação de autorização em{" "}
-                <span className="text-slate-200 font-semibold">
-                  {new Date(existingRequest.requestedAt).toLocaleString("pt-BR")}
-                </span>
-                . Assim que o administrador aprovar seu e-mail, seu acesso será liberado instantaneamente.
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                {existingRequest.status === "rejected" ? (
+                  <>
+                    Sua solicitação de acesso não pôde ser aprovada pelo administrador. Caso deseje tentar novamente ou enviar informações complementares, utilize o botão abaixo.
+                  </>
+                ) : existingRequest.status === "approved" ? (
+                  <>
+                    Seu e-mail teve uma solicitação anterior registrada, mas seu acesso não está ativo na lista de alunos no momento. Você pode verificar novamente ou enviar uma nova solicitação.
+                  </>
+                ) : (
+                  <>
+                    Você enviou uma solicitação de autorização em{" "}
+                    <span className="text-slate-100 font-semibold">
+                      {new Date(existingRequest.requestedAt).toLocaleString("pt-BR")}
+                    </span>
+                    . Assim que o administrador aprovar seu e-mail, seu acesso será liberado instantaneamente.
+                  </>
+                )}
               </p>
+
+              {existingRequest.message && (
+                <div className="text-xs text-slate-400 italic bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+                  "{existingRequest.message}"
+                </div>
+              )}
+
               <div className="pt-2 flex flex-col sm:flex-row gap-2">
                 <button
+                  type="button"
                   onClick={onRecheckAuth}
-                  className="flex-1 py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20"
+                  className="flex-1 py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 cursor-pointer"
                 >
                   <RefreshCw className="w-3.5 h-3.5" />
-                  Verificar Liberação de Acesso
+                  Verificar Liberação
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setIsEditingRequest(true)}
+                  className="py-2.5 px-3.5 bg-slate-800 hover:bg-slate-750 text-slate-300 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 border border-slate-700 cursor-pointer"
+                >
+                  <Send className="w-3.5 h-3.5 text-indigo-400" />
+                  {existingRequest.status === "pending" ? "Reenviar Pedido" : "Nova Solicitação"}
                 </button>
               </div>
             </div>
-          ) : requestSentSuccess ? (
+          ) : requestSentSuccess && !isEditingRequest ? (
             <div className="p-5 rounded-2xl bg-emerald-950/30 border border-emerald-800/40 text-emerald-300 space-y-2 text-center">
               <CheckCircle2 className="w-8 h-8 mx-auto text-emerald-400" />
               <div className="text-sm font-bold">Solicitação Enviada com Sucesso!</div>
               <p className="text-xs text-slate-400">
-                O administrador foi notificado sobre seu pedido de acesso. Clique abaixo para verificar quando for aprovado.
+                O administrador foi notificado sobre seu pedido de acesso. Clique abaixo para verificar quando for liberado.
               </p>
-              <button
-                onClick={onRecheckAuth}
-                className="mt-3 w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-3.5 h-3.5" />
-                Checar se já foi aprovado
-              </button>
+              <div className="pt-2 flex flex-col gap-2">
+                <button
+                  onClick={onRecheckAuth}
+                  className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-emerald-600/20"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" />
+                  Checar se já foi aprovado
+                </button>
+              </div>
             </div>
           ) : (
             <form onSubmit={handleSendRequest} className="space-y-3 bg-slate-850/60 p-5 rounded-2xl border border-slate-800">
-              <div className="text-xs font-bold text-slate-200 flex items-center gap-2">
-                <Send className="w-4 h-4 text-indigo-400" />
-                Pedir Convite ao Administrador
+              <div className="flex items-center justify-between">
+                <div className="text-xs font-bold text-slate-200 flex items-center gap-2">
+                  <Send className="w-4 h-4 text-indigo-400" />
+                  Pedir Convite ao Administrador
+                </div>
+                {existingRequest && (
+                  <button
+                    type="button"
+                    onClick={() => setIsEditingRequest(false)}
+                    className="text-[11px] text-slate-400 hover:text-slate-200"
+                  >
+                    Voltar ao status
+                  </button>
+                )}
               </div>
               <p className="text-[11px] text-slate-400">
                 Deseja estudar conosco para o concurso IBGE? Envie uma solicitação para o professor liberar o seu e-mail:
@@ -242,14 +302,16 @@ export default function AccessGate({
                 />
               </div>
 
-              <button
-                type="submit"
-                disabled={isSendingRequest}
-                className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 disabled:opacity-50"
-              >
-                <Send className="w-3.5 h-3.5" />
-                {isSendingRequest ? "Enviando Pedido..." : "Enviar Solicitação de Convite"}
-              </button>
+              <div className="flex gap-2">
+                <button
+                  type="submit"
+                  disabled={isSendingRequest}
+                  className="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 disabled:opacity-50 cursor-pointer"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  {isSendingRequest ? "Enviando Pedido..." : "Enviar Solicitação de Convite"}
+                </button>
+              </div>
             </form>
           )}
 

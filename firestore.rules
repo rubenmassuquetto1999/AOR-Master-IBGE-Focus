@@ -33,18 +33,21 @@ service cloud.firestore {
 
     // Rules for access requests
     match /accessRequests/{requestId} {
-      allow create: if isSignedIn() && 
+      allow create, update: if isSignedIn() && 
                     request.auth.token.email != null && 
-                    request.resource.data.email == request.auth.token.email.lower();
+                    (
+                      isAdmin() ||
+                      (request.resource.data.email == request.auth.token.email.lower() && requestId == request.auth.token.email.lower())
+                    );
       allow get: if isSignedIn() && (
         isAdmin() || 
-        (request.auth.token.email != null && resource.data.email == request.auth.token.email.lower())
+        (request.auth.token.email != null && (requestId == request.auth.token.email.lower() || resource.data.email == request.auth.token.email.lower()))
       );
       allow list: if isSignedIn() && (
         isAdmin() || 
         (request.auth.token.email != null && resource.data.email == request.auth.token.email.lower())
       );
-      allow update, delete: if isAdmin();
+      allow delete: if isAdmin();
     }
 
     // Rules for usersProgress

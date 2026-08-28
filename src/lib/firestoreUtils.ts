@@ -200,6 +200,28 @@ export async function deleteInvite(email: string): Promise<void> {
   try {
     const inviteRef = doc(db, "authorizedInvites", normalizedEmail);
     await deleteDoc(inviteRef);
+
+    // Also remove from accessRequests so it doesn't get stuck in "approved" without authorization
+    try {
+      const reqRef = doc(db, "accessRequests", normalizedEmail);
+      await deleteDoc(reqRef);
+    } catch {
+      // Ignore if accessRequest doesn't exist
+    }
+  } catch (error) {
+    handleFirestoreError(error, OperationType.DELETE, path);
+  }
+}
+
+/**
+ * Delete an access request document permanently (Admin only)
+ */
+export async function deleteAccessRequest(email: string): Promise<void> {
+  const normalizedEmail = email.trim().toLowerCase();
+  const path = `accessRequests/${normalizedEmail}`;
+  try {
+    const reqRef = doc(db, "accessRequests", normalizedEmail);
+    await deleteDoc(reqRef);
   } catch (error) {
     handleFirestoreError(error, OperationType.DELETE, path);
   }

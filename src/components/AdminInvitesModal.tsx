@@ -26,6 +26,7 @@ import {
   fetchAccessRequests,
   approveAccessRequest,
   rejectAccessRequest,
+  deleteAccessRequest,
 } from "../lib/firestoreUtils";
 
 interface AdminInvitesModalProps {
@@ -50,6 +51,8 @@ export default function AdminInvitesModal({
   const [newName, setNewName] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
+  const [confirmDeleteEmail, setConfirmDeleteEmail] = useState<string | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const loadData = async () => {
     setIsLoading(true);
@@ -116,15 +119,17 @@ export default function AdminInvitesModal({
   };
 
   const handleDeleteInvite = async (email: string) => {
-    if (!window.confirm(`Tem certeza que deseja remover permanentemente o acesso de ${email}?`)) {
-      return;
-    }
+    setIsDeleting(true);
     try {
       await deleteInvite(email);
       setInvites((prev) => prev.filter((item) => item.email.toLowerCase() !== email.toLowerCase()));
-      onAlert(`Acesso de ${email} removido.`, "Removido");
+      setConfirmDeleteEmail(null);
+      onAlert(`O acesso de ${email} foi removido com sucesso.`, "Acesso Excluído");
     } catch (err: any) {
-      onAlert("Erro ao excluir convite.", "Erro");
+      console.error("Delete invite error:", err);
+      onAlert(err.message || "Erro ao excluir convite.", "Erro");
+    } finally {
+      setIsDeleting(false);
     }
   };
 
@@ -144,9 +149,20 @@ export default function AdminInvitesModal({
   const handleRejectRequest = async (email: string) => {
     try {
       await rejectAccessRequest(email);
+      onAlert(`A solicitação de ${email} foi marcada como recusada.`, "Solicitação Recusada");
       await loadData();
     } catch (err: any) {
       onAlert("Erro ao recusar solicitação.", "Erro");
+    }
+  };
+
+  const handleDeleteRequest = async (email: string) => {
+    try {
+      await deleteAccessRequest(email);
+      setRequests((prev) => prev.filter((r) => r.email.toLowerCase() !== email.toLowerCase()));
+      onAlert(`A solicitação de ${email} foi removida da lista.`, "Solicitação Excluída");
+    } catch (err: any) {
+      onAlert("Erro ao excluir solicitação.", "Erro");
     }
   };
 
@@ -373,24 +389,51 @@ export default function AdminInvitesModal({
 
                         {!isSuperAdmin && (
                           <div className="flex items-center gap-1.5 flex-shrink-0">
-                            <button
-                              onClick={() => handleToggleStatus(invite)}
-                              className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition ${
-                                isActive
-                                  ? "bg-rose-50 text-rose-700 hover:bg-rose-100 dark:bg-rose-950/40 dark:text-rose-300"
-                                  : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:text-emerald-300"
-                              }`}
-                              title={isActive ? "Bloquear acesso temporariamente" : "Reativar acesso"}
-                            >
-                              {isActive ? "Revogar Acesso" : "Reativar Acesso"}
-                            </button>
-                            <button
-                              onClick={() => handleDeleteInvite(invite.email)}
-                              className="p-1.5 text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950/30 transition"
-                              title="Excluir permanentemente"
-                            >
-                              <Trash2 className="w-3.5 h-3.5" />
-                            </button>
+                            {confirmDeleteEmail === invite.email ? (
+                              <div className="flex items-center gap-1 bg-rose-50 dark:bg-rose-950/60 p-1 rounded-xl border border-rose-200 dark:border-rose-900/50 animate-fade-in">
+                                <span className="text-[10px] font-bold text-rose-700 dark:text-rose-300 px-1">
+                                  Excluir?
+                                </span>
+                                <button
+                                  type="button"
+                                  onClick={() => handleDeleteInvite(invite.email)}
+                                  disabled={isDeleting}
+                                  className="px-2 py-1 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-[10px] font-extrabold transition cursor-pointer shadow-2xs disabled:opacity-50"
+                                >
+                                  {isDeleting ? "..." : "Sim"}
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => setConfirmDeleteEmail(null)}
+                                  className="px-1.5 py-1 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-[10px] font-bold transition cursor-pointer"
+                                >
+                                  Não
+                                </button>
+                              </div>
+                            ) : (
+                              <>
+                                <button
+                                  type="button"
+                                  onClick={() => handleToggleStatus(invite)}
+                                  className={`px-2.5 py-1 text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                                    isActive
+                                      ? "bg-rose-50 text-rose-700 hover:bg-rose-100 dark:bg-rose-950/40 dark:text-rose-300 border border-rose-200/60 dark:border-rose-900/40"
+                                      : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-900/40"
+                                  }`}
+                                  title={isActive ? "Bloquear acesso temporariamente" : "Reativar acesso"}
+                                >
+                                  {isActive ? "Revogar" : "Reativar"}
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => setConfirmDeleteEmail(invite.email)}
+                                  className="p-1.5 text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/30 transition cursor-pointer"
+                                  title="Excluir permanentemente da lista"
+                                >
+                                  <Trash2 className="w-3.5 h-3.5" />
+                                </button>
+                              </>
+                            )}
                           </div>
                         )}
                       </div>
@@ -408,66 +451,116 @@ export default function AdminInvitesModal({
 
               {requests.length === 0 ? (
                 <div className="py-12 text-center text-xs text-slate-400 bg-slate-50 dark:bg-slate-850/50 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800">
-                  Nenhuma solicitação de acesso pendente no momento.
+                  Nenhuma solicitação de acesso registrada no momento.
                 </div>
               ) : (
-                requests.map((req) => (
-                  <div
-                    key={req.email}
-                    className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-850 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
-                  >
-                    <div className="space-y-1">
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-slate-900 dark:text-slate-100">{req.email}</span>
-                        <span
-                          className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                            req.status === "approved"
-                              ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300"
+                requests.map((req) => {
+                  const isAuthorizedInList = invites.some(
+                    (inv) => inv.email.toLowerCase() === req.email.toLowerCase() && inv.status === "active"
+                  );
+                  const isRevokedInList = invites.some(
+                    (inv) => inv.email.toLowerCase() === req.email.toLowerCase() && inv.status === "revoked"
+                  );
+
+                  return (
+                    <div
+                      key={req.email}
+                      className={`p-4 rounded-2xl border transition flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${
+                        isAuthorizedInList
+                          ? "bg-white dark:bg-slate-850/80 border-slate-200 dark:border-slate-800"
+                          : "bg-amber-50/40 dark:bg-amber-950/20 border-amber-200/70 dark:border-amber-900/40"
+                      }`}
+                    >
+                      <div className="space-y-1 min-w-0">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate">
+                            {req.email}
+                          </span>
+                          <span
+                            className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                              isAuthorizedInList
+                                ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300"
+                                : isRevokedInList
+                                ? "bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300"
+                                : req.status === "rejected"
+                                ? "bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300"
+                                : "bg-amber-100 text-amber-900 dark:bg-amber-950/60 dark:text-amber-300"
+                            }`}
+                          >
+                            {isAuthorizedInList
+                              ? "Acesso Liberado & Ativo"
+                              : isRevokedInList
+                              ? "Acesso Revogado na Lista"
                               : req.status === "rejected"
-                              ? "bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300"
-                              : "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-300"
-                          }`}
-                        >
-                          {req.status === "approved"
-                            ? "Aprovado"
-                            : req.status === "rejected"
-                            ? "Recusado"
-                            : "Pendente"}
-                        </span>
-                      </div>
-                      {req.name && (
-                        <div className="text-xs text-slate-600 dark:text-slate-300 font-medium">{req.name}</div>
-                      )}
-                      {req.message && (
-                        <div className="text-xs text-slate-500 italic bg-slate-50 dark:bg-slate-900/60 p-2 rounded-lg mt-1">
-                          "{req.message}"
+                              ? "Recusado"
+                              : "Aguardando Liberação"}
+                          </span>
                         </div>
-                      )}
-                      <div className="text-[10px] text-slate-400">
-                        Solicitado em {new Date(req.requestedAt).toLocaleString("pt-BR")}
+                        {req.name && (
+                          <div className="text-xs text-slate-600 dark:text-slate-300 font-medium">
+                            {req.name}
+                          </div>
+                        )}
+                        {req.message && (
+                          <div className="text-xs text-slate-600 dark:text-slate-300 italic bg-white/70 dark:bg-slate-900/60 p-2 rounded-xl border border-slate-200/60 dark:border-slate-800 mt-1 max-w-xl">
+                            "{req.message}"
+                          </div>
+                        )}
+                        <div className="text-[10px] text-slate-400">
+                          Solicitado em {new Date(req.requestedAt).toLocaleString("pt-BR")}
+                        </div>
+                      </div>
+
+                      {/* Action buttons */}
+                      <div className="flex items-center gap-1.5 flex-shrink-0">
+                        {!isAuthorizedInList ? (
+                          <>
+                            <button
+                              type="button"
+                              onClick={() => handleApproveRequest(req)}
+                              className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-xs transition flex items-center gap-1 cursor-pointer"
+                              title="Liberar acesso deste aluno"
+                            >
+                              <CheckCircle2 className="w-3.5 h-3.5" />
+                              {isRevokedInList ? "Reativar Acesso" : "Aprovar Acesso"}
+                            </button>
+                            {req.status !== "rejected" && (
+                              <button
+                                type="button"
+                                onClick={() => handleRejectRequest(req.email)}
+                                className="px-2.5 py-1.5 bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 dark:bg-slate-800 dark:hover:bg-rose-950/40 dark:text-slate-300 text-xs font-bold rounded-xl transition flex items-center gap-1 cursor-pointer"
+                                title="Recusar solicitação"
+                              >
+                                <XCircle className="w-3.5 h-3.5" />
+                                Recusar
+                              </button>
+                            )}
+                          </>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setActiveTab("invites");
+                              setSearchTerm(req.email);
+                            }}
+                            className="px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-750 dark:text-slate-300 text-xs font-bold rounded-xl transition cursor-pointer"
+                          >
+                            Ver na Lista
+                          </button>
+                        )}
+
+                        <button
+                          type="button"
+                          onClick={() => handleDeleteRequest(req.email)}
+                          className="p-2 text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/30 rounded-xl transition cursor-pointer"
+                          title="Excluir este registro de solicitação"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
                       </div>
                     </div>
-
-                    {req.status === "pending" && (
-                      <div className="flex items-center gap-2 flex-shrink-0">
-                        <button
-                          onClick={() => handleApproveRequest(req)}
-                          className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-xs transition flex items-center gap-1"
-                        >
-                          <CheckCircle2 className="w-3.5 h-3.5" />
-                          Aprovar Convite
-                        </button>
-                        <button
-                          onClick={() => handleRejectRequest(req.email)}
-                          className="px-3 py-1.5 bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-rose-700 dark:bg-slate-800 dark:hover:bg-rose-950/40 dark:text-slate-300 text-xs font-bold rounded-xl transition flex items-center gap-1"
-                        >
-                          <XCircle className="w-3.5 h-3.5" />
-                          Recusar
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                ))
+                  );
+                })
               )}
             </div>
           )}
