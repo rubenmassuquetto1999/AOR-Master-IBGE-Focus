@@ -881,30 +881,30 @@ export default function Achievements({ unlockedIds, xp, level }: AchievementsPro
         <div className="flex items-center gap-1.5 flex-wrap">
           <button
             onClick={() => setStatusFilter("all")}
-            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
               statusFilter === "all"
                 ? "bg-indigo-600 text-white shadow-xs"
-                : "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100"
+                : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-white"
             }`}
           >
             Todas ({totalBadgesCount})
           </button>
           <button
             onClick={() => setStatusFilter("unlocked")}
-            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
               statusFilter === "unlocked"
                 ? "bg-emerald-600 text-white shadow-xs"
-                : "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100"
+                : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-white"
             }`}
           >
             Conquistadas ({unlockedBadgesCount})
           </button>
           <button
             onClick={() => setStatusFilter("locked")}
-            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
               statusFilter === "locked"
                 ? "bg-amber-600 text-white shadow-xs"
-                : "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100"
+                : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-white"
             }`}
           >
             A Conquistar ({totalBadgesCount - unlockedBadgesCount})
@@ -922,13 +922,13 @@ export default function Achievements({ unlockedIds, xp, level }: AchievementsPro
       </div>
 
       {/* Level Navigation / 20 Filter Pills */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+      <div id="ach-level-filter-track" className="flex items-center gap-2 overflow-x-auto pb-2.5 pt-0.5 scrollbar-thin">
         <button
           onClick={() => setSelectedLevelFilter(null)}
-          className={`px-3.5 h-9 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer shrink-0 ${
+          className={`px-3.5 h-9 rounded-xl text-xs font-bold transition-colors whitespace-nowrap cursor-pointer shrink-0 ${
             selectedLevelFilter === null
               ? "bg-amber-500 text-white shadow-xs"
-              : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:bg-gray-50"
+              : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
           }`}
         >
           Trilha Completa (20 Níveis)
@@ -940,12 +940,12 @@ export default function Achievements({ unlockedIds, xp, level }: AchievementsPro
             <button
               key={tier.level}
               onClick={() => setSelectedLevelFilter(tier.level)}
-              className={`flex items-center gap-1.5 px-3 h-9 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer shrink-0 ${
+              className={`flex items-center gap-1.5 px-3 h-9 rounded-xl text-xs font-bold transition-colors whitespace-nowrap cursor-pointer shrink-0 ${
                 isSelected
                   ? "bg-amber-500 text-white shadow-xs"
                   : isCurrentOrPassed
-                  ? "bg-white dark:bg-gray-800 text-amber-700 dark:text-amber-300 border border-amber-300/80 dark:border-amber-900/60 hover:bg-amber-50/50"
-                  : "bg-white dark:bg-gray-800 text-gray-400 dark:text-gray-500 border border-gray-200 dark:border-gray-700 opacity-80"
+                  ? "bg-white dark:bg-gray-800 text-amber-700 dark:text-amber-300 border border-amber-300/80 dark:border-amber-800/60 hover:bg-amber-50 dark:hover:bg-amber-950/50 dark:hover:text-amber-200"
+                  : "bg-white dark:bg-gray-800 text-gray-400 dark:text-gray-400 border border-gray-200 dark:border-gray-700 opacity-80 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-200"
               }`}
             >
               <span>Nível {tier.level}</span>

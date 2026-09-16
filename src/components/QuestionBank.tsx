@@ -255,10 +255,10 @@ export default function QuestionBank({
           <select
             value={selectedBanca}
             onChange={(e) => setSelectedBanca(e.target.value)}
-            className="text-xs sm:text-sm font-semibold h-8 px-2 bg-transparent focus:outline-none dark:text-gray-200 cursor-pointer"
+            className="text-xs sm:text-sm font-semibold h-8 px-2 bg-transparent focus:outline-none text-gray-800 dark:text-gray-100 dark:bg-gray-800 dark:[color-scheme:dark] cursor-pointer"
           >
             {bancas.map((b) => (
-              <option key={b} value={b}>
+              <option key={b} value={b} className="bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100">
                 {b}
               </option>
             ))}
@@ -274,10 +274,10 @@ export default function QuestionBank({
               setSelectedDisciplina(e.target.value);
               setSelectedAssunto("Todos");
             }}
-            className="text-xs sm:text-sm font-semibold h-8 px-2 bg-transparent focus:outline-none dark:text-gray-200 cursor-pointer"
+            className="text-xs sm:text-sm font-semibold h-8 px-2 bg-transparent focus:outline-none text-gray-800 dark:text-gray-100 dark:bg-gray-800 dark:[color-scheme:dark] cursor-pointer"
           >
             {disciplinas.map((d) => (
-              <option key={d} value={d}>
+              <option key={d} value={d} className="bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100">
                 {d}
               </option>
             ))}
@@ -290,10 +290,10 @@ export default function QuestionBank({
           <select
             value={selectedAssunto}
             onChange={(e) => setSelectedAssunto(e.target.value)}
-            className="text-xs sm:text-sm font-semibold h-8 px-2 bg-transparent focus:outline-none dark:text-gray-200 max-w-[180px] sm:max-w-[260px] truncate cursor-pointer"
+            className="text-xs sm:text-sm font-semibold h-8 px-2 bg-transparent focus:outline-none text-gray-800 dark:text-gray-100 dark:bg-gray-800 dark:[color-scheme:dark] max-w-[180px] sm:max-w-[260px] truncate cursor-pointer"
           >
             {assuntos.map((as) => (
-              <option key={as} value={as}>
+              <option key={as} value={as} className="bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100">
                 {as}
               </option>
             ))}

@@ -44,11 +44,68 @@ body, body * {
 }
 
 /* Custom dark mode helpers */
+.dark {
+  color-scheme: dark;
+}
+
 .dark .bg-gray-850 {
   background-color: #182030;
 }
 .dark .bg-gray-750 {
   background-color: #242f41;
+}
+
+/* Ensure dropdown options and select elements maintain high contrast in dark mode */
+.dark select {
+  color-scheme: dark;
+}
+
+.dark select option,
+.dark select optgroup {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+/* Custom sleek scrollbar matching app design */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.dark, .dark * {
+  scrollbar-color: #4b5563 transparent;
 }
 
 /* Printer friendly layout */
