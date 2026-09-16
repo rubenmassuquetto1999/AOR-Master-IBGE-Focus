@@ -55,47 +55,85 @@ export function isQuestionEquivalent(q1: Question, q2: Question): boolean {
 
 /**
  * High-performance O(1) deduplication and merging of base static questions
- * with user/custom questions.
+ * with user/custom questions and persistent field overrides.
  */
 export function deduplicateAndMergeQuestions(
   baseQuestions: Question[],
   extraQuestions: Question[] = [],
-  deletedIds: string[] = []
+  deletedIds: string[] = [],
+  overrides: Record<string, Partial<Question>> = {}
 ): Question[] {
   const mergedMap = new Map<string, Question>();
-  const baseNormSet = new Set<string>();
-  const basePrefixSet = new Set<string>();
+  const baseNormToIdMap = new Map<string, string>();
+  const basePrefixToIdMap = new Map<string, string>();
 
-  // 1. Index and store base static questions (authoritative source)
-  for (const q of baseQuestions) {
-    if (!deletedIds.includes(q.id)) {
+  // 1. Index and store base static questions (applying any persistent overrides)
+  for (const rawQ of baseQuestions) {
+    if (!deletedIds.includes(rawQ.id)) {
+      const q = overrides[rawQ.id] ? { ...rawQ, ...overrides[rawQ.id] } : rawQ;
       mergedMap.set(q.id, q);
       const norm = normalizeQuestionText(q.text);
       if (norm) {
-        baseNormSet.add(norm);
+        baseNormToIdMap.set(norm, q.id);
         if (norm.length >= 35) {
-          basePrefixSet.add(norm.slice(0, 35));
+          basePrefixToIdMap.set(norm.slice(0, 35), q.id);
         }
       }
     }
   }
 
-  // 2. Add extra custom questions only if truly unique (O(1) checks)
-  for (const q of extraQuestions) {
-    if (!q || !q.id || deletedIds.includes(q.id)) continue;
-    if (mergedMap.has(q.id)) continue;
+  // 2. Add extra custom/modified questions (user modifications override base questions)
+  for (const rawQ of extraQuestions) {
+    if (!rawQ || !rawQ.id || deletedIds.includes(rawQ.id)) continue;
+    const q = overrides[rawQ.id] ? { ...rawQ, ...overrides[rawQ.id] } : rawQ;
+
+    // If this question ID already exists in mergedMap, the user's updated version takes precedence
+    if (mergedMap.has(q.id)) {
+      const existingQ = mergedMap.get(q.id)!;
+      mergedMap.set(q.id, { ...existingQ, ...q });
+      continue;
+    }
 
     const norm = normalizeQuestionText(q.text);
-    if (!norm) continue;
+    if (!norm) {
+      mergedMap.set(q.id, q);
+      continue;
+    }
 
-    // Fast check: exact normalized match or prefix match in base
-    if (baseNormSet.has(norm)) continue;
-    if (norm.length >= 35 && basePrefixSet.has(norm.slice(0, 35))) continue;
+    // If exact normalized text exists in base questions, MERGE the user modifications into it
+    // instead of discarding it!
+    if (baseNormToIdMap.has(norm)) {
+      const existingId = baseNormToIdMap.get(norm)!;
+      const existingQ = mergedMap.get(existingId);
+      if (existingQ) {
+        mergedMap.set(existingId, { ...existingQ, ...q, id: existingId });
+      }
+      continue;
+    }
+
+    // If prefix matches closely, update the existing question
+    if (norm.length >= 35 && basePrefixToIdMap.has(norm.slice(0, 35))) {
+      const existingId = basePrefixToIdMap.get(norm.slice(0, 35))!;
+      const existingQ = mergedMap.get(existingId);
+      if (existingQ) {
+        mergedMap.set(existingId, { ...existingQ, ...q, id: existingId });
+      }
+      continue;
+    }
 
     mergedMap.set(q.id, q);
-    baseNormSet.add(norm);
+    baseNormToIdMap.set(norm, q.id);
     if (norm.length >= 35) {
-      basePrefixSet.add(norm.slice(0, 35));
+      basePrefixToIdMap.set(norm.slice(0, 35), q.id);
+    }
+  }
+
+  // 3. Ensure any global overrides (e.g., batch unified bancas) are applied across all remaining questions
+  if (Object.keys(overrides).length > 0) {
+    for (const [id, patch] of Object.entries(overrides)) {
+      if (mergedMap.has(id)) {
+        mergedMap.set(id, { ...mergedMap.get(id)!, ...patch });
+      }
     }
   }
 

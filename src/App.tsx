@@ -94,19 +94,21 @@ export const STUDY_TIPS = [
   }
 ];
 
+const DEFAULT_USER_PROGRESS: UserProgress = {
+  userId: "guest",
+  streak: 0,
+  lastAnsweredDate: "",
+  xp: 0,
+  level: 1,
+  dailyGoal: 15,
+  completedAchievements: [],
+};
+
 export default function App() {
   const [questions, setQuestions] = useState<Question[]>(initialQuestions);
   const [deletedQuestionIds, setDeletedQuestionIds] = useState<string[]>([]);
   const [history, setHistory] = useState<UserHistory[]>([]);
-  const [progress, setProgress] = useState<UserProgress>({
-    userId: "guest",
-    streak: 0,
-    lastAnsweredDate: "",
-    xp: 0,
-    level: 1,
-    dailyGoal: 5,
-    completedAchievements: [],
-  });
+  const [progress, setProgress] = useState<UserProgress>(DEFAULT_USER_PROGRESS);
 
   // UI state
   const [activeTab, setActiveTab] = useState<string>("home");
@@ -396,23 +398,17 @@ export default function App() {
           // Sort by XP
           list.sort((a, b) => b.xp - a.xp);
 
-          // Backfill with real simulated competitors
-          const mocks = [
-            { name: "Reginaldo Mendonça", level: 6, xp: 1200 },
-            { name: "Concurseiro Federal", level: 5, xp: 950 },
-            { name: "Foco IBGE AOR", level: 4, xp: 750 },
-            { name: "Estudante Fiel", level: 3, xp: 480 },
-          ];
-
-          mocks.forEach((mock) => {
-            if (!list.some((item) => item.name.toLowerCase() === mock.name.toLowerCase())) {
-              list.push(mock);
+          // Deduplicate by name
+          const uniqueList: { name: string; level: number; xp: number }[] = [];
+          const seenNames = new Set<string>();
+          for (const item of list) {
+            if (!seenNames.has(item.name.toLowerCase())) {
+              seenNames.add(item.name.toLowerCase());
+              uniqueList.push(item);
             }
-          });
+          }
 
-          // Re-sort and slice
-          list.sort((a, b) => b.xp - a.xp);
-          setRankings(list.slice(0, 6));
+          setRankings(uniqueList.slice(0, 10));
         } catch (e) {
           fillMockRankings();
         }
@@ -425,20 +421,15 @@ export default function App() {
   }, [currentUser, progress.xp, progress.displayName, isOnline]);
 
   const fillMockRankings = () => {
-    const rawName = progress.displayName || (currentUser ? currentUser.email?.split("@")[0] : "Ruben");
+    const rawName = progress.displayName || (currentUser ? currentUser.email?.split("@")[0] : "Você");
     const formattedSelfName = rawName
       .replace(/[._]/g, " ")
       .trim()
       .replace(/\b\w/g, (c) => c.toUpperCase());
 
     const list = [
-      { name: "Reginaldo Mendonça", level: 6, xp: 1200 },
-      { name: "Concurseiro Federal", level: 5, xp: 950 },
-      { name: "Foco IBGE AOR", level: 4, xp: 750 },
-      { name: "Estudante Fiel", level: 3, xp: 480 },
-      { name: formattedSelfName, level: progress.level, xp: progress.xp },
+      { name: formattedSelfName, level: progress.level || 1, xp: progress.xp || 0 },
     ];
-    list.sort((a, b) => b.xp - a.xp);
     setRankings(list);
   };
 
@@ -453,18 +444,54 @@ export default function App() {
     setDeletedQuestionIds(deletedIds);
 
     if (localHistory) setHistory(JSON.parse(localHistory));
-    if (localProgress) setProgress(JSON.parse(localProgress));
+    
+    let loadedProgress: UserProgress = localProgress ? JSON.parse(localProgress) : { ...DEFAULT_USER_PROGRESS };
+    const customLocal = localStorage.getItem("custom_questions");
+    const guestList: Question[] = customLocal ? JSON.parse(customLocal) : [];
+    const guestHistList: UserHistory[] = localHistory ? JSON.parse(localHistory) : [];
+
+    // Auto-sync achievements for guest
+    const curBadges = new Set(loadedProgress.completedAchievements || []);
+    let guestBadgesChanged = false;
+    if (curBadges.has("ach_collector")) {
+      curBadges.add("ach_q_5");
+      curBadges.add("ach_q_15");
+      guestBadgesChanged = true;
+    }
+    if (guestList.length > 0 && !curBadges.has("ach_custom")) {
+      curBadges.add("ach_custom");
+      guestBadgesChanged = true;
+    }
+    if (guestHistList.length >= 1 && !curBadges.has("ach_welcome")) {
+      curBadges.add("ach_welcome");
+      guestBadgesChanged = true;
+    }
+    if (guestHistList.length >= 5 && !curBadges.has("ach_q_5")) {
+      curBadges.add("ach_q_5");
+      guestBadgesChanged = true;
+    }
+    if (guestHistList.length >= 15 && !curBadges.has("ach_q_15")) {
+      curBadges.add("ach_q_15");
+      guestBadgesChanged = true;
+    }
+    if (guestHistList.length >= 30 && !curBadges.has("ach_q_30")) {
+      curBadges.add("ach_q_30");
+      guestBadgesChanged = true;
+    }
+    if (guestHistList.length >= 60 && !curBadges.has("ach_q_60")) {
+      curBadges.add("ach_q_60");
+      guestBadgesChanged = true;
+    }
+    if (guestBadgesChanged) {
+      loadedProgress.completedAchievements = Array.from(curBadges);
+      localStorage.setItem("guest_progress", JSON.stringify(loadedProgress));
+    }
+    setProgress(loadedProgress);
+
     if (localQuestions) {
       try {
-        const guestList: Question[] = JSON.parse(localQuestions);
         const allQs = deduplicateAndMergeQuestions(initialQuestions, guestList, deletedIds);
         setQuestions(allQs);
-        
-        // Clean obsolete custom questions in localStorage that already exist in initialQuestions
-        const uniqueCustoms = guestList.filter(
-          (g) => !initialQuestions.some((iq) => isQuestionEquivalent(iq, g))
-        );
-        localStorage.setItem("custom_questions", JSON.stringify(uniqueCustoms));
       } catch (e) {
         setQuestions(deduplicateAndMergeQuestions(initialQuestions, [], deletedIds));
       }
@@ -650,23 +677,77 @@ export default function App() {
           banca: qData.banca,
           ano: qData.ano,
           assunto: qData.assunto,
+          disciplina: qData.disciplina,
           nivelSuperior: qData.nivelSuperior,
           image: qData.image || null,
+          generalExplanation: qData.generalExplanation || undefined,
         };
 
-        const norm = normalizeQuestionText(q.text);
-        const isBaseDuplicate =
-          baseIdSet.has(q.id) ||
-          (norm && (baseNormSet.has(norm) || (norm.length >= 35 && basePrefixSet.has(norm.slice(0, 35)))));
-
-        if (!isBaseDuplicate) {
-          userQuestions.push(q);
-        }
+        userQuestions.push(q);
       });
 
-      // Deduplicate questions to guarantee pristine count
+      // Also merge any offline cached custom questions
+      const localCustom = localStorage.getItem("custom_questions");
+      if (localCustom) {
+        try {
+          const localList: Question[] = JSON.parse(localCustom);
+          for (const lq of localList) {
+            const idx = userQuestions.findIndex((uq) => uq.id === lq.id);
+            if (idx === -1) {
+              userQuestions.push(lq);
+            }
+          }
+        } catch (e) {
+          console.error("Erro ao ler cache local de questões:", e);
+        }
+      }
+
+      // Deduplicate questions to guarantee pristine count and prioritize user modifications
       const allQs = deduplicateAndMergeQuestions(initialQuestions, userQuestions, deletedIds);
       setQuestions(allQs);
+
+      // Auto-verify and sync achievements based on cloud data
+      const hasCustom = userQuestions.length > 0 || (localStorage.getItem("custom_questions") && JSON.parse(localStorage.getItem("custom_questions") || "[]").length > 0);
+      const curBadges = new Set(cloudProgress.completedAchievements || []);
+      let cloudBadgesChanged = false;
+
+      if (curBadges.has("ach_collector")) {
+        curBadges.add("ach_q_5");
+        curBadges.add("ach_q_15");
+        cloudBadgesChanged = true;
+      }
+      if (hasCustom && !curBadges.has("ach_custom")) {
+        curBadges.add("ach_custom");
+        cloudBadgesChanged = true;
+      }
+      if (uHistory.length >= 1 && !curBadges.has("ach_welcome")) {
+        curBadges.add("ach_welcome");
+        cloudBadgesChanged = true;
+      }
+      if (uHistory.length >= 5 && !curBadges.has("ach_q_5")) {
+        curBadges.add("ach_q_5");
+        cloudBadgesChanged = true;
+      }
+      if (uHistory.length >= 15 && !curBadges.has("ach_q_15")) {
+        curBadges.add("ach_q_15");
+        cloudBadgesChanged = true;
+      }
+      if (uHistory.length >= 30 && !curBadges.has("ach_q_30")) {
+        curBadges.add("ach_q_30");
+        cloudBadgesChanged = true;
+      }
+      if (uHistory.length >= 60 && !curBadges.has("ach_q_60")) {
+        curBadges.add("ach_q_60");
+        cloudBadgesChanged = true;
+      }
+
+      if (cloudBadgesChanged) {
+        cloudProgress.completedAchievements = Array.from(curBadges);
+        setProgress({ ...cloudProgress });
+        if (isOnline) {
+          setDoc(progressRef, cloudProgress).catch(() => {});
+        }
+      }
     } catch (e) {
       console.warn("Could not load full user data from cloud (using local cache fallback):", e);
       loadGuestData();
@@ -742,18 +823,20 @@ export default function App() {
       }
     }
 
-    // Level up calculation logic (200 XP per level ceiling)
+    // Level up calculation logic (200 XP per level ceiling, up to level 20)
     const baseNewXp = progress.xp + (isCorrect ? 15 : 5); // +15 XP if correct, +5 XP if wrong
     let currentLvl = progress.level;
     let nextLvlThreshold = currentLvl * 200;
     let finalXp = baseNewXp;
     
-    if (finalXp >= nextLvlThreshold) {
+    while (finalXp >= nextLvlThreshold && currentLvl < 20) {
       finalXp = finalXp - nextLvlThreshold;
       currentLvl += 1;
+      const leveledTo = currentLvl;
       setTimeout(() => {
-        customAlert(`🌟 PARABÉNS! Você subiu de nível! Agora você é Nível ${currentLvl}! continue estudando.`, "Subiu de Nível! 🎉");
+        customAlert(`🌟 PARABÉNS! Você subiu de nível! Agora você é Nível ${leveledTo}! Continue estudando.`, "Subiu de Nível! 🎉");
       }, 800);
+      nextLvlThreshold = currentLvl * 200;
     }
 
     const updatedProgress: UserProgress = {
@@ -787,6 +870,79 @@ export default function App() {
         localStorage.setItem("guest_history", JSON.stringify(updatedHistory));
         localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
       }
+    }
+
+    // Trigger progressive achievements checks across all 40 challenges
+    const todayAnswersCount = updatedHistory.filter(
+      (h) => new Date(h.answeredAt).toISOString().slice(0, 10) === todayStr
+    ).length;
+    const totalAnswered = updatedHistory.length;
+    const correctAnswers = updatedHistory.filter((h) => h.isCorrect).length;
+    const accuracy = totalAnswered > 0 ? correctAnswers / totalAnswered : 0;
+
+    // Volume progression (up to 4,000 questions)
+    handleUnlockBadge("ach_welcome");
+    if (totalAnswered >= 5) handleUnlockBadge("ach_q_5");
+    if (totalAnswered >= 15) handleUnlockBadge("ach_q_15");
+    if (totalAnswered >= 30) handleUnlockBadge("ach_q_30");
+    if (totalAnswered >= 60) handleUnlockBadge("ach_q_60");
+    if (totalAnswered >= 100) handleUnlockBadge("ach_q_100");
+    if (totalAnswered >= 150) handleUnlockBadge("ach_q_150");
+    if (totalAnswered >= 250) handleUnlockBadge("ach_q_250");
+    if (totalAnswered >= 400) handleUnlockBadge("ach_q_400");
+    if (totalAnswered >= 500) handleUnlockBadge("ach_q_500");
+    if (totalAnswered >= 750) handleUnlockBadge("ach_q_750");
+    if (totalAnswered >= 1000) handleUnlockBadge("ach_q_1000");
+    if (totalAnswered >= 1300) handleUnlockBadge("ach_q_1300");
+    if (totalAnswered >= 1600) handleUnlockBadge("ach_q_1600");
+    if (totalAnswered >= 2000) handleUnlockBadge("ach_q_2000");
+    if (totalAnswered >= 2400) handleUnlockBadge("ach_q_2400");
+    if (totalAnswered >= 2800) handleUnlockBadge("ach_q_2800");
+    if (totalAnswered >= 3200) handleUnlockBadge("ach_q_3200");
+    if (totalAnswered >= 3600) handleUnlockBadge("ach_q_3600");
+    if (totalAnswered >= 4000) handleUnlockBadge("ach_q_4000");
+
+    // Streak progression
+    if (newStreak >= 3) handleUnlockBadge("ach_streak");
+    if (newStreak >= 7) handleUnlockBadge("ach_streak_7");
+    if (newStreak >= 14) handleUnlockBadge("ach_streak_14");
+    if (newStreak >= 21) handleUnlockBadge("ach_streak_21");
+    if (newStreak >= 30) handleUnlockBadge("ach_streak_30");
+    if (newStreak >= 60) handleUnlockBadge("ach_streak_60");
+
+    // Daily & Intensity goals
+    if (todayAnswersCount >= (progress.dailyGoal || 15)) handleUnlockBadge("ach_daily_goal");
+    if (todayAnswersCount >= 30) handleUnlockBadge("ach_speed_master");
+    if (todayAnswersCount >= 50) {
+      handleUnlockBadge("ach_marathon_master");
+      handleUnlockBadge("ach_day_50");
+    }
+
+    // High accuracy milestones
+    if (totalAnswered >= 20 && accuracy >= 0.75) handleUnlockBadge("ach_sniper");
+    if (totalAnswered >= 100 && accuracy >= 0.80) handleUnlockBadge("ach_accuracy_elite");
+    if (totalAnswered >= 200 && accuracy >= 0.85) handleUnlockBadge("ach_super_sniper");
+
+    // Subject diversity
+    const distinctDisciplines = new Set(
+      updatedHistory
+        .map((h) => questions.find((q) => q.id === h.questionId)?.disciplina)
+        .filter(Boolean)
+    );
+    if (distinctDisciplines.size >= 3) handleUnlockBadge("ach_multi_disc");
+    if (distinctDisciplines.size >= 5) handleUnlockBadge("ach_all_subjects_master");
+
+    // Level 20 Legend
+    if (currentLvl >= 20) handleUnlockBadge("ach_legend_hall");
+
+    const answeredQ = questions.find((q) => q.id === qId);
+    if (
+      answeredQ &&
+      (answeredQ.banca?.toLowerCase().includes("ibge") ||
+        answeredQ.disciplina?.toLowerCase().includes("ibge") ||
+        answeredQ.assunto?.toLowerCase().includes("ibge"))
+    ) {
+      handleUnlockBadge("ach_ibge");
     }
   };
 
@@ -879,6 +1035,10 @@ export default function App() {
 
     // Unlock achievement for custom question
     handleUnlockBadge("ach_custom");
+    const customCount = updatedQuestions.filter((q) => q.id.startsWith("q_custom_")).length;
+    if (customCount >= 3) {
+      handleUnlockBadge("ach_author_pro");
+    }
     return "added";
   };
 
@@ -896,36 +1056,84 @@ export default function App() {
         prevQuestions.map((q) => (q.id === updatedQ.id ? updatedQ : q))
       );
 
-      // 2. Persist in cloud or local storage
-      if (!currentUser) {
-        // Save locally for Guest
-        const customLocal = localStorage.getItem("custom_questions") || "[]";
-        let queueList: Question[] = JSON.parse(customLocal);
-        const index = queueList.findIndex((q) => q.id === updatedQ.id);
-        if (index !== -1) {
-          queueList[index] = updatedQ;
-        } else {
-          queueList.push(updatedQ);
-        }
-        localStorage.setItem("custom_questions", JSON.stringify(queueList));
-      } else {
-        if (isOnline) {
-          try {
-            await setDoc(doc(db, "customQuestions", updatedQ.id), {
-              ...updatedQ,
-              userId: currentUser.uid,
-            });
-          } catch (e) {
-            console.error("Failed to update cloud question, falling back to local:", e);
-            updateQuestionLocally(updatedQ);
-          }
-        } else {
-          updateQuestionLocally(updatedQ);
+      // 2. Persist locally as fast cache
+      updateQuestionLocally(updatedQ);
+
+      // 3. Persist in cloud if user is logged in
+      if (currentUser && isOnline) {
+        try {
+          await setDoc(doc(db, "customQuestions", updatedQ.id), {
+            ...updatedQ,
+            userId: currentUser.uid,
+            updatedAt: Date.now(),
+          });
+        } catch (e) {
+          console.error("Failed to update cloud question, kept local cache:", e);
         }
       }
       return true;
     } catch (err) {
       console.error("Error updating question:", err);
+      return false;
+    }
+  };
+
+  const handleBatchUpdateQuestions = async (
+    updates: { id: string; changes: Partial<Question> }[]
+  ): Promise<boolean> => {
+    if (updates.length === 0) return true;
+
+    try {
+      const updateMap = new Map<string, Partial<Question>>();
+      updates.forEach((u) => updateMap.set(u.id, u.changes));
+
+      const updatedList: Question[] = [];
+
+      // 1. Update questions state locally
+      setQuestions((prevQuestions) => {
+        return prevQuestions.map((q) => {
+          if (updateMap.has(q.id)) {
+            const updated: Question = { ...q, ...updateMap.get(q.id)! };
+            updatedList.push(updated);
+            return updated;
+          }
+          return q;
+        });
+      });
+
+      // 2. Persist locally (guest + fast offline cache)
+      const customLocal = localStorage.getItem("custom_questions") || "[]";
+      let queueList: Question[] = JSON.parse(customLocal);
+      const queueMap = new Map<string, Question>();
+      queueList.forEach((q) => queueMap.set(q.id, q));
+      updatedList.forEach((q) => queueMap.set(q.id, q));
+      localStorage.setItem("custom_questions", JSON.stringify(Array.from(queueMap.values())));
+
+      // 3. Persist to Firestore in batch if logged in
+      if (currentUser && isOnline) {
+        try {
+          const chunkSize = 400;
+          for (let i = 0; i < updatedList.length; i += chunkSize) {
+            const chunk = updatedList.slice(i, i + chunkSize);
+            const batch = writeBatch(db);
+            for (const q of chunk) {
+              const docRef = doc(db, "customQuestions", q.id);
+              batch.set(docRef, {
+                ...q,
+                userId: currentUser.uid,
+                updatedAt: Date.now(),
+              });
+            }
+            await batch.commit();
+          }
+        } catch (e) {
+          console.error("Erro ao salvar lote no Firestore:", e);
+        }
+      }
+
+      return true;
+    } catch (err) {
+      console.error("Erro em handleBatchUpdateQuestions:", err);
       return false;
     }
   };
@@ -996,47 +1204,66 @@ export default function App() {
   };
 
   const handleUnlockBadge = async (badgeId: string) => {
-    if (progress.completedAchievements.includes(badgeId)) return;
-
-    const updatedCompleted = [...progress.completedAchievements, badgeId];
     const item = ALL_ACHIEVEMENTS.find((b) => b.id === badgeId);
-    
-    // Give XP reward
-    const reward = item?.xpReward || 50;
-    const baseNewXp = progress.xp + reward;
-    let currentLvl = progress.level;
-    let nextLvlThreshold = currentLvl * 200;
-    let finalXp = baseNewXp;
-    
-    if (finalXp >= nextLvlThreshold) {
-      finalXp = finalXp - nextLvlThreshold;
-      currentLvl += 1;
-    }
+    let didUnlock = false;
+    let reward = item?.xpReward || 50;
 
-    const updatedProgress = {
-      ...progress,
-      completedAchievements: updatedCompleted,
-      xp: finalXp,
-      level: currentLvl,
-    };
-    setProgress(updatedProgress);
+    setProgress((prevProgress) => {
+      const currentBadges = prevProgress.completedAchievements || [];
+      if (currentBadges.includes(badgeId)) {
+        return prevProgress;
+      }
 
-    setTimeout(() => {
-      customAlert(`🏆 CONQUISTA DESBLOQUEADA: "${item?.title || "Nova Conquista"}"!\n${item?.description || ""}\nGanhou +${reward} de XP!`, "Conquista Desbloqueada! 🏆");
-    }, 1200);
+      didUnlock = true;
+      const updatedCompleted = [...currentBadges, badgeId];
 
-    if (!currentUser) {
-      localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
-    } else {
-      if (isOnline) {
-        try {
-          await setDoc(doc(db, "usersProgress", currentUser.uid), updatedProgress);
-        } catch (e) {
+      // Give XP reward
+      const baseNewXp = (prevProgress.xp || 0) + reward;
+      let currentLvl = prevProgress.level || 1;
+      let nextLvlThreshold = currentLvl * 200;
+      let finalXp = baseNewXp;
+
+      while (finalXp >= nextLvlThreshold && currentLvl < 20) {
+        finalXp = finalXp - nextLvlThreshold;
+        currentLvl += 1;
+        nextLvlThreshold = currentLvl * 200;
+      }
+
+      if (currentLvl >= 20 && !updatedCompleted.includes("ach_legend_hall")) {
+        updatedCompleted.push("ach_legend_hall");
+      }
+
+      const updatedProgress: UserProgress = {
+        ...prevProgress,
+        completedAchievements: updatedCompleted,
+        xp: finalXp,
+        level: currentLvl,
+      };
+
+      // Persist in storage or cloud
+      if (!currentUser) {
+        localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
+      } else {
+        if (isOnline) {
+          setDoc(doc(db, "usersProgress", currentUser.uid), updatedProgress).catch((e) => {
+            console.error("Erro ao salvar progresso:", e);
+            localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
+          });
+        } else {
           localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
         }
-      } else {
-        localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
       }
+
+      return updatedProgress;
+    });
+
+    if (didUnlock && item) {
+      setTimeout(() => {
+        customAlert(
+          `🏆 CONQUISTA DESBLOQUEADA: "${item.title}"!\n${item.description}\nGanhou +${reward} de XP para o seu nível!`,
+          "Conquista Desbloqueada! 🏆"
+        );
+      }, 600);
     }
   };
 
@@ -1439,7 +1666,7 @@ export default function App() {
               { id: "quiz", label: "Caderno" },
               { id: "bank", label: "Questões" },
               { id: "progress", label: "Desempenho" },
-              { id: "badges", label: "Medalhas" },
+              { id: "badges", label: "Níveis & Medalhas" },
               { id: "profile", label: "Área do Aluno" },
             ].map((tab) => (
               <button
@@ -1586,7 +1813,7 @@ export default function App() {
               { id: "quiz", label: "Caderno Estudantil" },
               { id: "bank", label: "Banco de Questões" },
               { id: "progress", label: "Desempenho" },
-              { id: "badges", label: "Medalhas" },
+              { id: "badges", label: "Níveis & Medalhas" },
               { id: "profile", label: "Área do Aluno" },
             ].map((tab) => (
               <button
@@ -1622,7 +1849,7 @@ export default function App() {
       </header>
 
       {/* 🚀 Main Core Dashboard Layout */}
-      <main className="flex-grow max-w-7xl w-full mx-auto px-4 md:px-6 py-6 font-sans">
+      <main className="flex-grow max-w-7xl w-full mx-auto px-3.5 sm:px-4 md:px-6 py-4 sm:py-6 pb-24 lg:pb-8 font-sans">
         
         <div className={activeTab === "home" ? "grid grid-cols-1 xl:grid-cols-4 gap-6" : "block space-y-6"}>
           {/* Main workspace section based on tabs (Left Column, col-span-3 or full) */}
@@ -1663,6 +1890,7 @@ export default function App() {
                 questions={questions}
                 onAddQuestion={handleRegisterCustomQuestion}
                 onUpdateQuestion={handleUpdateQuestion}
+                onBatchUpdateQuestions={handleBatchUpdateQuestions}
                 onReceiveXp={handleManualReceiveXp}
                 onAlert={customAlert}
                 onDeleteMultipleQuestions={handleDeleteMultipleQuestions}
@@ -1712,43 +1940,85 @@ export default function App() {
 
               {/* Public Contest rankings Leaderboard */}
               <div id="sidebar-rankings-leaderboard" className="p-6 rounded-3xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-sm space-y-4">
-                <div className="flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-slate-800">
-                  <Medal className="w-5 h-5 text-amber-500" />
-                  <h4 className="font-bold text-sm text-slate-800 dark:text-slate-100">🏆 Ranking Regional (IBGE)</h4>
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
+                  <div className="flex items-center gap-2">
+                    <Medal className="w-5 h-5 text-amber-500" />
+                    <h4 className="font-bold text-sm text-slate-800 dark:text-slate-100">
+                      {rankings.length > 1 ? "🏆 Ranking Regional (IBGE)" : "🏆 Seu Desempenho Regional"}
+                    </h4>
+                  </div>
+                  {rankings.length > 1 && (
+                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500">
+                      {rankings.length} alunos
+                    </span>
+                  )}
                 </div>
 
-                <div className="space-y-3">
-                  {rankings.slice(0, 4).map((rank, index) => (
-                    <div key={index} className={`flex justify-between items-center p-2 rounded-xl text-xs ${
-                      index === 0
-                        ? "bg-amber-50/50 border border-amber-100 dark:bg-amber-950/10 dark:border-amber-900/30"
-                        : "hover:bg-slate-50 dark:hover:bg-slate-800"
-                    }`}>
-                      <div className="flex items-center gap-2">
-                        <span className={`w-5 h-5 rounded-lg flex items-center justify-center font-black ${
-                          index === 0
-                            ? "bg-amber-100 text-amber-600"
-                            : index === 1
-                            ? "bg-slate-100 text-slate-600"
-                            : index === 2
-                            ? "bg-orange-100 text-orange-600"
-                            : "text-slate-400"
-                        }`}>
-                          {index === 0 ? "1º" : index === 1 ? "2º" : index === 2 ? "3º" : index + 1 + "º"}
-                        </span>
-                        <span className="font-semibold text-slate-700 dark:text-slate-300 truncate max-w-[130px]">{rank.name}</span>
+                {rankings.length > 1 ? (
+                  <div className="space-y-3">
+                    {rankings.slice(0, 5).map((rank, index) => (
+                      <div key={index} className={`flex justify-between items-center p-2 rounded-xl text-xs ${
+                        index === 0
+                          ? "bg-amber-50/70 border border-amber-100 dark:bg-amber-950/20 dark:border-amber-900/40"
+                          : "hover:bg-slate-50 dark:hover:bg-slate-800"
+                      }`}>
+                        <div className="flex items-center gap-2">
+                          <span className={`w-5 h-5 rounded-lg flex items-center justify-center font-black ${
+                            index === 0
+                              ? "bg-amber-100 text-amber-600"
+                              : index === 1
+                              ? "bg-slate-100 text-slate-600"
+                              : index === 2
+                              ? "bg-orange-100 text-orange-600"
+                              : "text-slate-400"
+                          }`}>
+                            {index === 0 ? "1º" : index === 1 ? "2º" : index === 2 ? "3º" : index + 1 + "º"}
+                          </span>
+                          <span className="font-semibold text-slate-700 dark:text-slate-300 truncate max-w-[130px]">{rank.name}</span>
+                        </div>
+                        <span className="font-mono text-slate-500 font-bold dark:text-slate-400">{rank.xp} XP</span>
                       </div>
-                      <span className="font-mono text-slate-500 font-bold dark:text-slate-400">{rank.xp} XP</span>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center p-3 rounded-2xl bg-amber-50/70 border border-amber-200/60 dark:bg-amber-950/20 dark:border-amber-900/40">
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center font-black text-xs shadow-xs">
+                          1º
+                        </div>
+                        <div>
+                          <p className="font-bold text-xs text-slate-800 dark:text-slate-100">
+                            {rankings[0]?.name || progress.displayName || "Você"}
+                          </p>
+                          <p className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">
+                            Nível {progress.level || 1} • {progress.xp || 0} XP
+                          </p>
+                        </div>
+                      </div>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300">
+                        Ativo
+                      </span>
                     </div>
-                  ))}
-                </div>
+
+                    <div className="p-3 bg-slate-50 dark:bg-slate-850 border border-slate-200/60 dark:border-slate-800 rounded-2xl text-center space-y-1">
+                      <p className="text-[11px] font-bold text-slate-700 dark:text-slate-300">
+                        Aguardando novos estudantes
+                      </p>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                        O ranking regional comparativo será ativado automaticamente quando novos candidatos ingressarem no sistema.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
                 <button 
                   onClick={() => {
                     setActiveTab("badges");
                   }}
-                  className="w-full py-2 text-[11px] font-bold text-blue-600 bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/20 dark:text-blue-400 rounded-xl uppercase tracking-widest transition"
+                  className="w-full py-2.5 text-[11px] font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/30 dark:text-indigo-300 rounded-xl uppercase tracking-wider transition cursor-pointer"
                 >
-                  Ver Medalhas & Progresso
+                  Ver Níveis & Conquistas
                 </button>
               </div>
 
@@ -1844,8 +2114,8 @@ export default function App() {
 
       {/* 🚀 Interactive Firebase Authentication Modal overlay */}
       {showAuthModal && (
-        <div id="auth-modal-overlay" className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 animate-fade-in print:hidden">
-          <div className="bg-white dark:bg-slate-900 p-7 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl max-w-sm w-full space-y-5 relative">
+        <div id="auth-modal-overlay" className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-3 sm:p-4 animate-fade-in print:hidden">
+          <div className="bg-white dark:bg-slate-900 p-5 sm:p-7 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl max-w-sm w-full space-y-4 sm:space-y-5 relative">
             
             {/* Fechar modal */}
             <button
@@ -1855,7 +2125,7 @@ export default function App() {
                 setEmail("");
                 setPassword("");
               }}
-              className="absolute right-4.5 top-4.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+              className="absolute right-4.5 top-4.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer"
               title="Fechar"
             >
               <X className="w-4 h-4" />
@@ -1881,7 +2151,7 @@ export default function App() {
             )}
 
             {/* Form de E-mail & Senha */}
-            <form onSubmit={handleAuth} className="space-y-4">
+            <form onSubmit={handleAuth} className="space-y-3.5 sm:space-y-4">
               <div>
                 <label className="block text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 mb-1.5 tracking-wider">Endereço de E-mail</label>
                 <div className="relative">
@@ -1894,7 +2164,7 @@ export default function App() {
                     placeholder="seu_email@exemplo.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2.5 text-sm border border-slate-200 dark:border-slate-750 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-800 dark:text-slate-100 dark:focus:ring-blue-400 transition-all duration-200"
+                    className="w-full pl-10 pr-4 h-11 text-sm border border-slate-200 dark:border-slate-750 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-800 dark:text-slate-100 dark:focus:ring-blue-400 transition-all duration-200"
                   />
                 </div>
               </div>
@@ -1906,7 +2176,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={handleForgotPassword}
-                      className="text-[11px] font-bold text-blue-600 hover:underline dark:text-blue-400"
+                      className="text-[11px] font-bold text-blue-600 hover:underline dark:text-blue-400 cursor-pointer"
                     >
                       Esqueceu sua senha?
                     </button>
@@ -1922,12 +2192,12 @@ export default function App() {
                     placeholder={isSignUp ? "Mínimo de 6 caracteres" : "Digite sua senha"}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-10 pr-10 py-2.5 text-sm border border-slate-200 dark:border-slate-750 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-800 dark:text-slate-100 dark:focus:ring-blue-400 transition-all duration-200"
+                    className="w-full pl-10 pr-10 h-11 text-sm border border-slate-200 dark:border-slate-750 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-800 dark:text-slate-100 dark:focus:ring-blue-400 transition-all duration-200"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
                   >
                     {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                   </button>
@@ -1936,7 +2206,7 @@ export default function App() {
 
               <button
                 type="submit"
-                className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/10 active:scale-[0.98] text-white rounded-xl text-sm font-bold shadow-md transition-all duration-200 flex items-center justify-center gap-1.5"
+                className="w-full h-11 bg-blue-600 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/10 active:scale-[0.98] text-white rounded-xl text-sm font-bold shadow-md transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 {isSignUp ? "Criar Minha Conta" : "Entrar"}
               </button>
@@ -1955,7 +2225,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={handleGoogleLogin}
-                className="flex items-center justify-center py-2.5 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group"
+                className="flex items-center justify-center h-11 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group cursor-pointer"
                 title="Entrar com o Google"
               >
                 <svg className="w-5 h-5 group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="none">
@@ -1970,7 +2240,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={handleFacebookLogin}
-                className="flex items-center justify-center py-2.5 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group"
+                className="flex items-center justify-center h-11 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group cursor-pointer"
                 title="Entrar com o Facebook"
               >
                 <svg className="w-5 h-5 group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="#1877F2">
@@ -1982,7 +2252,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={handleAppleLogin}
-                className="flex items-center justify-center py-2.5 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group"
+                className="flex items-center justify-center h-11 border border-slate-200 dark:border-slate-750 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-350 dark:hover:border-slate-600 transition duration-150 active:scale-95 group cursor-pointer"
                 title="Entrar com a Apple"
               >
                 <svg className="w-5 h-5 fill-current text-slate-800 dark:text-slate-100 group-hover:scale-105 transition-transform" viewBox="0 0 24 24">

@@ -126,22 +126,22 @@ export default function AccessGate({
   // 1. Authenticated User BUT NOT Authorized (No Invite in whitelist)
   if (currentUser) {
     return (
-      <div className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-4 relative overflow-hidden">
+      <div className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-3 sm:p-4 relative overflow-hidden">
         {/* Background Ambient Glow */}
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="w-full max-w-lg bg-slate-900/90 border border-slate-800/90 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-md relative z-10 space-y-6">
+        <div className="w-full max-w-lg bg-slate-900/90 border border-slate-800/90 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl backdrop-blur-md relative z-10 space-y-4 sm:space-y-6">
           {/* Header Icon */}
-          <div className="text-center space-y-3">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 shadow-inner">
-              <ShieldAlert className="w-8 h-8" />
+          <div className="text-center space-y-2 sm:space-y-3">
+            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 shadow-inner">
+              <ShieldAlert className="w-7 h-7 sm:w-8 sm:h-8" />
             </div>
             <div>
               <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">
                 Acesso Restrito por Convite
               </span>
-              <h2 className="text-2xl font-bold text-slate-100 mt-2.5">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mt-2">
                 Conta Aguardando Autorização
               </h2>
               <p className="text-xs text-slate-400 mt-1 max-w-md mx-auto">
@@ -151,24 +151,24 @@ export default function AccessGate({
           </div>
 
           {/* User Email Card */}
-          <div className="p-4 rounded-2xl bg-slate-850/80 border border-slate-800 flex items-center justify-between gap-3">
-            <div className="flex items-center gap-3 min-w-0">
-              <div className="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-sm">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-slate-850/80 border border-slate-800 flex items-center justify-between gap-2.5">
+            <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-sm shrink-0">
                 {currentUser.displayName ? currentUser.displayName[0].toUpperCase() : currentUser.email?.[0].toUpperCase() || "U"}
               </div>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <div className="text-xs font-semibold text-slate-200 truncate">
                   {currentUser.displayName || "Usuário Conectado"}
                 </div>
-                <div className="text-[11px] text-slate-400 truncate flex items-center gap-1 font-mono">
-                  <Mail className="w-3 h-3 text-slate-500" />
+                <div className="text-[11px] text-slate-400 break-all sm:truncate flex items-center gap-1 font-mono">
+                  <Mail className="w-3 h-3 text-slate-500 shrink-0" />
                   {currentUser.email}
                 </div>
               </div>
             </div>
             <button
               onClick={onLogout}
-              className="px-3 py-1.5 text-xs font-bold text-slate-400 hover:text-rose-400 hover:bg-slate-800 rounded-xl transition flex items-center gap-1 flex-shrink-0"
+              className="px-3 py-2 min-h-[38px] text-xs font-bold text-slate-400 hover:text-rose-400 hover:bg-slate-800 rounded-xl transition flex items-center gap-1 shrink-0 cursor-pointer"
               title="Trocar de conta"
             >
               <LogOut className="w-3.5 h-3.5" />
@@ -178,21 +178,21 @@ export default function AccessGate({
 
           {/* Request Status or Request Form */}
           {existingRequest && !isEditingRequest ? (
-            <div className="p-5 rounded-2xl bg-slate-850/60 border border-slate-800 space-y-3">
+            <div className="p-4 sm:p-5 rounded-2xl bg-slate-850/60 border border-slate-800 space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold">
                 {existingRequest.status === "rejected" ? (
                   <span className="text-rose-400 flex items-center gap-1.5">
-                    <ShieldAlert className="w-4 h-4" />
+                    <ShieldAlert className="w-4 h-4 shrink-0" />
                     Solicitação Não Aprovada
                   </span>
                 ) : existingRequest.status === "approved" ? (
                   <span className="text-amber-400 flex items-center gap-1.5">
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4 shrink-0" />
                     Autorização Necessita de Atualização
                   </span>
                 ) : (
                   <span className="text-amber-400 flex items-center gap-1.5">
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4 shrink-0" />
                     Solicitação de Acesso em Análise
                   </span>
                 )}
@@ -219,7 +219,7 @@ export default function AccessGate({
               </p>
 
               {existingRequest.message && (
-                <div className="text-xs text-slate-400 italic bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+                <div className="text-xs text-slate-400 italic bg-slate-900/80 p-2.5 rounded-xl border border-slate-800 break-words">
                   "{existingRequest.message}"
                 </div>
               )}
@@ -228,15 +228,15 @@ export default function AccessGate({
                 <button
                   type="button"
                   onClick={onRecheckAuth}
-                  className="flex-1 py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 cursor-pointer"
+                  className="w-full sm:flex-1 h-11 px-4 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs sm:text-sm font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 cursor-pointer"
                 >
-                  <RefreshCw className="w-3.5 h-3.5" />
+                  <RefreshCw className="w-4 h-4" />
                   Verificar Liberação
                 </button>
                 <button
                   type="button"
                   onClick={() => setIsEditingRequest(true)}
-                  className="py-2.5 px-3.5 bg-slate-800 hover:bg-slate-750 text-slate-300 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 border border-slate-700 cursor-pointer"
+                  className="w-full sm:w-auto h-11 px-4 bg-slate-800 hover:bg-slate-750 text-slate-300 rounded-xl text-xs sm:text-sm font-bold transition flex items-center justify-center gap-1.5 border border-slate-700 cursor-pointer"
                 >
                   <Send className="w-3.5 h-3.5 text-indigo-400" />
                   {existingRequest.status === "pending" ? "Reenviar Pedido" : "Nova Solicitação"}
@@ -253,15 +253,15 @@ export default function AccessGate({
               <div className="pt-2 flex flex-col gap-2">
                 <button
                   onClick={onRecheckAuth}
-                  className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-emerald-600/20"
+                  className="w-full h-11 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs sm:text-sm font-bold transition flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-emerald-600/20"
                 >
-                  <RefreshCw className="w-3.5 h-3.5" />
+                  <RefreshCw className="w-4 h-4" />
                   Checar se já foi aprovado
                 </button>
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSendRequest} className="space-y-3 bg-slate-850/60 p-5 rounded-2xl border border-slate-800">
+            <form onSubmit={handleSendRequest} className="space-y-3 bg-slate-850/60 p-4 sm:p-5 rounded-2xl border border-slate-800">
               <div className="flex items-center justify-between">
                 <div className="text-xs font-bold text-slate-200 flex items-center gap-2">
                   <Send className="w-4 h-4 text-indigo-400" />
@@ -271,7 +271,7 @@ export default function AccessGate({
                   <button
                     type="button"
                     onClick={() => setIsEditingRequest(false)}
-                    className="text-[11px] text-slate-400 hover:text-slate-200"
+                    className="text-[11px] text-slate-400 hover:text-slate-200 cursor-pointer py-1"
                   >
                     Voltar ao status
                   </button>
@@ -288,7 +288,7 @@ export default function AccessGate({
                   placeholder="Seu Nome Completo"
                   value={requestName}
                   onChange={(e) => setRequestName(e.target.value)}
-                  className="w-full px-3.5 py-2 text-xs border border-slate-750 rounded-xl bg-slate-900 text-slate-100 focus:outline-indigo-500"
+                  className="w-full px-3.5 h-11 text-sm border border-slate-750 rounded-xl bg-slate-900 text-slate-100 focus:outline-indigo-500"
                 />
               </div>
 
@@ -298,7 +298,7 @@ export default function AccessGate({
                   placeholder="Mensagem opcional (ex: Aluno da turma de informática / IBGE AOR)"
                   value={requestMessage}
                   onChange={(e) => setRequestMessage(e.target.value)}
-                  className="w-full px-3.5 py-2 text-xs border border-slate-750 rounded-xl bg-slate-900 text-slate-100 focus:outline-indigo-500 resize-none"
+                  className="w-full p-3 text-sm border border-slate-750 rounded-xl bg-slate-900 text-slate-100 focus:outline-indigo-500 resize-none"
                 />
               </div>
 
@@ -306,9 +306,9 @@ export default function AccessGate({
                 <button
                   type="submit"
                   disabled={isSendingRequest}
-                  className="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 disabled:opacity-50 cursor-pointer"
+                  className="flex-1 h-11 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs sm:text-sm font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 disabled:opacity-50 cursor-pointer"
                 >
-                  <Send className="w-3.5 h-3.5" />
+                  <Send className="w-4 h-4" />
                   {isSendingRequest ? "Enviando Pedido..." : "Enviar Solicitação de Convite"}
                 </button>
               </div>
@@ -316,10 +316,10 @@ export default function AccessGate({
           )}
 
           {/* Footer recheck */}
-          <div className="text-center pt-2">
+          <div className="text-center pt-1">
             <button
               onClick={onRecheckAuth}
-              className="text-xs text-indigo-400 hover:text-indigo-300 font-semibold underline"
+              className="text-xs text-indigo-400 hover:text-indigo-300 font-semibold underline p-2 inline-block cursor-pointer"
             >
               Já recebeu o convite? Clique aqui para atualizar
             </button>
@@ -331,20 +331,20 @@ export default function AccessGate({
 
   // 2. Unauthenticated Visitor — Clean, Professional Access Portal
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-3 sm:p-4 relative overflow-hidden">
       {/* Background Ambient Glows */}
       <div className="absolute -top-32 -left-32 w-80 h-80 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="w-full max-w-md bg-slate-900/90 border border-slate-850 rounded-3xl p-7 sm:p-9 shadow-2xl backdrop-blur-md relative z-10 space-y-6">
+      <div className="w-full max-w-md bg-slate-900/90 border border-slate-850 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl backdrop-blur-md relative z-10 space-y-5 sm:space-y-6">
         {/* Brand Header */}
         <div className="text-center space-y-2">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-indigo-600/15 border border-indigo-500/30 text-indigo-400 shadow-inner">
-            <ShieldCheck className="w-7 h-7" />
+          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-indigo-600/15 border border-indigo-500/30 text-indigo-400 shadow-inner">
+            <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7" />
           </div>
           <div>
             <div className="flex items-center justify-center gap-2">
-              <h1 className="text-2xl font-black tracking-tight text-white">
+              <h1 className="text-xl sm:text-2xl font-black tracking-tight text-white">
                 AOR <span className="text-indigo-400">Master</span>
               </h1>
               <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
@@ -369,7 +369,7 @@ export default function AccessGate({
         <button
           type="button"
           onClick={onGoogleLogin}
-          className="w-full py-3 px-4 bg-white hover:bg-slate-100 text-slate-900 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-2.5 shadow-md active:scale-98"
+          className="w-full h-11 sm:h-12 px-4 bg-white hover:bg-slate-100 text-slate-900 rounded-2xl text-xs sm:text-sm font-bold transition flex items-center justify-center gap-2.5 shadow-md active:scale-98 cursor-pointer"
         >
           <svg className="w-4 h-4" viewBox="0 0 24 24">
             <path
@@ -410,7 +410,7 @@ export default function AccessGate({
         {/* Email & Password Form */}
         <form onSubmit={handleAuthSubmit} className="space-y-3.5">
           <div>
-            <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1 tracking-wider">
+            <label className="block text-[10px] uppercase font-bold text-slate-400 mb-1.5 tracking-wider">
               E-mail Autorizado
             </label>
             <div className="relative">
@@ -421,13 +421,13 @@ export default function AccessGate({
                 placeholder="seu_email@exemplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-3 py-2.5 text-xs border border-slate-750 rounded-xl bg-slate-850 text-slate-100 focus:outline-indigo-500 transition"
+                className="w-full pl-10 pr-3 h-11 text-sm border border-slate-750 rounded-xl bg-slate-850 text-slate-100 focus:outline-indigo-500 transition"
               />
             </div>
           </div>
 
           <div>
-            <div className="flex items-center justify-between mb-1">
+            <div className="flex items-center justify-between mb-1.5">
               <label className="block text-[10px] uppercase font-bold text-slate-400 tracking-wider">
                 Senha
               </label>
@@ -435,7 +435,7 @@ export default function AccessGate({
                 <button
                   type="button"
                   onClick={() => onForgotPassword(email)}
-                  className="text-[11px] font-semibold text-indigo-400 hover:underline"
+                  className="text-[11px] font-semibold text-indigo-400 hover:underline cursor-pointer"
                 >
                   Esqueceu a senha?
                 </button>
@@ -449,12 +449,12 @@ export default function AccessGate({
                 placeholder={isSignUp ? "Mínimo 6 caracteres" : "Sua senha"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-10 py-2.5 text-xs border border-slate-750 rounded-xl bg-slate-850 text-slate-100 focus:outline-indigo-500 transition"
+                className="w-full pl-10 pr-10 h-11 text-sm border border-slate-750 rounded-xl bg-slate-850 text-slate-100 focus:outline-indigo-500 transition"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200 cursor-pointer p-1"
               >
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
@@ -464,10 +464,10 @@ export default function AccessGate({
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/25 disabled:opacity-50"
+            className="w-full h-11 bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white rounded-xl text-xs sm:text-sm font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/25 disabled:opacity-50 cursor-pointer"
           >
             {isSignUp ? "Criar Conta e Solicitar Acesso" : "Entrar na Plataforma"}
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-4 h-4" />
           </button>
         </form>
 
@@ -479,7 +479,7 @@ export default function AccessGate({
               setIsSignUp(!isSignUp);
               setAuthError("");
             }}
-            className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition"
+            className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition py-1 cursor-pointer"
           >
             {isSignUp
               ? "Já possui conta autorizada? Fazer Login"

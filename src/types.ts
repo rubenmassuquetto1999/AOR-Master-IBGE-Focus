@@ -7,6 +7,7 @@ export interface Question {
   banca: string;          // CESPE, FGV, FCC, Cesgranrio, IBGE, etc.
   ano: number;
   assunto: string;        // Ortografia, Acentuação, Hífen, Noções de Administração, etc.
+  disciplina?: string;    // Língua Portuguesa, Noções de Administração, Informática, RLM, etc.
   nivelSuperior: boolean;
   image?: string | null;  // URL ou base64 da imagem correspondente
   generalExplanation?: string; // Comentário geral / Resolução da questão
@@ -44,6 +45,9 @@ export interface Achievement {
   description: string;
   xpReward: number;
   icon: string;             // Nome do ícone do lucide-react ou emoji
+  levelRequired?: number;   // Nível mínimo associado à conquista
+  levelTitle?: string;      // Nome do título do nível correspondente
+  category?: string;        // Categoria temática
 }
 
 export interface QuizSession {

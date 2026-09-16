@@ -111,12 +111,31 @@ export default function Quiz({
   // Set up available filters
   const availableBancas = ["Todos", ...Array.from(new Set(questions.map((q) => q.banca).filter(Boolean))).sort()];
   
-  const availableDisciplinas = ["Todas", ...TAXONOMY.map((d) => d.name)];
+  const availableDisciplinas = [
+    "Todas",
+    ...Array.from(
+      new Set([
+        ...TAXONOMY.map((d) => d.name),
+        ...(questions.map((q) => q.disciplina).filter(Boolean) as string[]),
+      ])
+    ).sort(),
+  ];
 
   const availableAssuntos =
     selectedDisciplina === "Todas"
-      ? ["Todos", ...ALL_TOPICS]
-      : ["Todos", ...getTopicsForDiscipline(selectedDisciplina)];
+      ? ["Todos", ...Array.from(new Set([...ALL_TOPICS, ...questions.map((q) => q.assunto).filter(Boolean)])).sort()]
+      : [
+          "Todos",
+          ...Array.from(
+            new Set([
+              ...getTopicsForDiscipline(selectedDisciplina),
+              ...questions
+                .filter((q) => (q.disciplina ? q.disciplina === selectedDisciplina : getDisciplineForTopic(q.assunto)?.name === selectedDisciplina))
+                .map((q) => q.assunto)
+                .filter(Boolean),
+            ])
+          ).sort(),
+        ];
 
   // Exclude successfully answered questions (No Repeated Questions priority)
   const answeredSuccessfulIds = history.filter((h) => h.isCorrect).map((h) => h.questionId);
@@ -308,6 +327,7 @@ export default function Quiz({
       }
       if (selectedDisciplina !== "Todas") {
         pool = pool.filter((q) => {
+          if (q.disciplina) return q.disciplina === selectedDisciplina;
           const disc = getDisciplineForTopic(q.assunto);
           return disc ? disc.name === selectedDisciplina : false;
         });
@@ -416,11 +436,18 @@ export default function Quiz({
 
     // Trigger Achievements check
     onUnlockBadge("ach_welcome"); // First steps
-    if (accuracy === 1) {
-      onUnlockBadge("ach_perfect"); // Genio 100%
+    if (accuracy === 1 && sessionQuestions.length >= 1) {
+      onUnlockBadge("ach_perfect"); // Gabarito Perfeito 100%
     }
-    if (sessionQuestions.some((q) => q.banca === "IBGE (AOR)")) {
-      onUnlockBadge("ach_ibge"); // Rumo ao Censo
+    if (
+      sessionQuestions.some(
+        (q) =>
+          q.banca?.toLowerCase().includes("ibge") ||
+          q.disciplina?.toLowerCase().includes("ibge") ||
+          q.assunto?.toLowerCase().includes("ibge")
+      )
+    ) {
+      onUnlockBadge("ach_ibge"); // Foco no IBGE
     }
   };
 

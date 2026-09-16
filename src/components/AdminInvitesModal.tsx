@@ -184,41 +184,41 @@ export default function AdminInvitesModal({
   const pendingRequests = requests.filter((r) => r.status === "pending");
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 animate-fade-in print:hidden">
-      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden relative">
+    <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 animate-fade-in print:hidden">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-3xl max-h-[92dvh] flex flex-col overflow-hidden relative">
         {/* Header */}
-        <div className="p-6 border-b border-slate-150 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-850">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-600/10 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
-              <Shield className="w-5 h-5" />
+        <div className="p-3.5 sm:p-6 border-b border-slate-150 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-850 gap-2">
+          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-indigo-600/10 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+              <Shield className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <h3 className="text-sm sm:text-lg font-bold text-slate-900 dark:text-slate-100 truncate">
                   Painel de Convites & Acesso Restrito
                 </h3>
-                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300">
+                <span className="text-[9px] sm:text-[10px] font-extrabold uppercase px-1.5 sm:px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 shrink-0">
                   Admin
                 </span>
               </div>
-              <p className="text-xs text-slate-500 dark:text-slate-400">
+              <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 truncate sm:whitespace-normal">
                 Apenas usuários autorizados por você nesta lista conseguem entrar na plataforma.
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
             <button
               onClick={loadData}
               disabled={isLoading}
-              className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-slate-800 transition"
+              className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-slate-800 transition cursor-pointer"
               title="Atualizar lista"
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? "animate-spin" : ""}`} />
             </button>
             <button
               onClick={onClose}
-              className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-slate-800 transition"
+              className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl hover:bg-slate-200/50 dark:hover:bg-slate-800 transition cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -226,11 +226,11 @@ export default function AdminInvitesModal({
         </div>
 
         {/* Action Bar / Tabs */}
-        <div className="px-6 pt-4 border-b border-slate-150 dark:border-slate-800 flex items-center justify-between flex-wrap gap-3">
-          <div className="flex items-center gap-2">
+        <div className="px-3.5 sm:px-6 pt-3 sm:pt-4 border-b border-slate-150 dark:border-slate-800 flex items-center justify-between flex-wrap gap-2.5">
+          <div className="flex items-center gap-2 overflow-x-auto max-w-full">
             <button
               onClick={() => setActiveTab("invites")}
-              className={`pb-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition ${
+              className={`pb-2.5 sm:pb-3 px-2.5 sm:px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition whitespace-nowrap cursor-pointer ${
                 activeTab === "invites"
                   ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400"
                   : "border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
@@ -241,7 +241,7 @@ export default function AdminInvitesModal({
             </button>
             <button
               onClick={() => setActiveTab("requests")}
-              className={`pb-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition relative ${
+              className={`pb-2.5 sm:pb-3 px-2.5 sm:px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition relative whitespace-nowrap cursor-pointer ${
                 activeTab === "requests"
                   ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400"
                   : "border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
@@ -259,7 +259,7 @@ export default function AdminInvitesModal({
 
           <button
             onClick={handleCopyInviteLink}
-            className="mb-2 text-xs font-bold text-slate-600 dark:text-slate-300 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-750 px-3 py-1.5 rounded-xl flex items-center gap-1.5 transition"
+            className="mb-2 text-xs font-bold text-slate-600 dark:text-slate-300 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-750 px-3 py-1.5 rounded-xl flex items-center gap-1.5 transition cursor-pointer"
           >
             {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
             {copiedLink ? "Texto do Convite Copiado!" : "Copiar Texto de Convite"}
@@ -267,16 +267,16 @@ export default function AdminInvitesModal({
         </div>
 
         {/* Main Content Area */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-6">
+        <div className="flex-1 overflow-y-auto p-3.5 sm:p-6 space-y-4 sm:space-y-6">
           {activeTab === "invites" ? (
             <>
               {/* Form: Add new invite */}
-              <div className="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-3">
+              <div className="bg-slate-50 dark:bg-slate-800/60 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-3">
                 <div className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-200">
                   <UserPlus className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                   Autorizar Novo E-mail de Aluno
                 </div>
-                <form onSubmit={handleAddInvite} className="grid grid-cols-1 sm:grid-cols-12 gap-2.5">
+                <form onSubmit={handleAddInvite} className="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-2.5">
                   <div className="sm:col-span-6">
                     <input
                       type="email"
@@ -284,7 +284,7 @@ export default function AdminInvitesModal({
                       placeholder="E-mail do aluno (ex: aluno@gmail.com)"
                       value={newEmail}
                       onChange={(e) => setNewEmail(e.target.value)}
-                      className="w-full px-3 py-2 text-xs border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-900 focus:outline-indigo-500 text-slate-800 dark:text-slate-100"
+                      className="w-full px-3 py-2.5 sm:py-2 min-h-[42px] text-sm sm:text-xs border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-900 focus:outline-indigo-500 text-slate-800 dark:text-slate-100"
                     />
                   </div>
                   <div className="sm:col-span-3">
@@ -293,16 +293,16 @@ export default function AdminInvitesModal({
                       placeholder="Nome do aluno (opcional)"
                       value={newName}
                       onChange={(e) => setNewName(e.target.value)}
-                      className="w-full px-3 py-2 text-xs border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-900 focus:outline-indigo-500 text-slate-800 dark:text-slate-100"
+                      className="w-full px-3 py-2.5 sm:py-2 min-h-[42px] text-sm sm:text-xs border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-900 focus:outline-indigo-500 text-slate-800 dark:text-slate-100"
                     />
                   </div>
                   <div className="sm:col-span-3">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl shadow-xs transition flex items-center justify-center gap-1.5 disabled:opacity-50"
+                      className="w-full py-2.5 sm:py-2 min-h-[42px] bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-xs font-bold rounded-xl shadow-xs transition flex items-center justify-center gap-1.5 disabled:opacity-50 cursor-pointer"
                     >
-                      <UserCheck className="w-3.5 h-3.5" />
+                      <UserCheck className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
                       {isSubmitting ? "Autorizando..." : "Autorizar Acesso"}
                     </button>
                   </div>
@@ -318,10 +318,10 @@ export default function AdminInvitesModal({
                     placeholder="Buscar por e-mail ou nome..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-8 pr-3 py-1.5 text-xs border border-slate-200 dark:border-slate-750 rounded-xl bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100"
+                    className="w-full pl-8 pr-3 py-2 sm:py-1.5 min-h-[40px] text-sm sm:text-xs border border-slate-200 dark:border-slate-750 rounded-xl bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100"
                   />
                 </div>
-                <span className="text-xs text-slate-400">
+                <span className="text-xs text-slate-400 shrink-0">
                   {filteredInvites.length} de {invites.length} alunos
                 </span>
               </div>
@@ -342,15 +342,15 @@ export default function AdminInvitesModal({
                     return (
                       <div
                         key={invite.email}
-                        className={`p-3.5 rounded-2xl border transition flex items-center justify-between gap-3 ${
+                        className={`p-3 sm:p-3.5 rounded-2xl border transition flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3 ${
                           isActive
                             ? "bg-white dark:bg-slate-850/80 border-slate-200 dark:border-slate-800"
                             : "bg-slate-50 dark:bg-slate-900/50 border-rose-200 dark:border-rose-950/40 opacity-70"
                         }`}
                       >
-                        <div className="flex items-center gap-3 min-w-0">
+                        <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
                           <div
-                            className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs font-bold ${
+                            className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs font-bold shrink-0 ${
                               isSuperAdmin
                                 ? "bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300"
                                 : isActive
@@ -360,24 +360,24 @@ export default function AdminInvitesModal({
                           >
                             {isSuperAdmin ? "👑" : invite.name ? invite.name[0].toUpperCase() : "👤"}
                           </div>
-                          <div className="min-w-0">
-                            <div className="flex items-center gap-2">
-                              <span className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate">
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              <span className="text-xs font-bold text-slate-900 dark:text-slate-100 break-all sm:truncate">
                                 {invite.email}
                               </span>
                               {isSuperAdmin && (
-                                <span className="text-[10px] font-extrabold px-1.5 py-0.2 bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300 rounded-md">
+                                <span className="text-[10px] font-extrabold px-1.5 py-0.2 bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300 rounded-md shrink-0">
                                   Super Admin
                                 </span>
                               )}
                               {!isActive && (
-                                <span className="text-[10px] font-extrabold px-1.5 py-0.2 bg-rose-100 text-rose-800 dark:bg-rose-950/50 dark:text-rose-300 rounded-md">
+                                <span className="text-[10px] font-extrabold px-1.5 py-0.2 bg-rose-100 text-rose-800 dark:bg-rose-950/50 dark:text-rose-300 rounded-md shrink-0">
                                   Acesso Revogado
                                 </span>
                               )}
                             </div>
-                            <div className="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-2">
-                              {invite.name && <span>{invite.name}</span>}
+                            <div className="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-2 flex-wrap">
+                              {invite.name && <span className="truncate">{invite.name}</span>}
                               {invite.createdAt && (
                                 <span className="text-[10px] text-slate-400">
                                   Adicionado em {new Date(invite.createdAt).toLocaleDateString("pt-BR")}
@@ -388,7 +388,7 @@ export default function AdminInvitesModal({
                         </div>
 
                         {!isSuperAdmin && (
-                          <div className="flex items-center gap-1.5 flex-shrink-0">
+                          <div className="flex items-center gap-1.5 flex-shrink-0 self-end sm:self-auto pt-1 sm:pt-0">
                             {confirmDeleteEmail === invite.email ? (
                               <div className="flex items-center gap-1 bg-rose-50 dark:bg-rose-950/60 p-1 rounded-xl border border-rose-200 dark:border-rose-900/50 animate-fade-in">
                                 <span className="text-[10px] font-bold text-rose-700 dark:text-rose-300 px-1">
@@ -398,14 +398,14 @@ export default function AdminInvitesModal({
                                   type="button"
                                   onClick={() => handleDeleteInvite(invite.email)}
                                   disabled={isDeleting}
-                                  className="px-2 py-1 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-[10px] font-extrabold transition cursor-pointer shadow-2xs disabled:opacity-50"
+                                  className="px-2.5 py-1.5 min-h-[32px] bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-[10px] font-extrabold transition cursor-pointer shadow-2xs disabled:opacity-50"
                                 >
                                   {isDeleting ? "..." : "Sim"}
                                 </button>
                                 <button
                                   type="button"
                                   onClick={() => setConfirmDeleteEmail(null)}
-                                  className="px-1.5 py-1 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-[10px] font-bold transition cursor-pointer"
+                                  className="px-2 py-1.5 min-h-[32px] bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-[10px] font-bold transition cursor-pointer"
                                 >
                                   Não
                                 </button>
@@ -415,7 +415,7 @@ export default function AdminInvitesModal({
                                 <button
                                   type="button"
                                   onClick={() => handleToggleStatus(invite)}
-                                  className={`px-2.5 py-1 text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                                  className={`px-3 py-1.5 min-h-[34px] text-xs font-bold rounded-xl transition cursor-pointer ${
                                     isActive
                                       ? "bg-rose-50 text-rose-700 hover:bg-rose-100 dark:bg-rose-950/40 dark:text-rose-300 border border-rose-200/60 dark:border-rose-900/40"
                                       : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-900/40"
@@ -427,10 +427,10 @@ export default function AdminInvitesModal({
                                 <button
                                   type="button"
                                   onClick={() => setConfirmDeleteEmail(invite.email)}
-                                  className="p-1.5 text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/30 transition cursor-pointer"
+                                  className="p-2 min-h-[34px] min-w-[34px] flex items-center justify-center text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/30 transition cursor-pointer"
                                   title="Excluir permanentemente da lista"
                                 >
-                                  <Trash2 className="w-3.5 h-3.5" />
+                                  <Trash2 className="w-4 h-4" />
                                 </button>
                               </>
                             )}
@@ -471,13 +471,13 @@ export default function AdminInvitesModal({
                           : "bg-amber-50/40 dark:bg-amber-950/20 border-amber-200/70 dark:border-amber-900/40"
                       }`}
                     >
-                      <div className="space-y-1 min-w-0">
+                      <div className="space-y-1 min-w-0 flex-1">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate">
+                          <span className="text-xs font-bold text-slate-900 dark:text-slate-100 break-all sm:truncate">
                             {req.email}
                           </span>
                           <span
-                            className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                            className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full shrink-0 ${
                               isAuthorizedInList
                                 ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300"
                                 : isRevokedInList
@@ -497,12 +497,12 @@ export default function AdminInvitesModal({
                           </span>
                         </div>
                         {req.name && (
-                          <div className="text-xs text-slate-600 dark:text-slate-300 font-medium">
+                          <div className="text-xs text-slate-600 dark:text-slate-300 font-medium truncate">
                             {req.name}
                           </div>
                         )}
                         {req.message && (
-                          <div className="text-xs text-slate-600 dark:text-slate-300 italic bg-white/70 dark:bg-slate-900/60 p-2 rounded-xl border border-slate-200/60 dark:border-slate-800 mt-1 max-w-xl">
+                          <div className="text-xs text-slate-600 dark:text-slate-300 italic bg-white/70 dark:bg-slate-900/60 p-2 rounded-xl border border-slate-200/60 dark:border-slate-800 mt-1 max-w-xl break-words">
                             "{req.message}"
                           </div>
                         )}
@@ -512,13 +512,13 @@ export default function AdminInvitesModal({
                       </div>
 
                       {/* Action buttons */}
-                      <div className="flex items-center gap-1.5 flex-shrink-0">
+                      <div className="flex items-center gap-1.5 flex-wrap sm:flex-nowrap shrink-0 self-end sm:self-auto pt-1 sm:pt-0">
                         {!isAuthorizedInList ? (
                           <>
                             <button
                               type="button"
                               onClick={() => handleApproveRequest(req)}
-                              className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-xs transition flex items-center gap-1 cursor-pointer"
+                              className="px-3 py-1.5 min-h-[36px] bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-xs transition flex items-center gap-1 cursor-pointer"
                               title="Liberar acesso deste aluno"
                             >
                               <CheckCircle2 className="w-3.5 h-3.5" />
@@ -528,7 +528,7 @@ export default function AdminInvitesModal({
                               <button
                                 type="button"
                                 onClick={() => handleRejectRequest(req.email)}
-                                className="px-2.5 py-1.5 bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 dark:bg-slate-800 dark:hover:bg-rose-950/40 dark:text-slate-300 text-xs font-bold rounded-xl transition flex items-center gap-1 cursor-pointer"
+                                className="px-2.5 py-1.5 min-h-[36px] bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 dark:bg-slate-800 dark:hover:bg-rose-950/40 dark:text-slate-300 text-xs font-bold rounded-xl transition flex items-center gap-1 cursor-pointer"
                                 title="Recusar solicitação"
                               >
                                 <XCircle className="w-3.5 h-3.5" />
@@ -543,7 +543,7 @@ export default function AdminInvitesModal({
                               setActiveTab("invites");
                               setSearchTerm(req.email);
                             }}
-                            className="px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-750 dark:text-slate-300 text-xs font-bold rounded-xl transition cursor-pointer"
+                            className="px-2.5 py-1.5 min-h-[36px] bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-750 dark:text-slate-300 text-xs font-bold rounded-xl transition cursor-pointer"
                           >
                             Ver na Lista
                           </button>
@@ -552,10 +552,10 @@ export default function AdminInvitesModal({
                         <button
                           type="button"
                           onClick={() => handleDeleteRequest(req.email)}
-                          className="p-2 text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/30 rounded-xl transition cursor-pointer"
+                          className="p-2 min-h-[36px] min-w-[36px] flex items-center justify-center text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/30 rounded-xl transition cursor-pointer"
                           title="Excluir este registro de solicitação"
                         >
-                          <Trash2 className="w-3.5 h-3.5" />
+                          <Trash2 className="w-4 h-4" />
                         </button>
                       </div>
                     </div>

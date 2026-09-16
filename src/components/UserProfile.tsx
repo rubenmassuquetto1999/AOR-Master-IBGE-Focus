@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { User, Award, Flame, Star, Camera, Upload, Trash2, Check, BookOpen, Target, FileText, MapPin, Mail, Lock, Phone, Key, Shield, Users } from "lucide-react";
 import { UserProgress } from "../types";
+import { ALL_ACHIEVEMENTS } from "./Achievements";
 import { auth } from "../firebase";
 import { updateEmail, updatePassword } from "firebase/auth";
 
@@ -412,7 +413,7 @@ export default function UserProfile({
               </div>
               <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-100 dark:border-slate-800">
                 <span className="block text-[9px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider">Medalhas</span>
-                <span className="text-base font-black text-slate-850 dark:text-slate-100 font-mono">{progress.completedAchievements?.length || 0} / 6</span>
+                <span className="text-base font-black text-slate-850 dark:text-slate-100 font-mono">{progress.completedAchievements?.length || 0} / {ALL_ACHIEVEMENTS.length}</span>
               </div>
             </div>
           </section>
