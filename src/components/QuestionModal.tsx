@@ -48,11 +48,11 @@ export default function QuestionModal({
   // --- Form State ---
   const [text, setText] = useState("");
   const [banca, setBanca] = useState("IBFC");
-  const [isCustomBanca, setIsCustomBanca] = useState(false);
+  const [bancaMode, setBancaMode] = useState<"alter" | "cadastrar">("alter");
   const [disciplina, setDisciplina] = useState("Língua Portuguesa");
-  const [isCustomDisciplina, setIsCustomDisciplina] = useState(false);
+  const [disciplinaMode, setDisciplinaMode] = useState<"alter" | "cadastrar">("alter");
   const [assunto, setAssunto] = useState("Concordância Nominal e Concordância Verbal");
-  const [isCustomAssunto, setIsCustomAssunto] = useState(false);
+  const [assuntoMode, setAssuntoMode] = useState<"alter" | "cadastrar">("alter");
   const [ano, setAno] = useState<number>(new Date().getFullYear());
   const [nivelSuperior, setNivelSuperior] = useState(false);
   const [image, setImage] = useState("");
@@ -92,13 +92,13 @@ export default function QuestionModal({
         getDisciplineForTopic(questionToEdit.assunto)?.name ||
         "Língua Portuguesa";
       setDisciplina(disc);
-      setIsCustomDisciplina(false);
+      setDisciplinaMode("alter");
 
       setBanca(questionToEdit.banca || "IBFC");
-      setIsCustomBanca(false);
+      setBancaMode("alter");
 
       setAssunto(questionToEdit.assunto || "Geral");
-      setIsCustomAssunto(false);
+      setAssuntoMode("alter");
 
       setAno(questionToEdit.ano || new Date().getFullYear());
       setNivelSuperior(!!questionToEdit.nivelSuperior);
@@ -135,11 +135,11 @@ export default function QuestionModal({
       // Create mode: clean default form
       setText("");
       setBanca("IBFC");
-      setIsCustomBanca(false);
+      setBancaMode("alter");
       setDisciplina("Língua Portuguesa");
-      setIsCustomDisciplina(false);
+      setDisciplinaMode("alter");
       setAssunto("Concordância Nominal e Concordância Verbal");
-      setIsCustomAssunto(false);
+      setAssuntoMode("alter");
       setAno(new Date().getFullYear());
       setNivelSuperior(false);
       setImage("");
@@ -164,7 +164,10 @@ export default function QuestionModal({
 
   // --- Dynamic Taxonomy and Database Aggregates ---
   const allBancas = Array.from(
-    new Set(questions.map((q) => q.banca?.trim()).filter(Boolean) as string[])
+    new Set([
+      ...questions.map((q) => q.banca?.trim()).filter(Boolean) as string[],
+      ...(banca ? [banca.trim()] : []),
+    ])
   ).sort();
   if (!allBancas.includes("IBFC")) allBancas.unshift("IBFC");
   if (!allBancas.includes("CESPE / Cebraspe")) allBancas.push("CESPE / Cebraspe");
@@ -174,6 +177,7 @@ export default function QuestionModal({
     new Set([
       ...TAXONOMY.map((d) => d.name),
       ...(questions.map((q) => q.disciplina?.trim()).filter(Boolean) as string[]),
+      ...(disciplina ? [disciplina.trim()] : []),
     ])
   ).sort();
 
@@ -193,8 +197,24 @@ export default function QuestionModal({
   );
 
   const availableTopics = Array.from(
-    new Set([...registeredTopicsForSelectedDisc, ...questionsTopicsForSelectedDisc])
+    new Set([
+      ...registeredTopicsForSelectedDisc,
+      ...questionsTopicsForSelectedDisc,
+      ...(assunto ? [assunto.trim()] : []),
+    ])
   ).sort();
+
+  const allDatabaseTopics = Array.from(
+    new Set([
+      ...TAXONOMY.flatMap((d) => d.topics),
+      ...(questions.map((q) => q.assunto?.trim()).filter(Boolean) as string[]),
+      ...(assunto ? [assunto.trim()] : []),
+    ])
+  ).sort();
+
+  const otherDatabaseTopics = allDatabaseTopics.filter(
+    (t) => !availableTopics.includes(t)
+  );
 
   // Handle number of options change (2 for Certo/Errado, 4 or 5 for Múltipla Escolha)
   const handleNumOptionsChange = (num: number) => {
@@ -259,18 +279,18 @@ export default function QuestionModal({
       return;
     }
 
-    if (isCustomBanca && !banca.trim()) {
-      onAlert?.("Por favor, digite o nome da nova banca examinadora!", "Campo Vazio");
+    if (bancaMode === "cadastrar" && !banca.trim()) {
+      onAlert?.("Por favor, preencha o nome da nova banca examinadora!", "Campo Vazio");
       return;
     }
 
-    if (isCustomDisciplina && !disciplina.trim()) {
-      onAlert?.("Por favor, digite o nome da nova disciplina!", "Campo Vazio");
+    if (disciplinaMode === "cadastrar" && !disciplina.trim()) {
+      onAlert?.("Por favor, preencha o nome da nova disciplina!", "Campo Vazio");
       return;
     }
 
-    if (isCustomAssunto && !assunto.trim()) {
-      onAlert?.("Por favor, digite o nome do novo assunto / tópico!", "Campo Vazio");
+    if (assuntoMode === "cadastrar" && !assunto.trim()) {
+      onAlert?.("Por favor, preencha o nome do novo assunto / tópico!", "Campo Vazio");
       return;
     }
 
@@ -334,10 +354,13 @@ export default function QuestionModal({
     >
       <div
         id="question-modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="question-modal-title"
         className="max-w-4xl w-full max-h-[92vh] flex flex-col bg-white dark:bg-gray-850 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-2xl overflow-hidden"
       >
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/50">
+        <header className="flex items-center justify-between px-6 py-5 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/50">
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 rounded-2xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center border border-indigo-100 dark:border-indigo-900 shadow-2xs">
               {mode === "create" ? (
@@ -347,7 +370,7 @@ export default function QuestionModal({
               )}
             </div>
             <div>
-              <h3 className="text-lg font-black text-gray-900 dark:text-white flex items-center gap-2">
+              <h3 id="question-modal-title" className="text-lg font-black text-gray-900 dark:text-white flex items-center gap-2">
                 {mode === "create"
                   ? "Cadastrar Nova Questão"
                   : "Editar Questão de Concurso"}
@@ -362,11 +385,12 @@ export default function QuestionModal({
           <button
             type="button"
             onClick={onClose}
+            aria-label="Fechar modal"
             className="w-9 h-9 rounded-xl flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
-        </div>
+        </header>
 
         {/* Modal Scrollable Body */}
         <form
@@ -374,180 +398,425 @@ export default function QuestionModal({
           className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-thin"
         >
           {/* Top Classification Fields: Banca, Disciplina, Assunto, Ano */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <fieldset className="grid grid-cols-1 md:grid-cols-12 gap-4 border-0 p-0 m-0">
+            <legend className="sr-only">Classificação da Questão de Concurso</legend>
             {/* 1. Banca Examinadora */}
-            <div className="space-y-1.5">
-              <label className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-                <Building2 className="w-3.5 h-3.5 text-indigo-500" />
-                Banca
-              </label>
-              <select
-                value={isCustomBanca ? "__NEW__" : banca}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (val === "__NEW__") {
-                    setIsCustomBanca(true);
-                    setBanca("");
-                  } else {
-                    setIsCustomBanca(false);
-                    setBanca(val);
-                  }
-                }}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer shadow-2xs"
-              >
-                {allBancas.map((b) => (
-                  <option key={b} value={b}>
-                    {b}
-                  </option>
-                ))}
-                <option
-                  value="__NEW__"
-                  className="text-indigo-600 dark:text-indigo-400 font-bold"
-                >
-                  ➕ Cadastrar nova Banca...
-                </option>
-              </select>
+            <div className="md:col-span-6 lg:col-span-6 space-y-1.5">
+              <div className="flex items-center justify-between gap-2 h-7">
+                <label className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider shrink-0">
+                  <Building2 className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
+                  Banca
+                </label>
+                <div className="flex items-center gap-1 shrink-0 p-0.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                  <button
+                    type="button"
+                    onClick={() => setBancaMode("alter")}
+                    className={`text-[11px] font-semibold px-2 py-0.5 rounded-md transition cursor-pointer flex items-center gap-1 ${
+                      bancaMode === "alter"
+                        ? "bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 font-bold shadow-2xs border border-amber-300/80 dark:border-amber-700/80"
+                        : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                    }`}
+                    title="Mudar para alguma opção já cadastrada no banco de dados"
+                  >
+                    <RefreshCw className={`w-3 h-3 ${bancaMode === "alter" ? "text-amber-700 dark:text-amber-400" : ""}`} />
+                    Alterar
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setBancaMode("cadastrar");
+                      setBanca("");
+                    }}
+                    className={`text-[11px] font-semibold px-2 py-0.5 rounded-md transition cursor-pointer flex items-center gap-1 ${
+                      bancaMode === "cadastrar"
+                        ? "bg-indigo-100 dark:bg-indigo-900/60 text-indigo-900 dark:text-indigo-200 font-bold shadow-2xs border border-indigo-300/80 dark:border-indigo-700/80"
+                        : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                    }`}
+                    title="Cadastrar uma nova banca no banco de dados"
+                  >
+                    <PlusCircle className={`w-3 h-3 ${bancaMode === "cadastrar" ? "text-indigo-700 dark:text-indigo-400" : ""}`} />
+                    Cadastrar
+                  </button>
+                </div>
+              </div>
 
-              {isCustomBanca && (
-                <input
-                  type="text"
-                  placeholder="Digite o nome da nova banca..."
-                  value={banca}
-                  onChange={(e) => setBanca(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-indigo-300 bg-indigo-50/40 dark:bg-gray-750 dark:border-indigo-600 dark:text-gray-100 text-xs font-semibold focus:outline-indigo-500 mt-1"
-                  autoFocus
-                />
+              {bancaMode === "alter" ? (
+                <div className="space-y-1">
+                  <select
+                    value={banca}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      if (val === "__NEW__") {
+                        setBancaMode("cadastrar");
+                        setBanca("");
+                      } else {
+                        setBanca(val);
+                      }
+                    }}
+                    className="w-full h-[42px] px-3.5 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-2xs"
+                  >
+                    {allBancas.map((b) => (
+                      <option key={b} value={b}>
+                        {b}
+                      </option>
+                    ))}
+                    <option value="__NEW__" className="text-indigo-600 dark:text-indigo-400 font-bold">
+                      ➕ Cadastrar nova banca...
+                    </option>
+                  </select>
+                  <div className="flex items-center justify-between text-[11px] px-1 text-gray-500 dark:text-gray-400">
+                    <span className="flex items-center gap-1 text-amber-800 dark:text-amber-300 font-medium">
+                      <CheckCircle2 className="w-3 h-3 text-amber-600 dark:text-amber-400 shrink-0" />
+                      Opção do banco ({allBancas.length} cadastradas)
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setBancaMode("cadastrar");
+                        setBanca("");
+                      }}
+                      className="text-indigo-600 dark:text-indigo-400 hover:underline cursor-pointer"
+                    >
+                      + Cadastrar nova banca
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-1">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Digite o nome da nova banca para cadastrar..."
+                      value={banca}
+                      onChange={(e) => setBanca(e.target.value)}
+                      className="w-full h-[42px] px-3.5 pr-24 rounded-xl border-2 border-indigo-400 dark:border-indigo-500 bg-indigo-50/30 dark:bg-gray-750 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-2xs"
+                      autoFocus
+                    />
+                    <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-bold text-indigo-800 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800 px-2 py-0.5 rounded-md pointer-events-none">
+                      ➕ Cadastrar
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] px-1">
+                    <span className="text-indigo-600 dark:text-indigo-400 font-medium">
+                      Cadastrando nova banca no banco de dados.
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setBancaMode("alter");
+                        if (!banca.trim()) setBanca(originalBanca || "IBFC");
+                      }}
+                      className="text-amber-700 dark:text-amber-300 hover:underline font-bold cursor-pointer flex items-center gap-1"
+                    >
+                      <RefreshCw className="w-3 h-3" />
+                      Alterar (escolher do banco)
+                    </button>
+                  </div>
+                </div>
               )}
             </div>
 
             {/* 2. Disciplina */}
-            <div className="space-y-1.5">
-              <label className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-                <GraduationCap className="w-3.5 h-3.5 text-indigo-500" />
-                Disciplina
-              </label>
-              <select
-                value={isCustomDisciplina ? "__NEW__" : disciplina}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (val === "__NEW__") {
-                    setIsCustomDisciplina(true);
-                    setDisciplina("");
-                  } else {
-                    setIsCustomDisciplina(false);
-                    setDisciplina(val);
-                    // auto pick first topic if available
-                    const tList = getTopicsForDiscipline(val);
-                    if (tList.length > 0) {
-                      setAssunto(tList[0]);
-                      setIsCustomAssunto(false);
-                    }
-                  }
-                }}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer shadow-2xs"
-              >
-                {allDisciplinas.map((d) => (
-                  <option key={d} value={d}>
-                    {d}
-                  </option>
-                ))}
-                <option
-                  value="__NEW__"
-                  className="text-indigo-600 dark:text-indigo-400 font-bold"
-                >
-                  ➕ Cadastrar nova Disciplina...
-                </option>
-              </select>
+            <div className="md:col-span-6 lg:col-span-6 space-y-1.5">
+              <div className="flex items-center justify-between gap-2 h-7">
+                <label className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider shrink-0">
+                  <GraduationCap className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
+                  Disciplina
+                </label>
+                <div className="flex items-center gap-1 shrink-0 p-0.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                  <button
+                    type="button"
+                    onClick={() => setDisciplinaMode("alter")}
+                    className={`text-[11px] font-semibold px-2 py-0.5 rounded-md transition cursor-pointer flex items-center gap-1 ${
+                      disciplinaMode === "alter"
+                        ? "bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 font-bold shadow-2xs border border-amber-300/80 dark:border-amber-700/80"
+                        : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                    }`}
+                    title="Mudar para alguma opção já cadastrada no banco de dados"
+                  >
+                    <RefreshCw className={`w-3 h-3 ${disciplinaMode === "alter" ? "text-amber-700 dark:text-amber-400" : ""}`} />
+                    Alterar
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setDisciplinaMode("cadastrar");
+                      setDisciplina("");
+                    }}
+                    className={`text-[11px] font-semibold px-2 py-0.5 rounded-md transition cursor-pointer flex items-center gap-1 ${
+                      disciplinaMode === "cadastrar"
+                        ? "bg-indigo-100 dark:bg-indigo-900/60 text-indigo-900 dark:text-indigo-200 font-bold shadow-2xs border border-indigo-300/80 dark:border-indigo-700/80"
+                        : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                    }`}
+                    title="Cadastrar uma nova disciplina no banco de dados"
+                  >
+                    <PlusCircle className={`w-3 h-3 ${disciplinaMode === "cadastrar" ? "text-indigo-700 dark:text-indigo-400" : ""}`} />
+                    Cadastrar
+                  </button>
+                </div>
+              </div>
 
-              {isCustomDisciplina && (
-                <input
-                  type="text"
-                  placeholder="Digite a nova disciplina..."
-                  value={disciplina}
-                  onChange={(e) => setDisciplina(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-indigo-300 bg-indigo-50/40 dark:bg-gray-750 dark:border-indigo-600 dark:text-gray-100 text-xs font-semibold focus:outline-indigo-500 mt-1"
-                  autoFocus
-                />
+              {disciplinaMode === "alter" ? (
+                <div className="space-y-1">
+                  <select
+                    value={disciplina}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      if (val === "__NEW__") {
+                        setDisciplinaMode("cadastrar");
+                        setDisciplina("");
+                      } else {
+                        setDisciplina(val);
+                        // auto pick first topic if available
+                        const tList = getTopicsForDiscipline(val);
+                        if (tList.length > 0) {
+                          setAssunto(tList[0]);
+                          setAssuntoMode("alter");
+                        }
+                      }
+                    }}
+                    className="w-full h-[42px] px-3.5 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-2xs"
+                  >
+                    {allDisciplinas.map((d) => (
+                      <option key={d} value={d}>
+                        {d}
+                      </option>
+                    ))}
+                    <option value="__NEW__" className="text-indigo-600 dark:text-indigo-400 font-bold">
+                      ➕ Cadastrar nova disciplina...
+                    </option>
+                  </select>
+                  <div className="flex items-center justify-between text-[11px] px-1 text-gray-500 dark:text-gray-400">
+                    <span className="flex items-center gap-1 text-amber-800 dark:text-amber-300 font-medium">
+                      <CheckCircle2 className="w-3 h-3 text-amber-600 dark:text-amber-400 shrink-0" />
+                      Opção do banco ({allDisciplinas.length} cadastradas)
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setDisciplinaMode("cadastrar");
+                        setDisciplina("");
+                      }}
+                      className="text-indigo-600 dark:text-indigo-400 hover:underline cursor-pointer"
+                    >
+                      + Cadastrar nova disciplina
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-1">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Digite o nome da nova disciplina para cadastrar..."
+                      value={disciplina}
+                      onChange={(e) => setDisciplina(e.target.value)}
+                      className="w-full h-[42px] px-3.5 pr-24 rounded-xl border-2 border-indigo-400 dark:border-indigo-500 bg-indigo-50/30 dark:bg-gray-750 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-2xs"
+                      autoFocus
+                    />
+                    <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-bold text-indigo-800 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800 px-2 py-0.5 rounded-md pointer-events-none">
+                      ➕ Cadastrar
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] px-1">
+                    <span className="text-indigo-600 dark:text-indigo-400 font-medium">
+                      Cadastrando nova disciplina no banco de dados.
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setDisciplinaMode("alter");
+                        if (!disciplina.trim()) setDisciplina(originalDisciplina || "Língua Portuguesa");
+                      }}
+                      className="text-amber-700 dark:text-amber-300 hover:underline font-bold cursor-pointer flex items-center gap-1"
+                    >
+                      <RefreshCw className="w-3 h-3" />
+                      Alterar (escolher do banco)
+                    </button>
+                  </div>
+                </div>
               )}
             </div>
 
             {/* 3. Assunto / Tópico */}
-            <div className="space-y-1.5">
-              <label className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-                <BookOpen className="w-3.5 h-3.5 text-indigo-500" />
-                Assunto / Tópico
-              </label>
-              <select
-                value={isCustomAssunto ? "__NEW__" : assunto}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (val === "__NEW__") {
-                    setIsCustomAssunto(true);
-                    setAssunto("");
-                  } else {
-                    setIsCustomAssunto(false);
-                    setAssunto(val);
-                  }
-                }}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer shadow-2xs truncate"
-              >
-                {availableTopics.map((a) => (
-                  <option key={a} value={a}>
-                    {a}
-                  </option>
-                ))}
-                <option
-                  value="__NEW__"
-                  className="text-indigo-600 dark:text-indigo-400 font-bold"
-                >
-                  ➕ Cadastrar novo Tópico...
-                </option>
-              </select>
+            <div className="md:col-span-12 lg:col-span-7 space-y-1.5">
+              <div className="flex items-center justify-between gap-2 h-7">
+                <label className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider shrink-0">
+                  <BookOpen className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
+                  Assunto / Tópico
+                </label>
+                <div className="flex items-center gap-1 shrink-0 p-0.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                  <button
+                    type="button"
+                    onClick={() => setAssuntoMode("alter")}
+                    className={`text-[11px] font-semibold px-2 py-0.5 rounded-md transition cursor-pointer flex items-center gap-1 ${
+                      assuntoMode === "alter"
+                        ? "bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 font-bold shadow-2xs border border-amber-300/80 dark:border-amber-700/80"
+                        : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                    }`}
+                    title="Mudar para alguma opção já cadastrada no banco de dados"
+                  >
+                    <RefreshCw className={`w-3 h-3 ${assuntoMode === "alter" ? "text-amber-700 dark:text-amber-400" : ""}`} />
+                    Alterar
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAssuntoMode("cadastrar");
+                      setAssunto("");
+                    }}
+                    className={`text-[11px] font-semibold px-2 py-0.5 rounded-md transition cursor-pointer flex items-center gap-1 ${
+                      assuntoMode === "cadastrar"
+                        ? "bg-indigo-100 dark:bg-indigo-900/60 text-indigo-900 dark:text-indigo-200 font-bold shadow-2xs border border-indigo-300/80 dark:border-indigo-700/80"
+                        : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                    }`}
+                    title="Cadastrar um novo assunto / tópico no banco de dados"
+                  >
+                    <PlusCircle className={`w-3 h-3 ${assuntoMode === "cadastrar" ? "text-indigo-700 dark:text-indigo-400" : ""}`} />
+                    Cadastrar
+                  </button>
+                </div>
+              </div>
 
-              {isCustomAssunto && (
-                <input
-                  type="text"
-                  placeholder="Digite o novo tópico / assunto..."
-                  value={assunto}
-                  onChange={(e) => setAssunto(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-indigo-300 bg-indigo-50/40 dark:bg-gray-750 dark:border-indigo-600 dark:text-gray-100 text-xs font-semibold focus:outline-indigo-500 mt-1"
-                  autoFocus
-                />
+              {assuntoMode === "alter" ? (
+                <div className="space-y-1">
+                  <select
+                    value={assunto}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      if (val === "__NEW__") {
+                        setAssuntoMode("cadastrar");
+                        setAssunto("");
+                      } else {
+                        setAssunto(val);
+                        // Auto-link disciplina if topic belongs to known discipline in taxonomy
+                        const matched = getDisciplineForTopic(val);
+                        if (matched && matched.name !== disciplina) {
+                          setDisciplina(matched.name);
+                        }
+                      }
+                    }}
+                    className="w-full h-[42px] px-3.5 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-2xs truncate"
+                  >
+                    {availableTopics.length > 0 && (
+                      <optgroup label={`Tópicos de "${disciplina || "esta disciplina"}" (${availableTopics.length})`}>
+                        {availableTopics.map((a) => (
+                          <option key={a} value={a}>
+                            {a}
+                          </option>
+                        ))}
+                      </optgroup>
+                    )}
+                    {otherDatabaseTopics.length > 0 && (
+                      <optgroup label={`Outros tópicos cadastrados no banco (${otherDatabaseTopics.length})`}>
+                        {otherDatabaseTopics.map((a) => (
+                          <option key={a} value={a}>
+                            {a}
+                          </option>
+                        ))}
+                      </optgroup>
+                    )}
+                    <option value="__NEW__" className="text-indigo-600 dark:text-indigo-400 font-bold">
+                      ➕ Cadastrar novo assunto / tópico...
+                    </option>
+                  </select>
+                  <div className="flex items-center justify-between text-[11px] px-1 text-gray-500 dark:text-gray-400">
+                    <span className="flex items-center gap-1 text-amber-800 dark:text-amber-300 font-medium truncate">
+                      <CheckCircle2 className="w-3 h-3 text-amber-600 dark:text-amber-400 shrink-0" />
+                      Opção do banco ({availableTopics.length + otherDatabaseTopics.length} cadastrados)
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setAssuntoMode("cadastrar");
+                        setAssunto("");
+                      }}
+                      className="text-indigo-600 dark:text-indigo-400 hover:underline cursor-pointer shrink-0 ml-1"
+                    >
+                      + Cadastrar novo tópico
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-1">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Digite o novo tópico / assunto para cadastrar..."
+                      value={assunto}
+                      onChange={(e) => setAssunto(e.target.value)}
+                      className="w-full h-[42px] px-3.5 pr-24 rounded-xl border-2 border-indigo-400 dark:border-indigo-500 bg-indigo-50/30 dark:bg-gray-750 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-2xs"
+                      autoFocus
+                    />
+                    <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-bold text-indigo-800 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800 px-2 py-0.5 rounded-md pointer-events-none">
+                      ➕ Cadastrar
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] px-1">
+                    <span className="text-indigo-600 dark:text-indigo-400 font-medium">
+                      Cadastrando novo tópico no banco de dados.
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setAssuntoMode("alter");
+                        if (!assunto.trim()) setAssunto(originalAssunto || "Geral");
+                      }}
+                      className="text-amber-700 dark:text-amber-300 hover:underline font-bold cursor-pointer flex items-center gap-1"
+                    >
+                      <RefreshCw className="w-3 h-3" />
+                      Alterar (escolher do banco)
+                    </button>
+                  </div>
+                </div>
               )}
             </div>
 
             {/* 4. Ano & Nível Superior */}
-            <div className="flex gap-3 items-end">
-              <div className="flex-1 space-y-1.5">
-                <label className="block text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-                  Ano
-                </label>
-                <input
-                  type="number"
-                  min="1990"
-                  max="2035"
-                  value={ano}
-                  onChange={(e) => setAno(Number(e.target.value))}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-2xs"
-                />
+            <div className="md:col-span-12 lg:col-span-5 space-y-1.5">
+              <div className="flex items-center justify-between gap-2 h-7">
+                <span className="text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+                  Ano & Escolaridade
+                </span>
               </div>
-              <div className="flex items-center gap-2 pb-2.5">
-                <input
-                  type="checkbox"
-                  id="modal-nivel-sup"
-                  checked={nivelSuperior}
-                  onChange={(e) => setNivelSuperior(e.target.checked)}
-                  className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600 cursor-pointer"
-                />
-                <label
-                  htmlFor="modal-nivel-sup"
-                  className="text-xs font-bold text-gray-600 dark:text-gray-300 cursor-pointer whitespace-nowrap"
-                >
-                  Nível Superior
-                </label>
+              <div className="flex items-center gap-3">
+                <div className="w-28 sm:w-32 shrink-0 space-y-1">
+                  <input
+                    type="number"
+                    min="1990"
+                    max="2035"
+                    value={ano}
+                    onChange={(e) => setAno(Number(e.target.value))}
+                    aria-label="Ano da questão"
+                    className="w-full h-[42px] px-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm font-bold text-center focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-2xs [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                  <div className="text-[11px] px-1 text-gray-500 dark:text-gray-400 text-center font-medium">
+                    Ano da Prova
+                  </div>
+                </div>
+                <div className="flex-1 min-w-[140px] space-y-1">
+                  <label
+                    htmlFor="modal-nivel-sup"
+                    className="flex items-center gap-2.5 px-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 cursor-pointer transition shadow-2xs h-[42px] select-none"
+                  >
+                    <input
+                      type="checkbox"
+                      id="modal-nivel-sup"
+                      checked={nivelSuperior}
+                      onChange={(e) => setNivelSuperior(e.target.checked)}
+                      className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600 cursor-pointer shrink-0"
+                    />
+                    <span className="text-xs font-bold text-gray-700 dark:text-gray-200 truncate">
+                      Nível Superior
+                    </span>
+                  </label>
+                  <div className="text-[11px] px-1 text-gray-500 dark:text-gray-400 font-medium truncate">
+                    Nível de Exigência
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </fieldset>
 
           {/* Edit Mode Global Replication Helper (Banca, Disciplina, Assunto) */}
           {mode === "edit" && (isBancaChanged || isDisciplinaChanged || isAssuntoChanged) && (
@@ -619,10 +888,11 @@ export default function QuestionModal({
                     className="text-xs text-gray-700 dark:text-gray-200 cursor-pointer leading-relaxed"
                   >
                     <span className="font-bold block text-indigo-900 dark:text-indigo-300">
-                      Vincular Disciplina: "{originalDisciplina}" ➔ "{disciplina.trim()}"
+                      Alterar / Unificar Disciplina: "{originalDisciplina}" ➔ "{disciplina.trim()}"
                     </span>
-                    Vincular a nova disciplina "{disciplina.trim()}" a todas as questões
-                    com o assunto "{originalAssunto}" ({sameAssuntoCount} questões) em todo o banco.
+                    Atualizar a disciplina nas outras{" "}
+                    <strong>{sameDisciplinaCount} questões</strong> com a disciplina "{originalDisciplina}",
+                    unificando em todo o banco de dados.
                   </label>
                 </div>
               )}
@@ -653,7 +923,7 @@ export default function QuestionModal({
           )}
 
           {/* Enunciado da Questão */}
-          <div className="space-y-1.5">
+          <div id="question-statement-container" className="space-y-1.5 pt-3">
             <label className="block text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
               Enunciado da Questão <span className="text-rose-500">*</span>
             </label>

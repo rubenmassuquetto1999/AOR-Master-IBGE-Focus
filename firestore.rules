@@ -52,7 +52,8 @@ service cloud.firestore {
 
     // Rules for usersProgress
     match /usersProgress/{userId} {
-      allow read, write: if isSignedIn() && (request.auth.uid == userId || isAdmin());
+      allow read: if isSignedIn();
+      allow write: if isSignedIn() && (request.auth.uid == userId || isAdmin());
     }
     
     // Rules for usersHistory

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Flame, Trophy, Play, CheckCircle2, TrendingUp, BookOpen, Layers, Sparkles, ChevronRight, Search, ArrowRight } from "lucide-react";
 import { Question, UserHistory } from "../types";
-import { TAXONOMY, DisciplineInfo, getDisciplineForTopic, ALL_TOPICS } from "../data/taxonomy";
+import { TAXONOMY, DisciplineInfo, getDisciplineForTopic, getQuestionDiscipline, ALL_TOPICS } from "../data/taxonomy";
 
 interface DashboardProps {
   history: UserHistory[];
@@ -87,9 +87,10 @@ export default function Dashboard({
     });
   };
 
-  const handleDisciplineClick = (disc: DisciplineInfo) => {
+  const handleDisciplineClick = (disc: { name: string } | string) => {
+    const discName = typeof disc === "string" ? disc : disc.name;
     if (onSelectQuickTopic) {
-      onSelectQuickTopic("Todos", "Todos", disc.name);
+      onSelectQuickTopic("Todos", "Todos", discName);
     } else {
       onSetTab("quiz");
     }
@@ -110,6 +111,87 @@ export default function Dashboard({
     ? allSubtopics.filter((t) => t.toLowerCase().includes(topicSearch.toLowerCase().trim()))
     : [];
 
+  // Dynamic Registered Disciplines derived from current questions and official taxonomy
+  const registeredDisciplines = React.useMemo(() => {
+    // 1. Group questions by their exact registered discipline
+    const questionsByDisc = new Map<string, Question[]>();
+    for (const q of questions) {
+      const disc = getQuestionDiscipline(q);
+      if (!questionsByDisc.has(disc)) {
+        questionsByDisc.set(disc, []);
+      }
+      questionsByDisc.get(disc)!.push(q);
+    }
+
+    // 2. Map canonical taxonomy disciplines that have questions in the database
+    const canonicalDisciplines = TAXONOMY
+      .filter((tax) => (questionsByDisc.get(tax.name) || []).length > 0)
+      .map((tax) => {
+        const discQuestions = questionsByDisc.get(tax.name) || [];
+        const discMastered = new Set(
+          history
+            .filter((h) => h.isCorrect)
+            .map((h) => h.questionId)
+            .filter((id) => discQuestions.some((dq) => dq.id === id))
+        ).size;
+        const pct = discQuestions.length > 0 ? Math.round((discMastered / discQuestions.length) * 100) : 0;
+
+        return {
+          id: tax.id,
+          name: tax.name,
+          shortName: tax.shortName,
+          emoji: tax.emoji,
+          colorBorder: tax.colorBorder,
+          badgeBg: tax.badgeBg,
+          textColor: tax.textColor,
+          desc: tax.desc,
+          questionsCount: discQuestions.length,
+          masteredCount: discMastered,
+          pct,
+        };
+      });
+
+    // 3. Append any other custom disciplines that were registered in questions
+    const customDisciplines: typeof canonicalDisciplines = [];
+    questionsByDisc.forEach((discQuestions, discName) => {
+      if (
+        !TAXONOMY.some((t) => t.name.toLowerCase() === discName.toLowerCase()) &&
+        discQuestions.length > 0
+      ) {
+        const discMastered = new Set(
+          history
+            .filter((h) => h.isCorrect)
+            .map((h) => h.questionId)
+            .filter((id) => discQuestions.some((dq) => dq.id === id))
+        ).size;
+        const pct = discQuestions.length > 0 ? Math.round((discMastered / discQuestions.length) * 100) : 0;
+        const discTopics = Array.from(new Set(discQuestions.map((q) => q.assunto).filter(Boolean)));
+
+        customDisciplines.push({
+          id: discName.toLowerCase().replace(/\s+/g, "-"),
+          name: discName,
+          shortName: discName,
+          emoji: "📚",
+          colorBorder: "hover:border-blue-500 hover:shadow-blue-500/10",
+          badgeBg: "bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300",
+          textColor: "text-blue-600 dark:text-blue-400",
+          desc: discTopics.length > 0 ? discTopics.slice(0, 5).join(", ") : "Disciplina cadastrada no banco de questões.",
+          questionsCount: discQuestions.length,
+          masteredCount: discMastered,
+          pct,
+        });
+      }
+    });
+
+    return [...canonicalDisciplines, ...customDisciplines];
+  }, [questions, history]);
+
+  // Featured topics filtered strictly to disciplines currently active in the database
+  const activeFeaturedTopics = React.useMemo(() => {
+    const activeDiscNames = new Set(registeredDisciplines.map((d) => d.name.toLowerCase()));
+    return FEATURED_TOPICS.filter((ft) => activeDiscNames.has(ft.category.toLowerCase()));
+  }, [registeredDisciplines]);
+
   return (
     <div id="home-dashboard-widgets-container" className="space-y-6">
       {/* Motivational Banner */}
@@ -120,7 +202,7 @@ export default function Dashboard({
         <div className="space-y-1 z-10">
           <h2 className="text-xl md:text-2xl font-black tracking-tight font-sans">Aprovação AOR Master IBGE</h2>
           <p className="text-xs text-blue-100 max-w-lg leading-relaxed">
-            Prepare-se para o cargo de Agente Operacional Regional (AOR) com {totalQuestions.toLocaleString("pt-BR")} questões comentadas das 4 disciplinas oficiais do edital!
+            Prepare-se para o cargo de Agente Operacional Regional (AOR) com {totalQuestions.toLocaleString("pt-BR")} questões comentadas das {registeredDisciplines.length} disciplinas cadastradas!
           </p>
         </div>
         <div className="flex gap-3 z-10">
@@ -279,52 +361,38 @@ export default function Dashboard({
           </span>
         </div>
 
-        {/* 5 Discipline Cards Grid */}
+        {/* Dynamic Registered Disciplines Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {TAXONOMY.map((disc) => {
-            const discQuestions = questions.filter((q) => {
-              const matchedDisc = getDisciplineForTopic(q.assunto);
-              return matchedDisc ? matchedDisc.id === disc.id : disc.topics.includes(q.assunto);
-            });
-            const discMastered = new Set(
-              history
-                .filter((h) => h.isCorrect)
-                .map((h) => h.questionId)
-                .filter((id) => discQuestions.some((dq) => dq.id === id))
-            ).size;
-            const pct = discQuestions.length > 0 ? Math.round((discMastered / discQuestions.length) * 100) : 0;
-
-            return (
-              <div
-                key={disc.id}
-                onClick={() => handleDisciplineClick(disc)}
-                className={`p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-850/40 hover:bg-white dark:hover:bg-slate-800/80 transition-all duration-200 cursor-pointer flex flex-col justify-between shadow-xs hover:shadow-md ${disc.colorBorder}`}
-              >
-                <div className="space-y-2.5">
-                  <div className="flex items-start justify-between gap-2">
-                    <span className="text-2xl">{disc.emoji}</span>
-                    <span className={`text-[10px] font-bold font-mono px-2 py-0.5 rounded-full ${disc.badgeBg}`}>
-                      {discQuestions.length} questões
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-800 dark:text-slate-100 text-sm font-sans">{disc.name}</h4>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed line-clamp-2">{disc.desc}</p>
-                  </div>
+          {registeredDisciplines.map((disc) => (
+            <div
+              key={disc.id}
+              onClick={() => handleDisciplineClick(disc)}
+              className={`p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-850/40 hover:bg-white dark:hover:bg-slate-800/80 transition-all duration-200 cursor-pointer flex flex-col justify-between shadow-xs hover:shadow-md ${disc.colorBorder}`}
+            >
+              <div className="space-y-2.5">
+                <div className="flex items-start justify-between gap-2">
+                  <span className="text-2xl">{disc.emoji}</span>
+                  <span className={`text-[10px] font-bold font-mono px-2 py-0.5 rounded-full ${disc.badgeBg}`}>
+                    {disc.questionsCount} questões
+                  </span>
                 </div>
-
-                <div className="mt-4 pt-3 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                    <span className="font-bold text-slate-700 dark:text-slate-300 font-mono">{discMastered}</span>
-                    <span>/ {discQuestions.length} ({pct}%)</span>
-                  </div>
-                  <button className={`text-xs font-bold flex items-center gap-1 ${disc.textColor} hover:underline`}>
-                    Praticar <ChevronRight className="w-3.5 h-3.5" />
-                  </button>
+                <div>
+                  <h4 className="font-bold text-slate-800 dark:text-slate-100 text-sm font-sans">{disc.name}</h4>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed line-clamp-2">{disc.desc}</p>
                 </div>
               </div>
-            );
-          })}
+
+              <div className="mt-4 pt-3 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+                <div className="flex items-center gap-1.5 text-xs text-slate-400">
+                  <span className="font-bold text-slate-700 dark:text-slate-300 font-mono">{disc.masteredCount}</span>
+                  <span>/ {disc.questionsCount} ({disc.pct}%)</span>
+                </div>
+                <button className={`text-xs font-bold flex items-center gap-1 ${disc.textColor} hover:underline`}>
+                  Praticar <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Featured High-Yield Study Topics */}
@@ -333,7 +401,7 @@ export default function Dashboard({
             <Sparkles className="w-3.5 h-3.5 text-amber-500" /> Tópicos e Assuntos em Destaque
           </h4>
           <div className="flex flex-wrap gap-2">
-            {FEATURED_TOPICS.map((topic) => (
+            {activeFeaturedTopics.map((topic) => (
               <button
                 key={topic.name}
                 onClick={() => handleTopicClick(topic.name)}

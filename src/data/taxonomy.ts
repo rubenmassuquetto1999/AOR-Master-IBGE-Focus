@@ -199,8 +199,32 @@ export function getDisciplineForTopic(topicName: string): DisciplineInfo | undef
   if (!topicName) return undefined;
   const cleanTopic = topicName.trim().toLowerCase();
   return TAXONOMY.find((d) =>
-    d.topics.some((t) => t.toLowerCase() === cleanTopic || cleanTopic.includes(t.toLowerCase()))
+    d.topics.some((t) => {
+      const lowerT = t.toLowerCase();
+      return lowerT === cleanTopic || cleanTopic.includes(lowerT);
+    })
   );
+}
+
+/**
+ * Returns the exact discipline for any question based on registered field, topic, or classification
+ */
+export function getQuestionDiscipline(question: { disciplina?: string; assunto?: string; text?: string; id?: string }): string {
+  if (question.disciplina && question.disciplina.trim()) {
+    const trimmed = question.disciplina.trim();
+    const matchedTax = TAXONOMY.find(
+      (t) =>
+        t.name.toLowerCase() === trimmed.toLowerCase() ||
+        t.id.toLowerCase() === trimmed.toLowerCase() ||
+        t.shortName.toLowerCase() === trimmed.toLowerCase()
+    );
+    return matchedTax ? matchedTax.name : trimmed;
+  }
+  const matched = getDisciplineForTopic(question.assunto || "");
+  if (matched) return matched.name;
+  const classified = classifyQuestion(question);
+  if (classified?.discipline) return classified.discipline;
+  return "Outras";
 }
 
 /**

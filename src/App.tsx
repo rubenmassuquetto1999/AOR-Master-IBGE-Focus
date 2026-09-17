@@ -60,8 +60,7 @@ import ProgressReport from "./components/ProgressReport";
 import Achievements, { ALL_ACHIEVEMENTS } from "./components/Achievements";
 import UserProfile from "./components/UserProfile";
 import AccessGate from "./components/AccessGate";
-import AdminInvitesModal from "./components/AdminInvitesModal";
-import { checkUserInviteStatus, isUserAdmin } from "./lib/firestoreUtils";
+import { checkUserInviteStatus, isUserAdmin, ADMIN_EMAIL } from "./lib/firestoreUtils";
 
 export const STUDY_TIPS = [
   {
@@ -105,8 +104,35 @@ const DEFAULT_USER_PROGRESS: UserProgress = {
 };
 
 export default function App() {
-  const [questions, setQuestions] = useState<Question[]>(initialQuestions);
-  const [deletedQuestionIds, setDeletedQuestionIds] = useState<string[]>([]);
+  const [questionOverrides, setQuestionOverrides] = useState<Record<string, Partial<Question>>>(() => {
+    try {
+      const saved = localStorage.getItem("question_overrides");
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+  const [deletedQuestionIds, setDeletedQuestionIds] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem("deleted_question_ids");
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      return [];
+    }
+  });
+  const [questions, setQuestions] = useState<Question[]>(() => {
+    try {
+      const savedDel = localStorage.getItem("deleted_question_ids");
+      const delIds: string[] = savedDel ? JSON.parse(savedDel) : [];
+      const savedOvr = localStorage.getItem("question_overrides");
+      const ovrs: Record<string, Partial<Question>> = savedOvr ? JSON.parse(savedOvr) : {};
+      const savedCustom = localStorage.getItem("custom_questions");
+      const customQs: Question[] = savedCustom ? JSON.parse(savedCustom) : [];
+      return deduplicateAndMergeQuestions(initialQuestions, customQs, delIds, ovrs);
+    } catch (e) {
+      return initialQuestions;
+    }
+  });
   const [history, setHistory] = useState<UserHistory[]>([]);
   const [progress, setProgress] = useState<UserProgress>(DEFAULT_USER_PROGRESS);
 
@@ -158,7 +184,6 @@ export default function App() {
   const [isLoadingAuth, setIsLoadingAuth] = useState<boolean>(true);
   const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
-  const [showAdminInvites, setShowAdminInvites] = useState<boolean>(false);
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
   
@@ -167,7 +192,6 @@ export default function App() {
   const [password, setPassword] = useState("");
   const [authError, setAuthError] = useState<React.ReactNode>("");
   const [showPassword, setShowPassword] = useState(false);
-  const [rankings, setRankings] = useState<{ name: string; level: number; xp: number }[]>([]);
   const [currentTipIndex, setCurrentTipIndex] = useState(0);
 
   // Mobile menu toggle
@@ -300,24 +324,18 @@ export default function App() {
     localStorage.setItem("themeMode", mode);
   };
 
-  // Verify user authorization against invite whitelist
+  // Verify user authorization: strictly exclusive to rubenmassuquetto1999@gmail.com
   const handleVerifyUserAuth = async (user: FirebaseUser) => {
     if (!user.email) {
       setIsAuthorized(false);
       setIsAdmin(false);
       return;
     }
-    try {
-      const authStatus = await checkUserInviteStatus(user.email);
-      setIsAuthorized(authStatus.isAuthorized);
-      setIsAdmin(authStatus.isAdmin);
-      if (authStatus.isAuthorized) {
-        await loadUserData(user.uid);
-      }
-    } catch (err) {
-      console.warn("Authorization verification error:", err);
-      setIsAuthorized(false);
-      setIsAdmin(false);
+    const isExclusive = user.email.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+    setIsAuthorized(isExclusive);
+    setIsAdmin(isExclusive);
+    if (isExclusive) {
+      await loadUserData(user.uid);
     }
   };
 
@@ -344,94 +362,6 @@ export default function App() {
 
     return () => unsubscribe();
   }, []);
-
-  // Fetch / Generate Ranking list
-  useEffect(() => {
-    const fetchRankings = async () => {
-      if (isOnline && db) {
-        try {
-          const rankingsCol = collection(db, "usersProgress");
-          const snap = await getDocs(rankingsCol);
-          const list: { name: string; level: number; xp: number }[] = [];
-          let currentUserAdded = false;
-
-          snap.forEach((docSnap) => {
-            const data = docSnap.data();
-            const isSelf = currentUser && docSnap.id === currentUser.uid;
-            
-            let rawName = "Usuário";
-            if (isSelf) {
-              rawName = progress.displayName || currentUser.email?.split("@")[0] || "Você";
-              currentUserAdded = true;
-            } else {
-              rawName = data.displayName || data.email?.split("@")[0] || "Estudante";
-            }
-            
-            // Format name nicely: replace underscores/dots with space, and title-case
-            const formattedName = rawName
-              .replace(/[._]/g, " ")
-              .trim()
-              .replace(/\b\w/g, (c) => c.toUpperCase());
-
-            list.push({
-              name: formattedName,
-              level: isSelf ? progress.level : (data.level || 1),
-              xp: isSelf ? progress.xp : (data.xp || 0),
-            });
-          });
-
-          // If current user wasn't in db snapshot (e.g. newly registered or guest offline)
-          if (!currentUserAdded) {
-            const rawName = progress.displayName || (currentUser ? currentUser.email?.split("@")[0] : "Ruben");
-            const formattedName = rawName
-              .replace(/[._]/g, " ")
-              .trim()
-              .replace(/\b\w/g, (c) => c.toUpperCase());
-
-            list.push({
-              name: formattedName,
-              level: progress.level,
-              xp: progress.xp,
-            });
-          }
-
-          // Sort by XP
-          list.sort((a, b) => b.xp - a.xp);
-
-          // Deduplicate by name
-          const uniqueList: { name: string; level: number; xp: number }[] = [];
-          const seenNames = new Set<string>();
-          for (const item of list) {
-            if (!seenNames.has(item.name.toLowerCase())) {
-              seenNames.add(item.name.toLowerCase());
-              uniqueList.push(item);
-            }
-          }
-
-          setRankings(uniqueList.slice(0, 10));
-        } catch (e) {
-          fillMockRankings();
-        }
-      } else {
-        fillMockRankings();
-      }
-    };
-
-    fetchRankings();
-  }, [currentUser, progress.xp, progress.displayName, isOnline]);
-
-  const fillMockRankings = () => {
-    const rawName = progress.displayName || (currentUser ? currentUser.email?.split("@")[0] : "Você");
-    const formattedSelfName = rawName
-      .replace(/[._]/g, " ")
-      .trim()
-      .replace(/\b\w/g, (c) => c.toUpperCase());
-
-    const list = [
-      { name: formattedSelfName, level: progress.level || 1, xp: progress.xp || 0 },
-    ];
-    setRankings(list);
-  };
 
   // Load guest local data
   const loadGuestData = () => {
@@ -488,15 +418,15 @@ export default function App() {
     }
     setProgress(loadedProgress);
 
-    if (localQuestions) {
-      try {
-        const allQs = deduplicateAndMergeQuestions(initialQuestions, guestList, deletedIds);
-        setQuestions(allQs);
-      } catch (e) {
-        setQuestions(deduplicateAndMergeQuestions(initialQuestions, [], deletedIds));
-      }
-    } else {
-      setQuestions(deduplicateAndMergeQuestions(initialQuestions, [], deletedIds));
+    const localOverridesStr = localStorage.getItem("question_overrides");
+    const localOverrides: Record<string, Partial<Question>> = localOverridesStr ? JSON.parse(localOverridesStr) : {};
+    setQuestionOverrides(localOverrides);
+
+    try {
+      const allQs = deduplicateAndMergeQuestions(initialQuestions, guestList, deletedIds, localOverrides);
+      setQuestions(allQs);
+    } catch (e) {
+      setQuestions(deduplicateAndMergeQuestions(initialQuestions, [], deletedIds, localOverrides));
     }
   };
 
@@ -513,6 +443,7 @@ export default function App() {
       const progressSnap = await getDoc(progressRef);
       let cloudProgress: UserProgress;
       let deletedIds: string[] = [];
+      let cloudOverrides: Record<string, Partial<Question>> = {};
 
       // Check if there is guest progress locally to bind with the account
       const localProgressStr = localStorage.getItem("guest_progress");
@@ -528,6 +459,7 @@ export default function App() {
       if (progressSnap.exists()) {
         cloudProgress = progressSnap.data() as UserProgress;
         deletedIds = (progressSnap.data() as any).deletedQuestionIds || [];
+        cloudOverrides = (progressSnap.data() as any).questionOverrides || {};
 
         // Amarre/vincule os dados de perfil locais se não existirem na nuvem
         if (guestProgress) {
@@ -586,7 +518,26 @@ export default function App() {
         await setDoc(progressRef, cloudProgress);
       }
       setProgress(cloudProgress);
-      setDeletedQuestionIds(deletedIds);
+
+      // Merge with local deleted ids and overrides
+      const localDeletedStr = localStorage.getItem("deleted_question_ids");
+      const localDeletedIds: string[] = localDeletedStr ? JSON.parse(localDeletedStr) : [];
+      const mergedDeletedIds = Array.from(new Set([...deletedIds, ...localDeletedIds]));
+      deletedIds = mergedDeletedIds;
+      setDeletedQuestionIds(mergedDeletedIds);
+      localStorage.setItem("deleted_question_ids", JSON.stringify(mergedDeletedIds));
+
+      const localOverridesStr = localStorage.getItem("question_overrides");
+      const localOverrides: Record<string, Partial<Question>> = localOverridesStr ? JSON.parse(localOverridesStr) : {};
+      const mergedOverrides = { ...cloudOverrides, ...localOverrides };
+      setQuestionOverrides(mergedOverrides);
+      localStorage.setItem("question_overrides", JSON.stringify(mergedOverrides));
+
+      // Sync back to cloud if local had more deleted IDs or overrides
+      if (mergedDeletedIds.length > (progressSnap.data()?.deletedQuestionIds?.length || 0) ||
+          Object.keys(mergedOverrides).length > Object.keys(cloudOverrides).length) {
+        setDoc(progressRef, { deletedQuestionIds: mergedDeletedIds, questionOverrides: mergedOverrides }, { merge: true }).catch(console.error);
+      }
 
       // 2. Get history list
       const historyCol = collection(db, "usersHistory");
@@ -703,7 +654,7 @@ export default function App() {
       }
 
       // Deduplicate questions to guarantee pristine count and prioritize user modifications
-      const allQs = deduplicateAndMergeQuestions(initialQuestions, userQuestions, deletedIds);
+      const allQs = deduplicateAndMergeQuestions(initialQuestions, userQuestions, deletedIds, mergedOverrides);
       setQuestions(allQs);
 
       // Auto-verify and sync achievements based on cloud data
@@ -1056,17 +1007,30 @@ export default function App() {
         prevQuestions.map((q) => (q.id === updatedQ.id ? updatedQ : q))
       );
 
-      // 2. Persist locally as fast cache
+      // 2. Persist in overrides state and localStorage
+      const newOverrides = {
+        ...questionOverrides,
+        [updatedQ.id]: updatedQ,
+      };
+      setQuestionOverrides(newOverrides);
+      localStorage.setItem("question_overrides", JSON.stringify(newOverrides));
+
+      // 3. Persist locally as fast cache
       updateQuestionLocally(updatedQ);
 
-      // 3. Persist in cloud if user is logged in
+      // 4. Persist in cloud if user is logged in
       if (currentUser && isOnline) {
         try {
-          await setDoc(doc(db, "customQuestions", updatedQ.id), {
-            ...updatedQ,
-            userId: currentUser.uid,
-            updatedAt: Date.now(),
-          });
+          const progressRef = doc(db, "usersProgress", currentUser.uid);
+          await setDoc(progressRef, { questionOverrides: newOverrides }, { merge: true });
+
+          if (updatedQ.id.startsWith("q_custom_")) {
+            await setDoc(doc(db, "customQuestions", updatedQ.id), {
+              ...updatedQ,
+              userId: currentUser.uid,
+              updatedAt: Date.now(),
+            }, { merge: true });
+          }
         } catch (e) {
           console.error("Failed to update cloud question, kept local cache:", e);
         }
@@ -1101,30 +1065,51 @@ export default function App() {
         });
       });
 
-      // 2. Persist locally (guest + fast offline cache)
+      // 2. Update questionOverrides state and localStorage
+      const newOverrides = { ...questionOverrides };
+      updates.forEach((u) => {
+        newOverrides[u.id] = {
+          ...(newOverrides[u.id] || {}),
+          ...u.changes,
+        };
+      });
+      setQuestionOverrides(newOverrides);
+      localStorage.setItem("question_overrides", JSON.stringify(newOverrides));
+
+      // 3. Persist locally in custom questions if applicable
       const customLocal = localStorage.getItem("custom_questions") || "[]";
       let queueList: Question[] = JSON.parse(customLocal);
       const queueMap = new Map<string, Question>();
       queueList.forEach((q) => queueMap.set(q.id, q));
-      updatedList.forEach((q) => queueMap.set(q.id, q));
+      updatedList.forEach((q) => {
+        if (queueMap.has(q.id) || q.id.startsWith("q_custom_")) {
+          queueMap.set(q.id, q);
+        }
+      });
       localStorage.setItem("custom_questions", JSON.stringify(Array.from(queueMap.values())));
 
-      // 3. Persist to Firestore in batch if logged in
+      // 4. Persist to Firestore in batch if logged in & online
       if (currentUser && isOnline) {
         try {
-          const chunkSize = 400;
-          for (let i = 0; i < updatedList.length; i += chunkSize) {
-            const chunk = updatedList.slice(i, i + chunkSize);
-            const batch = writeBatch(db);
-            for (const q of chunk) {
-              const docRef = doc(db, "customQuestions", q.id);
-              batch.set(docRef, {
-                ...q,
-                userId: currentUser.uid,
-                updatedAt: Date.now(),
-              });
+          const progressRef = doc(db, "usersProgress", currentUser.uid);
+          await setDoc(progressRef, { questionOverrides: newOverrides }, { merge: true });
+
+          const customUpdates = updatedList.filter((q) => q.id.startsWith("q_custom_"));
+          if (customUpdates.length > 0) {
+            const chunkSize = 400;
+            for (let i = 0; i < customUpdates.length; i += chunkSize) {
+              const chunk = customUpdates.slice(i, i + chunkSize);
+              const batch = writeBatch(db);
+              for (const q of chunk) {
+                const docRef = doc(db, "customQuestions", q.id);
+                batch.set(docRef, {
+                  ...q,
+                  userId: currentUser.uid,
+                  updatedAt: Date.now(),
+                }, { merge: true });
+              }
+              await batch.commit();
             }
-            await batch.commit();
           }
         } catch (e) {
           console.error("Erro ao salvar lote no Firestore:", e);
@@ -1144,7 +1129,7 @@ export default function App() {
     const index = queueList.findIndex((q) => q.id === updatedQ.id);
     if (index !== -1) {
       queueList[index] = updatedQ;
-    } else {
+    } else if (updatedQ.id.startsWith("q_custom_")) {
       queueList.push(updatedQ);
     }
     localStorage.setItem("custom_questions", JSON.stringify(queueList));
@@ -1154,46 +1139,52 @@ export default function App() {
     if (questionIdsToDelete.length === 0) return true;
 
     try {
-      // 1. Update local deletedQuestionIds state
+      // 1. Update local deletedQuestionIds state and localStorage ALWAYS
       const updatedDeletedIds = Array.from(new Set([...deletedQuestionIds, ...questionIdsToDelete]));
       setDeletedQuestionIds(updatedDeletedIds);
+      localStorage.setItem("deleted_question_ids", JSON.stringify(updatedDeletedIds));
 
-      // 2. Filter local questions state
+      // 2. Clean up questionOverrides
+      const newOverrides = { ...questionOverrides };
+      for (const qId of questionIdsToDelete) {
+        delete newOverrides[qId];
+      }
+      setQuestionOverrides(newOverrides);
+      localStorage.setItem("question_overrides", JSON.stringify(newOverrides));
+
+      // 3. Clean up custom questions in localStorage
+      const customLocal = localStorage.getItem("custom_questions") || "[]";
+      let queueList: Question[] = JSON.parse(customLocal);
+      queueList = queueList.filter((q) => !questionIdsToDelete.includes(q.id));
+      localStorage.setItem("custom_questions", JSON.stringify(queueList));
+
+      // 4. Filter questions state immediately
       setQuestions((prevQuestions) => prevQuestions.filter((q) => !questionIdsToDelete.includes(q.id)));
 
-      // 3. Persist in database / local storage
-      if (!currentUser) {
-        // Save in localStorage for Guest
-        localStorage.setItem("deleted_question_ids", JSON.stringify(updatedDeletedIds));
+      // 5. Persist in Firestore if user is logged in
+      if (currentUser && isOnline) {
+        try {
+          const progressRef = doc(db, "usersProgress", currentUser.uid);
+          await setDoc(progressRef, {
+            deletedQuestionIds: updatedDeletedIds,
+            questionOverrides: newOverrides,
+          }, { merge: true });
 
-        // Also clean up guest's custom questions
-        const customLocal = localStorage.getItem("custom_questions") || "[]";
-        let queueList: Question[] = JSON.parse(customLocal);
-        queueList = queueList.filter((q) => !questionIdsToDelete.includes(q.id));
-        localStorage.setItem("custom_questions", JSON.stringify(queueList));
-      } else {
-        // Logged in user
-        if (isOnline) {
-          try {
-            // Update deletedQuestionIds in user's progress doc
-            const progressRef = doc(db, "usersProgress", currentUser.uid);
-            await setDoc(progressRef, { deletedQuestionIds: updatedDeletedIds }, { merge: true });
-
-            // Also delete any customQuestions from Firestore
-            for (const qId of questionIdsToDelete) {
-              await deleteDoc(doc(db, "customQuestions", qId));
+          // Fast batch delete custom questions only
+          const customIds = questionIdsToDelete.filter((id) => id.startsWith("q_custom_"));
+          if (customIds.length > 0) {
+            const chunkSize = 400;
+            for (let i = 0; i < customIds.length; i += chunkSize) {
+              const chunk = customIds.slice(i, i + chunkSize);
+              const batch = writeBatch(db);
+              for (const qId of chunk) {
+                batch.delete(doc(db, "customQuestions", qId));
+              }
+              await batch.commit();
             }
-          } catch (e) {
-            console.error("Failed to sync deleted questions to cloud, saving locally:", e);
-            localStorage.setItem("deleted_question_ids", JSON.stringify(updatedDeletedIds));
           }
-        } else {
-          localStorage.setItem("deleted_question_ids", JSON.stringify(updatedDeletedIds));
-          // Save custom questions queue filter
-          const customLocal = localStorage.getItem("custom_questions") || "[]";
-          let queueList: Question[] = JSON.parse(customLocal);
-          queueList = queueList.filter((q) => !questionIdsToDelete.includes(q.id));
-          localStorage.setItem("custom_questions", JSON.stringify(queueList));
+        } catch (e) {
+          console.error("Failed to sync deleted questions to cloud, saved locally:", e);
         }
       }
       return true;
@@ -1586,49 +1577,19 @@ export default function App() {
     );
   }
 
-  // 🔒 Master Security Gate: Only users with authorized invites can access the platform
+  // 🔒 Master Security Gate: Direct Google Login exclusive to admin
   if (!currentUser || !isAuthorized) {
     return (
       <AccessGate
         currentUser={currentUser}
         isLoadingAuth={isLoadingAuth}
         onGoogleLogin={handleGoogleLogin}
-        onEmailLogin={async (loginEmail, loginPass, isRegister) => {
-          setAuthError("");
-          if (isRegister) {
-            await createUserWithEmailAndPassword(auth, loginEmail, loginPass);
-          } else {
-            await signInWithEmailAndPassword(auth, loginEmail, loginPass);
-          }
-        }}
-        onForgotPassword={async (userEmail) => {
-          if (!userEmail) {
-            customAlert("Por favor, digite seu e-mail para enviarmos o link de recuperação.", "E-mail Necessário");
-            return;
-          }
-          try {
-            await sendPasswordResetEmail(auth, userEmail);
-            customAlert(`Link de recuperação enviado com sucesso para ${userEmail}.`, "E-mail Enviado! ✉️");
-          } catch (err: any) {
-            setAuthError(err.message || "Erro ao enviar e-mail de recuperação.");
-          }
-        }}
         onLogout={async () => {
           await signOut(auth);
           setCurrentUser(null);
           setIsAuthorized(false);
           setIsAdmin(false);
           loadGuestData();
-        }}
-        onRecheckAuth={async () => {
-          if (currentUser) {
-            setIsLoadingAuth(true);
-            try {
-              await handleVerifyUserAuth(currentUser);
-            } finally {
-              setIsLoadingAuth(false);
-            }
-          }
         }}
         authError={authError}
         setAuthError={setAuthError}
@@ -1639,8 +1600,8 @@ export default function App() {
   return (
     <div id="full-page-application-wrapper" className="min-h-screen bg-slate-50 flex flex-col transition-colors duration-300 dark:bg-slate-950 pb-16 md:pb-0 font-sans text-slate-900 dark:text-slate-100">
       
-      {/* 🚀 Sticky Upper Header Navigation */}
-      <header id="app-main-header" className="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-xs print:hidden">
+      {/* 🚀 Fixed Upper Header Navigation (Locked) */}
+      <header id="app-main-header" className="fixed top-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm print:hidden">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
           
           {/* Logo Brand info */}
@@ -1739,17 +1700,7 @@ export default function App() {
               <span>{isOnline ? "Online" : "Offline"}</span>
             </div>
 
-            {/* Admin Invites Panel Button */}
-            {isAdmin && (
-              <button
-                onClick={() => setShowAdminInvites(true)}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 dark:bg-indigo-950/60 dark:hover:bg-indigo-900/80 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/80 rounded-xl text-xs font-bold transition shadow-2xs cursor-pointer shrink-0"
-                title="Gerenciar Convites de Alunos"
-              >
-                <Shield className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-                <span className="hidden sm:inline">Convites</span>
-              </button>
-            )}
+
 
             {/* Profile Avatar button */}
             <button
@@ -1832,21 +1783,12 @@ export default function App() {
               </button>
             ))}
 
-            {isAdmin && (
-              <button
-                onClick={() => {
-                  setShowAdminInvites(true);
-                  setShowMobileMenu(false);
-                }}
-                className="w-full text-left font-bold py-2 px-3 rounded-xl text-xs transition bg-indigo-50 text-indigo-700 dark:bg-indigo-950/50 dark:text-indigo-300 flex items-center gap-2 border border-indigo-200 dark:border-indigo-800/60"
-              >
-                <Shield className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-                Painel de Convites (Admin)
-              </button>
-            )}
+
           </div>
         )}
       </header>
+      {/* Spacer to prevent content underlap for fixed header */}
+      <div className="h-16 shrink-0 print:hidden" aria-hidden="true" />
 
       {/* 🚀 Main Core Dashboard Layout */}
       <main className="flex-grow max-w-7xl w-full mx-auto px-3.5 sm:px-4 md:px-6 py-4 sm:py-6 pb-24 lg:pb-8 font-sans">
@@ -1893,6 +1835,7 @@ export default function App() {
                 onBatchUpdateQuestions={handleBatchUpdateQuestions}
                 onReceiveXp={handleManualReceiveXp}
                 onAlert={customAlert}
+                onConfirm={customConfirm}
                 onDeleteMultipleQuestions={handleDeleteMultipleQuestions}
               />
             )}
@@ -1912,7 +1855,6 @@ export default function App() {
                 currentUserEmail={currentUser ? currentUser.email : null}
                 onAlert={customAlert}
                 isAdmin={isAdmin}
-                onOpenAdminInvites={() => setShowAdminInvites(true)}
               />
             )}
           </div>
@@ -1938,89 +1880,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Public Contest rankings Leaderboard */}
-              <div id="sidebar-rankings-leaderboard" className="p-6 rounded-3xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-sm space-y-4">
-                <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
-                  <div className="flex items-center gap-2">
-                    <Medal className="w-5 h-5 text-amber-500" />
-                    <h4 className="font-bold text-sm text-slate-800 dark:text-slate-100">
-                      {rankings.length > 1 ? "🏆 Ranking Regional (IBGE)" : "🏆 Seu Desempenho Regional"}
-                    </h4>
-                  </div>
-                  {rankings.length > 1 && (
-                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500">
-                      {rankings.length} alunos
-                    </span>
-                  )}
-                </div>
 
-                {rankings.length > 1 ? (
-                  <div className="space-y-3">
-                    {rankings.slice(0, 5).map((rank, index) => (
-                      <div key={index} className={`flex justify-between items-center p-2 rounded-xl text-xs ${
-                        index === 0
-                          ? "bg-amber-50/70 border border-amber-100 dark:bg-amber-950/20 dark:border-amber-900/40"
-                          : "hover:bg-slate-50 dark:hover:bg-slate-800"
-                      }`}>
-                        <div className="flex items-center gap-2">
-                          <span className={`w-5 h-5 rounded-lg flex items-center justify-center font-black ${
-                            index === 0
-                              ? "bg-amber-100 text-amber-600"
-                              : index === 1
-                              ? "bg-slate-100 text-slate-600"
-                              : index === 2
-                              ? "bg-orange-100 text-orange-600"
-                              : "text-slate-400"
-                          }`}>
-                            {index === 0 ? "1º" : index === 1 ? "2º" : index === 2 ? "3º" : index + 1 + "º"}
-                          </span>
-                          <span className="font-semibold text-slate-700 dark:text-slate-300 truncate max-w-[130px]">{rank.name}</span>
-                        </div>
-                        <span className="font-mono text-slate-500 font-bold dark:text-slate-400">{rank.xp} XP</span>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center p-3 rounded-2xl bg-amber-50/70 border border-amber-200/60 dark:bg-amber-950/20 dark:border-amber-900/40">
-                      <div className="flex items-center gap-2.5">
-                        <div className="w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center font-black text-xs shadow-xs">
-                          1º
-                        </div>
-                        <div>
-                          <p className="font-bold text-xs text-slate-800 dark:text-slate-100">
-                            {rankings[0]?.name || progress.displayName || "Você"}
-                          </p>
-                          <p className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">
-                            Nível {progress.level || 1} • {progress.xp || 0} XP
-                          </p>
-                        </div>
-                      </div>
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300">
-                        Ativo
-                      </span>
-                    </div>
-
-                    <div className="p-3 bg-slate-50 dark:bg-slate-850 border border-slate-200/60 dark:border-slate-800 rounded-2xl text-center space-y-1">
-                      <p className="text-[11px] font-bold text-slate-700 dark:text-slate-300">
-                        Aguardando novos estudantes
-                      </p>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                        O ranking regional comparativo será ativado automaticamente quando novos candidatos ingressarem no sistema.
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                <button 
-                  onClick={() => {
-                    setActiveTab("badges");
-                  }}
-                  className="w-full py-2.5 text-[11px] font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/30 dark:text-indigo-300 rounded-xl uppercase tracking-wider transition cursor-pointer"
-                >
-                  Ver Níveis & Conquistas
-                </button>
-              </div>
 
               {/* Useful study resources tips links */}
               <div id="sidebar-tips-card" className="p-6 rounded-3xl bg-slate-950 border border-slate-900 text-white space-y-4 shadow-xl">
@@ -2403,12 +2263,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* 🔒 Administrator Invitation & Whitelist Management Modal */}
-      <AdminInvitesModal
-        isOpen={showAdminInvites}
-        onClose={() => setShowAdminInvites(false)}
-        onAlert={customAlert}
-      />
+
     </div>
   );
 }

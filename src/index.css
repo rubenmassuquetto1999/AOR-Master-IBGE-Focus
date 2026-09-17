@@ -14,7 +14,7 @@
 
 /* Custom transitions and utility animations */
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   -webkit-tap-highlight-color: transparent;
 }

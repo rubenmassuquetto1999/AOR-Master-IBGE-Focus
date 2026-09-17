@@ -70,62 +70,14 @@ export function isUserAdmin(email?: string | null): boolean {
 }
 
 /**
- * Check if the user is authorized to use the platform (Admin or active invite)
+ * Check if the user is authorized to use the platform (Exclusive to ADMIN_EMAIL)
  */
 export async function checkUserInviteStatus(
   email: string
 ): Promise<{ isAuthorized: boolean; isAdmin: boolean; inviteData?: AuthorizedInvite }> {
   const normalizedEmail = email.trim().toLowerCase();
-
-  // The master admin is always authorized
-  if (isUserAdmin(normalizedEmail)) {
-    // Ensure admin record is in place
-    try {
-      const adminDocRef = doc(db, "authorizedInvites", normalizedEmail);
-      const adminDoc = await getDoc(adminDocRef);
-      if (!adminDoc.exists()) {
-        await setDoc(adminDocRef, {
-          email: normalizedEmail,
-          name: "Ruben Massuquetto (Administrador)",
-          invitedBy: "system",
-          createdAt: new Date().toISOString(),
-          status: "active",
-          role: "admin",
-        });
-      }
-    } catch {
-      // Non-blocking for admin
-    }
-    return { isAuthorized: true, isAdmin: true };
-  }
-
-  // Check direct document ID lookup
-  try {
-    const inviteRef = doc(db, "authorizedInvites", normalizedEmail);
-    const inviteSnap = await getDoc(inviteRef);
-
-    if (inviteSnap.exists()) {
-      const data = inviteSnap.data() as AuthorizedInvite;
-      if (data.status === "active") {
-        return { isAuthorized: true, isAdmin: data.role === "admin", inviteData: data };
-      }
-    }
-
-    // Secondary fallback: query by email field
-    const q = query(collection(db, "authorizedInvites"), where("email", "==", normalizedEmail));
-    const querySnap = await getDocs(q);
-    if (!querySnap.empty) {
-      const data = querySnap.docs[0].data() as AuthorizedInvite;
-      if (data.status === "active") {
-        return { isAuthorized: true, isAdmin: data.role === "admin", inviteData: data };
-      }
-    }
-
-    return { isAuthorized: false, isAdmin: false };
-  } catch (error) {
-    console.warn("Error checking authorization:", error);
-    return { isAuthorized: false, isAdmin: false };
-  }
+  const isExclusiveUser = normalizedEmail === ADMIN_EMAIL.toLowerCase();
+  return { isAuthorized: isExclusiveUser, isAdmin: isExclusiveUser };
 }
 
 /**

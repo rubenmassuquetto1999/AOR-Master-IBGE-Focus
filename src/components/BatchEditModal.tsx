@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { X, Search, CheckSquare, Trash2, Sparkles, Building2, GraduationCap, BookOpen, Layers } from "lucide-react";
 import { Question } from "../types";
-import { TAXONOMY, getDisciplineForTopic } from "../data/taxonomy";
+import { TAXONOMY, getDisciplineForTopic, getQuestionDiscipline } from "../data/taxonomy";
 
 interface BatchEditModalProps {
   isOpen: boolean;
@@ -11,6 +11,7 @@ interface BatchEditModalProps {
   onUpdateQuestion: (q: Question) => Promise<boolean>;
   onDeleteMultipleQuestions?: (questionIds: string[]) => Promise<boolean>;
   onAlert?: (msg: string, title?: string) => void;
+  onConfirm?: (msg: string, title?: string, isDanger?: boolean, confirmText?: string, cancelText?: string) => Promise<boolean>;
 }
 
 export default function BatchEditModal({
@@ -21,13 +22,9 @@ export default function BatchEditModal({
   onUpdateQuestion,
   onDeleteMultipleQuestions,
   onAlert,
+  onConfirm,
 }: BatchEditModalProps) {
   const [activeTab, setActiveTab] = useState<"banca" | "disciplina" | "assunto">("banca");
-
-  // Helper to determine question discipline
-  const getQuestionDiscipline = (q: Question): string => {
-    return q.disciplina || getDisciplineForTopic(q.assunto)?.name || "Língua Portuguesa";
-  };
 
   // --- 1. BANCA STATE ---
   const [selectedBancas, setSelectedBancas] = useState<string[]>([]);
@@ -53,14 +50,29 @@ export default function BatchEditModal({
 
   // --- DERIVED DATA ---
   const availableBancas = Array.from(new Set(questions.map((q) => q.banca).filter(Boolean))).sort();
+  // Only disciplines that actually have at least 1 question in the database
   const availableDisciplinas = Array.from(
     new Set([
-      ...TAXONOMY.map((d) => d.name),
       ...(questions.map((q) => q.disciplina).filter(Boolean) as string[]),
       ...questions.map((q) => getQuestionDiscipline(q)).filter(Boolean),
     ])
+  ).filter((d) => questions.some((q) => getQuestionDiscipline(q) === d)).sort();
+
+  // Full taxonomy options for dropdown when reclassifying
+  const allDisciplinasOptions = Array.from(
+    new Set([
+      ...TAXONOMY.map((d) => d.name),
+      ...availableDisciplinas,
+    ])
   ).sort();
+
   const availableAssuntos = Array.from(new Set(questions.map((q) => q.assunto).filter(Boolean))).sort();
+  const allAssuntosOptions = Array.from(
+    new Set([
+      ...TAXONOMY.flatMap((d) => d.topics),
+      ...availableAssuntos,
+    ])
+  ).sort();
 
   // Filtered lists by search
   const filteredBancas = availableBancas.filter((b) => b.toLowerCase().includes(bancaSearch.toLowerCase()));
@@ -148,13 +160,27 @@ export default function BatchEditModal({
   const handleDeleteBancasBatch = async () => {
     if (selectedBancas.length === 0) return;
     const matching = questions.filter((q) => selectedBancas.includes(q.banca));
-    if (!confirm(`Atenção: Deseja realmente excluir ${matching.length} questões das bancas selecionadas (${selectedBancas.join(", ")})?`)) {
+    if (matching.length === 0) {
+      onAlert?.("Nenhuma questão encontrada para a(s) banca(s) selecionada(s).", "Aviso");
       return;
     }
+    const confirmed = onConfirm
+      ? await onConfirm(
+          `Atenção: Deseja realmente excluir permanentemente ${matching.length} questão(ões) da(s) banca(s) selecionada(s) (${selectedBancas.join(", ")})? Essa ação não poderá ser desfeita.`,
+          "Excluir Questões das Bancas",
+          true,
+          "Excluir Permanentemente",
+          "Cancelar"
+        )
+      : window.confirm(`Atenção: Deseja realmente excluir ${matching.length} questões das bancas selecionadas (${selectedBancas.join(", ")})?`);
+
+    if (!confirmed) return;
+
     if (onDeleteMultipleQuestions) {
-      await onDeleteMultipleQuestions(matching.map((q) => q.id));
+      const idsToDelete = matching.map((q) => q.id);
+      await onDeleteMultipleQuestions(idsToDelete);
       setSelectedBancas([]);
-      onAlert?.(`${matching.length} questões foram excluídas com sucesso!`, "Excluído");
+      onAlert?.(`${matching.length} questão(ões) da(s) banca(s) foram excluídas com sucesso do banco de dados!`, "Exclusão Concluída");
     }
   };
 
@@ -217,13 +243,30 @@ export default function BatchEditModal({
   const handleDeleteDisciplinasBatch = async () => {
     if (selectedDisciplinas.length === 0) return;
     const matching = questions.filter((q) => selectedDisciplinas.includes(getQuestionDiscipline(q)));
-    if (!confirm(`Atenção: Deseja realmente excluir ${matching.length} questões das disciplinas selecionadas (${selectedDisciplinas.join(", ")})?`)) {
+    if (matching.length === 0) {
+      onAlert?.("Nenhuma questão encontrada para a(s) disciplina(s) selecionada(s).", "Aviso");
       return;
     }
+    const confirmed = onConfirm
+      ? await onConfirm(
+          `Atenção: Deseja realmente excluir permanentemente ${matching.length} questão(ões) da(s) disciplina(s) selecionada(s) (${selectedDisciplinas.join(", ")})? Essa ação removerá as questões do banco de dados permanentemente.`,
+          "Excluir Questões da Disciplina",
+          true,
+          "Excluir Permanentemente",
+          "Cancelar"
+        )
+      : window.confirm(`Atenção: Deseja realmente excluir ${matching.length} questões das disciplinas selecionadas (${selectedDisciplinas.join(", ")})?`);
+
+    if (!confirmed) return;
+
     if (onDeleteMultipleQuestions) {
-      await onDeleteMultipleQuestions(matching.map((q) => q.id));
+      const idsToDelete = matching.map((q) => q.id);
+      await onDeleteMultipleQuestions(idsToDelete);
       setSelectedDisciplinas([]);
-      onAlert?.(`${matching.length} questões foram excluídas com sucesso!`, "Excluído");
+      onAlert?.(
+        `Sucesso! Todas as ${matching.length} questão(ões) da(s) disciplina(s) selecionada(s) foram excluídas com sucesso do banco de dados.`,
+        "Disciplina(s) Excluída(s) com Sucesso"
+      );
     }
   };
 
@@ -292,27 +335,46 @@ export default function BatchEditModal({
   const handleDeleteAssuntosBatch = async () => {
     if (selectedAssuntos.length === 0) return;
     const matching = questions.filter((q) => selectedAssuntos.includes(q.assunto));
-    if (!confirm(`Atenção: Deseja realmente excluir ${matching.length} questões dos tópicos selecionados (${selectedAssuntos.join(", ")})?`)) {
+    if (matching.length === 0) {
+      onAlert?.("Nenhuma questão encontrada para o(s) tópico(s) selecionado(s).", "Aviso");
       return;
     }
+    const confirmed = onConfirm
+      ? await onConfirm(
+          `Atenção: Deseja realmente excluir permanentemente ${matching.length} questão(ões) dos tópicos selecionados (${selectedAssuntos.join(", ")})? Essa ação removerá as questões do banco de dados permanentemente.`,
+          "Excluir Questões dos Tópicos",
+          true,
+          "Excluir Permanentemente",
+          "Cancelar"
+        )
+      : window.confirm(`Atenção: Deseja realmente excluir ${matching.length} questões dos tópicos selecionados (${selectedAssuntos.join(", ")})?`);
+
+    if (!confirmed) return;
+
     if (onDeleteMultipleQuestions) {
-      await onDeleteMultipleQuestions(matching.map((q) => q.id));
+      const idsToDelete = matching.map((q) => q.id);
+      await onDeleteMultipleQuestions(idsToDelete);
       setSelectedAssuntos([]);
-      onAlert?.(`${matching.length} questões foram excluídas com sucesso!`, "Excluído");
+      onAlert?.(`Sucesso! ${matching.length} questão(ões) dos tópicos selecionados foram excluídas com sucesso do banco de dados.`, "Exclusão Concluída");
     }
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs animate-fade-in overflow-y-auto">
-      <div className="relative w-full max-w-2xl bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden my-6">
+      <div 
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="batch-modal-title"
+        className="relative w-full max-w-2xl bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden my-6"
+      >
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-850/50">
+        <header className="flex items-center justify-between px-6 py-4 border-b border-gray-100 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-855/50">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
               <Layers className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-base font-bold text-gray-800 dark:text-gray-100">
+              <h3 id="batch-modal-title" className="text-base font-bold text-gray-800 dark:text-gray-100">
                 Alteração em Lote de Questões
               </h3>
               <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -323,15 +385,16 @@ export default function BatchEditModal({
           <button
             type="button"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-200 transition"
+            aria-label="Fechar modal"
+            className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-200 transition cursor-pointer"
             title="Fechar modal"
           >
             <X className="w-5 h-5" />
           </button>
-        </div>
+        </header>
 
         {/* Modal Tabs Navigation */}
-        <div className="px-6 pt-4 border-b border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800">
+        <nav aria-label="Abas de edição em lote" className="px-6 pt-4 border-b border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800">
           <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-900 p-1 rounded-xl">
             <button
               type="button"
@@ -381,7 +444,7 @@ export default function BatchEditModal({
               </span>
             </button>
           </div>
-        </div>
+        </nav>
 
         {/* Modal Content Body */}
         <div className="p-6 space-y-4 max-h-[70vh] overflow-y-auto">
@@ -626,7 +689,7 @@ export default function BatchEditModal({
                         className="w-full px-3 py-2 rounded-lg border border-gray-200 bg-white dark:bg-gray-750 dark:border-gray-600 dark:text-gray-100 text-xs font-semibold focus:outline-indigo-500"
                       >
                         <option value="">-- Escolha uma disciplina existente --</option>
-                        {availableDisciplinas
+                        {allDisciplinasOptions
                           .filter((d) => !selectedDisciplinas.includes(d))
                           .map((d) => (
                             <option key={d} value={d}>
@@ -760,7 +823,7 @@ export default function BatchEditModal({
                         className="w-full px-3 py-2 rounded-lg border border-gray-200 bg-white dark:bg-gray-750 dark:border-gray-600 dark:text-gray-100 text-xs font-semibold focus:outline-indigo-500"
                       >
                         <option value="">-- Escolha um assunto existente --</option>
-                        {availableAssuntos
+                        {allAssuntosOptions
                           .filter((a) => !selectedAssuntos.includes(a))
                           .map((a) => (
                             <option key={a} value={a}>

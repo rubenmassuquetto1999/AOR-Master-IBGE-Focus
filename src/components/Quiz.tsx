@@ -23,7 +23,7 @@ import {
   Compass,
 } from "lucide-react";
 import { Question, UserHistory } from "../types";
-import { TAXONOMY, getDisciplineForTopic, getTopicsForDiscipline, ALL_TOPICS } from "../data/taxonomy";
+import { TAXONOMY, getDisciplineForTopic, getTopicsForDiscipline, getQuestionDiscipline, ALL_TOPICS } from "../data/taxonomy";
 
 interface QuizProps {
   questions: Question[];
@@ -108,32 +108,26 @@ export default function Quiz({
     }
   };
 
-  // Set up available filters
+  // Set up available filters strictly from questions present in database
   const availableBancas = ["Todos", ...Array.from(new Set(questions.map((q) => q.banca).filter(Boolean))).sort()];
   
-  const availableDisciplinas = [
-    "Todas",
-    ...Array.from(
-      new Set([
-        ...TAXONOMY.map((d) => d.name),
-        ...(questions.map((q) => q.disciplina).filter(Boolean) as string[]),
-      ])
-    ).sort(),
-  ];
+  const availableDisciplinasList = Array.from(
+    new Set(questions.map((q) => getQuestionDiscipline(q)).filter(Boolean))
+  ).sort();
+  const availableDisciplinas = ["Todas", ...availableDisciplinasList];
 
   const availableAssuntos =
     selectedDisciplina === "Todas"
-      ? ["Todos", ...Array.from(new Set([...ALL_TOPICS, ...questions.map((q) => q.assunto).filter(Boolean)])).sort()]
+      ? ["Todos", ...Array.from(new Set(questions.map((q) => q.assunto).filter(Boolean))).sort()]
       : [
           "Todos",
           ...Array.from(
-            new Set([
-              ...getTopicsForDiscipline(selectedDisciplina),
-              ...questions
-                .filter((q) => (q.disciplina ? q.disciplina === selectedDisciplina : getDisciplineForTopic(q.assunto)?.name === selectedDisciplina))
+            new Set(
+              questions
+                .filter((q) => getQuestionDiscipline(q) === selectedDisciplina)
                 .map((q) => q.assunto)
-                .filter(Boolean),
-            ])
+                .filter(Boolean)
+            )
           ).sort(),
         ];
 
@@ -326,11 +320,7 @@ export default function Quiz({
         pool = pool.filter((q) => q.banca === selectedBanca);
       }
       if (selectedDisciplina !== "Todas") {
-        pool = pool.filter((q) => {
-          if (q.disciplina) return q.disciplina === selectedDisciplina;
-          const disc = getDisciplineForTopic(q.assunto);
-          return disc ? disc.name === selectedDisciplina : false;
-        });
+        pool = pool.filter((q) => getQuestionDiscipline(q) === selectedDisciplina);
       }
       if (activeAssunto !== "Todos") {
         pool = pool.filter((q) => q.assunto === activeAssunto);
@@ -985,14 +975,14 @@ export default function Quiz({
   }
 
   return (
-    <div id="quiz-main-screen" className="max-w-3xl mx-auto">
+    <section id="quiz-main-screen" aria-label="Caderno e Simulado" className="max-w-3xl mx-auto">
       {!activeSession ? (
         <div
           id="quiz-setup-panel"
           className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm dark:bg-slate-900 dark:border-slate-800 space-y-6 animate-fade-in"
         >
           {/* Header Title */}
-          <div className="flex items-center gap-3">
+          <header className="flex items-center gap-3">
             <div className="w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center font-bold shadow-xs">
               <BookOpen className="w-6 h-6" />
             </div>
@@ -1004,7 +994,7 @@ export default function Quiz({
                 Escolha o modo de estudo: Treino personalizado ou Simulado Completo IBGE (AOR)
               </p>
             </div>
-          </div>
+          </header>
 
           {/* Mode Switcher Selector */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-1.5 bg-slate-100/80 dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-750">
@@ -1239,12 +1229,13 @@ export default function Quiz({
           </div>
 
           {/* Current Question Display */}
-          <div
+          <article
             id="current-question-card"
+            aria-labelledby="current-question-text"
             className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-sm space-y-4"
           >
             {/* Meta Tags */}
-            <div className="flex flex-wrap items-center gap-2">
+            <header className="flex flex-wrap items-center gap-2">
               <span className="text-[10px] font-bold font-mono tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 dark:bg-blue-955/20 dark:text-blue-400 dark:border-blue-900/30">
                 {sessionQuestions[currentIdx].banca}
               </span>
@@ -1254,10 +1245,10 @@ export default function Quiz({
               <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-950/20 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/30">
                 {sessionQuestions[currentIdx].assunto}
               </span>
-            </div>
+            </header>
 
             {/* Statement */}
-            <p className="text-sm md:text-base font-semibold text-slate-800 dark:text-slate-100 leading-relaxed whitespace-pre-line border-b border-slate-100 pb-4 dark:border-slate-800">
+            <p id="current-question-text" className="text-sm md:text-base font-semibold text-slate-800 dark:text-slate-100 leading-relaxed whitespace-pre-line border-b border-slate-100 pb-4 dark:border-slate-800">
               {sessionQuestions[currentIdx].text}
             </p>
 
@@ -1277,7 +1268,8 @@ export default function Quiz({
             )}
 
             {/* Alternatives List */}
-            <div className="space-y-3 pt-2">
+            <fieldset className="space-y-3 pt-2">
+              <legend className="sr-only">Alternativas da questão</legend>
               {sessionQuestions[currentIdx].options.map((opt, optIdx) => {
                 const isSelected = selectedAnswers[currentIdx] === optIdx;
                 const isCorrectAns = optIdx === sessionQuestions[currentIdx].correctIndex;
@@ -1315,8 +1307,8 @@ export default function Quiz({
                   </button>
                 );
               })}
-            </div>
-          </div>
+            </fieldset>
+          </article>
 
           {/* Render Detailed Explanation alternative corrective comments */}
           {showExplanation[currentIdx] && (
@@ -1409,6 +1401,6 @@ export default function Quiz({
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }

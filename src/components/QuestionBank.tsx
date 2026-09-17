@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Search, PlusCircle, Edit3, Layers, Trash2, HelpCircle } from "lucide-react";
 import { Question } from "../types";
-import { TAXONOMY, getDisciplineForTopic, getTopicsForDiscipline, ALL_TOPICS } from "../data/taxonomy";
+import { TAXONOMY, getDisciplineForTopic, getTopicsForDiscipline, getQuestionDiscipline, ALL_TOPICS } from "../data/taxonomy";
 import BatchEditModal from "./BatchEditModal";
 import QuestionModal from "./QuestionModal";
 
@@ -12,6 +12,7 @@ interface QuestionBankProps {
   onBatchUpdateQuestions?: (updates: { id: string; changes: Partial<Question> }[]) => Promise<boolean>;
   onReceiveXp?: (amount: number) => void;
   onAlert?: (msg: string, title?: string) => void;
+  onConfirm?: (msg: string, title?: string, isDanger?: boolean, confirmText?: string, cancelText?: string) => Promise<boolean>;
   onDeleteMultipleQuestions?: (questionIds: string[]) => Promise<boolean>;
 }
 
@@ -21,6 +22,7 @@ export default function QuestionBank({
   onUpdateQuestion,
   onBatchUpdateQuestions,
   onAlert,
+  onConfirm,
   onDeleteMultipleQuestions,
 }: QuestionBankProps) {
   // Search & Filter state
@@ -34,37 +36,44 @@ export default function QuestionBank({
   const [showAddModal, setShowAddModal] = useState(false);
   const [questionToEdit, setQuestionToEdit] = useState<Question | null>(null);
 
-  // Helper for discipline deduction
-  const getQuestionDiscipline = (q: Question): string => {
-    return q.disciplina || getDisciplineForTopic(q.assunto)?.name || "Língua Portuguesa";
-  };
-
-  // Available Filter Options
+  // Available Filter Options (derived only from questions currently in database)
   const bancas = ["Todas", ...Array.from(new Set(questions.map((q) => q.banca).filter(Boolean))).sort()];
-  const allDisciplinasList = Array.from(
-    new Set([
-      ...TAXONOMY.map((d) => d.name),
-      ...(questions.map((q) => q.disciplina).filter(Boolean) as string[]),
-      ...questions.map((q) => getQuestionDiscipline(q)).filter(Boolean),
-    ])
+  const availableDisciplinasList = Array.from(
+    new Set(questions.map((q) => getQuestionDiscipline(q)).filter(Boolean))
   ).sort();
-  const disciplinas = ["Todas", ...allDisciplinasList];
+  const disciplinas = ["Todas", ...availableDisciplinasList];
 
-  const assuntos =
+  const availableAssuntosList =
     selectedDisciplina === "Todas"
-      ? ["Todos", ...Array.from(new Set([...ALL_TOPICS, ...questions.map((q) => q.assunto).filter(Boolean)])).sort()]
-      : [
-          "Todos",
-          ...Array.from(
-            new Set([
-              ...getTopicsForDiscipline(selectedDisciplina),
-              ...questions
-                .filter((q) => (q.disciplina ? q.disciplina === selectedDisciplina : getDisciplineForTopic(q.assunto)?.name === selectedDisciplina))
-                .map((q) => q.assunto)
-                .filter(Boolean),
-            ])
-          ).sort(),
-        ];
+      ? Array.from(new Set(questions.map((q) => q.assunto).filter(Boolean))).sort()
+      : Array.from(
+          new Set(
+            questions
+              .filter((q) => getQuestionDiscipline(q) === selectedDisciplina)
+              .map((q) => q.assunto)
+              .filter(Boolean)
+          )
+        ).sort();
+  const assuntos = ["Todos", ...availableAssuntosList];
+
+  // Auto-reset filters if current selection no longer has any questions
+  React.useEffect(() => {
+    if (selectedDisciplina !== "Todas" && !availableDisciplinasList.includes(selectedDisciplina)) {
+      setSelectedDisciplina("Todas");
+    }
+  }, [availableDisciplinasList, selectedDisciplina]);
+
+  React.useEffect(() => {
+    if (selectedAssunto !== "Todos" && !availableAssuntosList.includes(selectedAssunto)) {
+      setSelectedAssunto("Todos");
+    }
+  }, [availableAssuntosList, selectedAssunto]);
+
+  React.useEffect(() => {
+    if (selectedBanca !== "Todas" && !bancas.includes(selectedBanca)) {
+      setSelectedBanca("Todas");
+    }
+  }, [bancas, selectedBanca]);
 
   // Filtered questions list
   const filteredQuestions = questions.filter((q) => {
@@ -172,15 +181,24 @@ export default function QuestionBank({
 
   // Delete single question
   const handleDeleteSingleQuestion = async (qId: string) => {
-    if (!confirm("Tem certeza que deseja excluir esta questão permanentemente?")) return;
+    const confirmed = onConfirm
+      ? await onConfirm(
+          "Tem certeza que deseja excluir esta questão permanentemente do banco de dados? Essa ação não poderá ser desfeita.",
+          "Excluir Questão",
+          true,
+          "Excluir Permanentemente",
+          "Cancelar"
+        )
+      : window.confirm("Tem certeza que deseja excluir esta questão permanentemente?");
+    if (!confirmed) return;
     if (onDeleteMultipleQuestions) {
       await onDeleteMultipleQuestions([qId]);
-      onAlert?.("Questão excluída com sucesso.", "Excluída");
+      onAlert?.("Questão excluída com sucesso do banco de dados.", "Excluída");
     }
   };
 
   return (
-    <div id="question-bank-container" className="space-y-6">
+    <section id="question-bank-container" aria-label="Banco de Questões de Concurso" className="space-y-6">
       {/* Subaba / Modal: Alterar em Lote */}
       <BatchEditModal
         isOpen={showBatchModal}
@@ -190,6 +208,7 @@ export default function QuestionBank({
         onUpdateQuestion={onUpdateQuestion}
         onDeleteMultipleQuestions={onDeleteMultipleQuestions}
         onAlert={onAlert}
+        onConfirm={onConfirm}
       />
 
       {/* Subaba / Modal: Cadastrar Nova Questão */}
@@ -214,14 +233,15 @@ export default function QuestionBank({
       />
 
       {/* Top Header: Search and Action Buttons */}
-      <div className="flex flex-col md:flex-row gap-3 sm:gap-4 items-stretch md:items-center justify-between">
-        <div className="flex-grow max-w-lg relative">
+      <header className="flex flex-col md:flex-row gap-3 sm:gap-4 items-stretch md:items-center justify-between">
+        <div className="flex-grow max-w-lg relative" role="search">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
           <input
-            type="text"
+            type="search"
             placeholder="Pesquise por enunciado, banca, disciplina ou assunto..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            aria-label="Pesquisar questões"
             className="w-full pl-10 pr-4 h-11 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white placeholder-gray-400 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:focus:ring-indigo-500/50 text-sm font-medium"
           />
         </div>
@@ -245,14 +265,15 @@ export default function QuestionBank({
             <PlusCircle className="w-4 h-4 sm:w-5 sm:h-5" /> Cadastrar Questão
           </button>
         </div>
-      </div>
+      </header>
 
       {/* Filter Bar (Banca, Disciplina, Tópico) */}
-      <div className="flex flex-wrap items-center gap-2.5">
+      <nav aria-label="Filtros de questões" className="flex flex-wrap items-center gap-2.5">
         {/* Filter by Banca */}
         <div className="flex items-center gap-1.5 bg-white dark:bg-gray-800 p-1 pl-2.5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-2xs">
-          <span className="text-xs font-semibold text-gray-500 shrink-0">Banca:</span>
+          <label htmlFor="filter-banca" className="text-xs font-semibold text-gray-500 shrink-0">Banca:</label>
           <select
+            id="filter-banca"
             value={selectedBanca}
             onChange={(e) => setSelectedBanca(e.target.value)}
             className="text-xs sm:text-sm font-semibold h-8 px-2 bg-transparent focus:outline-none text-gray-800 dark:text-gray-100 dark:bg-gray-800 dark:[color-scheme:dark] cursor-pointer"
@@ -267,8 +288,9 @@ export default function QuestionBank({
 
         {/* Filter by Disciplina */}
         <div className="flex items-center gap-1.5 bg-white dark:bg-gray-800 p-1 pl-2.5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-2xs">
-          <span className="text-xs font-semibold text-gray-500 shrink-0">Disciplina:</span>
+          <label htmlFor="filter-disciplina" className="text-xs font-semibold text-gray-500 shrink-0">Disciplina:</label>
           <select
+            id="filter-disciplina"
             value={selectedDisciplina}
             onChange={(e) => {
               setSelectedDisciplina(e.target.value);
@@ -286,8 +308,9 @@ export default function QuestionBank({
 
         {/* Filter by Assunto / Tópico */}
         <div className="flex items-center gap-1.5 bg-white dark:bg-gray-800 p-1 pl-2.5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-2xs max-w-full">
-          <span className="text-xs font-semibold text-gray-500 shrink-0">Tópico:</span>
+          <label htmlFor="filter-assunto" className="text-xs font-semibold text-gray-500 shrink-0">Tópico:</label>
           <select
+            id="filter-assunto"
             value={selectedAssunto}
             onChange={(e) => setSelectedAssunto(e.target.value)}
             className="text-xs sm:text-sm font-semibold h-8 px-2 bg-transparent focus:outline-none text-gray-800 dark:text-gray-100 dark:bg-gray-800 dark:[color-scheme:dark] max-w-[180px] sm:max-w-[260px] truncate cursor-pointer"
@@ -303,7 +326,7 @@ export default function QuestionBank({
         <span className="text-xs font-medium text-gray-400 ml-auto">
           Mostrando {filteredQuestions.length} de {questions.length} questões
         </span>
-      </div>
+      </nav>
 
       {/* Questions List */}
       <div id="questions-list-wrapper" className="space-y-4">
@@ -311,13 +334,14 @@ export default function QuestionBank({
           const qDiscipline = getQuestionDiscipline(q);
 
           return (
-            <div
+            <article
               key={q.id}
               id={`question-card-${q.id}`}
+              aria-labelledby={`question-title-${q.id}`}
               className="p-5 rounded-2xl bg-white border border-gray-150/40 dark:bg-gray-800 dark:border-gray-700/60 shadow-sm"
             >
               {/* Meta Tags */}
-              <div className="flex flex-wrap items-center gap-2 mb-3">
+              <header className="flex flex-wrap items-center gap-2 mb-3">
                 <span className="text-[10px] font-bold font-mono tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/30 dark:text-purple-300 dark:border-purple-800/40">
                   {qDiscipline}
                 </span>
@@ -335,10 +359,10 @@ export default function QuestionBank({
                     Nível Superior
                   </span>
                 )}
-              </div>
+              </header>
 
               {/* Question Text */}
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4 whitespace-pre-line leading-relaxed">
+              <p id={`question-title-${q.id}`} className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4 whitespace-pre-line leading-relaxed">
                 {q.text}
               </p>
 
@@ -399,7 +423,7 @@ export default function QuestionBank({
               </div>
 
               {/* Action Buttons */}
-              <div className="flex justify-between items-center bg-gray-50 dark:bg-gray-750/30 -mx-5 -mb-5 p-3 rounded-b-2xl border-t border-gray-100 dark:border-gray-700/50 mt-4">
+              <footer className="flex justify-between items-center bg-gray-50 dark:bg-gray-750/30 -mx-5 -mb-5 p-3 rounded-b-2xl border-t border-gray-100 dark:border-gray-700/50 mt-4">
                 <span className="text-[11px] text-gray-400 dark:text-gray-500 font-mono">ID: {q.id}</span>
                 <div className="flex items-center gap-2">
                   <button
@@ -418,8 +442,8 @@ export default function QuestionBank({
                     <Trash2 className="w-3.5 h-3.5" />
                   </button>
                 </div>
-              </div>
-            </div>
+              </footer>
+            </article>
           );
         })}
 
@@ -429,6 +453,6 @@ export default function QuestionBank({
           </p>
         )}
       </div>
-    </div>
+    </section>
   );
 }
