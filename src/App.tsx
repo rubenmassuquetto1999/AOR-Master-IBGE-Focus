@@ -831,7 +831,7 @@ export default function App() {
     const correctAnswers = updatedHistory.filter((h) => h.isCorrect).length;
     const accuracy = totalAnswered > 0 ? correctAnswers / totalAnswered : 0;
 
-    // Volume progression (up to 4,000 questions)
+    // Volume progression (calibrated to actual question bank of ~1,400 questions)
     handleUnlockBadge("ach_welcome");
     if (totalAnswered >= 5) handleUnlockBadge("ach_q_5");
     if (totalAnswered >= 15) handleUnlockBadge("ach_q_15");
@@ -839,19 +839,19 @@ export default function App() {
     if (totalAnswered >= 60) handleUnlockBadge("ach_q_60");
     if (totalAnswered >= 100) handleUnlockBadge("ach_q_100");
     if (totalAnswered >= 150) handleUnlockBadge("ach_q_150");
-    if (totalAnswered >= 250) handleUnlockBadge("ach_q_250");
-    if (totalAnswered >= 400) handleUnlockBadge("ach_q_400");
-    if (totalAnswered >= 500) handleUnlockBadge("ach_q_500");
-    if (totalAnswered >= 750) handleUnlockBadge("ach_q_750");
-    if (totalAnswered >= 1000) handleUnlockBadge("ach_q_1000");
-    if (totalAnswered >= 1300) handleUnlockBadge("ach_q_1300");
-    if (totalAnswered >= 1600) handleUnlockBadge("ach_q_1600");
-    if (totalAnswered >= 2000) handleUnlockBadge("ach_q_2000");
-    if (totalAnswered >= 2400) handleUnlockBadge("ach_q_2400");
-    if (totalAnswered >= 2800) handleUnlockBadge("ach_q_2800");
-    if (totalAnswered >= 3200) handleUnlockBadge("ach_q_3200");
-    if (totalAnswered >= 3600) handleUnlockBadge("ach_q_3600");
-    if (totalAnswered >= 4000) handleUnlockBadge("ach_q_4000");
+    if (totalAnswered >= 220) handleUnlockBadge("ach_q_250");
+    if (totalAnswered >= 300) handleUnlockBadge("ach_q_400");
+    if (totalAnswered >= 400) handleUnlockBadge("ach_q_500");
+    if (totalAnswered >= 500) handleUnlockBadge("ach_q_750");
+    if (totalAnswered >= 650) handleUnlockBadge("ach_q_1000");
+    if (totalAnswered >= 800) handleUnlockBadge("ach_q_1300");
+    if (totalAnswered >= 950) handleUnlockBadge("ach_q_1600");
+    if (totalAnswered >= 1050) handleUnlockBadge("ach_q_2000");
+    if (totalAnswered >= 1150) handleUnlockBadge("ach_q_2400");
+    if (totalAnswered >= 1220) handleUnlockBadge("ach_q_2800");
+    if (totalAnswered >= 1280) handleUnlockBadge("ach_q_3200");
+    if (totalAnswered >= 1320) handleUnlockBadge("ach_q_3600");
+    if (totalAnswered >= 1350) handleUnlockBadge("ach_q_4000");
 
     // Streak progression
     if (newStreak >= 3) handleUnlockBadge("ach_streak");
@@ -874,14 +874,14 @@ export default function App() {
     if (totalAnswered >= 100 && accuracy >= 0.80) handleUnlockBadge("ach_accuracy_elite");
     if (totalAnswered >= 200 && accuracy >= 0.85) handleUnlockBadge("ach_super_sniper");
 
-    // Subject diversity
+    // Subject diversity (calibrated to the 4 disciplines registered in the database)
     const distinctDisciplines = new Set(
       updatedHistory
         .map((h) => questions.find((q) => q.id === h.questionId)?.disciplina)
         .filter(Boolean)
     );
     if (distinctDisciplines.size >= 3) handleUnlockBadge("ach_multi_disc");
-    if (distinctDisciplines.size >= 5) handleUnlockBadge("ach_all_subjects_master");
+    if (distinctDisciplines.size >= 4) handleUnlockBadge("ach_all_subjects_master");
 
     // Level 20 Legend
     if (currentLvl >= 20) handleUnlockBadge("ach_legend_hall");

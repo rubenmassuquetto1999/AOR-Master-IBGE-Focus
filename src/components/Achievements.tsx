@@ -117,7 +117,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 7,
     title: "Especialista Multidisciplinar",
     minXp: 1200,
-    description: "Intersecção de disciplinas: domínio de Português, RLM, Informática, Administração e Ética no IBGE.",
+    description: "Intersecção de disciplinas: domínio de Português, RLM, Informática e Administração.",
     badgeLabel: "Fase de Aprofundamento",
     accentColor: {
       bg: "bg-purple-50/50 dark:bg-purple-950/20",
@@ -130,7 +130,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 8,
     title: "Gabaritador de Simulados",
     minXp: 1400,
-    description: "Condições reais de concurso: superação de simulados oficiais completos de questões no padrão IBGE AOR.",
+    description: "Condições reais de concurso: superação de simulados oficiais e mais de 220 questões resolvidas no padrão IBGE AOR.",
     badgeLabel: "Fase de Simulação Real",
     accentColor: {
       bg: "bg-rose-50/50 dark:bg-rose-950/20",
@@ -143,7 +143,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 9,
     title: "Elite dos Concursos",
     minXp: 1600,
-    description: "Acurácia de elite: mais de 400 questões no histórico e índice de acerto cirúrgico superior a 75%.",
+    description: "Acurácia de elite: mais de 300 questões no histórico e índice de acerto cirúrgico superior a 75%.",
     badgeLabel: "Fase de Lapidação",
     accentColor: {
       bg: "bg-orange-50/50 dark:bg-orange-950/20",
@@ -156,7 +156,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 10,
     title: "Nomeado & Convocado",
     minXp: 1800,
-    description: "Patamar de topo da lista: mais de 500 questões resolvidas e consistência inabalável de estudos.",
+    description: "Patamar de topo da lista: mais de 400 questões resolvidas e consistência inabalável de estudos.",
     badgeLabel: "Fase de Nomeação",
     accentColor: {
       bg: "bg-teal-50/50 dark:bg-teal-950/20",
@@ -169,7 +169,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 11,
     title: "Mestre do Edital AOR",
     minXp: 2000,
-    description: "Varredura completa do conteúdo programático: mais de 750 questões superadas sem deixar brechas.",
+    description: "Varredura do conteúdo programático: mais de 500 questões superadas sem deixar brechas.",
     badgeLabel: "Fase de Domínio Total",
     accentColor: {
       bg: "bg-sky-50/50 dark:bg-sky-950/20",
@@ -182,7 +182,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 12,
     title: "Centurião do Conhecimento",
     minXp: 2200,
-    description: "Mais de 1.000 questões resolvidas! Velocidade de leitura, interpretação apurada e retenção máxima.",
+    description: "Mais de 650 questões resolvidas! Velocidade de leitura, interpretação apurada e retenção máxima.",
     badgeLabel: "Fase de Alta Performance",
     accentColor: {
       bg: "bg-violet-50/50 dark:bg-violet-950/20",
@@ -195,7 +195,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 13,
     title: "Titã da Constância",
     minXp: 2400,
-    description: "Disciplina inquebrável: maratona contínua com mais de 1.300 questões e sequências longas de estudos.",
+    description: "Disciplina inquebrável: maratona contínua com mais de 800 questões e sequências longas de estudos.",
     badgeLabel: "Fase de Resistência",
     accentColor: {
       bg: "bg-fuchsia-50/50 dark:bg-fuchsia-950/20",
@@ -208,7 +208,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 14,
     title: "Oráculo do IBGE",
     minXp: 2600,
-    description: "Conhece cada pegadinha e estilo de banca de olhos fechados. Mais de 1.600 questões resolvidas.",
+    description: "Conhece cada pegadinha e estilo de banca de olhos fechados. Mais de 950 questões resolvidas.",
     badgeLabel: "Fase de Especialista Sênior",
     accentColor: {
       bg: "bg-lime-50/50 dark:bg-lime-950/20",
@@ -221,7 +221,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 15,
     title: "Gabarito de Ouro",
     minXp: 2800,
-    description: "Excelência estatística: mais de 2.000 questões resolvidas e índice de aproveitamento de alto padrão.",
+    description: "Excelência estatística: mais de 1.050 questões resolvidas e índice de aproveitamento de alto padrão.",
     badgeLabel: "Fase de Excelência Áurea",
     accentColor: {
       bg: "bg-amber-100/40 dark:bg-amber-950/30",
@@ -234,7 +234,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 16,
     title: "Prodígio dos Gabaritos",
     minXp: 3000,
-    description: "Mais de 2.400 questões! Nível de retenção mnemônica e raciocínio lógico em nível de instrutor.",
+    description: "Mais de 1.150 questões! Nível de retenção mnemônica e raciocínio lógico em nível de instrutor.",
     badgeLabel: "Fase Magistral",
     accentColor: {
       bg: "bg-emerald-100/40 dark:bg-emerald-950/30",
@@ -247,7 +247,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 17,
     title: "Soberano das Bancas",
     minXp: 3200,
-    description: "Mais de 2.800 questões resolvidas. Domínio absoluto de enunciados complexos e casos gerenciais.",
+    description: "Mais de 1.220 questões resolvidas. Domínio absoluto de enunciados complexos e casos práticos.",
     badgeLabel: "Fase Suprema",
     accentColor: {
       bg: "bg-blue-100/40 dark:bg-blue-950/30",
@@ -260,7 +260,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 18,
     title: "Primeiro Lugar Geral",
     minXp: 3400,
-    description: "Mais de 3.200 questões! Desempenho comparável aos primeiros colocados em certames nacionais.",
+    description: "Mais de 1.280 questões! Desempenho comparável aos primeiros colocados em certames nacionais.",
     badgeLabel: "Fase de Campeão",
     accentColor: {
       bg: "bg-purple-100/40 dark:bg-purple-950/30",
@@ -273,7 +273,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 19,
     title: "Mítico Servidor Aprovado",
     minXp: 3600,
-    description: "Mais de 3.600 questões! Ritmo de treinamento lendário, simulados gabaritados e bagagem enciclopédica.",
+    description: "Mais de 1.320 questões! Ritmo de treinamento lendário, simulados gabaritados e bagagem enciclopédica.",
     badgeLabel: "Fase Mítica",
     accentColor: {
       bg: "bg-rose-100/40 dark:bg-rose-950/30",
@@ -286,7 +286,7 @@ export const LEVEL_TIERS: LevelTier[] = [
     level: 20,
     title: "Lenda Imortal dos Concursos",
     minXp: 3800,
-    description: "Patamar máximo absoluto: mais de 4.000 questões resolvidas, dedicação heroica e posse garantida com louvor!",
+    description: "Patamar máximo absoluto: mais de 1.350 questões resolvidas (quase a totalidade do banco de dados), dedicação exemplar e posse garantida com louvor!",
     badgeLabel: "Fase Hall da Fama",
     accentColor: {
       bg: "bg-yellow-100/60 dark:bg-yellow-950/40",
@@ -455,8 +455,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 8: GABARITADOR DE SIMULADOS ---
   {
     id: "ach_q_250",
-    title: "Maratona 250",
-    description: "Alcançou a marca impressionante de 250 questões respondidas no banco de estudos.",
+    title: "Maratona 220 (220 Qs)",
+    description: "Alcançou a marca expressiva de 220 questões respondidas no banco de estudos.",
     xpReward: 250,
     icon: "Shield",
     levelRequired: 8,
@@ -477,8 +477,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 9: ELITE DOS CONCURSOS ---
   {
     id: "ach_q_400",
-    title: "Quatrocentas Batalhas",
-    description: "Ultrapassou a marca de 400 questões resolvidas, adquirindo intuição de prova apurada.",
+    title: "Trezentas Batalhas (300 Qs)",
+    description: "Ultrapassou a marca de 300 questões resolvidas, adquirindo intuição de prova apurada.",
     xpReward: 280,
     icon: "BarChart2",
     levelRequired: 9,
@@ -499,8 +499,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 10: NOMEADO & CONVOCADO ---
   {
     id: "ach_q_500",
-    title: "Meio Milhar (500 Qs)",
-    description: "Concluiu 500 questões resolvidas. Preparação digna de classificação direta no concurso!",
+    title: "Quatrocentos Desafios (400 Qs)",
+    description: "Concluiu 400 questões resolvidas. Preparação digna de classificação direta no concurso!",
     xpReward: 350,
     icon: "Crown",
     levelRequired: 10,
@@ -521,8 +521,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 11: MESTRE DO EDITAL AOR ---
   {
     id: "ach_q_750",
-    title: "Guardião do Edital (750 Qs)",
-    description: "Superou 750 questões de treino, dominando a lógica de cobrança das bancas examinadoras.",
+    title: "Meio Milhar (500 Qs)",
+    description: "Superou 500 questões de treino, dominando a lógica de cobrança das bancas examinadoras.",
     xpReward: 380,
     icon: "Shield",
     levelRequired: 11,
@@ -543,8 +543,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 12: CENTURIÃO DO CONHECIMENTO ---
   {
     id: "ach_q_1000",
-    title: "Clube do Milhar (1.000 Qs)",
-    description: "Alcançou a histórica e respeitadíssima marca de 1.000 questões resolvidas no sistema!",
+    title: "Grande Escalada (650 Qs)",
+    description: "Alcançou a respeitadíssima marca de 650 questões resolvidas no sistema!",
     xpReward: 500,
     icon: "Crown",
     levelRequired: 12,
@@ -565,8 +565,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 13: TITÃ DA CONSTÂNCIA ---
   {
     id: "ach_q_1300",
-    title: "Legião dos Treinados (1.300 Qs)",
-    description: "Superou 1.300 questões resolvidas com resiliência incomparável.",
+    title: "Titã dos Estudos (800 Qs)",
+    description: "Superou 800 questões resolvidas com resiliência incomparável.",
     xpReward: 450,
     icon: "Trophy",
     levelRequired: 13,
@@ -587,8 +587,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 14: ORÁCULO DO IBGE ---
   {
     id: "ach_q_1600",
-    title: "Mestre das 1600 (1.600 Qs)",
-    description: "Ultrapassou 1.600 questões resolvidas com interpretação apurada de pegadinhas.",
+    title: "Oráculo do Acervo (950 Qs)",
+    description: "Ultrapassou 950 questões resolvidas com interpretação apurada de pegadinhas.",
     xpReward: 500,
     icon: "Compass",
     levelRequired: 14,
@@ -609,8 +609,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 15: GABARITO DE OURO ---
   {
     id: "ach_q_2000",
-    title: "Bimilenar dos Concursos (2.000 Qs)",
-    description: "Incríveis 2.000 questões resolvidas! Bagagem monstruosa de treinamento prático.",
+    title: "Milhar Superado (1.050 Qs)",
+    description: "Incríveis 1.050 questões resolvidas! Mais de um milhar de exercícios práticos dominados.",
     xpReward: 600,
     icon: "Medal",
     levelRequired: 15,
@@ -631,8 +631,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 16: PRODÍGIO DOS GABARITOS ---
   {
     id: "ach_q_2400",
-    title: "Força Imparável (2.400 Qs)",
-    description: "Mais de 2.400 questões! Ritmo acelerado de acertos com retenção mnemônica impecável.",
+    title: "Força Imparável (1.150 Qs)",
+    description: "Mais de 1.150 questões! Ritmo acelerado de acertos com retenção mnemônica de alto nível.",
     xpReward: 550,
     icon: "Zap",
     levelRequired: 16,
@@ -653,8 +653,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 17: SOBERANO DAS BANCAS ---
   {
     id: "ach_q_2800",
-    title: "Conhecimento Enciclopédico (2.800 Qs)",
-    description: "2.800 questões superadas. Visão panorâmica profunda de todos os tópicos do edital.",
+    title: "Soberano do Banco (1.220 Qs)",
+    description: "1.220 questões superadas. Visão panorâmica profunda de todos os tópicos do concurso.",
     xpReward: 600,
     icon: "BarChart2",
     levelRequired: 17,
@@ -664,7 +664,7 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   {
     id: "ach_all_subjects_master",
     title: "Polímata do Concurso",
-    description: "Acertou dezenas de questões em todas as grandes disciplinas cobradas no certame.",
+    description: "Acertou dezenas de questões em todas as 4 disciplinas oficiais cadastradas no certame.",
     xpReward: 400,
     icon: "CheckSquare",
     levelRequired: 17,
@@ -675,8 +675,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 18: PRIMEIRO LUGAR GERAL ---
   {
     id: "ach_q_3200",
-    title: "Três Mil e Duzentos Passos (3.200 Qs)",
-    description: "3.200 questões de concurso! Nível de prontidão digno dos primeiros lugares do país.",
+    title: "Vanguarda de Elite (1.280 Qs)",
+    description: "1.280 questões de concurso! Nível de prontidão digno dos primeiros lugares do país.",
     xpReward: 650,
     icon: "Crown",
     levelRequired: 18,
@@ -697,8 +697,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 19: MÍTICO SERVIDOR APROVADO ---
   {
     id: "ach_q_3600",
-    title: "Vanguarda Nacional (3.600 Qs)",
-    description: "3.600 questões superadas! Nível de treino lendário e domínio pleno de bancas.",
+    title: "Domínio Enciclopédico (1.320 Qs)",
+    description: "1.320 questões superadas! Nível de treino lendário e domínio de praticamente todas as bancas.",
     xpReward: 700,
     icon: "Shield",
     levelRequired: 19,
@@ -719,8 +719,8 @@ export const ALL_ACHIEVEMENTS: Achievement[] = [
   // --- NÍVEL 20: LENDA IMORTAL DOS CONCURSOS ---
   {
     id: "ach_q_4000",
-    title: "Monumento Vivo (4.000 Qs)",
-    description: "Alcançou o patamar mítico de 4.000 questões resolvidas. Preparação irretocável para o IBGE!",
+    title: "Monumento Vivo do Acervo (1.350 Qs)",
+    description: "Alcançou o patamar mítico de mais de 1.350 questões resolvidas, dominando a quase totalidade do banco de dados! Preparação irretocável para o IBGE.",
     xpReward: 1000,
     icon: "Crown",
     levelRequired: 20,
