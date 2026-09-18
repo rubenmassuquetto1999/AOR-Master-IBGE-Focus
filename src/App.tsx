@@ -60,7 +60,7 @@ import ProgressReport from "./components/ProgressReport";
 import Achievements, { ALL_ACHIEVEMENTS } from "./components/Achievements";
 import UserProfile from "./components/UserProfile";
 import AccessGate from "./components/AccessGate";
-import { checkUserInviteStatus, isUserAdmin, ADMIN_EMAIL } from "./lib/firestoreUtils";
+import { checkUserInviteStatus, isUserAdmin, ADMIN_EMAIL, sanitizeFirestoreData, cleanQuestionForStorage } from "./lib/firestoreUtils";
 
 export const STUDY_TIPS = [
   {
@@ -107,7 +107,9 @@ export default function App() {
   const [questionOverrides, setQuestionOverrides] = useState<Record<string, Partial<Question>>>(() => {
     try {
       const saved = localStorage.getItem("question_overrides");
-      return saved ? JSON.parse(saved) : {};
+      if (!saved) return {};
+      const parsed = JSON.parse(saved);
+      return sanitizeFirestoreData(parsed) || {};
     } catch (e) {
       return {};
     }
@@ -493,7 +495,7 @@ export default function App() {
           }
 
           if (hasChanges) {
-            await setDoc(progressRef, cloudProgress);
+            await setDoc(progressRef, sanitizeFirestoreData(cloudProgress));
           }
         }
       } else {
@@ -515,7 +517,7 @@ export default function App() {
           bio: guestProgress?.bio || "",
           courseInterest: guestProgress?.courseInterest || "",
         };
-        await setDoc(progressRef, cloudProgress);
+        await setDoc(progressRef, sanitizeFirestoreData(cloudProgress));
       }
       setProgress(cloudProgress);
 
@@ -529,14 +531,14 @@ export default function App() {
 
       const localOverridesStr = localStorage.getItem("question_overrides");
       const localOverrides: Record<string, Partial<Question>> = localOverridesStr ? JSON.parse(localOverridesStr) : {};
-      const mergedOverrides = { ...cloudOverrides, ...localOverrides };
+      const mergedOverrides = sanitizeFirestoreData({ ...cloudOverrides, ...localOverrides });
       setQuestionOverrides(mergedOverrides);
       localStorage.setItem("question_overrides", JSON.stringify(mergedOverrides));
 
       // Sync back to cloud if local had more deleted IDs or overrides
       if (mergedDeletedIds.length > (progressSnap.data()?.deletedQuestionIds?.length || 0) ||
           Object.keys(mergedOverrides).length > Object.keys(cloudOverrides).length) {
-        setDoc(progressRef, { deletedQuestionIds: mergedDeletedIds, questionOverrides: mergedOverrides }, { merge: true }).catch(console.error);
+        setDoc(progressRef, sanitizeFirestoreData({ deletedQuestionIds: mergedDeletedIds, questionOverrides: mergedOverrides }), { merge: true }).catch(console.error);
       }
 
       // 2. Get history list
@@ -718,10 +720,10 @@ export default function App() {
         const queue: UserHistory[] = JSON.parse(guestHistory);
         for (const h of queue) {
           const docRef = doc(db, "usersHistory", `${currentUser.uid}_${h.questionId}`);
-          await setDoc(docRef, {
+          await setDoc(docRef, sanitizeFirestoreData({
             ...h,
             userId: currentUser.uid,
-          });
+          }));
         }
         localStorage.removeItem("guest_history");
       }
@@ -731,10 +733,10 @@ export default function App() {
         const queue: Question[] = JSON.parse(guestCustomQuestions);
         for (const q of queue) {
           const docRef = doc(db, "customQuestions", q.id);
-          await setDoc(docRef, {
-            ...q,
+          await setDoc(docRef, sanitizeFirestoreData({
+            ...cleanQuestionForStorage(q),
             userId: currentUser.uid,
-          });
+          }));
         }
         localStorage.removeItem("custom_questions");
       }
@@ -807,11 +809,11 @@ export default function App() {
       // Save globally Firebase
       if (isOnline) {
         try {
-          await setDoc(doc(db, "usersHistory", histId), {
+          await setDoc(doc(db, "usersHistory", histId), sanitizeFirestoreData({
             ...newHistItem,
             userId: currentUser.uid,
-          });
-          await setDoc(doc(db, "usersProgress", currentUser.uid), updatedProgress);
+          }));
+          await setDoc(doc(db, "usersProgress", currentUser.uid), sanitizeFirestoreData(updatedProgress));
         } catch (e) {
           // Failure fallbacks to local caching queue
           localStorage.setItem("guest_history", JSON.stringify(updatedHistory));
@@ -927,11 +929,11 @@ export default function App() {
         } else {
           if (isOnline) {
             try {
-              await setDoc(doc(db, "customQuestions", existingQ.id), {
-                ...existingQ,
-                image: newQ.image,
+              const cleanedExisting = cleanQuestionForStorage({ ...existingQ, image: newQ.image });
+              await setDoc(doc(db, "customQuestions", existingQ.id), sanitizeFirestoreData({
+                ...cleanedExisting,
                 userId: currentUser.uid,
-              });
+              }));
             } catch (e) {
               const customLocal = localStorage.getItem("custom_questions") || "[]";
               const queueList: Question[] = JSON.parse(customLocal);
@@ -961,26 +963,27 @@ export default function App() {
       }
     }
 
-    const updatedQuestions = [...questions, newQ];
+    const cleanedNewQ = cleanQuestionForStorage(newQ);
+    const updatedQuestions = [...questions, cleanedNewQ];
     setQuestions(updatedQuestions);
 
     if (!currentUser) {
       const customLocal = localStorage.getItem("custom_questions") || "[]";
       const queueList = JSON.parse(customLocal);
-      queueList.push(newQ);
+      queueList.push(cleanedNewQ);
       localStorage.setItem("custom_questions", JSON.stringify(queueList));
     } else {
       if (isOnline) {
         try {
-          await setDoc(doc(db, "customQuestions", newQ.id), {
-            ...newQ,
+          await setDoc(doc(db, "customQuestions", cleanedNewQ.id), sanitizeFirestoreData({
+            ...cleanedNewQ,
             userId: currentUser.uid,
-          });
+          }));
         } catch (e) {
-          saveQuestionLocally(newQ);
+          saveQuestionLocally(cleanedNewQ);
         }
       } else {
-        saveQuestionLocally(newQ);
+        saveQuestionLocally(cleanedNewQ);
       }
     }
 
@@ -1002,34 +1005,36 @@ export default function App() {
 
   const handleUpdateQuestion = async (updatedQ: Question): Promise<boolean> => {
     try {
+      const cleanedQ = cleanQuestionForStorage(updatedQ);
+
       // 1. Update questions state locally
       setQuestions((prevQuestions) =>
-        prevQuestions.map((q) => (q.id === updatedQ.id ? updatedQ : q))
+        prevQuestions.map((q) => (q.id === cleanedQ.id ? cleanedQ : q))
       );
 
       // 2. Persist in overrides state and localStorage
-      const newOverrides = {
+      const newOverrides = sanitizeFirestoreData({
         ...questionOverrides,
-        [updatedQ.id]: updatedQ,
-      };
+        [cleanedQ.id]: cleanedQ,
+      });
       setQuestionOverrides(newOverrides);
       localStorage.setItem("question_overrides", JSON.stringify(newOverrides));
 
       // 3. Persist locally as fast cache
-      updateQuestionLocally(updatedQ);
+      updateQuestionLocally(cleanedQ);
 
       // 4. Persist in cloud if user is logged in
       if (currentUser && isOnline) {
         try {
           const progressRef = doc(db, "usersProgress", currentUser.uid);
-          await setDoc(progressRef, { questionOverrides: newOverrides }, { merge: true });
+          await setDoc(progressRef, sanitizeFirestoreData({ questionOverrides: newOverrides }), { merge: true });
 
-          if (updatedQ.id.startsWith("q_custom_")) {
-            await setDoc(doc(db, "customQuestions", updatedQ.id), {
-              ...updatedQ,
+          if (cleanedQ.id.startsWith("q_custom_")) {
+            await setDoc(doc(db, "customQuestions", cleanedQ.id), sanitizeFirestoreData({
+              ...cleanedQ,
               userId: currentUser.uid,
               updatedAt: Date.now(),
-            }, { merge: true });
+            }), { merge: true });
           }
         } catch (e) {
           console.error("Failed to update cloud question, kept local cache:", e);
@@ -1066,15 +1071,16 @@ export default function App() {
       });
 
       // 2. Update questionOverrides state and localStorage
-      const newOverrides = { ...questionOverrides };
+      const newOverrides: Record<string, any> = sanitizeFirestoreData({ ...questionOverrides });
       updates.forEach((u) => {
-        newOverrides[u.id] = {
+        newOverrides[u.id] = sanitizeFirestoreData({
           ...(newOverrides[u.id] || {}),
-          ...u.changes,
-        };
+          ...cleanQuestionForStorage(u.changes as any),
+        });
       });
-      setQuestionOverrides(newOverrides);
-      localStorage.setItem("question_overrides", JSON.stringify(newOverrides));
+      const cleanOverrides = sanitizeFirestoreData(newOverrides);
+      setQuestionOverrides(cleanOverrides);
+      localStorage.setItem("question_overrides", JSON.stringify(cleanOverrides));
 
       // 3. Persist locally in custom questions if applicable
       const customLocal = localStorage.getItem("custom_questions") || "[]";
@@ -1083,7 +1089,7 @@ export default function App() {
       queueList.forEach((q) => queueMap.set(q.id, q));
       updatedList.forEach((q) => {
         if (queueMap.has(q.id) || q.id.startsWith("q_custom_")) {
-          queueMap.set(q.id, q);
+          queueMap.set(q.id, cleanQuestionForStorage(q));
         }
       });
       localStorage.setItem("custom_questions", JSON.stringify(Array.from(queueMap.values())));
@@ -1092,7 +1098,7 @@ export default function App() {
       if (currentUser && isOnline) {
         try {
           const progressRef = doc(db, "usersProgress", currentUser.uid);
-          await setDoc(progressRef, { questionOverrides: newOverrides }, { merge: true });
+          await setDoc(progressRef, sanitizeFirestoreData({ questionOverrides: cleanOverrides }), { merge: true });
 
           const customUpdates = updatedList.filter((q) => q.id.startsWith("q_custom_"));
           if (customUpdates.length > 0) {
@@ -1102,11 +1108,11 @@ export default function App() {
               const batch = writeBatch(db);
               for (const q of chunk) {
                 const docRef = doc(db, "customQuestions", q.id);
-                batch.set(docRef, {
-                  ...q,
+                batch.set(docRef, sanitizeFirestoreData({
+                  ...cleanQuestionForStorage(q),
                   userId: currentUser.uid,
                   updatedAt: Date.now(),
-                }, { merge: true });
+                }), { merge: true });
               }
               await batch.commit();
             }
@@ -1165,10 +1171,10 @@ export default function App() {
       if (currentUser && isOnline) {
         try {
           const progressRef = doc(db, "usersProgress", currentUser.uid);
-          await setDoc(progressRef, {
+          await setDoc(progressRef, sanitizeFirestoreData({
             deletedQuestionIds: updatedDeletedIds,
             questionOverrides: newOverrides,
-          }, { merge: true });
+          }), { merge: true });
 
           // Fast batch delete custom questions only
           const customIds = questionIdsToDelete.filter((id) => id.startsWith("q_custom_"));
@@ -1236,7 +1242,7 @@ export default function App() {
         localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
       } else {
         if (isOnline) {
-          setDoc(doc(db, "usersProgress", currentUser.uid), updatedProgress).catch((e) => {
+          setDoc(doc(db, "usersProgress", currentUser.uid), sanitizeFirestoreData(updatedProgress)).catch((e) => {
             console.error("Erro ao salvar progresso:", e);
             localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
           });
@@ -1281,7 +1287,7 @@ export default function App() {
     } else {
       if (isOnline) {
         try {
-          await setDoc(doc(db, "usersProgress", currentUser.uid), updatedProgress);
+          await setDoc(doc(db, "usersProgress", currentUser.uid), sanitizeFirestoreData(updatedProgress));
         } catch (e) {
           localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
         }
@@ -1303,7 +1309,7 @@ export default function App() {
     } else {
       if (isOnline) {
         try {
-          await setDoc(doc(db, "usersProgress", currentUser.uid), updatedProgress);
+          await setDoc(doc(db, "usersProgress", currentUser.uid), sanitizeFirestoreData(updatedProgress));
         } catch (e) {
           localStorage.setItem("guest_progress", JSON.stringify(updatedProgress));
         }

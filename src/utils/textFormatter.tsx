@@ -242,8 +242,26 @@ export const FormattedText: React.FC<{
   );
 };
 
+const KNOWN_TAG_PAIRS: { format: FormatType; open: string; close: string }[] = [
+  { format: "bold", open: "**", close: "**" },
+  { format: "bold", open: "<b>", close: "</b>" },
+  { format: "bold", open: "<strong>", close: "</strong>" },
+  { format: "underline", open: "<u>", close: "</u>" },
+  { format: "mark-yellow", open: "<mark>", close: "</mark>" },
+  { format: "mark", open: "<mark>", close: "</mark>" },
+  { format: "mark-green", open: "<mark-green>", close: "</mark-green>" },
+  { format: "mark-blue", open: "<mark-blue>", close: "</mark-blue>" },
+  { format: "mark-rose", open: "<mark-rose>", close: "</mark-rose>" },
+  { format: "strike", open: "~~", close: "~~" },
+  { format: "strike", open: "<s>", close: "</s>" },
+  { format: "strike", open: "<del>", close: "</del>" },
+  { format: "italic", open: "*", close: "*" },
+  { format: "italic", open: "<i>", close: "</i>" },
+  { format: "italic", open: "<em>", close: "</em>" },
+];
+
 /**
- * Aplica formatação a um trecho de texto dentro de uma string original
+ * Aplica ou desmarca (toggle) a formatação de um trecho de texto dentro de uma string original
  */
 export function applyFormatToString(
   original: string,
@@ -255,38 +273,125 @@ export function applyFormatToString(
   const trimmedSnippet = selectedSnippet.trim();
   if (!trimmedSnippet) return original;
 
-  // Encontra a ocorrência do texto selecionado
-  const index = original.indexOf(trimmedSnippet);
-  if (index === -1) return original;
+  const plain = stripFormatting(trimmedSnippet);
+  if (!plain) return original;
 
-  let formattedSnippet = trimmedSnippet;
+  // 1. Verifica se no texto original já existe o trecho formatado com alguma tag
+  for (const pair of KNOWN_TAG_PAIRS) {
+    const taggedVariant = `${pair.open}${plain}${pair.close}`;
+    const tagIndex = original.indexOf(taggedVariant);
 
-  if (format === "clear") {
-    // Remove qualquer formatação no snippet
-    formattedSnippet = stripFormatting(trimmedSnippet);
-  } else if (format === "bold") {
-    formattedSnippet = `**${stripFormatting(trimmedSnippet)}**`;
-  } else if (format === "underline") {
-    formattedSnippet = `<u>${stripFormatting(trimmedSnippet)}</u>`;
-  } else if (format === "mark" || format === "mark-yellow") {
-    formattedSnippet = `<mark>${stripFormatting(trimmedSnippet)}</mark>`;
-  } else if (format === "mark-green") {
-    formattedSnippet = `<mark-green>${stripFormatting(trimmedSnippet)}</mark-green>`;
-  } else if (format === "mark-blue") {
-    formattedSnippet = `<mark-blue>${stripFormatting(trimmedSnippet)}</mark-blue>`;
-  } else if (format === "mark-rose") {
-    formattedSnippet = `<mark-rose>${stripFormatting(trimmedSnippet)}</mark-rose>`;
-  } else if (format === "strike") {
-    formattedSnippet = `~~${stripFormatting(trimmedSnippet)}~~`;
-  } else if (format === "italic") {
-    formattedSnippet = `*${stripFormatting(trimmedSnippet)}*`;
+    if (tagIndex !== -1) {
+      // O trecho já possui essa formatação no texto original!
+      const isSameFormat =
+        pair.format === format ||
+        (format === "mark-yellow" && pair.format === "mark") ||
+        (format === "mark" && pair.format === "mark-yellow");
+
+      // Se o usuário clicou no mesmo botão OU em "clear": DESMARCA e volta ao texto normal
+      if (isSameFormat || format === "clear") {
+        return (
+          original.slice(0, tagIndex) +
+          plain +
+          original.slice(tagIndex + taggedVariant.length)
+        );
+      }
+
+      // Se o usuário clicou em outro botão de formatação: troca pela nova formatação
+      let newOpen = "";
+      let newClose = "";
+      if (format === "bold") {
+        newOpen = "**";
+        newClose = "**";
+      } else if (format === "underline") {
+        newOpen = "<u>";
+        newClose = "</u>";
+      } else if (format === "mark" || format === "mark-yellow") {
+        newOpen = "<mark>";
+        newClose = "</mark>";
+      } else if (format === "mark-green") {
+        newOpen = "<mark-green>";
+        newClose = "</mark-green>";
+      } else if (format === "strike") {
+        newOpen = "~~";
+        newClose = "~~";
+      } else if (format === "italic") {
+        newOpen = "*";
+        newClose = "*";
+      }
+
+      if (newOpen && newClose) {
+        const replacement = `${newOpen}${plain}${newClose}`;
+        return (
+          original.slice(0, tagIndex) +
+          replacement +
+          original.slice(tagIndex + taggedVariant.length)
+        );
+      }
+    }
   }
 
-  return original.slice(0, index) + formattedSnippet + original.slice(index + trimmedSnippet.length);
+  // 2. Se o trecho não está envolvido por tags no original, busca o texto plano
+  const plainIndex = original.indexOf(plain);
+  if (plainIndex === -1) {
+    // Tenta pelo snippet direto
+    const rawIndex = original.indexOf(trimmedSnippet);
+    if (rawIndex === -1) return original;
+
+    if (format === "clear") {
+      return (
+        original.slice(0, rawIndex) +
+        plain +
+        original.slice(rawIndex + trimmedSnippet.length)
+      );
+    }
+    const formatted = formatWrapper(plain, format);
+    return (
+      original.slice(0, rawIndex) +
+      formatted +
+      original.slice(rawIndex + trimmedSnippet.length)
+    );
+  }
+
+  if (format === "clear") {
+    return original;
+  }
+
+  const formattedSnippet = formatWrapper(plain, format);
+  return (
+    original.slice(0, plainIndex) +
+    formattedSnippet +
+    original.slice(plainIndex + plain.length)
+  );
+}
+
+function formatWrapper(content: string, format: FormatType): string {
+  switch (format) {
+    case "bold":
+      return `**${content}**`;
+    case "underline":
+      return `<u>${content}</u>`;
+    case "mark":
+    case "mark-yellow":
+      return `<mark>${content}</mark>`;
+    case "mark-green":
+      return `<mark-green>${content}</mark-green>`;
+    case "mark-blue":
+      return `<mark-blue>${content}</mark-blue>`;
+    case "mark-rose":
+      return `<mark-rose>${content}</mark-rose>`;
+    case "strike":
+      return `~~${content}~~`;
+    case "italic":
+      return `*${content}*`;
+    case "clear":
+    default:
+      return content;
+  }
 }
 
 /**
- * Auxiliar para inserir formatação em um elemento HTMLInputElement ou HTMLTextAreaElement
+ * Auxiliar para inserir ou desmarcar (toggle) formatação em um HTMLInputElement ou HTMLTextAreaElement
  */
 export function insertFormatInInput(
   inputEl: HTMLTextAreaElement | HTMLInputElement,
@@ -298,66 +403,98 @@ export function insertFormatInInput(
   const end = inputEl.selectionEnd ?? 0;
   const selected = currentValue.slice(start, end);
 
-  let prefix = "";
-  let suffix = "";
+  // Se nada estiver selecionado, usa "texto" como placeholder
+  if (!selected) {
+    if (format === "clear") return;
+    const sample = formatWrapper("texto", format);
+    const nextVal = currentValue.slice(0, start) + sample + currentValue.slice(end);
+    onUpdate(nextVal);
+    setTimeout(() => {
+      inputEl.focus();
+      inputEl.setSelectionRange(start + 2, start + 7);
+    }, 0);
+    return;
+  }
 
-  switch (format) {
-    case "bold":
-      prefix = "**";
-      suffix = "**";
-      break;
-    case "underline":
-      prefix = "<u>";
-      suffix = "</u>";
-      break;
-    case "mark":
-    case "mark-yellow":
-      prefix = "<mark>";
-      suffix = "</mark>";
-      break;
-    case "mark-green":
-      prefix = "<mark-green>";
-      suffix = "</mark-green>";
-      break;
-    case "mark-blue":
-      prefix = "<mark-blue>";
-      suffix = "</mark-blue>";
-      break;
-    case "mark-rose":
-      prefix = "<mark-rose>";
-      suffix = "</mark-rose>";
-      break;
-    case "strike":
-      prefix = "~~";
-      suffix = "~~";
-      break;
-    case "italic":
-      prefix = "*";
-      suffix = "*";
-      break;
-    case "clear":
-      if (selected) {
-        const cleaned = stripFormatting(selected);
-        const nextVal = currentValue.slice(0, start) + cleaned + currentValue.slice(end);
+  // 1. Verifica se a própria seleção contém tags nos extremos
+  for (const pair of KNOWN_TAG_PAIRS) {
+    if (
+      selected.startsWith(pair.open) &&
+      selected.endsWith(pair.close) &&
+      selected.length >= pair.open.length + pair.close.length
+    ) {
+      const isSame =
+        pair.format === format ||
+        (format === "mark-yellow" && pair.format === "mark") ||
+        (format === "mark" && pair.format === "mark-yellow");
+
+      // Clicou no mesmo botão ou em clear -> DESMARCA (remove as tags)
+      if (isSame || format === "clear") {
+        const unwrapped = selected.slice(
+          pair.open.length,
+          selected.length - pair.close.length
+        );
+        const nextVal = currentValue.slice(0, start) + unwrapped + currentValue.slice(end);
         onUpdate(nextVal);
         setTimeout(() => {
           inputEl.focus();
-          inputEl.setSelectionRange(start, start + cleaned.length);
+          inputEl.setSelectionRange(start, start + unwrapped.length);
         }, 0);
+        return;
       }
-      return;
+    }
   }
 
-  const replacement = selected ? `${prefix}${selected}${suffix}` : `${prefix}texto${suffix}`;
+  // 2. Verifica se antes e depois do cursor de seleção já existem as tags do formato
+  for (const pair of KNOWN_TAG_PAIRS) {
+    const oLen = pair.open.length;
+    const cLen = pair.close.length;
+    if (start >= oLen && end + cLen <= currentValue.length) {
+      const before = currentValue.slice(start - oLen, start);
+      const after = currentValue.slice(end, end + cLen);
+      if (before === pair.open && after === pair.close) {
+        const isSame =
+          pair.format === format ||
+          (format === "mark-yellow" && pair.format === "mark") ||
+          (format === "mark" && pair.format === "mark-yellow");
+
+        if (isSame || format === "clear") {
+          // Desmarca removendo os delimitadores externos
+          const nextVal =
+            currentValue.slice(0, start - oLen) +
+            selected +
+            currentValue.slice(end + cLen);
+          onUpdate(nextVal);
+          setTimeout(() => {
+            inputEl.focus();
+            inputEl.setSelectionRange(start - oLen, start - oLen + selected.length);
+          }, 0);
+          return;
+        }
+      }
+    }
+  }
+
+  // 3. Se selecionou e clicou em "clear", limpa qualquer tag interna
+  if (format === "clear") {
+    const cleaned = stripFormatting(selected);
+    const nextVal = currentValue.slice(0, start) + cleaned + currentValue.slice(end);
+    onUpdate(nextVal);
+    setTimeout(() => {
+      inputEl.focus();
+      inputEl.setSelectionRange(start, start + cleaned.length);
+    }, 0);
+    return;
+  }
+
+  // 4. Aplica a nova formatação
+  const cleanSelected = stripFormatting(selected);
+  const replacement = formatWrapper(cleanSelected, format);
   const nextVal = currentValue.slice(0, start) + replacement + currentValue.slice(end);
   onUpdate(nextVal);
 
   setTimeout(() => {
     inputEl.focus();
-    if (selected) {
-      inputEl.setSelectionRange(start, start + replacement.length);
-    } else {
-      inputEl.setSelectionRange(start + prefix.length, start + prefix.length + 5);
-    }
+    inputEl.setSelectionRange(start, start + replacement.length);
   }, 0);
 }

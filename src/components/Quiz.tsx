@@ -31,7 +31,6 @@ import {
   stripFormatting,
   FormatType,
 } from "../utils/textFormatter";
-import QuestionFormatModal from "./QuestionFormatModal";
 import QuestionInterpretationBar from "./QuestionInterpretationBar";
 import FloatingSelectionToolbar from "./FloatingSelectionToolbar";
 
@@ -87,8 +86,7 @@ export default function Quiz({
 
   // Interpretation, formatting and elimination states
   const questionCardRef = React.useRef<HTMLElement>(null);
-  const [isFormatModalOpen, setIsFormatModalOpen] = useState(false);
-  const [eliminatedOptions, setEliminatedOptions] = useState<{ [qIdx: number]: Set<number> }>({});
+  const [eliminatedOptions, setEliminatedOptions] = useState<{ [qId: string]: Set<number> }>({});
 
   const handleSaveFormattedQuestion = (updatedQ: Question) => {
     setSessionQuestions((prev) =>
@@ -111,13 +109,16 @@ export default function Quiz({
       }
     }
 
-    if (!targetSnippet) {
-      setIsFormatModalOpen(true);
-      return;
-    }
+    if (!targetSnippet) return;
+
+    const cleanSnippet = stripFormatting(targetSnippet);
+    if (!cleanSnippet) return;
 
     // Se estiver no enunciado
-    if (currentQ.text.includes(targetSnippet)) {
+    if (
+      currentQ.text.includes(targetSnippet) ||
+      stripFormatting(currentQ.text).includes(cleanSnippet)
+    ) {
       const updatedText = applyFormatToString(currentQ.text, targetSnippet, format);
       const updatedQ = { ...currentQ, text: updatedText };
       handleSaveFormattedQuestion(updatedQ);
@@ -125,18 +126,16 @@ export default function Quiz({
     }
 
     // Se estiver em alguma alternativa
-    const optIdx = currentQ.options.findIndex((opt) => opt.includes(targetSnippet));
+    const optIdx = currentQ.options.findIndex(
+      (opt) => opt.includes(targetSnippet) || stripFormatting(opt).includes(cleanSnippet)
+    );
     if (optIdx !== -1) {
       const updatedOpt = applyFormatToString(currentQ.options[optIdx], targetSnippet, format);
       const nextOptions = [...currentQ.options];
       nextOptions[optIdx] = updatedOpt;
       const updatedQ = { ...currentQ, options: nextOptions };
       handleSaveFormattedQuestion(updatedQ);
-      return;
     }
-
-    // Fallback: abre modal
-    setIsFormatModalOpen(true);
   };
 
   const handleClearCurrentHighlights = () => {
@@ -154,14 +153,18 @@ export default function Quiz({
 
   const toggleEliminateOption = (e: React.MouseEvent, optIdx: number) => {
     e.stopPropagation();
+    const currentQ = sessionQuestions[currentIdx];
+    if (!currentQ) return;
+    const qId = currentQ.id;
+
     setEliminatedOptions((prev) => {
-      const currentSet = new Set(prev[currentIdx] || []);
+      const currentSet = new Set(prev[qId] || []);
       if (currentSet.has(optIdx)) {
         currentSet.delete(optIdx);
       } else {
         currentSet.add(optIdx);
       }
-      return { ...prev, [currentIdx]: currentSet };
+      return { ...prev, [qId]: currentSet };
     });
   };
 
@@ -450,6 +453,7 @@ export default function Quiz({
     setCurrentIdx(0);
     setSelectedAnswers({});
     setShowExplanation({});
+    setEliminatedOptions({});
     setQuizStartTime(Date.now());
     setQuizCompleted(false);
     setActiveSession(true);
@@ -467,6 +471,7 @@ export default function Quiz({
     if (confirmed) {
       setActiveSession(false);
       setQuizCompleted(false);
+      setEliminatedOptions({});
     }
   };
 
@@ -505,6 +510,7 @@ export default function Quiz({
     setQuizEndTime(Math.round((Date.now() - quizStartTime) / 1000));
     setQuizCompleted(true);
     setActiveSession(false);
+    setEliminatedOptions({});
 
     // Give base rewards
     let correctCount = 0;
@@ -1339,7 +1345,6 @@ export default function Quiz({
                 {/* Interpretation Toolbar */}
                 <QuestionInterpretationBar
                   onApplyFormatToSelection={(fmt) => handleApplyFormatToCurrentQuestion(fmt)}
-                  onOpenFormatModal={() => setIsFormatModalOpen(true)}
                   onClearHighlights={handleClearCurrentHighlights}
                   hasFormatting={hasCurrentFormatting}
                 />
@@ -1393,7 +1398,7 @@ export default function Quiz({
                       const isSelected = selectedAnswers[currentIdx] === optIdx;
                       const isCorrectAns = optIdx === currentQ.correctIndex;
                       const anySelected = selectedAnswers[currentIdx] !== undefined;
-                      const isEliminated = !anySelected && (eliminatedOptions[currentIdx]?.has(optIdx) ?? false);
+                      const isEliminated = !anySelected && (eliminatedOptions[currentQ.id]?.has(optIdx) ?? false);
 
                       let optClass =
                         "border-slate-200 dark:border-slate-800 bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-850 cursor-pointer";
@@ -1553,16 +1558,6 @@ export default function Quiz({
             </button>
           </div>
         </div>
-      )}
-
-      {/* Complete Interpretation / Formatting Modal */}
-      {isFormatModalOpen && sessionQuestions[currentIdx] && (
-        <QuestionFormatModal
-          isOpen={isFormatModalOpen}
-          question={sessionQuestions[currentIdx]}
-          onClose={() => setIsFormatModalOpen(false)}
-          onSave={handleSaveFormattedQuestion}
-        />
       )}
     </section>
   );

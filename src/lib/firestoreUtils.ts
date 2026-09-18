@@ -12,7 +12,7 @@ import {
   orderBy,
   serverTimestamp,
 } from "firebase/firestore";
-import { AuthorizedInvite, AccessRequest } from "../types";
+import { AuthorizedInvite, AccessRequest, Question } from "../types";
 
 export enum OperationType {
   CREATE = "create",
@@ -275,4 +275,57 @@ export async function rejectAccessRequest(email: string): Promise<void> {
   } catch (error) {
     handleFirestoreError(error, OperationType.UPDATE, path);
   }
+}
+
+/**
+ * Recursively removes all keys with 'undefined' values from an object or array,
+ * ensuring valid data for Firestore operations without 'Unsupported field value: undefined' errors.
+ */
+export function sanitizeFirestoreData<T>(data: T): T {
+  if (data === null || data === undefined) {
+    return null as unknown as T;
+  }
+  if (Array.isArray(data)) {
+    return data
+      .filter((item) => item !== undefined)
+      .map((item) => sanitizeFirestoreData(item)) as unknown as T;
+  }
+  if (typeof data === "object" && !(data instanceof Date)) {
+    const cleaned: Record<string, any> = {};
+    for (const [key, value] of Object.entries(data as Record<string, any>)) {
+      if (value !== undefined) {
+        cleaned[key] = sanitizeFirestoreData(value);
+      }
+    }
+    return cleaned as unknown as T;
+  }
+  return data;
+}
+
+/**
+ * Sanitizes and normalizes a Question object so that none of its properties
+ * contain 'undefined' values that would crash Firestore calls.
+ */
+export function cleanQuestionForStorage(q: Partial<Question>): Question {
+  const cleaned: Question = {
+    id: q.id || `q_${Date.now()}`,
+    text: q.text ?? "",
+    options: Array.isArray(q.options) ? q.options.map((opt) => opt ?? "") : [],
+    correctIndex: typeof q.correctIndex === "number" ? q.correctIndex : -1,
+    explanations: Array.isArray(q.explanations) ? q.explanations.map((exp) => exp ?? "") : [],
+    banca: q.banca ?? "Geral",
+    ano: typeof q.ano === "number" ? q.ano : new Date().getFullYear(),
+    assunto: q.assunto ?? "Geral",
+    nivelSuperior: Boolean(q.nivelSuperior),
+    generalExplanation: q.generalExplanation ?? "",
+  };
+
+  if (q.disciplina !== undefined && q.disciplina !== null) {
+    cleaned.disciplina = q.disciplina;
+  }
+  if (q.image !== undefined && q.image !== null) {
+    cleaned.image = q.image;
+  }
+
+  return cleaned;
 }
