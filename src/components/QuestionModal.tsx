@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   X,
   PlusCircle,
@@ -14,9 +14,15 @@ import {
   HelpCircle,
   Trash2,
   RefreshCw,
+  Bold,
+  Underline,
+  Highlighter,
+  Strikethrough,
+  Eye,
 } from "lucide-react";
 import { Question } from "../types";
 import { TAXONOMY, getTopicsForDiscipline, getDisciplineForTopic } from "../data/taxonomy";
+import { FormattedText, insertFormatInInput } from "../utils/textFormatter";
 
 interface QuestionModalProps {
   isOpen: boolean;
@@ -80,6 +86,12 @@ export default function QuestionModal({
   const [replicateDisciplinaAcrossDatabase, setReplicateDisciplinaAcrossDatabase] = useState(false);
   const [replicateAssuntoAcrossDatabase, setReplicateAssuntoAcrossDatabase] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Formatting refs & preview toggles
+  const statementRef = useRef<HTMLTextAreaElement>(null);
+  const generalExplanationRef = useRef<HTMLTextAreaElement>(null);
+  const [showStatementPreview, setShowStatementPreview] = useState(false);
+  const [showGeneralExpPreview, setShowGeneralExpPreview] = useState(false);
 
   // Initialize or populate form when opening
   useEffect(() => {
@@ -924,10 +936,63 @@ export default function QuestionModal({
 
           {/* Enunciado da Questão */}
           <div id="question-statement-container" className="space-y-1.5 pt-3">
-            <label className="block text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-              Enunciado da Questão <span className="text-rose-500">*</span>
-            </label>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <label className="block text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+                Enunciado da Questão <span className="text-rose-500">*</span>
+              </label>
+
+              {/* Formatting Toolbar */}
+              <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700">
+                <button
+                  type="button"
+                  onClick={() => statementRef.current && insertFormatInInput(statementRef.current, "bold", text, setText)}
+                  title="Negrito (**texto**)"
+                  className="p-1 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition font-bold"
+                >
+                  <Bold className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => statementRef.current && insertFormatInInput(statementRef.current, "underline", text, setText)}
+                  title="Sublinhado (<u>texto</u>)"
+                  className="p-1 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition"
+                >
+                  <Underline className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => statementRef.current && insertFormatInInput(statementRef.current, "mark-yellow", text, setText)}
+                  title="Marca-texto Amarelo (<mark>texto</mark>)"
+                  className="p-1 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-amber-600 dark:text-amber-400 transition"
+                >
+                  <Highlighter className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => statementRef.current && insertFormatInInput(statementRef.current, "strike", text, setText)}
+                  title="Tachado / Riscar (~~texto~~)"
+                  className="p-1 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-rose-500 transition"
+                >
+                  <Strikethrough className="w-3.5 h-3.5" />
+                </button>
+                <div className="w-[1px] h-3.5 bg-slate-200 dark:bg-slate-700 mx-0.5" />
+                <button
+                  type="button"
+                  onClick={() => setShowStatementPreview(!showStatementPreview)}
+                  className={`p-1 px-2 rounded-lg text-[11px] font-semibold flex items-center gap-1 transition ${
+                    showStatementPreview
+                      ? "bg-indigo-600 text-white shadow-2xs"
+                      : "hover:bg-white dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300"
+                  }`}
+                >
+                  <Eye className="w-3 h-3" />
+                  <span>{showStatementPreview ? "Ocultar Prévia" : "Ver Prévia"}</span>
+                </button>
+              </div>
+            </div>
+
             <textarea
+              ref={statementRef}
               required
               rows={4}
               placeholder="Digite ou cole aqui o texto completo do enunciado da questão de concurso..."
@@ -935,6 +1000,17 @@ export default function QuestionModal({
               onChange={(e) => setText(e.target.value)}
               className="w-full px-4 py-3 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 leading-relaxed placeholder-gray-400 shadow-2xs"
             />
+
+            {showStatementPreview && (
+              <div className="p-3.5 rounded-2xl bg-indigo-50/40 dark:bg-slate-800/80 border border-indigo-100 dark:border-slate-700 animate-fade-in">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 block mb-1">
+                  Prévia Formatada do Enunciado:
+                </span>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-100 leading-relaxed whitespace-pre-line">
+                  <FormattedText text={text} />
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Imagem Ilustrativa Opcional */}
@@ -1026,17 +1102,81 @@ export default function QuestionModal({
 
           {/* Comentário Geral / Resolução Completa */}
           <div className="space-y-1.5">
-            <label className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
-              Comentário Geral / Resolução do Professor (Opcional)
-            </label>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <label className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
+                Comentário Geral / Resolução do Professor (Opcional)
+              </label>
+
+              {/* Formatting Toolbar */}
+              <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700">
+                <button
+                  type="button"
+                  onClick={() => generalExplanationRef.current && insertFormatInInput(generalExplanationRef.current, "bold", generalExplanation, setGeneralExplanation)}
+                  title="Negrito (**texto**)"
+                  className="p-1 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition font-bold"
+                >
+                  <Bold className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => generalExplanationRef.current && insertFormatInInput(generalExplanationRef.current, "underline", generalExplanation, setGeneralExplanation)}
+                  title="Sublinhado (<u>texto</u>)"
+                  className="p-1 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition"
+                >
+                  <Underline className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => generalExplanationRef.current && insertFormatInInput(generalExplanationRef.current, "mark-yellow", generalExplanation, setGeneralExplanation)}
+                  title="Marca-texto Amarelo"
+                  className="p-1 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-amber-600 dark:text-amber-400 transition"
+                >
+                  <Highlighter className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => generalExplanationRef.current && insertFormatInInput(generalExplanationRef.current, "strike", generalExplanation, setGeneralExplanation)}
+                  title="Tachado"
+                  className="p-1 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-rose-500 transition"
+                >
+                  <Strikethrough className="w-3.5 h-3.5" />
+                </button>
+                <div className="w-[1px] h-3.5 bg-slate-200 dark:bg-slate-700 mx-0.5" />
+                <button
+                  type="button"
+                  onClick={() => setShowGeneralExpPreview(!showGeneralExpPreview)}
+                  className={`p-1 px-2 rounded-lg text-[11px] font-semibold flex items-center gap-1 transition ${
+                    showGeneralExpPreview
+                      ? "bg-indigo-600 text-white shadow-2xs"
+                      : "hover:bg-white dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300"
+                  }`}
+                >
+                  <Eye className="w-3 h-3" />
+                  <span>{showGeneralExpPreview ? "Ocultar Prévia" : "Ver Prévia"}</span>
+                </button>
+              </div>
+            </div>
+
             <textarea
+              ref={generalExplanationRef}
               rows={2}
               placeholder="Digite a resolução completa, fundamentação teórica ou macetes de resolução..."
               value={generalExplanation}
               onChange={(e) => setGeneralExplanation(e.target.value)}
               className="w-full px-4 py-2.5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 shadow-2xs"
             />
+
+            {showGeneralExpPreview && generalExplanation && (
+              <div className="p-3.5 rounded-2xl bg-indigo-50/40 dark:bg-slate-800/80 border border-indigo-100 dark:border-slate-700 animate-fade-in">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 block mb-1">
+                  Prévia da Resolução / Comentário:
+                </span>
+                <p className="text-xs font-semibold text-gray-800 dark:text-gray-100 leading-relaxed whitespace-pre-line">
+                  <FormattedText text={generalExplanation} />
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Alternativas de Resposta */}

@@ -4,6 +4,7 @@ import { Question } from "../types";
 import { TAXONOMY, getDisciplineForTopic, getTopicsForDiscipline, getQuestionDiscipline, ALL_TOPICS } from "../data/taxonomy";
 import BatchEditModal from "./BatchEditModal";
 import QuestionModal from "./QuestionModal";
+import { FormattedText } from "../utils/textFormatter";
 
 interface QuestionBankProps {
   questions: Question[];
@@ -362,9 +363,9 @@ export default function QuestionBank({
               </header>
 
               {/* Question Text */}
-              <p id={`question-title-${q.id}`} className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4 whitespace-pre-line leading-relaxed">
-                {q.text}
-              </p>
+              <div id={`question-title-${q.id}`} className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4 whitespace-pre-line leading-relaxed">
+                <FormattedText text={q.text} />
+              </div>
 
               {/* Question Image (if any) */}
               {q.image && (
@@ -383,7 +384,9 @@ export default function QuestionBank({
                   <HelpCircle className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold block mb-0.5">Comentário Geral / Resolução:</span>
-                    <p className="whitespace-pre-line">{q.generalExplanation}</p>
+                    <div className="whitespace-pre-line leading-relaxed">
+                      <FormattedText text={q.generalExplanation} />
+                    </div>
                   </div>
                 </div>
               )}
@@ -402,7 +405,9 @@ export default function QuestionBank({
                       }`}
                     >
                       <div className="flex items-start justify-between gap-2">
-                        <span>{opt}</span>
+                        <span className="leading-relaxed">
+                          <FormattedText text={opt} />
+                        </span>
                         {isCorrect && (
                           <span className="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300">
                             Gabarito
@@ -414,7 +419,7 @@ export default function QuestionBank({
                           <span className="font-semibold text-gray-600 dark:text-gray-300 mr-1">
                             {isCorrect ? "Gabarito Comentado:" : "Comentário:"}
                           </span>
-                          {q.explanations[oIdx]}
+                          <FormattedText text={q.explanations[oIdx]} />
                         </div>
                       )}
                     </div>

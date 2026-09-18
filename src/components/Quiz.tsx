@@ -21,9 +21,19 @@ import {
   FileSpreadsheet,
   Brain,
   Compass,
+  Scissors,
 } from "lucide-react";
 import { Question, UserHistory } from "../types";
 import { TAXONOMY, getDisciplineForTopic, getTopicsForDiscipline, getQuestionDiscipline, ALL_TOPICS } from "../data/taxonomy";
+import {
+  FormattedText,
+  applyFormatToString,
+  stripFormatting,
+  FormatType,
+} from "../utils/textFormatter";
+import QuestionFormatModal from "./QuestionFormatModal";
+import QuestionInterpretationBar from "./QuestionInterpretationBar";
+import FloatingSelectionToolbar from "./FloatingSelectionToolbar";
 
 interface QuizProps {
   questions: Question[];
@@ -42,6 +52,7 @@ interface QuizProps {
   initialBanca?: string;
   initialAssunto?: string;
   initialDisciplina?: string;
+  onUpdateQuestion?: (updatedQ: Question) => Promise<boolean> | void;
 }
 
 export default function Quiz({
@@ -55,6 +66,7 @@ export default function Quiz({
   initialBanca = "Todos",
   initialAssunto = "Todos",
   initialDisciplina = "Todas",
+  onUpdateQuestion,
 }: QuizProps) {
   // Mode: "practice" (Treino livre 5, 15, 30 ou 60 Qs com filtros) | "official_ibge" (Simulado 60 Qs Edital IBGE AOR)
   const [quizMode, setQuizMode] = useState<"practice" | "official_ibge">("practice");
@@ -72,6 +84,86 @@ export default function Quiz({
   const [quizStartTime, setQuizStartTime] = useState<number>(0);
   const [quizElapsedTime, setQuizEndTime] = useState<number>(0);
   const [quizCompleted, setQuizCompleted] = useState<boolean>(false);
+
+  // Interpretation, formatting and elimination states
+  const questionCardRef = React.useRef<HTMLElement>(null);
+  const [isFormatModalOpen, setIsFormatModalOpen] = useState(false);
+  const [eliminatedOptions, setEliminatedOptions] = useState<{ [qIdx: number]: Set<number> }>({});
+
+  const handleSaveFormattedQuestion = (updatedQ: Question) => {
+    setSessionQuestions((prev) =>
+      prev.map((q, idx) => (idx === currentIdx ? updatedQ : q))
+    );
+    if (onUpdateQuestion) {
+      onUpdateQuestion(updatedQ);
+    }
+  };
+
+  const handleApplyFormatToCurrentQuestion = (format: FormatType, selectedSnippet?: string) => {
+    if (!sessionQuestions[currentIdx]) return;
+    const currentQ = sessionQuestions[currentIdx];
+
+    let targetSnippet = selectedSnippet;
+    if (!targetSnippet) {
+      const sel = window.getSelection();
+      if (sel && !sel.isCollapsed) {
+        targetSnippet = sel.toString().trim();
+      }
+    }
+
+    if (!targetSnippet) {
+      setIsFormatModalOpen(true);
+      return;
+    }
+
+    // Se estiver no enunciado
+    if (currentQ.text.includes(targetSnippet)) {
+      const updatedText = applyFormatToString(currentQ.text, targetSnippet, format);
+      const updatedQ = { ...currentQ, text: updatedText };
+      handleSaveFormattedQuestion(updatedQ);
+      return;
+    }
+
+    // Se estiver em alguma alternativa
+    const optIdx = currentQ.options.findIndex((opt) => opt.includes(targetSnippet));
+    if (optIdx !== -1) {
+      const updatedOpt = applyFormatToString(currentQ.options[optIdx], targetSnippet, format);
+      const nextOptions = [...currentQ.options];
+      nextOptions[optIdx] = updatedOpt;
+      const updatedQ = { ...currentQ, options: nextOptions };
+      handleSaveFormattedQuestion(updatedQ);
+      return;
+    }
+
+    // Fallback: abre modal
+    setIsFormatModalOpen(true);
+  };
+
+  const handleClearCurrentHighlights = () => {
+    if (!sessionQuestions[currentIdx]) return;
+    const currentQ = sessionQuestions[currentIdx];
+    const cleanedText = stripFormatting(currentQ.text);
+    const cleanedOptions = currentQ.options.map((opt) => stripFormatting(opt));
+    const updatedQ = {
+      ...currentQ,
+      text: cleanedText,
+      options: cleanedOptions,
+    };
+    handleSaveFormattedQuestion(updatedQ);
+  };
+
+  const toggleEliminateOption = (e: React.MouseEvent, optIdx: number) => {
+    e.stopPropagation();
+    setEliminatedOptions((prev) => {
+      const currentSet = new Set(prev[currentIdx] || []);
+      if (currentSet.has(optIdx)) {
+        currentSet.delete(optIdx);
+      } else {
+        currentSet.add(optIdx);
+      }
+      return { ...prev, [currentIdx]: currentSet };
+    });
+  };
 
   useEffect(() => {
     if (initialBanca) {
@@ -1229,86 +1321,147 @@ export default function Quiz({
           </div>
 
           {/* Current Question Display */}
-          <article
-            id="current-question-card"
-            aria-labelledby="current-question-text"
-            className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-sm space-y-4"
-          >
-            {/* Meta Tags */}
-            <header className="flex flex-wrap items-center gap-2">
-              <span className="text-[10px] font-bold font-mono tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 dark:bg-blue-955/20 dark:text-blue-400 dark:border-blue-900/30">
-                {sessionQuestions[currentIdx].banca}
-              </span>
-              <span className="text-[10px] font-semibold font-mono px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-300">
-                ANO: {sessionQuestions[currentIdx].ano}
-              </span>
-              <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-950/20 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/30">
-                {sessionQuestions[currentIdx].assunto}
-              </span>
-            </header>
+          {(() => {
+            const currentQ = sessionQuestions[currentIdx];
+            const hasCurrentFormatting =
+              Boolean(currentQ) &&
+              (/[<*_~=]/.test(currentQ.text) ||
+                currentQ.options.some((opt) => /[<*_~=]/.test(opt)));
 
-            {/* Statement */}
-            <p id="current-question-text" className="text-sm md:text-base font-semibold text-slate-800 dark:text-slate-100 leading-relaxed whitespace-pre-line border-b border-slate-100 pb-4 dark:border-slate-800">
-              {sessionQuestions[currentIdx].text}
-            </p>
-
-            {/* Question Image (if any) */}
-            {sessionQuestions[currentIdx].image && (
-              <div
-                className="flex justify-center p-2 mb-2 bg-slate-50 dark:bg-gray-800 rounded-xl"
-                id={`quiz-q-img-container-${sessionQuestions[currentIdx].id}`}
-              >
-                <img
-                  src={sessionQuestions[currentIdx].image}
-                  alt="Ilustração da Questão"
-                  className="max-h-72 w-auto object-contain rounded-xl shadow-sm border border-slate-205 dark:border-slate-700"
-                  referrerPolicy="no-referrer"
+            return (
+              <>
+                {/* Floating Selection Toolbar (appears on text selection) */}
+                <FloatingSelectionToolbar
+                  containerRef={questionCardRef}
+                  onApplyFormat={(fmt, text) => handleApplyFormatToCurrentQuestion(fmt, text)}
                 />
-              </div>
-            )}
 
-            {/* Alternatives List */}
-            <fieldset className="space-y-3 pt-2">
-              <legend className="sr-only">Alternativas da questão</legend>
-              {sessionQuestions[currentIdx].options.map((opt, optIdx) => {
-                const isSelected = selectedAnswers[currentIdx] === optIdx;
-                const isCorrectAns = optIdx === sessionQuestions[currentIdx].correctIndex;
-                const anySelected = selectedAnswers[currentIdx] !== undefined;
+                {/* Interpretation Toolbar */}
+                <QuestionInterpretationBar
+                  onApplyFormatToSelection={(fmt) => handleApplyFormatToCurrentQuestion(fmt)}
+                  onOpenFormatModal={() => setIsFormatModalOpen(true)}
+                  onClearHighlights={handleClearCurrentHighlights}
+                  hasFormatting={hasCurrentFormatting}
+                />
 
-                let optClass =
-                  "border-slate-200 dark:border-slate-800 bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-850 cursor-pointer";
-                if (anySelected) {
-                  if (isCorrectAns) {
-                    optClass =
-                      "border-emerald-500 bg-emerald-50/40 text-emerald-800 dark:bg-emerald-955/20 dark:text-emerald-400 shadow-sm shadow-emerald-50 dark:shadow-none";
-                  } else if (isSelected) {
-                    optClass = "border-rose-500 bg-rose-50/40 text-rose-800 dark:bg-rose-955/20 dark:text-rose-400";
-                  } else {
-                    optClass = "border-slate-150/40 bg-slate-50/30 dark:bg-slate-900/40 opacity-70 cursor-not-allowed";
-                  }
-                }
+                <article
+                  ref={questionCardRef}
+                  id="current-question-card"
+                  aria-labelledby="current-question-text"
+                  className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-sm space-y-4"
+                >
+                  {/* Meta Tags */}
+                  <header className="flex flex-wrap items-center gap-2">
+                    <span className="text-[10px] font-bold font-mono tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 dark:bg-blue-955/20 dark:text-blue-400 dark:border-blue-900/30">
+                      {currentQ.banca}
+                    </span>
+                    <span className="text-[10px] font-semibold font-mono px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-300">
+                      ANO: {currentQ.ano}
+                    </span>
+                    <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-950/20 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/30">
+                      {currentQ.assunto}
+                    </span>
+                  </header>
 
-                return (
-                  <button
-                    key={optIdx}
-                    disabled={anySelected}
-                    onClick={() => handleSelectOption(optIdx)}
-                    className={`w-full text-left p-4 rounded-2xl border text-sm font-semibold transition active:scale-[0.99] flex items-center justify-between ${optClass}`}
+                  {/* Statement */}
+                  <div
+                    id="current-question-text"
+                    className="text-sm md:text-base font-semibold text-slate-800 dark:text-slate-100 leading-relaxed whitespace-pre-line border-b border-slate-100 pb-4 dark:border-slate-800"
                   >
-                    <span className="leading-snug">{opt}</span>
-                    {anySelected && isCorrectAns && (
-                      <span className="text-xs uppercase font-extrabold text-emerald-600 dark:text-emerald-400">
-                        Correto
-                      </span>
-                    )}
-                    {anySelected && isSelected && !isCorrectAns && (
-                      <span className="text-xs uppercase font-extrabold text-rose-500">Incorreto</span>
-                    )}
-                  </button>
-                );
-              })}
-            </fieldset>
-          </article>
+                    <FormattedText text={currentQ.text} />
+                  </div>
+
+                  {/* Question Image (if any) */}
+                  {currentQ.image && (
+                    <div
+                      className="flex justify-center p-2 mb-2 bg-slate-50 dark:bg-gray-800 rounded-xl"
+                      id={`quiz-q-img-container-${currentQ.id}`}
+                    >
+                      <img
+                        src={currentQ.image}
+                        alt="Ilustração da Questão"
+                        className="max-h-72 w-auto object-contain rounded-xl shadow-sm border border-slate-205 dark:border-slate-700"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  )}
+
+                  {/* Alternatives List */}
+                  <fieldset className="space-y-3 pt-2">
+                    <legend className="sr-only">Alternativas da questão</legend>
+                    {currentQ.options.map((opt, optIdx) => {
+                      const isSelected = selectedAnswers[currentIdx] === optIdx;
+                      const isCorrectAns = optIdx === currentQ.correctIndex;
+                      const anySelected = selectedAnswers[currentIdx] !== undefined;
+                      const isEliminated = !anySelected && (eliminatedOptions[currentIdx]?.has(optIdx) ?? false);
+
+                      let optClass =
+                        "border-slate-200 dark:border-slate-800 bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-850 cursor-pointer";
+                      if (anySelected) {
+                        if (isCorrectAns) {
+                          optClass =
+                            "border-emerald-500 bg-emerald-50/40 text-emerald-800 dark:bg-emerald-955/20 dark:text-emerald-400 shadow-sm shadow-emerald-50 dark:shadow-none";
+                        } else if (isSelected) {
+                          optClass = "border-rose-500 bg-rose-50/40 text-rose-800 dark:bg-rose-955/20 dark:text-rose-400";
+                        } else {
+                          optClass = "border-slate-150/40 bg-slate-50/30 dark:bg-slate-900/40 opacity-70 cursor-not-allowed";
+                        }
+                      } else if (isEliminated) {
+                        optClass =
+                          "border-dashed border-rose-200 dark:border-rose-900/40 bg-rose-50/20 dark:bg-rose-955/10 opacity-60 text-slate-400 dark:text-slate-500";
+                      }
+
+                      return (
+                        <div
+                          key={optIdx}
+                          onClick={() => {
+                            if (!anySelected) handleSelectOption(optIdx);
+                          }}
+                          className={`w-full text-left p-3.5 sm:p-4 rounded-2xl border text-sm font-semibold transition active:scale-[0.99] flex items-center justify-between gap-3 ${optClass}`}
+                        >
+                          <div className={`flex-1 leading-snug ${isEliminated ? "line-through decoration-rose-500/70" : ""}`}>
+                            <FormattedText text={opt} />
+                          </div>
+
+                          <div className="flex items-center gap-2 shrink-0">
+                            {!anySelected && (
+                              <button
+                                type="button"
+                                onClick={(e) => toggleEliminateOption(e, optIdx)}
+                                title={
+                                  isEliminated
+                                    ? "Restaurar alternativa"
+                                    : "Riscar / Descartar alternativa para focar nas restantes"
+                                }
+                                className={`p-1.5 rounded-lg text-xs transition flex items-center gap-1 cursor-pointer ${
+                                  isEliminated
+                                    ? "bg-rose-100 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300 font-bold"
+                                    : "text-slate-400 hover:text-rose-500 hover:bg-slate-100 dark:hover:bg-slate-800"
+                                }`}
+                              >
+                                <Scissors className="w-3.5 h-3.5" />
+                                <span className="text-[10px] hidden sm:inline">
+                                  {isEliminated ? "Restaurar" : "Descartar"}
+                                </span>
+                              </button>
+                            )}
+                            {anySelected && isCorrectAns && (
+                              <span className="text-xs uppercase font-extrabold text-emerald-600 dark:text-emerald-400">
+                                Correto
+                              </span>
+                            )}
+                            {anySelected && isSelected && !isCorrectAns && (
+                              <span className="text-xs uppercase font-extrabold text-rose-500">Incorreto</span>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </fieldset>
+                </article>
+              </>
+            );
+          })()}
 
           {/* Render Detailed Explanation alternative corrective comments */}
           {showExplanation[currentIdx] && (
@@ -1328,14 +1481,14 @@ export default function Quiz({
                       <p className="text-[10px] uppercase font-bold text-emerald-700 dark:text-emerald-400 tracking-wider">
                         Explicação / Resolução da Questão:
                       </p>
-                      <p className="text-xs text-slate-700 dark:text-slate-300 mt-1 leading-relaxed font-semibold whitespace-pre-line">
-                        {sessionQuestions[currentIdx].generalExplanation}
-                      </p>
+                      <div className="text-xs text-slate-700 dark:text-slate-300 mt-1 leading-relaxed font-semibold whitespace-pre-line">
+                        <FormattedText text={sessionQuestions[currentIdx].generalExplanation} />
+                      </div>
                     </div>
                   ) : (
-                    <p className="text-xs text-slate-700 dark:text-slate-300 mt-1.5 leading-relaxed font-semibold whitespace-pre-line">
-                      {sessionQuestions[currentIdx].explanations[sessionQuestions[currentIdx].correctIndex]}
-                    </p>
+                    <div className="text-xs text-slate-700 dark:text-slate-300 mt-1.5 leading-relaxed font-semibold whitespace-pre-line">
+                      <FormattedText text={sessionQuestions[currentIdx].explanations[sessionQuestions[currentIdx].correctIndex]} />
+                    </div>
                   )}
                 </div>
 
@@ -1354,7 +1507,7 @@ export default function Quiz({
                           ) : (
                             <XCircle className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
                           )}
-                          <p className="leading-relaxed text-slate-700 dark:text-slate-300">
+                          <div className="leading-relaxed text-slate-700 dark:text-slate-300">
                             <strong
                               className={
                                 isCorrectAlt
@@ -1364,8 +1517,8 @@ export default function Quiz({
                             >
                               ({String.fromCharCode(65 + expIdx)})
                             </strong>{" "}
-                            {exp}
-                          </p>
+                            <FormattedText text={exp} />
+                          </div>
                         </div>
                       );
                     })}
@@ -1400,6 +1553,16 @@ export default function Quiz({
             </button>
           </div>
         </div>
+      )}
+
+      {/* Complete Interpretation / Formatting Modal */}
+      {isFormatModalOpen && sessionQuestions[currentIdx] && (
+        <QuestionFormatModal
+          isOpen={isFormatModalOpen}
+          question={sessionQuestions[currentIdx]}
+          onClose={() => setIsFormatModalOpen(false)}
+          onSave={handleSaveFormattedQuestion}
+        />
       )}
     </section>
   );

@@ -1824,6 +1824,7 @@ export default function App() {
                 initialBanca={preselectedBanca}
                 initialDisciplina={preselectedDisciplina}
                 initialAssunto={preselectedAssunto}
+                onUpdateQuestion={handleUpdateQuestion}
               />
             )}
 
